@@ -30,6 +30,6 @@ Commands in these documents run from the repository root unless stated otherwise
 
 ## Historical protocols
 
-Historical experiment protocols intentionally retain their original settings.
-The current Live Arena, earlier two-reviewer online run, and newer gated-memory
-runner must not be treated as identical experiments.
+Historical protocols retain the settings used for each experiment. Live Arena, the
+earlier two-reviewer online run, and the newer gated-memory runner use different rules;
+results from one do not describe the others.

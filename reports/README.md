@@ -1,7 +1,7 @@
 # Public result summaries
 
-These files summarize experiments. Source data and complete saved records are
-available separately in `data/` and `runs/`.
+These files summarize experiments. Source data and complete saved records are available
+separately in `data/` and `runs/`.
 
 | File | Scope |
 | --- | --- |
@@ -11,12 +11,12 @@ available separately in `data/` and `runs/`.
 | `radgraph_ablation_2026-11-04.json` | Separate report-graph ablation metrics and completion status |
 | `stronger_model_cost_estimates_2026-11-04.json` | Dated measured usage and planning estimates, not current pricing guarantees |
 
-Run `python3 scripts/reproduce_results.py` from the repository root to recalculate
-the main table. The other summaries describe separate experiments and should not
-be pooled with the online probe. Embedded status/test counts describe when each
-summary was generated, rather than the current repository state.
+Run `python3 scripts/reproduce_results.py` from the repository root to recalculate the main table. The other
+summaries describe separate experiments; keep them separate from the online probe.
+Embedded status and test counts reflect when each summary was generated. They are not a
+current repository inventory.
 
-`radgraph_smoke.json` and `memory_policy_audit_2026-11-04.json` contain report
-excerpts or case-derived observations and are included as supporting evidence.
-These and the complete run records retain dataset-specific attribution and terms;
-see `data/LICENSE.md` and `runs/README.md`.
+`radgraph_smoke.json` and `memory_policy_audit_2026-11-04.json` contain report excerpts or case-derived
+observations and are included as supporting evidence. These and the complete run records
+retain dataset-specific attribution and terms; see `data/LICENSE.md` and
+`runs/README.md`.
