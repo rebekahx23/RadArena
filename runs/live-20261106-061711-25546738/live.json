@@ -1,0 +1,27 @@
+{
+  "id": "live-20261106-061711-25546738",
+  "status": "failed",
+  "phase": "failed",
+  "message": "Run stopped: LMRateLimitError. Inspect the latest request and its retained reserve. The spending guard can stop before the cap to reserve a whole request.",
+  "created_at": "2026-11-06T06:17:11.800834+00:00",
+  "updated_at": "2026-11-06T06:17:48.600589+00:00",
+  "completed_studies": 0,
+  "study_index": 1,
+  "options": {
+    "studies": 1,
+    "budget": 1,
+    "controls": true,
+    "learn": true,
+    "red_rules": [],
+    "blue_rules": [],
+    "launch_id": "98dcc975-170f-4d85-8188-a9894822aec8"
+  },
+  "pid": 2995,
+  "study_id": "2471",
+  "stage": "01-2471-judge1",
+  "role": "judge",
+  "action": null,
+  "request_started_at": "2026-11-06T06:17:47.829091+00:00",
+  "error_type": "LMRateLimitError",
+  "finished_at": "2026-11-06T06:17:48.600578+00:00"
+}

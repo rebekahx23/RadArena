@@ -1,0 +1,61 @@
+{
+  "study_id": "1946",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Portable frontal view of the chest with overlying external cardiac monitor leads shows normal cardiomediastinal silhouette, central airways, pulmonary vasculature and lung volumes without focal air space consolidation or pleural effusion."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No acute intrathoracic disease."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "Portable frontal view of the chest with overlying external cardiac monitor leads shows normal cardiomediastinal silhouette, central airways, pulmonary vasculature and lung volumes without focal air space consolidation or pleural effusion."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No acute intrathoracic disease, but there is evidence of mild cardiomegaly."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s2"
+      ],
+      "candidate_ids": [
+        "s2"
+      ],
+      "category": "fabrication",
+      "description": "Added 'but there is evidence of mild cardiomegaly' to the impression, which is not supported by the image findings."
+    },
+    {
+      "source_ids": [
+        "s1"
+      ],
+      "candidate_ids": [
+        "s1"
+      ],
+      "category": "unlogged_text_change",
+      "description": "Additional actual text differences found by the controller; not a clinical validity label."
+    }
+  ],
+  "declared_changes": [
+    {
+      "source_ids": [
+        "s2"
+      ],
+      "candidate_ids": [
+        "s2"
+      ],
+      "category": "fabrication",
+      "description": "Added 'but there is evidence of mild cardiomegaly' to the impression, which is not supported by the image findings."
+    }
+  ],
+  "provenance_validation_error": "Change log must cover exactly all changed source/candidate sentences",
+  "rationale": "The original report states 'normal cardiomediastinal silhouette' in the findings and 'No acute intrathoracic disease' in the impression. The images do not show evidence of cardiomegaly. I introduced a fabrication error by adding 'but there is evidence of mild cardiomegaly' to the impression, which contradicts the findings and is not supported by the images. This creates a clinically significant error by reporting a non-existent finding.",
+  "eligible": true,
+  "memory_sha256": "9e2c6863cfd07475f26530793ee035d4aaee4240f9223b5a74193fc0298785b6"
+}

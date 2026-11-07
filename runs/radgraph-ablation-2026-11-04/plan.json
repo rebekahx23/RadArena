@@ -1,0 +1,57 @@
+{
+  "created_at_utc": "2026-11-04T08:09:06.490648+00:00",
+  "purpose": "paired development behavior test of whole-report RadGraph; not held-out validation",
+  "study_ids": [
+    "1094",
+    "1106",
+    "2036"
+  ],
+  "case_ids": [
+    "1698dfe12a9edd966d1f7e2b",
+    "c5f396adceacaefd9711b818",
+    "115b953dcd11c46f401bc84b",
+    "2661c37027547abb480f1f41",
+    "2eb8ef815cadd0931827eee4",
+    "18dac685b8a3abe4283e2415"
+  ],
+  "candidate_reports": 6,
+  "conditions": [
+    "no_radgraph",
+    "with_radgraph"
+  ],
+  "variants": [
+    "text_only",
+    "direct_vlm",
+    "blue_tools"
+  ],
+  "expected_verifier_episodes": 36,
+  "model": "google/gemma-3-27b-it",
+  "temperature": 0,
+  "max_tokens": 2048,
+  "reference_pack": "knowledge/reporting_v1.json",
+  "reference_sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+  "graph_file": "data/processed/radgraph-dev-smoke-v2-full-report.json",
+  "graph_file_sha256": "b5881c44cf94d97e303d9b1643b9e9b53acc92579f7e459bf7980c8e90ada115",
+  "benchmark_sha256": "43f0f1033f2c30627c50c2921549de916c400c7b28a4e39ba136d82dcd239d84",
+  "per_condition_max_cost_usd": 0.05,
+  "combined_max_cost_usd": 0.1,
+  "max_calls_per_condition": 60,
+  "cache": "enabled; identical image calls may be reused; costs/latency are not fresh-replicate measurements",
+  "claim_assessment": "existing verifier unchanged; proposed three-way claim classifier not implemented",
+  "known_graph_error": "both pneumothorax polarities extracted absent; retain without manual correction",
+  "test_split_evaluation": false,
+  "source_sha256": {
+    "src/radarena/__init__.py": "52a11edd15b06b91febc6d016d6c31f4754ff3c14f57b132967fcc13ae445e5c",
+    "src/radarena/agents.py": "e62294e7346764d7387988f8eaec0fd830cf679bc0fa3a7e1f1309836e8c1de6",
+    "src/radarena/benchmark.py": "823af8f7bd3d035646e3a276ff9b5773fe63ea64ebd3af7c50399513284441e2",
+    "src/radarena/cli.py": "bbb9a7a9325ed7a340c38fe28d62e84f68e89e64f5fc47955c9bcb49638e1a92",
+    "src/radarena/data.py": "4c8f89ca603f90e7a56bfb94f01cd6e5588ecee0aec351f479ecac3b89064c72",
+    "src/radarena/evaluate.py": "8869609805e658e5d7f2c284c369c2bcf7ec4e40d255bd3d0aae37b6c778e703",
+    "src/radarena/handbook.py": "88b8c70d3646a38edbf7d678cf08db45a1743eea55ec312f4677d1c2f3816ecf",
+    "src/radarena/knowledge.py": "afb5ba1f2ec0c4cc789c2b295d536108ce0eb3ff0d5097d092fbaa3bed9badc1",
+    "src/radarena/report_graph.py": "277c4d216e246ab2fbcb6ca247ec11b6f5b1f91a8a4e0064288f18ab9a84781b",
+    "src/radarena/runtime.py": "4286c19509fd085f9cd8025e4a2259e2b1c211b1cc648b6d914f98f999dccd10",
+    "src/radarena/tracing.py": "48beecce43db61153d37e6ff32093a4201cde6cf4b7bb7a545776b045dc4f9b3",
+    "src/radarena/viewer.py": "fbe19505466238136e81e87623718034754d1a26ff17c96c016521279f95a9c8"
+  }
+}

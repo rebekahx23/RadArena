@@ -1,0 +1,1 @@
+{"case_id": "1698dfe12a9edd966d1f7e2b", "study_id": "1106", "variant": "text_only", "private_label": {"attacker": "lexical_seed_v1", "changed_sentence_ids": [], "edits": [], "error_type": null, "has_error": false, "image_adjudication": "pending"}, "status": "failed", "exception_type": "LMRateLimitError"}

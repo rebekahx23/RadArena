@@ -1,0 +1,44 @@
+{
+  "library": {
+    "initial": [
+      "Avoid flagging the absence of a finding when subtle image features suggest its possible presence.",
+      "When image quality or views are limited, prioritize uncertainty and avoid confident error flags.",
+      "Do not confidently flag a claim as incorrect if the image findings are open to multiple interpretations.",
+      "Acknowledge limitations of single-view radiographs when assessing findings.",
+      "Be cautious when assessing subtle differences in image density, especially when characterizing opacities."
+    ],
+    "error detection": [
+      "When an observation from a vision tool explicitly identifies a finding (e.g., a calcified nodule or cardiomegaly), and the candidate report explicitly denies or contradicts this finding, confidently flag it as a contradiction.",
+      "Do not overlook significant discrepancies or fabricated findings in the candidate report, such as the addition of a pneumothorax, even if the primary focus of the vision tool observations was on other findings like cardiomegaly or pulmonary artery hypertension."
+    ],
+    "limitations handling": [
+      "Do not allow general limitations of plain radiographs (e.g., difficulty with precise localization or subtle findings) to prevent flagging clear contradictions when a specific finding is visible and explicitly denied by the candidate."
+    ],
+    "contradiction detection": [
+      "When a vision tool explicitly states the absence of a finding (e.g., 'No definite focal consolidation, pleural effusion, or pneumothorax is identified'), and the candidate report explicitly claims the presence of that finding, confidently flag it as a contradiction, even if other vision tool observations are less definitive or conflicting."
+    ],
+    "accuracy": [
+      "When a vision tool explicitly states the absence of a finding (e.g., 'The cardiothoracic ratio appears to be within normal limits') and the candidate report explicitly claims the presence of that finding (e.g., 'Mild cardiomegaly'), confidently flag it as a contradiction.",
+      "When a vision tool explicitly states the absence of a finding (e.g., 'The thoracic spine to be relatively straight without obvious lateral curvature') and the candidate report explicitly claims the presence of that finding (e.g., 'There is evidence of mild scoliosis'), confidently flag it as a contradiction."
+    ]
+  },
+  "lessons": [
+    {
+      "category": "Accuracy",
+      "rule": "When a vision tool explicitly states the absence of a finding (e.g., 'The cardiothoracic ratio appears to be within normal limits') and the candidate report explicitly claims the presence of that finding (e.g., 'Mild cardiomegaly'), confidently flag it as a contradiction.",
+      "supporting_episode_ids": [
+        "11"
+      ]
+    },
+    {
+      "category": "Accuracy",
+      "rule": "When a vision tool explicitly states the absence of a finding (e.g., 'The thoracic spine to be relatively straight without obvious lateral curvature') and the candidate report explicitly claims the presence of that finding (e.g., 'There is evidence of mild scoliosis'), confidently flag it as a contradiction.",
+      "supporting_episode_ids": [
+        "15"
+      ]
+    }
+  ],
+  "rejected": [],
+  "explanation": "The feedback from episodes 11 and 15 reinforces the existing rule about flagging contradictions when the vision tool explicitly denies a finding that the candidate report explicitly claims. Episode 11 specifically addresses cardiomegaly, and episode 15 addresses scoliosis. These are specific instances that align with the general principle of identifying clear contradictions based on explicit vision tool observations. Episode 13's feedback was about an omission, which is not directly related to the existing rules or the new lessons derived from the other episodes, which focus on contradictions of explicit claims.",
+  "previous_memory_sha256": "076e2645fb8db62ba4fd687c1bc93a2886dc9f4d3c8c910e989a7000d2880f8e"
+}

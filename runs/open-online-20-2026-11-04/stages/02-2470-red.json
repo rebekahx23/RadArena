@@ -1,0 +1,70 @@
+{
+  "study_id": "2470",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart is normal in size and contour."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is no mediastinal widening."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No focal airspace disease."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No large pleural effusion or pneumothorax."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: The XXXX are intact."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute abnormality."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart is normal in size and contour."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is no mediastinal widening."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No focal airspace disease."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No large pleural effusion or pneumothorax."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: The XXXX are intact."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Mild cardiomegaly."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s6"
+      ],
+      "candidate_ids": [
+        "s6"
+      ],
+      "category": "fabrication",
+      "description": "The impression was changed from 'No acute abnormality' to 'Mild cardiomegaly' to introduce a fabricated finding."
+    }
+  ],
+  "rationale": "The change introduces a fabrication error by stating 'Mild cardiomegaly' in the impression, which contradicts the finding of 'The heart is normal in size and contour' (s1) and is not supported by the provided images. This creates an internal inconsistency and a clinically meaningful error.",
+  "eligible": true,
+  "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+}

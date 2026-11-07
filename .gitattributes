@@ -1,0 +1,3 @@
+# Historical checksums refer to exact file bytes; do not normalize on checkout.
+data/processed/** -text
+runs/** -text

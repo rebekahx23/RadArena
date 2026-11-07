@@ -1,0 +1,6 @@
+{
+  "change": "Allow null evidence on non-contradicted/not-assessed rows; contradictions still require nonempty evidence and citations.",
+  "reason": "First Gemma structured attempt returned null evidence for unassessed sentences and failed parsing. No structured predictions were completed before this change. Legacy predictors unaffected.",
+  "prior_metadata": "metadata.before-nullability-fix.json",
+  "failed_requests_preserved": true
+}

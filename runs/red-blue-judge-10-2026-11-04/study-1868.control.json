@@ -1,0 +1,144 @@
+{
+  "study_id": "1868",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Heart size and pulmonary vascularity normal."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is a small right pleural effusion."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: There is infrahilar interstitial prominence which may represent bronchovascular crowding lung."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Small left pleural effusion."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Small bilateral pleural effusions and right infrahilar infiltrate versus bronchovascular crowding."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Heart size and pulmonary vascularity normal."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is a small right pleural effusion."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: There is infrahilar interstitial prominence which may represent bronchovascular crowding lung."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Small left pleural effusion."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Small bilateral pleural effusions and right infrahilar infiltrate versus bronchovascular crowding."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1868_IM-0561-1001.dcm.png",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1868_IM-0561-2001.dcm.png"
+  ],
+  "clinical_context": "Ovarian hyperstimulation syndrome, rest for abnormality",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [],
+    "rationale": "Unchanged source report control",
+    "requested_error_type": null,
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "uncertain",
+    "findings": [],
+    "limitations": "The image quality is moderate, and subtle effusions can be difficult to detect on radiographs. The observations indicate possible small bilateral pleural effusions, but are not definitive. The report claims small left and right pleural effusions, which are consistent with the uncertain image findings. Therefore, I cannot confidently flag these claims as errors."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is a pleural effusion visible on the right side?",
+      "observation": "The frontal chest x-ray shows a subtle haziness in the right costophrenic angle, which could potentially represent a small pleural effusion. The lateral view does not clearly demonstrate blunting of the costophrenic angle, but the image quality is somewhat limited. There is no obvious large fluid collection visible in either view.",
+      "limitations": "The image quality is moderate, and subtle effusions can be difficult to detect on radiographs. A CT scan would be more sensitive for detecting and quantifying pleural effusions. Without prior imaging for comparison, it is difficult to determine if this is a new finding or a chronic condition. The lateral view is partially obscured."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is a pleural effusion visible on the left side?",
+      "observation": "The frontal chest x-ray shows a subtle haziness in the left costophrenic angle, which could potentially represent a small pleural effusion. The lateral view does not clearly demonstrate blunting of the costophrenic angle, but the image quality is somewhat limited. There is no obvious large fluid collection visible in either view.",
+      "limitations": "The image quality is not optimal, making definitive assessment of a small pleural effusion challenging. A decubitus view would be helpful to confirm the presence or absence of a small effusion. Without prior imaging for comparison, it is difficult to determine if these findings are new or chronic."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 0,
+    "uncertain": true,
+    "injected_edit_detected": null,
+    "unchanged_control_flagged": false,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

@@ -1,0 +1,15 @@
+{
+  "role": "red",
+  "round": 1,
+  "rules": [
+    "Introduce errors by swapping left and right laterality.",
+    "Modify anatomical locations to create inconsistencies.",
+    "Focus on findings related to paired organs (lungs, kidneys, etc.).",
+    "Prioritize edits that are syntactically correct but clinically implausible.",
+    "Ensure edits are localized to specific sentences."
+  ],
+  "explanation": "The feedback indicates a successful laterality error injection. To reinforce this attack strategy, I will add a rule specifically targeting laterality swaps. Since this is the first rule set, I will also include a general rule about introducing errors in anatomical descriptions.",
+  "previous_memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "memory_sha256": "2535bf8ae7c3ab60c32f540f9e7e65218dfbdbe590f7392f16904bd34941f41f",
+  "training_study_id": "113"
+}

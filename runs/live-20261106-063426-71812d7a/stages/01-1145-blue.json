@@ -1,0 +1,117 @@
+{
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s1",
+        "error_type": "contradiction",
+        "evidence": "The lungs appear to be normal in volume. The diaphragms are at the level of the 9th-10th posterior ribs, and the retrosternal space is not significantly increased.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      },
+      {
+        "sentence_id": "s9",
+        "error_type": "contradiction",
+        "evidence": "The lungs appear to be normal in volume. The diaphragms are at the level of the 9th-10th posterior ribs, and the retrosternal space is not significantly increased.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": [
+          "s1"
+        ]
+      }
+    ],
+    "limitations": "The vision model noted limitations in definitively assessing subtle changes in lung volume without prior imaging for comparison, and that variations in patient inspiration can affect perceived lung volume."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "error",
+        "findings": [
+          {
+            "sentence_id": "s1",
+            "error_type": "contradiction",
+            "evidence": "The lungs appear to be normal in volume. The diaphragms are at the level of the 9th-10th posterior ribs, and the retrosternal space is not significantly increased.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          },
+          {
+            "sentence_id": "s9",
+            "error_type": "contradiction",
+            "evidence": "The lungs appear to be normal in volume. The diaphragms are at the level of the 9th-10th posterior ribs, and the retrosternal space is not significantly increased.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": [
+              "s1"
+            ]
+          }
+        ],
+        "limitations": "The vision model noted limitations in definitively assessing subtle changes in lung volume without prior imaging for comparison, and that variations in patient inspiration can affect perceived lung volume."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Are the lungs hyperexpanded or normal in volume?",
+      "observation": "The lungs appear to be normal in volume. The diaphragms are at the level of the 9th-10th posterior ribs, and the retrosternal space is not significantly increased.",
+      "limitations": "Without prior imaging for comparison, it is difficult to definitively assess for subtle changes in lung volume. The inspiratory effort appears adequate, but variations in patient inspiration can affect the perceived lung volume."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there any focal airspace consolidation?",
+      "observation": "There is no definite focal airspace consolidation identified on the provided chest radiographs. The lung fields appear clear.",
+      "limitations": "The sensitivity for detecting subtle airspace consolidation on plain radiographs can be limited, especially in cases of early or atypical presentations. Overlying structures and patient positioning can obscure findings. Without clinical context or comparison imaging, the significance of subtle findings cannot be fully assessed."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Lungs are hyperexpanded."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is no focal airspace consolidation."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No suspicious pulmonary mass or nodule is seen."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pleural effusion or pneumothorax."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: Normal heart size and mediastinal contour."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No focal air space consolidation."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: 2."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: Lungs are normal in volume."
+    }
+  ],
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

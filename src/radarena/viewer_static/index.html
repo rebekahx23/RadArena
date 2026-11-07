@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101416">
+  <title>RadArena — Observer</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <aside class="rail">
+    <a class="brand" href="/" aria-label="RadArena home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 26 16 3l13 23H3Z M10 26l6-11 6 11 M9 16h14"/></svg><span>RAD<span class="brand-light">ARENA</span><small>RESEARCH OBSERVATORY</small></span></a>
+    <div class="rail-heading"><span>EXPERIMENT LIBRARY</span><span id="run-count" class="counter">0</span></div>
+    <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Find a run…" aria-label="Find a run"></label>
+    <nav id="run-list" aria-label="Recorded runs"><p class="empty">Loading local traces…</p></nav>
+    <div id="live-rail" hidden><div class="rail-heading">LIVE SESSIONS</div><nav id="live-sessions" aria-label="Live demo sessions"></nav><p class="live-rail-note">A fresh report attack on every launch. Historical traces stay in their own workspace.</p></div>
+    <div class="rail-bottom"><span class="status-dot"></span><span>LOCAL ARENA<small id="rail-mode">Trace playback · no inference</small></span><span class="version">02</span></div>
+  </aside>
+
+  <main>
+    <header class="topbar"><div class="breadcrumb">WORKSPACE <span>/</span> <b>ARENA OBSERVER</b></div><div class="top-actions"><span class="local-label">READ ONLY</span><button id="refresh-run" class="quiet" aria-label="Refresh selected run" title="Refresh selected run">↻ Refresh</button><button id="watch" class="quiet" aria-pressed="false"><span class="status-dot"></span>Watch new calls</button><button id="tools-button" class="outline">Tool registry <span>↗</span></button></div></header>
+    <nav class="page-tabs" aria-label="Arena workspaces"><button id="page-history" aria-pressed="true">Historical runs <span>01</span></button><button id="page-live" aria-pressed="false"><i class="status-dot"></i> Live Arena <span>02</span></button></nav>
+    <div id="notice" role="status" hidden></div>
+    <section id="live-page" hidden>
+      <div class="live-intro"><div><div class="eyebrow">REAL INFERENCE / DEMO WORKSPACE</div><h1>The arena is live<span>.</span></h1><p>Original study in. Fresh attack out. Watch every handoff.</p></div><span class="live-seal">UNCACHED<br>MODEL CALLS</span></div>
+      <form id="live-form" class="live-launch">
+        <button type="button" id="live-config-toggle" class="live-config-toggle" aria-expanded="true">Match setup <span>Collapse ↑</span></button>
+        <section id="judge-crew-config" class="judge-crew-config" aria-label="Judge crew for new runs"></section>
+        <fieldset id="live-options"><legend>SET THE MATCH</legend><div class="live-settings">
+          <label>STUDIES<input id="live-studies" type="number" min="1" max="10" step="1" value="1" required><small>1–10 original studies, sampled fresh</small></label>
+          <label>SPENDING CAP · USD<input id="live-budget" type="number" min="0.5" max="3" step="0.5" value="1" required><small>Stops before an unreservable request</small></label>
+          <label class="live-check"><input id="live-controls" type="checkbox" checked><span>Unchanged controls<small>Also verify each original report</small></span></label>
+          <label class="live-check"><input id="live-learn" type="checkbox" checked><span>Update agent memories<small>Consensus feedback + rule review</small></span></label>
+        </div><details class="live-seed"><summary>Set starting memories <span>role-private · one rule per line</span></summary><div class="live-seed-grid"><label class="red-ink">RED / STARTING RULES<textarea id="live-red-rules" rows="3" placeholder="Empty: start without learned rules" aria-label="Red starting memory rules"></textarea></label><label class="blue-ink">BLUE / STARTING RULES<textarea id="live-blue-rules" rows="3" placeholder="Empty: start without learned rules" aria-label="Blue starting memory rules"></textarea></label></div><p>Up to 12 rules per role. Each agent sees only its own memory. Demo updates use model review, without the research runner’s measured performance gate.</p></details></fieldset>
+        <div class="live-launch-bottom"><div><p id="live-readiness">Checking local runner…</p><small id="live-models">Two agents · two independent-call judges · actual provider costs</small></div><button id="live-start" class="live-start" type="submit" disabled>Start live run <span>↗</span></button></div>
+        <p id="live-error" role="alert" hidden></p>
+      </form>
+      <label id="live-session-picker" class="live-session-picker" hidden>LIVE SESSION<select id="live-session" aria-label="Select live session"></select></label>
+      <section id="live-monitor" class="live-monitor" aria-label="Live run progress" hidden>
+        <div class="live-monitor-head"><div><span id="live-status" class="live-status">RUNNING</span><b id="live-run-id"></b></div><div class="live-monitor-actions"><label><input id="live-follow" type="checkbox" checked>Follow live</label><button type="button" id="live-stop">Stop after current request</button></div></div>
+        <section id="live-outcome" class="match-outcome" aria-label="Match result" aria-live="polite"></section>
+        <div class="live-scoreboard"><div><span>STUDIES FINISHED</span><b id="live-progress">0 / 1</b></div><div><span>ELAPSED</span><b id="live-elapsed">00:00</b></div><div><span>ACCOUNTED / CAP</span><b id="live-spend">$0 / $1</b></div><div><span>REQUESTS</span><b id="live-requests">0</b></div></div>
+        <p class="live-cost-note">Accounted spend includes conservative reserves for in-flight or unknown charges; reserves settle when provider costs arrive.</p>
+        <div id="live-phases" class="live-phases"></div><div class="live-now" aria-live="polite"><span class="status-dot"></span><p id="live-message">Waiting for the first request…</p><small id="live-heartbeat"></small></div>
+        <div class="live-memory-heading"><h2>Agent memories</h2><span>Current active rules · inspect earlier checkpoints below</span></div><div id="live-memories" class="live-memories"></div>
+      </section>
+      <div id="live-waiting" class="live-waiting"><span>[ R → B → J ]</span><h2>Ready for a fresh match.</h2><p>Red modifies the report during the run. Blue checks the candidate against the study images. Judges review the actual outcome. Results appear as each request starts and finishes.</p></div>
+    </section>
+    <div id="observer-content">
+    <section class="run-heading"><div><div class="eyebrow"><span class="tiny-cross">+</span> ADVERSARIAL REPORT VERIFICATION</div><h1>Inside the arena<span>.</span></h1><p id="run-subtitle">An image. Two agents. Every action in view.</p></div><div class="headline-stats"><div><span>RUN ACCOUNTED</span><strong id="run-cost">—</strong><small id="cost-note">Recorded cost in USD</small><small class="cost-split"><span>Contestants <b id="agent-total-cost">—</b></span><span>Judges <b id="judge-total-cost">—</b></span></small></div><div><span>MODEL REQUESTS</span><strong id="run-calls">—</strong><small id="episode-count">— episodes</small></div></div></section>
+
+    <section class="session-bar"><div class="session-label"><span class="bracket">[</span><span>OBSERVING<small id="run-name">Select a run</small></span><span class="bracket">]</span></div><label class="episode-picker"><span>CASE / CONDITION</span><select id="episode" aria-label="Select study and condition"></select></label><div class="session-meta"><span id="case-kind">—</span><span id="record-status" class="tag">RECORDED</span></div></section>
+
+    <section id="live-report-diff" class="live-report-diff" aria-label="Runtime report changes" hidden></section>
+    <section id="experiment-context" class="experiment-context" aria-label="Experiment and memory context" hidden></section>
+    <div class="workspace-toolbar">
+      <nav class="workspace-tabs" aria-label="Workspace views"><button id="view-arena" aria-pressed="true"><span class="role-dots"><i></i><i></i></span>Agent arena</button><button id="view-judge" aria-pressed="false"><span class="judge-dot"></span>Judge review <span id="review-count" class="counter">0</span></button></nav>
+      <span id="workspace-caption">Red creates the challenge. Blue checks the evidence.</span>
+    </div>
+    <section class="arena" id="arena" aria-label="Agent arena">
+      <article class="agent red"><div class="agent-heading"><span class="team-mark">R</span><div><h2>Red team</h2><p>ATTACKER</p></div><span id="red-state" class="agent-state">READY</span></div><div class="agent-body" id="red-context"></div><div class="agent-footer"><span>AGENT SPEND</span><b id="red-cost">—</b></div></article>
+
+      <article class="image-panel"><div class="panel-heading"><h2><span class="view-mark">▣</span> Study viewport</h2><span id="image-meta" class="mono">IU / OPENI</span></div><div id="viewport" class="viewport"><img id="study-image" alt="Selected study chest X-ray" draggable="false"><div class="image-overlay top-left"><b id="study-label">STUDY —</b><span>CHEST RADIOGRAPH</span><span id="view-label">—</span></div><div class="image-overlay top-right"><span id="image-context">STUDY REFERENCE</span><span id="image-count">—</span></div><div class="image-overlay bottom-left"><span id="window-label">BRIGHTNESS 100 · CONTRAST 100</span><span id="zoom-label">FIT TO VIEW</span></div><span class="viewport-cross cross-top"></span><span class="viewport-cross cross-bottom"></span><div id="image-empty" class="image-empty" hidden>Study image unavailable</div></div><div class="image-toolbar"><div class="image-buttons"><button id="zoom-out" title="Zoom out" aria-label="Zoom out">−</button><button id="zoom-in" title="Zoom in" aria-label="Zoom in">+</button><button id="invert" title="Invert image" aria-label="Invert image" aria-pressed="false">◐</button><button id="reset-image" title="Reset image adjustments">Fit</button></div><label title="Image contrast">C <input id="contrast" aria-label="Image contrast" type="range" min="50" max="200" value="100"></label><label title="Image brightness">B <input id="brightness" aria-label="Image brightness" type="range" min="50" max="170" value="100"></label></div><div id="thumbnails" class="thumbnails" aria-label="Study image views"></div></article>
+
+      <article class="agent blue"><div class="agent-heading"><span class="team-mark">B</span><div><h2>Blue team</h2><p>VERIFIER</p></div><span id="blue-state" class="agent-state">READY</span></div><div class="agent-body" id="blue-context"></div><div class="agent-footer"><span>AGENT SPEND</span><b id="blue-cost">—</b></div></article>
+      <article class="judge-panel" id="judge-panel" aria-label="Independent judge review" hidden>
+        <div class="judge-heading"><span class="team-mark">J</span><div><h2>Independent judge</h2><p>POST-HOC REVIEW</p></div><span id="judge-state" class="tag">NOT RUN</span><button id="jump-judge" class="quiet" disabled>Inspect request ↗</button></div>
+        <div class="judge-selector"><label for="judge-select">REVIEWER</label><select id="judge-select" aria-label="Select judge review"></select><span id="judge-scope"></span></div>
+        <div id="judge-content" aria-live="polite"><p>No independent judge has reviewed this episode.</p></div>
+        <div class="agent-footer"><span>JUDGE SPEND · THIS REVIEW</span><b id="judge-cost">—</b></div>
+      </article>
+    </section>
+
+    <section id="episode-summary" class="episode-summary" aria-label="Episode outcome and scoring"></section>
+    <section class="activity"><div class="activity-header"><div><span class="eyebrow">THE ACTION TAPE</span><h2>Follow the evidence.</h2><p id="current-action" class="current-action">Choose an action to see its inputs and response.</p></div><div class="playback"><span id="step-label" class="mono">0 / 0</span><button id="prev" class="quiet" aria-label="Previous action">←</button><button id="play" class="play" aria-label="Replay recorded actions">▶ <span>Replay</span></button><button id="next" class="quiet" aria-label="Next action">→</button><select id="speed" aria-label="Replay speed"><option value="1600">1×</option><option value="800">2×</option><option value="400">4×</option></select></div></div><div id="timeline" class="timeline" aria-label="Model request timeline"></div></section>
+
+    <section class="inspector"><div class="inspector-heading"><div><span id="call-role" class="call-role">ACTION</span><h2 id="call-name">Select a recorded request</h2><span id="call-status" class="tag">—</span></div><div class="call-metrics"><span id="call-duration">—</span><span id="call-tokens">—</span><b id="call-cost">—</b></div></div><div class="inspector-tabs" role="tablist" aria-label="Request details"><button role="tab" id="tab-output" data-tab="output" aria-selected="true">Response</button><button role="tab" id="tab-input" data-tab="input" aria-selected="false">Full request context</button><button role="tab" id="tab-usage" data-tab="usage" aria-selected="false">Usage & cost</button><span id="call-model" class="mono"></span></div><div id="call-content" role="tabpanel" aria-labelledby="tab-output"></div></section>
+
+    </div>
+    <footer class="page-footer"><span><i class="status-dot"></i> Observable prompts, actions & outputs · researcher view</span><span>Research demo · clinical validity not adjudicated</span><span class="footer-brand">RADARENA / 2026</span></footer>
+  </main>
+
+  <dialog id="tools-dialog"><div class="dialog-heading"><div><div class="eyebrow">CAPABILITIES & ACCOUNTING</div><h2>The tool registry.</h2></div><button id="close-tools" aria-label="Close tool registry">×</button></div><p class="dialog-note">DSPy actions available in the harness. Each model request is metered separately; retries and parsing fallbacks appear as additional requests. Costs below come from this recorded run.</p><div id="tool-list"></div><div class="dialog-note">Handbook reads run locally after chapter selection. Optional local report extraction has no provider request charge and is outside the model-request tape. Token prices depend on the model and provider; the observer does not estimate future charges.</div></dialog>
+  <script src="/app.js" defer></script>
+  <script src="/live.js" defer></script>
+</body>
+</html>

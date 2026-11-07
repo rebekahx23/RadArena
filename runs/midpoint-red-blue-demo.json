@@ -1,0 +1,369 @@
+{
+  "study_id": "113",
+  "split": "train",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart and mediastinum are unremarkable."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There are two subcentimeter hyperdense nodular opacities are noted within the right lung."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: These may represent XXXX on end or alternatively, calcified granulomas."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: The lungs are clear without infiltrate."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: There is no effusion or pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No acute cardiopulmonary disease."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart and mediastinum are unremarkable."
+    },
+    {
+      "id": "s2",
+      "text": "There are two subcentimeter hyperdense nodular opacities are noted within the left lung."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: These may represent XXXX on end or alternatively, calcified granulomas."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: The lungs are clear without infiltrate."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: There is no effusion or pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No acute cardiopulmonary disease."
+    }
+  ],
+  "private_attack": {
+    "edits": [
+      {
+        "sentence_id": "s2",
+        "replacement": "There are two subcentimeter hyperdense nodular opacities are noted within the left lung."
+      }
+    ],
+    "rationale": "Changing the laterality of the lung nodules from right to left to introduce a laterality error as requested.",
+    "requested_error_type": "laterality",
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s2",
+        "error_type": "presence_absence",
+        "evidence": "The images show a subtle opacity in the left lower lung field, approximately 2-3 cm in diameter (vision_1).",
+        "tool_call_ids": [
+          "vision_1"
+        ]
+      },
+      {
+        "sentence_id": "s5",
+        "error_type": "presence_absence",
+        "evidence": "The images show no obvious large pleural effusion or pneumothorax (vision_3).",
+        "tool_call_ids": [
+          "vision_3"
+        ]
+      }
+    ],
+    "limitations": "The size estimation of the opacity in the left lung is difficult due to the lack of clear borders and the quality of the images (vision_1). The assessment of opacities is subjective and relies on interpretation of grayscale variations (vision_1, vision_2). The assessment of pleural effusion/pneumothorax is limited by the 2D nature of the X-ray images and the possibility of missing small effusions/pneumothoraces (vision_3)."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there a visible opacity in the left lung, and if so, what is its approximate size?",
+      "observation": "The images show a chest X-ray series including a PA view, an AP view, and a lateral view. In the PA and AP views, there appears to be a subtle opacity in the left lower lung field. It is not sharply defined and could be due to several factors. The lateral view does not clearly delineate the opacity, but it appears to correspond to the area of increased density seen on the PA and AP views. Estimating the size is difficult due to the lack of clear borders, but it appears to be approximately 2-3 cm in diameter. There is also a possible small opacity in the right lung, but it is less distinct.",
+      "limitations": "The assessment of opacity is subjective and relies on interpretation of grayscale variations. The lack of a prior X-ray for comparison makes it difficult to determine if this is a new finding. The quality of the images and the presence of overlying structures limit precise size estimation. Further investigation with additional imaging (e.g., CT scan) would be necessary to characterize the opacity definitively."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are there any other opacities visible in either lung?",
+      "observation": "The provided images are chest X-rays in AP and lateral views. The lung fields appear generally clear, without large, well-defined opacities. There is some normal shadowing from the vasculature and soft tissues. Subtle differences in density are present, but it is difficult to determine if these represent pathology or normal anatomical variation without comparison to prior imaging or clinical context. The lateral view shows the heart border and some soft tissue density, but no obvious consolidation or mass is seen. There is some mild haziness in the lower lung fields bilaterally, which could be due to a number of factors including normal anatomy, patient positioning, or mild fluid accumulation.",
+      "limitations": "The assessment is limited by the lack of prior imaging for comparison. The quality of the images is adequate, but subtle opacities could be missed. Without clinical information, it is difficult to determine the significance of any observed findings. The images are static and do not provide information about changes over time."
+    },
+    {
+      "tool_call_id": "vision_3",
+      "question": "Is there any pleural effusion or pneumothorax visible?",
+      "observation": "The images show a standard chest X-ray series including a PA view, an AP view, and a lateral view. There is no obvious large pleural effusion or pneumothorax visible in any of the views. The costophrenic angles appear reasonably sharp, though subtle effusions can be difficult to detect on a single view. There is some opacity in the right lower lung field on the PA view, but this could be due to a number of factors and is not definitively a pleural effusion. The lung fields are generally clear, and there is no evidence of a pneumothorax (no visible pleural line).",
+      "limitations": "The assessment is limited by the 2D nature of the X-ray images. Small effusions or pneumothoraces may be missed. A comparison to prior imaging would be helpful to assess for any changes. The image quality is adequate, but higher resolution images could provide more detail. I am an AI and cannot provide medical diagnoses."
+    }
+  ],
+  "score": {
+    "localization_tp": 1,
+    "localization_fp": 1,
+    "localization_fn": 0,
+    "uncertain": false,
+    "injected_edit_detected": true,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "elapsed_seconds": 34.15,
+  "model_calls": [
+    {
+      "model": "openrouter/google/gemma-3-27b-it",
+      "usage": {
+        "completion_tokens": 65,
+        "prompt_tokens": 1135,
+        "total_tokens": 1200,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0,
+          "video_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0,
+          "initial_prompt_tokens": null,
+          "cache_creation_tokens": 0
+        },
+        "cost": 0.0001012,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0001012,
+          "upstream_inference_prompt_cost": 9.08e-05,
+          "upstream_inference_completions_cost": 1.04e-05
+        }
+      },
+      "reported_cost": 0.0001012,
+      "cache_hit": null
+    },
+    {
+      "model": "openrouter/google/gemma-3-27b-it",
+      "usage": {
+        "completion_tokens": 287,
+        "prompt_tokens": 2202,
+        "total_tokens": 2489,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0,
+          "video_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0,
+          "initial_prompt_tokens": null,
+          "cache_creation_tokens": 0
+        },
+        "cost": 0.00022208,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.00022208,
+          "upstream_inference_prompt_cost": 0.00017616,
+          "upstream_inference_completions_cost": 4.592e-05
+        }
+      },
+      "reported_cost": 0.00022208,
+      "cache_hit": null
+    },
+    {
+      "model": "openrouter/google/gemma-3-27b-it",
+      "usage": {
+        "completion_tokens": 68,
+        "prompt_tokens": 2132,
+        "total_tokens": 2200,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0,
+          "video_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0,
+          "initial_prompt_tokens": null,
+          "cache_creation_tokens": 0
+        },
+        "cost": 0.00018144,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.00018144,
+          "upstream_inference_prompt_cost": 0.00017056,
+          "upstream_inference_completions_cost": 1.088e-05
+        }
+      },
+      "reported_cost": 0.00018144,
+      "cache_hit": null
+    },
+    {
+      "model": "openrouter/google/gemma-3-27b-it",
+      "usage": {
+        "completion_tokens": 223,
+        "prompt_tokens": 1040,
+        "total_tokens": 1263,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0,
+          "video_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0,
+          "initial_prompt_tokens": null,
+          "cache_creation_tokens": 0
+        },
+        "cost": 0.00011888,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.00011888,
+          "upstream_inference_prompt_cost": 8.32e-05,
+          "upstream_inference_completions_cost": 3.568e-05
+        }
+      },
+      "reported_cost": 0.00011888,
+      "cache_hit": null
+    },
+    {
+      "model": "openrouter/google/gemma-3-27b-it",
+      "usage": {
+        "completion_tokens": 207,
+        "prompt_tokens": 1032,
+        "total_tokens": 1239,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0,
+          "video_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0,
+          "initial_prompt_tokens": null,
+          "cache_creation_tokens": 0
+        },
+        "cost": 0.00011568,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.00011568,
+          "upstream_inference_prompt_cost": 8.256e-05,
+          "upstream_inference_completions_cost": 3.312e-05
+        }
+      },
+      "reported_cost": 0.00011568,
+      "cache_hit": null
+    },
+    {
+      "model": "openrouter/google/gemma-3-27b-it",
+      "usage": {
+        "completion_tokens": 207,
+        "prompt_tokens": 1031,
+        "total_tokens": 1238,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null,
+          "text_tokens": null,
+          "image_tokens": 0,
+          "video_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null,
+          "video_tokens": 0,
+          "initial_prompt_tokens": null,
+          "cache_creation_tokens": 0
+        },
+        "cost": 0.0001156,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0001156,
+          "upstream_inference_prompt_cost": 8.248e-05,
+          "upstream_inference_completions_cost": 3.312e-05
+        }
+      },
+      "reported_cost": 0.0001156,
+      "cache_hit": null
+    }
+  ],
+  "memory_learning": "not implemented; all strategy inputs empty",
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "handbook_access": {}
+}

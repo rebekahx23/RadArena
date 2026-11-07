@@ -1,0 +1,64 @@
+{
+  "study_id": "2766",
+  "source": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: There is mild to moderate cardiomegaly."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: Tortuous and ectatic appearing aorta."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: No overt edema."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No focal infiltrate."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No pleural effusion or pneumothorax is seen."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: There is mild to moderate cardiomegaly."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: Tortuous and ectatic appearing aorta."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: No overt edema."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No focal infiltrate."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No pleural effusion or pneumothorax is seen."
+    },
+    {
+      "id": "a1",
+      "text": "IMPRESSION: There is a small right apical pneumothorax."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new finding to the impression that is not supported by the image."
+    }
+  ],
+  "rationale": "I have introduced a fabrication error by adding a new sentence to the impression stating 'There is a small right apical pneumothorax.' This finding is not visible in the provided images, creating a clinically significant error. This aligns with the instruction to 'Introduce fabrication errors by adding new, clinically significant findings to the impression that are not supported by the image or other findings in the report.'",
+  "eligible": true,
+  "memory_sha256": "fade623ff0eba990389a5745f11212bf7148e7624993d52f038639d3471506eb"
+}

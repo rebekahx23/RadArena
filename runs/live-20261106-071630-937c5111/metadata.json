@@ -1,0 +1,32 @@
+{
+  "live_demo": true,
+  "initial_memories": {
+    "red": {
+      "initial": []
+    },
+    "blue": {
+      "initial": []
+    }
+  },
+  "judges": [
+    "google/gemma-3-27b-it",
+    "google/gemini-2.5-flash",
+    "qwen/qwen3-vl-30b-a3b-instruct"
+  ],
+  "model": "google/gemini-2.5-flash",
+  "response_cache": false,
+  "judge_backups": {
+    "google/gemma-3-27b-it": "qwen/qwen3-vl-8b-instruct"
+  },
+  "review_policy": "majority_distinct_families_v1",
+  "options": {
+    "studies": 2,
+    "budget": 1,
+    "controls": true,
+    "learn": true,
+    "red_rules": [],
+    "blue_rules": [],
+    "launch_id": "104b4111-d434-4e75-b338-9b1c4847b462"
+  },
+  "protocol": "Fresh uncached model calls on randomly selected original training reports. Red edits at runtime; Blue receives only candidate reports and its own memories. Optional unchanged controls. Three independent-call reviews; one shares the contestant model family. Demo memory updates use consensus feedback and rule review, without measured performance gates."
+}

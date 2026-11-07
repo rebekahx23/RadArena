@@ -1,0 +1,7 @@
+{
+  "after_completed_episodes": 6,
+  "change": "One bounded mechanical correction for an invalid Blue verdict using the same images/observations and public candidate IDs only. Original citation/decision validation unchanged.",
+  "reason": "Case 7 produced an uncited accusation; rejected output remains in audit.",
+  "completed_outputs_preserved": true,
+  "paired_final_probe_uses_same_corrected_pipeline": true
+}

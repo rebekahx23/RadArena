@@ -1,0 +1,97 @@
+{
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s3",
+        "error_type": "Presence",
+        "evidence": "There is evidence of bilateral pleural effusions, more prominent on the right, with associated blunting of the costophrenic angles. No definite pneumothorax is identified.",
+        "tool_call_ids": [
+          "vision_2"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      },
+      {
+        "sentence_id": "a1",
+        "error_type": "Presence",
+        "evidence": "The images show very low lung volumes. There is evidence of bronchovascular crowding, particularly in the lower lung zones. Bibasilar areas of atelectasis are visible, consistent with the low lung volumes and crowding.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      }
+    ],
+    "limitations": "The semi-upright position of the frontal radiograph and the single lateral view may limit the full assessment of lung volumes and the extent of atelectasis, especially in the posterior sulci. The overall image quality is suboptimal for detailed evaluation of subtle parenchymal changes. The images are semi-upright and may not fully demonstrate small effusions or pneumothoraces. The quality of the images is suboptimal for detailed evaluation of lung parenchyma. The patchy opacities are non-specific and could represent various etiologies, including consolidation, atelectasis, or interstitial changes. Without prior imaging for comparison, it is difficult to assess chronicity or change."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "error",
+        "findings": [
+          {
+            "sentence_id": "s3",
+            "error_type": "Presence",
+            "evidence": "There is evidence of bilateral pleural effusions, more prominent on the right, with associated blunting of the costophrenic angles. No definite pneumothorax is identified.",
+            "tool_call_ids": [
+              "vision_2"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          },
+          {
+            "sentence_id": "a1",
+            "error_type": "Presence",
+            "evidence": "The images show very low lung volumes. There is evidence of bronchovascular crowding, particularly in the lower lung zones. Bibasilar areas of atelectasis are visible, consistent with the low lung volumes and crowding.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          }
+        ],
+        "limitations": "The semi-upright position of the frontal radiograph and the single lateral view may limit the full assessment of lung volumes and the extent of atelectasis, especially in the posterior sulci. The overall image quality is suboptimal for detailed evaluation of subtle parenchymal changes. The images are semi-upright and may not fully demonstrate small effusions or pneumothoraces. The quality of the images is suboptimal for detailed evaluation of lung parenchyma. The patchy opacities are non-specific and could represent various etiologies, including consolidation, atelectasis, or interstitial changes. Without prior imaging for comparison, it is difficult to assess chronicity or change."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Are there very low lung volumes, bronchovascular crowding, and bibasilar areas of atelectasis visible?",
+      "observation": "The images show very low lung volumes. There is evidence of bronchovascular crowding, particularly in the lower lung zones. Bibasilar areas of atelectasis are visible, consistent with the low lung volumes and crowding.",
+      "limitations": "The semi-upright position of the frontal radiograph and the single lateral view may limit the full assessment of lung volumes and the extent of atelectasis, especially in the posterior sulci. The overall image quality is suboptimal for detailed evaluation of subtle parenchymal changes."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there any lobar consolidation, pleural effusion, or pneumothorax visible?",
+      "observation": "There is evidence of bilateral pleural effusions, more prominent on the right, with associated blunting of the costophrenic angles. There is also evidence of patchy opacities in both lung fields, which could represent consolidation or atelectasis. No definite pneumothorax is identified.",
+      "limitations": "The images are semi-upright and may not fully demonstrate small effusions or pneumothoraces. The quality of the images is suboptimal for detailed evaluation of lung parenchyma. The patchy opacities are non-specific and could represent various etiologies, including consolidation, atelectasis, or interstitial changes. Without prior imaging for comparison, it is difficult to assess chronicity or change."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: Very low lung volumes, bronchovascular crowding and bibasilar areas of atelectasis."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No lobar consolidation."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: No appreciable pleural effusion or pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: Heart size within normal limits."
+    },
+    {
+      "id": "a1",
+      "text": "IMPRESSION: Mild cardiomegaly."
+    }
+  ],
+  "memory_sha256": "bfd302f95ec0e3544439172bb4de0cebb54cc9c3ac07715c850319eea4bc8860"
+}

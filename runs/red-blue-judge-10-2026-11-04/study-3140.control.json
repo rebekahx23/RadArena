@@ -1,0 +1,120 @@
+{
+  "study_id": "3140",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: Streaky opacities in the right lower lobe most suggestive of atelectasis, differential diagnosis includes atypical infection."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No definite pleural effusion seen."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: Heart size within normal limits, no typical findings of pulmonary edema."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: Streaky opacities in the right lower lobe most suggestive of atelectasis, differential diagnosis includes atypical infection."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No definite pleural effusion seen."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: Heart size within normal limits, no typical findings of pulmonary edema."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3140_IM-1477-1001.dcm.png",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3140_IM-1477-2001.dcm.png"
+  ],
+  "clinical_context": "XXXX-year-old female, chest pain, XXXX symptoms",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [],
+    "rationale": "Unchanged source report control",
+    "requested_error_type": null,
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The image quality is moderate, and subtle effusions may be missed. It is difficult to definitively characterize the nature of the opacities (e.g., streaky vs. consolidated) based on these images alone. A clinical correlation would be necessary to interpret these findings."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there evidence of streaky opacities in the right lower lobe?",
+      "observation": "The frontal chest x-ray shows some areas of increased opacity in the right lower lobe, which could potentially be described as streaky. The lateral view also demonstrates increased opacity in the right lower lobe. However, it is difficult to definitively characterize these opacities as 'streaky' without a higher resolution image or comparison to prior imaging. The opacities could also represent consolidation or other lung pathology.",
+      "limitations": "The assessment is limited by the image quality and the lack of prior imaging for comparison. It is difficult to definitively characterize the nature of the opacities (e.g., streaky vs. consolidated) based on these images alone. A clinical correlation would be necessary to interpret these findings."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is a pleural effusion visible?",
+      "observation": "The frontal chest x-ray shows relatively clear lung fields bilaterally, with no obvious blunting of the costophrenic angles which could suggest a pleural effusion. The lateral view shows a relatively clear costophrenic angle as well. However, subtle effusions can be difficult to detect on standard chest radiographs, and the images are limited in their ability to definitively rule out a small pleural effusion.",
+      "limitations": "The assessment is based on a single set of chest radiographs. Comparison to prior imaging is unavailable. The resolution of the images is moderate, and subtle effusions may be missed. The images are limited in their ability to detect small amounts of fluid."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 0,
+    "uncertain": false,
+    "injected_edit_detected": null,
+    "unchanged_control_flagged": false,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

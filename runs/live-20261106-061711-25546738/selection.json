@@ -1,0 +1,50 @@
+[
+  {
+    "study_id": "2471",
+    "split": "train",
+    "image_ids": [
+      "2471_IM-1002-1001.dcm.png",
+      "2471_IM-1002-1002.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2471_IM-1002-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2471_IM-1002-1002.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The trachea is midline."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The cardiomediastinal silhouette is normal and unchanged compared to prior examination."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Lungs are clear, without evidence of acute infiltrate or effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: There is no pneumothorax."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: The visualized bony structures reveal no acute abnormalities."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormalities."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "bbcb777c878db490a9d7e361b4ce8b3b1a2df6d466d29c8202ab6ffc3b971a4c",
+      "9dfe4fe689b9c050780f0e46b4ad53d72f890ff49c8e3e833ca9301c49b57c86"
+    ]
+  }
+]

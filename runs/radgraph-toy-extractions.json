@@ -1,0 +1,192 @@
+{
+  "extractor": {
+    "tool": "RadGraph",
+    "package_version": "0.1.18",
+    "model_type": "radgraph-xl",
+    "device": "cpu",
+    "model_files_sha256": {
+      "config.json": "985554e4df559a6b6d348bf4c4541cc4c353a768dfe7d533464cbf101d9a39b2",
+      "vocabulary/.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vocabulary/non_padded_namespaces.txt": "863044919d9f9c1c04aba282ac981ab0157d6ab08737a96c72f7e15887911db0",
+      "vocabulary/radgraph-xl__ner_labels.txt": "c532272c568f3beddd583cd643441cd7102f2e9b958fee57d64745b1f6213755",
+      "vocabulary/radgraph-xl__relation_labels.txt": "cb735684302c8abb3a906adf01be34d2205473f146dc6e90c6ba9ea5d65082b9",
+      "weights.th": "fdc4780bbeb7c2f9a2457ed20da842f80b2eaf057063e54951991645fa1d5464"
+    },
+    "scope": "sentence-level extraction; cross-sentence relations are not modeled",
+    "evidence_type": "report text claims, not image observations"
+  },
+  "graph": {
+    "report_sha256": "5784ae1814dc20834ae9d9770b64ffaa43f6bb5ccc3614d9801103f205cd9e4e",
+    "extractor_fingerprint": "cc57ec1986bde7c3b856fbd3e7ab4de15af78ce9bc7b9696def135e31318a930",
+    "sentences": [
+      {
+        "sentence_id": "s1",
+        "source_text": "No pneumothorax.",
+        "extraction_input": "No pneumothorax.",
+        "raw_annotation": {
+          "text": "No pneumothorax .",
+          "entities": {
+            "1": {
+              "tokens": "pneumothorax",
+              "label": "Observation::definitely absent",
+              "start_ix": 1,
+              "end_ix": 1,
+              "relations": []
+            }
+          },
+          "data_source": null,
+          "data_split": "inference"
+        },
+        "claims": [
+          {
+            "entity_id": "1",
+            "observation": "pneumothorax",
+            "qualified_observation": "pneumothorax",
+            "status": "absent",
+            "anatomy": [],
+            "modifiers": [],
+            "relations": []
+          }
+        ]
+      },
+      {
+        "sentence_id": "s2",
+        "source_text": "pneumothorax.",
+        "extraction_input": "pneumothorax.",
+        "raw_annotation": {
+          "text": "pneumothorax .",
+          "entities": {
+            "1": {
+              "tokens": "pneumothorax",
+              "label": "Observation::definitely absent",
+              "start_ix": 0,
+              "end_ix": 0,
+              "relations": []
+            }
+          },
+          "data_source": null,
+          "data_split": "inference"
+        },
+        "claims": [
+          {
+            "entity_id": "1",
+            "observation": "pneumothorax",
+            "qualified_observation": "pneumothorax",
+            "status": "absent",
+            "anatomy": [],
+            "modifiers": [],
+            "relations": []
+          }
+        ]
+      },
+      {
+        "sentence_id": "s3",
+        "source_text": "There is a pneumothorax.",
+        "extraction_input": "There is a pneumothorax.",
+        "raw_annotation": {
+          "text": "There is a pneumothorax .",
+          "entities": {
+            "1": {
+              "tokens": "pneumothorax",
+              "label": "Observation::definitely absent",
+              "start_ix": 3,
+              "end_ix": 3,
+              "relations": []
+            }
+          },
+          "data_source": null,
+          "data_split": "inference"
+        },
+        "claims": [
+          {
+            "entity_id": "1",
+            "observation": "pneumothorax",
+            "qualified_observation": "pneumothorax",
+            "status": "absent",
+            "anatomy": [],
+            "modifiers": [],
+            "relations": []
+          }
+        ]
+      },
+      {
+        "sentence_id": "s4",
+        "source_text": "Possible small left pleural effusion.",
+        "extraction_input": "Possible small left pleural effusion.",
+        "raw_annotation": {
+          "text": "Possible small left pleural effusion .",
+          "entities": {
+            "1": {
+              "tokens": "small",
+              "label": "Observation::uncertain",
+              "start_ix": 1,
+              "end_ix": 1,
+              "relations": []
+            },
+            "2": {
+              "tokens": "left",
+              "label": "Anatomy::definitely present",
+              "start_ix": 2,
+              "end_ix": 2,
+              "relations": [
+                [
+                  "modify",
+                  "3"
+                ]
+              ]
+            },
+            "3": {
+              "tokens": "pleural",
+              "label": "Anatomy::definitely present",
+              "start_ix": 3,
+              "end_ix": 3,
+              "relations": []
+            },
+            "4": {
+              "tokens": "effusion",
+              "label": "Observation::uncertain",
+              "start_ix": 4,
+              "end_ix": 4,
+              "relations": [
+                [
+                  "located_at",
+                  "3"
+                ]
+              ]
+            }
+          },
+          "data_source": null,
+          "data_split": "inference"
+        },
+        "claims": [
+          {
+            "entity_id": "1",
+            "observation": "small",
+            "qualified_observation": "small",
+            "status": "uncertain",
+            "anatomy": [],
+            "modifiers": [],
+            "relations": []
+          },
+          {
+            "entity_id": "4",
+            "observation": "effusion",
+            "qualified_observation": "effusion",
+            "status": "uncertain",
+            "anatomy": [
+              "left pleural"
+            ],
+            "modifiers": [],
+            "relations": [
+              {
+                "type": "located_at",
+                "target_entity_id": "3",
+                "target_text": "left pleural"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

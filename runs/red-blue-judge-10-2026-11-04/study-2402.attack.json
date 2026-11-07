@@ -1,0 +1,141 @@
+{
+  "study_id": "2402",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size and mediastinal contours appear within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There are low lung volumes with left basilar subsegmental atelectasis."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No focal airspace consolidation, effusions or pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No acute bony abnormalities."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No acute cardiopulmonary findings."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size and mediastinal contours appear within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "There are low lung volumes with right basilar subsegmental atelectasis."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No focal airspace consolidation, effusions or pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No acute bony abnormalities."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No acute cardiopulmonary findings."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2402_IM-0951-1001.dcm.png",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2402_IM-0951-2001.dcm.png"
+  ],
+  "clinical_context": "XXXX-year-old female presenting with DKA",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [
+      {
+        "sentence_id": "s2",
+        "replacement": "There are low lung volumes with right basilar subsegmental atelectasis."
+      }
+    ],
+    "rationale": "Changed the laterality of the basilar atelectasis from left to right to introduce a laterality error, as requested. This change is consistent with the error type and strategies provided.",
+    "requested_error_type": "laterality",
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The assessment of atelectasis is limited by the single PA and lateral view provided. The lateral view does not clearly demonstrate volume loss, and the PA view shows only subtle increased opacity. A clinical correlation is needed to assess the significance of these findings. Assessment of heart size and mediastinal contours is limited by the single anteroposterior and lateral view provided. Comparison to prior imaging is unavailable."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there evidence of atelectasis in the right lung bases?",
+      "observation": "The PA view shows some subtle increased opacity in the right lung base, which could potentially represent atelectasis. The lateral view does not clearly demonstrate volume loss or elevation of the hemidiaphragm, which would be expected with significant atelectasis. However, the lateral view is limited in its ability to assess the true extent of basilar changes. There is also a possibility that the opacity seen on the PA view is due to other factors such as normal anatomy, fluid, or scarring.",
+      "limitations": "The assessment is limited by the single PA and lateral view provided. Comparison to prior imaging would be helpful to determine if these findings are new. The quality of the images is adequate, but subtle findings can be difficult to interpret. A clinical correlation is needed to assess the significance of these findings."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are the heart size and mediastinal contours within normal limits?",
+      "observation": "The frontal chest radiograph shows the heart size and mediastinal contours appear within normal limits. The cardiac silhouette does not appear enlarged. The mediastinum is not widened. The lateral view also supports these findings, with no obvious widening of the mediastinum or enlargement of the cardiac silhouette. However, subtle changes can be difficult to assess on a single view.",
+      "limitations": "Assessment of heart size and mediastinal contours is limited by the single anteroposterior and lateral view provided. Comparison to prior imaging is unavailable, which would be helpful to assess for any changes. The quality of the images is adequate, but higher resolution imaging could provide more detail. A formal cardiothoracic ratio measurement was not performed."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 1,
+    "uncertain": false,
+    "injected_edit_detected": false,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

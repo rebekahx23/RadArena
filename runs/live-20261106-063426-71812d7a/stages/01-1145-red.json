@@ -1,0 +1,149 @@
+{
+  "study_id": "1145",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Lungs are hyperexpanded."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is no focal airspace consolidation."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No suspicious pulmonary mass or nodule is seen."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pleural effusion or pneumothorax."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: Normal heart size and mediastinal contour."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No focal air space consolidation."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: 2."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: Hyperexpanded lungs, suggestive of emphysema."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Lungs are hyperexpanded."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is no focal airspace consolidation."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No suspicious pulmonary mass or nodule is seen."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pleural effusion or pneumothorax."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: Normal heart size and mediastinal contour."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No focal air space consolidation."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: 2."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: Lungs are normal in volume."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s9"
+      ],
+      "candidate_ids": [
+        "s9"
+      ],
+      "category": "degree",
+      "description": "Changed the description of lung volume from 'hyperexpanded, suggestive of emphysema' to 'normal in volume' in the impression, which contradicts the findings and the patient's history of emphysema."
+    }
+  ],
+  "rationale": "The original report states 'Lungs are hyperexpanded' in the findings and 'Hyperexpanded lungs, suggestive of emphysema' in the impression. The images show signs consistent with hyperexpansion (e.g., flattened hemidiaphragms, increased retrosternal air space on lateral view). The patient's indication also includes 'emphysema'. The change alters the impression to 'Lungs are normal in volume', which is a clinically plausible error in 'degree' that contradicts the findings, the visual evidence, and the patient's known history. This creates an internal inconsistency between the findings and impression, and an external inconsistency with the images and patient history.",
+  "eligible": true,
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attempts": [
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: Lungs are hyperexpanded."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: There is no focal airspace consolidation."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: No suspicious pulmonary mass or nodule is seen."
+        },
+        {
+          "id": "s4",
+          "text": "FINDINGS: No pleural effusion or pneumothorax."
+        },
+        {
+          "id": "s5",
+          "text": "FINDINGS: Normal heart size and mediastinal contour."
+        },
+        {
+          "id": "s6",
+          "text": "IMPRESSION: 1."
+        },
+        {
+          "id": "s7",
+          "text": "IMPRESSION: No focal air space consolidation."
+        },
+        {
+          "id": "s8",
+          "text": "IMPRESSION: 2."
+        },
+        {
+          "id": "s9",
+          "text": "IMPRESSION: Lungs are normal in volume."
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [
+            "s9"
+          ],
+          "candidate_ids": [
+            "s9"
+          ],
+          "category": "degree",
+          "description": "Changed the description of lung volume from 'hyperexpanded, suggestive of emphysema' to 'normal in volume' in the impression, which contradicts the findings and the patient's history of emphysema."
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

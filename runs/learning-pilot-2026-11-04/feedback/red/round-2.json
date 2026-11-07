@@ -1,0 +1,47 @@
+{
+  "requested_error_type": "presence_absence",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Normal heart size."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Clear, hyperaerated lungs."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pleural effusion."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: XXXX substernal density may be related to a pectus deformity."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+    }
+  ],
+  "own_edits": [
+    {
+      "sentence_id": "s3",
+      "replacement": "Pneumothorax is present."
+    }
+  ],
+  "own_rationale": "The error type is presence_absence, and the task is to introduce an error. The original sentence states 'No pneumothorax.' I have changed it to 'Pneumothorax is present.' to introduce a false positive finding. This change is unambiguous and consistent with the instructions.",
+  "attack_status": "syntactically_valid_clinically_unreviewed",
+  "edit_localization": {
+    "localization_tp": 1,
+    "localization_fp": 1,
+    "localization_fn": 0,
+    "uncertain": false,
+    "injected_edit_detected": true,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "validity": "Syntactic edits only; clinical image support not adjudicated"
+}

@@ -1,0 +1,43 @@
+{
+  "created_at_utc": "2026-11-04T07:33:19.108067+00:00",
+  "purpose": "development debugging; not a held-out performance claim",
+  "selection_rule": "lexicographically first study_id within each error category in frozen dev split",
+  "study_ids": [
+    "1094",
+    "1106",
+    "2036"
+  ],
+  "candidate_reports": 6,
+  "variants": [
+    "text_only",
+    "direct_vlm",
+    "blue_tools"
+  ],
+  "knowledge": "knowledge/reporting_v1.json",
+  "condition": "full",
+  "max_cost_usd": 0.18,
+  "max_calls": 80,
+  "test_split_access": "none",
+  "source_sha256": {
+    "src/radarena/__init__.py": "52a11edd15b06b91febc6d016d6c31f4754ff3c14f57b132967fcc13ae445e5c",
+    "src/radarena/agents.py": "3073aaef65f634be6edb93a555638bb098ec0ac07547a143cfc7f361da552147",
+    "src/radarena/benchmark.py": "823af8f7bd3d035646e3a276ff9b5773fe63ea64ebd3af7c50399513284441e2",
+    "src/radarena/cli.py": "4143eea5df8f9fc2e76b12fde79f5a99a5e5226ec6cbc0edb48f06bf2e39a397",
+    "src/radarena/data.py": "4c8f89ca603f90e7a56bfb94f01cd6e5588ecee0aec351f479ecac3b89064c72",
+    "src/radarena/evaluate.py": "ff3b4788ca4229c18ea1763cc12ca66bd78546e6d53c1108f033318282df57dd",
+    "src/radarena/handbook.py": "88b8c70d3646a38edbf7d678cf08db45a1743eea55ec312f4677d1c2f3816ecf",
+    "src/radarena/knowledge.py": "afb5ba1f2ec0c4cc789c2b295d536108ce0eb3ff0d5097d092fbaa3bed9badc1",
+    "src/radarena/runtime.py": "4286c19509fd085f9cd8025e4a2259e2b1c211b1cc648b6d914f98f999dccd10",
+    "src/radarena/tracing.py": "48beecce43db61153d37e6ff32093a4201cde6cf4b7bb7a545776b045dc4f9b3"
+  },
+  "success_checks": [
+    "runtime/schema completion",
+    "unchanged-control false alarms",
+    "changed-sentence localization",
+    "image observation agrees with visible evidence (manual review pending)",
+    "role-boundary and neutral-question audit",
+    "actual cost and failure analysis"
+  ],
+  "previous_attempt": "Handbook selector hallucinated an unlisted pneumonia chapter; reader correctly rejected it. Isolate the core verifier workflow with identical fixed reporting cards in all arms. Handbook selection reliability is a separate failed component to repair/evaluate later.",
+  "model": "google/gemma-3-27b-it"
+}

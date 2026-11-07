@@ -1,0 +1,9 @@
+{
+  "observed_at_utc": "2026-11-04T07:36:47.913474+00:00",
+  "usage_before_pilot_usd": 0.68575943,
+  "usage_after_pilot_usd": 0.69301321,
+  "observed_usage_increase_usd": 0.00725378,
+  "scope": "key-level usage difference; may include concurrent unrelated calls; not credit-purchase fees",
+  "provider": "OpenRouter GET /api/v1/key",
+  "credentials_logged": false
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "study_id": "3737",
+    "split": "train",
+    "image_ids": [
+      "3737_IM-1867-2001.dcm.png",
+      "3737_IM-1867-1001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3737_IM-1867-2001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3737_IM-1867-1001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Heart size within normal limits."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: No focal airspace disease."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: No acute cardiopulmonary findings."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "83d30da1a53a58702e7c599f88fb1012406d3a4b734231c8ef3fca88776927a3",
+      "c869f3fa0c177322db1c09f0803be3e421fabf7199819d5f4db7d117d9089924"
+    ]
+  },
+  {
+    "study_id": "3956",
+    "split": "train",
+    "image_ids": [
+      "3956_IM-2021-1001.dcm.png",
+      "3956_IM-2021-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3956_IM-2021-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3956_IM-2021-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: AP and lateral views of the chest were obtained."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The heart is normal size."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Mediastinum is unremarkable."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Lungs are hypoinflated but clear."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No focal consolidation is seen."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute disease"
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "c050920f9a8d4f63767fc07c225c7740def42fcbea57bafadd3c6258a6d7ce94",
+      "4e845b895958519fe5cba8d92a40cc3a58aa3494dec20e138e24953b45cbe90d"
+    ]
+  },
+  {
+    "study_id": "3630",
+    "split": "train",
+    "image_ids": [
+      "3630_IM-1798-4004.dcm.png",
+      "3630_IM-1798-1001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3630_IM-1798-4004.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3630_IM-1798-1001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Frontal and lateral views of the chest show normal size and configuration of the cardiac silhouette."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There is aortic XXXX vascular calcification."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: And there is a hyper left lung calcified granuloma."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Normal mediastinal contour, pulmonary XXXX and vasculature, central airways and lung volumes."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No pleural effusion."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: There are vascular and skeletal senescent changes."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: No acute or active cardiac, pulmonary or pleural disease."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "e3e759d2dd232d1c8dc38086d7f9826d33c4188758f3e6839aa48e7e6c67dedc",
+      "e7a9bd701ce941832687ce150f850bc06c6c45151c51418a6d4c2c6aa0fd4b67"
+    ]
+  }
+]

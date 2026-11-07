@@ -1,0 +1,70 @@
+{
+  "study_id": "2488",
+  "source": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: Heart size is normal."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: 2 cm calcified granuloma in the right midlung."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: Calcified right hilar lymph XXXX."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No other nodules or masses."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: It is unchanged XXXX compared to a XXXX for the abdomen CT scan from XXXX."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: The XXXX 40% of the nodule is on the upper portion of the XXXX film."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: Heart size is normal."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No calcified granuloma in the right midlung."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: Calcified right hilar lymph XXXX."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No other nodules or masses."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: It is unchanged XXXX compared to a XXXX for the abdomen CT scan from XXXX."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: The XXXX 40% of the nodule is on the upper portion of the XXXX film."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s2"
+      ],
+      "candidate_ids": [
+        "s2"
+      ],
+      "category": "omission",
+      "description": "The 2 cm calcified granuloma in the right midlung was omitted from the impression."
+    }
+  ],
+  "rationale": "The original image clearly shows a calcified granuloma in the right midlung. The change made was to negate the presence of this granuloma in the impression, creating an omission error. This aligns with the 'omission' category and specifically targets a quantitative finding (2 cm calcified granuloma) to create a false negative, as per the own_rules.",
+  "eligible": true,
+  "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+}

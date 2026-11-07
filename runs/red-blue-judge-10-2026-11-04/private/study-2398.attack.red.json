@@ -1,0 +1,13 @@
+{
+  "edits": [
+    {
+      "sentence_id": "s3",
+      "replacement": "FINDINGS: Low lung volumes with elevated hemidiaphragms, no asymmetry."
+    },
+    {
+      "sentence_id": "s8",
+      "replacement": "IMPRESSION: Cardiomegaly with no asymmetry of the hemidiaphragms and no acute findings."
+    }
+  ],
+  "rationale": "The task is to change the presence/absence of a finding. The original report states elevated hemidiaphragms are 'greater on the right', implying asymmetry. I have edited both the FINDINGS and IMPRESSION sections to state 'no asymmetry', effectively removing the side difference and altering the presence of the asymmetry finding."
+}

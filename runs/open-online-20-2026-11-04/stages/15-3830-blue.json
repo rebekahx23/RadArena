@@ -1,0 +1,77 @@
+{
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "a1",
+        "error_type": "contradiction",
+        "evidence": "The frontal chest radiograph shows the thoracic spine to be relatively straight without obvious lateral curvature. The lateral view does not provide sufficient information to assess for scoliosis.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      }
+    ],
+    "limitations": "The vision tool notes that the images provided are not optimized for the evaluation of scoliosis, and subtle scoliosis may not be apparent on these limited views. The lateral view does not provide sufficient information to assess for scoliosis."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "error",
+        "findings": [
+          {
+            "sentence_id": "a1",
+            "error_type": "contradiction",
+            "evidence": "The frontal chest radiograph shows the thoracic spine to be relatively straight without obvious lateral curvature. The lateral view does not provide sufficient information to assess for scoliosis.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          }
+        ],
+        "limitations": "The vision tool notes that the images provided are not optimized for the evaluation of scoliosis, and subtle scoliosis may not be apparent on these limited views. The lateral view does not provide sufficient information to assess for scoliosis."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there evidence of scoliosis on the image?",
+      "observation": "The frontal chest radiograph shows the thoracic spine to be relatively straight without obvious lateral curvature. The lateral view does not provide sufficient information to assess for scoliosis.",
+      "limitations": "The images provided are a frontal and lateral chest radiograph. These views are not optimized for the evaluation of scoliosis, which typically requires dedicated full-spine radiographs. Subtle scoliosis may not be apparent on these limited views. Additionally, the lateral view is primarily for assessing sagittal alignment and does not allow for a comprehensive evaluation of coronal plane deformities like scoliosis."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are the cardiac and mediastinal contours within normal limits?",
+      "observation": "The cardiac and mediastinal contours appear within normal limits on the frontal and lateral chest radiographs. The heart size is not enlarged, and the mediastinum does not show any obvious widening or masses.",
+      "limitations": "The assessment is based on a single frontal and lateral chest radiograph, which may not fully capture all cardiac and mediastinal structures. Subtle abnormalities or those obscured by overlying structures may not be detectable. Further imaging, such as CT, would provide a more detailed evaluation if clinically indicated."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Cardiac and mediastinal contours are within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The lungs are clear."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Bony structures are intact."
+    },
+    {
+      "id": "a1",
+      "text": "FINDINGS: There is evidence of mild scoliosis."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No acute preoperative findings."
+    }
+  ],
+  "memory_sha256": "076e2645fb8db62ba4fd687c1bc93a2886dc9f4d3c8c910e989a7000d2880f8e"
+}

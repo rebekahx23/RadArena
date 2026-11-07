@@ -1,0 +1,123 @@
+{
+  "summary": {
+    "complete": true,
+    "counts": {
+      "episodes": 20,
+      "eligible_text_changes": 20,
+      "blue_invalid": 1,
+      "control_invalid": 0,
+      "blue_error": 13,
+      "blue_uncertain": 1,
+      "control_flags": 7,
+      "control_uncertain": 2,
+      "accepted_reviews": 40,
+      "consensus_valid": 15,
+      "valid_error": 10,
+      "validity_disagreement_or_rejection": 5,
+      "valid_no_error_detected": 4,
+      "valid_invalid_output": 1
+    },
+    "categories": {
+      "omission": 6,
+      "fabrication": 16,
+      "unlogged_text_change": 1
+    },
+    "rounds": {
+      "1": {
+        "episodes": 5,
+        "attack_flags": 3,
+        "control_flags": 2
+      },
+      "2": {
+        "episodes": 5,
+        "attack_flags": 2,
+        "control_flags": 2
+      },
+      "3": {
+        "episodes": 5,
+        "attack_flags": 3,
+        "control_flags": 2
+      },
+      "4": {
+        "episodes": 5,
+        "attack_flags": 5,
+        "control_flags": 1
+      }
+    },
+    "final_five_paired_probe": {
+      "initial": {
+        "reports": 5,
+        "attack_flags": 4,
+        "invalid_outputs": 0,
+        "attack_abstentions": 1,
+        "control_flags": 2,
+        "control_invalid_outputs": 0
+      },
+      "learned": {
+        "reports": 5,
+        "attack_flags": 5,
+        "invalid_outputs": 0,
+        "attack_abstentions": 0,
+        "control_flags": 1,
+        "control_invalid_outputs": 0
+      }
+    },
+    "accounted_cost_usd": 0.5338977300000007,
+    "limitations": [
+      "Online round changes are confounded by case mix. Only final five have paired initial-memory comparisons.",
+      "Two reviewers are fallible; Flash family is shared with contestants. Consensus is not clinical truth.",
+      "Open rewrites/omissions do not support the earlier injected-sentence localization F1; report-level outcomes are primary.",
+      "All studies are unused training studies, not the project final test split."
+    ]
+  },
+  "paired_probe": {
+    "initial": {
+      "paired_studies": 5,
+      "consensus_valid_attacks": 3,
+      "detected_consensus_valid_attacks": 3,
+      "missed_or_abstained_or_invalid_on_valid_attacks": 0,
+      "reference_control_flags": 2,
+      "attack_invalid_outputs": 0,
+      "control_invalid_outputs": 0,
+      "attack_abstentions": 1,
+      "control_abstentions": 1,
+      "consensus_conditioned_report_detection_f1": 0.75
+    },
+    "learned": {
+      "paired_studies": 5,
+      "consensus_valid_attacks": 3,
+      "detected_consensus_valid_attacks": 3,
+      "missed_or_abstained_or_invalid_on_valid_attacks": 0,
+      "reference_control_flags": 1,
+      "attack_invalid_outputs": 0,
+      "control_invalid_outputs": 0,
+      "attack_abstentions": 0,
+      "control_abstentions": 1,
+      "consensus_conditioned_report_detection_f1": 0.8571428571428571
+    }
+  },
+  "costs": {
+    "accounted_cost_usd": 0.5338977300000007,
+    "known_reported_call_cost_usd": 0.20620493,
+    "unknown_cost_reserves_usd": 0.3276928,
+    "audited_calls_including_cache": 274,
+    "failed_requests": {
+      "LMTimeoutError": 1
+    }
+  },
+  "memory_updates": {
+    "red": {
+      "versions": 3,
+      "proposed_lessons": 6,
+      "rejected_lessons": 0,
+      "final_rules": 10
+    },
+    "blue": {
+      "versions": 3,
+      "proposed_lessons": 6,
+      "rejected_lessons": 0,
+      "final_rules": 11
+    }
+  },
+  "metric_scope": "Report-level detection on final five cases with consensus-valid attacks and unchanged reference controls; not clinical accuracy. Invalid outputs retained as failures. Judge disagreement not counted as attacker success."
+}

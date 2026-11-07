@@ -1,0 +1,13 @@
+{
+  "edits": [
+    {
+      "sentence_id": "s4",
+      "replacement": "FINDINGS: No streaky bibasilar opacities."
+    },
+    {
+      "sentence_id": "s9",
+      "replacement": "IMPRESSION: Low lung volumes with minimal basilar airspace disease, XXXX atelectasis."
+    }
+  ],
+  "rationale": "The error type is severity. I have reduced the severity of the bibasilar opacities from 'mild' to 'none' in the findings section and removed the 'streaky' descriptor. I also removed 'streaky' from the impression section to maintain consistency."
+}

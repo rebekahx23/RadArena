@@ -1,0 +1,64 @@
+{
+  "study_id": "2088",
+  "case_id": "7e3d544f3b50a2cdfde18eea",
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Compared to prior examination from XXXX, there has been extubation and removal of central line and enteric tube."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Stable cardiomegaly and mild thoracolumbar dextroscoliosis."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Right basilar opacity XXXX represents chronic fibrosis/scar."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No focal consolidation, pneumothorax, or effusion."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No acute osseous abnormality."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Stable cardiomegaly without acute cardiopulmonary abnormality."
+    }
+  ],
+  "clinical_context": "XXXX-year-old XXXX with chest pain and shortness of breath..",
+  "error_type": "laterality",
+  "changed_sentence_ids": [
+    "s3"
+  ],
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "Assessment of cardiomegaly and dextroscoliosis is limited by the lack of prior imaging and the fact that these are chest radiographs, not dedicated cardiac or spinal imaging. Precise measurements and definitive characterization are not possible with the available images."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is cardiomegaly present, and if so, how would you characterize its severity?",
+      "observation": "The frontal chest radiograph shows the cardiac silhouette occupies a significant portion of the chest. The cardiothoracic ratio appears increased, suggesting cardiomegaly. The lateral view also demonstrates an enlarged cardiac shadow. However, precise measurement of the cardiothoracic ratio is difficult without clear landmarks and a standardized image acquisition. The heart appears globally enlarged, without obvious chamber-specific enlargement on these views. ",
+      "limitations": "Assessment of cardiomegaly is limited by the lack of prior imaging for comparison. The image quality and positioning may affect accurate measurement of the cardiothoracic ratio. A more definitive assessment would require echocardiography or other cardiac imaging modalities."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there evidence of dextroscoliosis, and if so, at what levels of the thoracic and lumbar spine is it observed?",
+      "observation": "The provided images are chest radiographs (AP and lateral views). On the AP view, the spinal alignment appears relatively straight. However, on the lateral view, there is a subtle curvature of the thoracic spine towards the right, which could be indicative of dextroscoliosis. It is difficult to precisely determine the levels affected without dedicated spinal imaging. The curvature appears to be most pronounced in the mid to lower thoracic spine (approximately T7-T12). There is no clear visualization of the lumbar spine in the lateral view to assess for extension of the curvature into the lumbar region. ",
+      "limitations": "The assessment is limited by the fact that these are chest radiographs, not dedicated spinal imaging (e.g., a scoliogram). The lumbar spine is not fully visualized on the lateral view. Precise measurement of the Cobb angle is not possible with these images. It is difficult to differentiate between true scoliosis and other causes of spinal curvature (e.g., rotation or postural asymmetry) without further investigation. The images are single views and lack comparison to prior imaging."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 1,
+    "uncertain": false,
+    "injected_edit_detected": false,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "blue_memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+}

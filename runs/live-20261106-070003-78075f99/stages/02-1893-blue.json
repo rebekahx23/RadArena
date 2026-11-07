@@ -1,0 +1,107 @@
+{
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s1",
+        "error_type": "contradiction",
+        "evidence": "The lung volumes appear within normal limits on both the frontal and lateral chest radiographs. The diaphragms are well-defined and at an appropriate level for a full inspiration. The costophrenic angles are sharp.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      },
+      {
+        "sentence_id": "s7",
+        "error_type": "contradiction",
+        "evidence": "The candidate states \"focal air space disease\" in the impression, but sentence s2 states \"Lungs are clear without focal air space disease.\"",
+        "tool_call_ids": [],
+        "evidence_type": "report_text",
+        "report_sentence_ids": [
+          "s2",
+          "s7"
+        ]
+      }
+    ],
+    "limitations": "The assessment of lung volumes is based on a single inspiratory effort, and variations in patient cooperation can influence the perceived lung volume. Without prior imaging for comparison, subtle changes in lung volume are difficult to definitively assess. Without prior imaging for comparison, it is not possible to determine if the observed mild elevation of the right hemidiaphragm is persistent or a new finding. The lateral view is not optimal for precise hemidiaphragm comparison due to superimposition and projection."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "error",
+        "findings": [
+          {
+            "sentence_id": "s1",
+            "error_type": "contradiction",
+            "evidence": "The lung volumes appear within normal limits on both the frontal and lateral chest radiographs. The diaphragms are well-defined and at an appropriate level for a full inspiration. The costophrenic angles are sharp.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          },
+          {
+            "sentence_id": "s7",
+            "error_type": "contradiction",
+            "evidence": "The candidate states \"focal air space disease\" in the impression, but sentence s2 states \"Lungs are clear without focal air space disease.\"",
+            "tool_call_ids": [],
+            "evidence_type": "report_text",
+            "report_sentence_ids": [
+              "s2",
+              "s7"
+            ]
+          }
+        ],
+        "limitations": "The assessment of lung volumes is based on a single inspiratory effort, and variations in patient cooperation can influence the perceived lung volume. Without prior imaging for comparison, subtle changes in lung volume are difficult to definitively assess. Without prior imaging for comparison, it is not possible to determine if the observed mild elevation of the right hemidiaphragm is persistent or a new finding. The lateral view is not optimal for precise hemidiaphragm comparison due to superimposition and projection."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Are lung volumes mildly low?",
+      "observation": "The lung volumes appear within normal limits on both the frontal and lateral chest radiographs. The diaphragms are well-defined and at an appropriate level for a full inspiration. The costophrenic angles are sharp.",
+      "limitations": "The assessment of lung volumes is based on a single inspiratory effort, and variations in patient cooperation can influence the perceived lung volume. Without prior imaging for comparison, subtle changes in lung volume are difficult to definitively assess."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there persistent mild elevation of the right hemidiaphragm?",
+      "observation": "The frontal radiograph shows the right hemidiaphragm to be mildly elevated compared to the left hemidiaphragm. The lateral radiograph also suggests a mild elevation of the right hemidiaphragm, though it is less clearly delineated in this view.",
+      "limitations": "Without prior imaging for comparison, it is not possible to determine if the observed mild elevation of the right hemidiaphragm is persistent or a new finding. The lateral view is not optimal for precise hemidiaphragm comparison due to superimposition and projection."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Mildly low lung volumes."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Lungs are clear without focal air space disease."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Persistent mild elevation right hemidiaphragm."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pleural effusions or pneumothoraces."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: Heart and mediastinum of normal size and contour."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: Degenerative changes in the spine."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: Stable appearance of the chest with focal air space disease."
+    }
+  ],
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

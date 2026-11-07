@@ -1,0 +1,143 @@
+{
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s2",
+        "error_type": "Misrepresentation",
+        "evidence": "The frontal chest radiograph shows an enlarged cardiac silhouette, with a cardiothoracic ratio greater than 0.5. The lateral view also suggests cardiomegaly.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      },
+      {
+        "sentence_id": "s4",
+        "error_type": "Misrepresentation",
+        "evidence": "The frontal and lateral chest radiographs show bilateral pleural effusions, which are more prominent on the right side. There is also evidence of atelectasis or consolidation at the lung bases, particularly on the right, obscured by the effusion. The lung fields are not clear due to these findings.",
+        "tool_call_ids": [
+          "vision_2"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      },
+      {
+        "sentence_id": "s5",
+        "error_type": "Misrepresentation",
+        "evidence": "The frontal and lateral chest radiographs show bilateral pleural effusions, which are more prominent on the right side. There is also evidence of atelectasis or consolidation at the lung bases, particularly on the right, obscured by the effusion. The lung fields are not clear due to these findings.",
+        "tool_call_ids": [
+          "vision_2"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      },
+      {
+        "sentence_id": "s6",
+        "error_type": "Misrepresentation",
+        "evidence": "The frontal chest radiograph shows an enlarged cardiac silhouette, with a cardiothoracic ratio greater than 0.5. The lateral view also suggests cardiomegaly. The frontal and lateral chest radiographs show bilateral pleural effusions, which are more prominent on the right side. There is also evidence of atelectasis or consolidation at the lung bases, particularly on the right, obscured by the effusion. The lung fields are not clear due to these findings.",
+        "tool_call_ids": [
+          "vision_1",
+          "vision_2"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      }
+    ],
+    "limitations": "The exact heart size cannot be precisely measured without knowing the projection (e.g., AP vs. PA) and patient positioning, which can affect the apparent cardiac silhouette. Without prior imaging for comparison, it is difficult to assess for acute changes in heart size. The extent of the lung parenchymal abnormalities is limited by the presence of significant pleural effusions. A more detailed assessment of the lung parenchyma would require further imaging, such as a CT scan, or resolution of the effusions. The images are also limited by being plain radiographs, which have inherent limitations in soft tissue contrast and detection of subtle abnormalities compared to cross-sectional imaging."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "error",
+        "findings": [
+          {
+            "sentence_id": "s2",
+            "error_type": "Misrepresentation",
+            "evidence": "The frontal chest radiograph shows an enlarged cardiac silhouette, with a cardiothoracic ratio greater than 0.5. The lateral view also suggests cardiomegaly.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          },
+          {
+            "sentence_id": "s4",
+            "error_type": "Misrepresentation",
+            "evidence": "The frontal and lateral chest radiographs show bilateral pleural effusions, which are more prominent on the right side. There is also evidence of atelectasis or consolidation at the lung bases, particularly on the right, obscured by the effusion. The lung fields are not clear due to these findings.",
+            "tool_call_ids": [
+              "vision_2"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          },
+          {
+            "sentence_id": "s5",
+            "error_type": "Misrepresentation",
+            "evidence": "The frontal and lateral chest radiographs show bilateral pleural effusions, which are more prominent on the right side. There is also evidence of atelectasis or consolidation at the lung bases, particularly on the right, obscured by the effusion. The lung fields are not clear due to these findings.",
+            "tool_call_ids": [
+              "vision_2"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          },
+          {
+            "sentence_id": "s6",
+            "error_type": "Misrepresentation",
+            "evidence": "The frontal chest radiograph shows an enlarged cardiac silhouette, with a cardiothoracic ratio greater than 0.5. The lateral view also suggests cardiomegaly. The frontal and lateral chest radiographs show bilateral pleural effusions, which are more prominent on the right side. There is also evidence of atelectasis or consolidation at the lung bases, particularly on the right, obscured by the effusion. The lung fields are not clear due to these findings.",
+            "tool_call_ids": [
+              "vision_1",
+              "vision_2"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          }
+        ],
+        "limitations": "The exact heart size cannot be precisely measured without knowing the projection (e.g., AP vs. PA) and patient positioning, which can affect the apparent cardiac silhouette. Without prior imaging for comparison, it is difficult to assess for acute changes in heart size. The extent of the lung parenchymal abnormalities is limited by the presence of significant pleural effusions. A more detailed assessment of the lung parenchyma would require further imaging, such as a CT scan, or resolution of the effusions. The images are also limited by being plain radiographs, which have inherent limitations in soft tissue contrast and detection of subtle abnormalities compared to cross-sectional imaging."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is the heart size normal?",
+      "observation": "The frontal chest radiograph shows an enlarged cardiac silhouette, with a cardiothoracic ratio greater than 0.5. The lateral view also suggests cardiomegaly.",
+      "limitations": "The exact heart size cannot be precisely measured without knowing the projection (e.g., AP vs. PA) and patient positioning, which can affect the apparent cardiac silhouette. Without prior imaging for comparison, it is difficult to assess for acute changes in heart size."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are the lungs clear?",
+      "observation": "The frontal and lateral chest radiographs show bilateral pleural effusions, which are more prominent on the right side. There is also evidence of atelectasis or consolidation at the lung bases, particularly on the right, obscured by the effusion. The lung fields are not clear due to these findings.",
+      "limitations": "The extent of the lung parenchymal abnormalities is limited by the presence of significant pleural effusions. A more detailed assessment of the lung parenchyma would require further imaging, such as a CT scan, or resolution of the effusions. The images are also limited by being plain radiographs, which have inherent limitations in soft tissue contrast and detection of subtle abnormalities compared to cross-sectional imaging."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: AP and lateral views of the chest were obtained."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The heart is normal size."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Mediastinum is unremarkable."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Lungs are clear."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No focal consolidation is seen."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute disease"
+    }
+  ],
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

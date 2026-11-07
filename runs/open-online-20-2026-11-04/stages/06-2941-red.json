@@ -1,0 +1,70 @@
+{
+  "study_id": "2941",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Cardiac and mediastinal contours are unremarkable."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Pulmonary vascularity is within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No focal air space opacities, pleural effusion, or pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: XXXX are grossly unremarkable."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Clear lungs."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Cardiac and mediastinal contours are unremarkable."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Pulmonary vascularity is within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No focal air space opacities, pleural effusion, or pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: XXXX are grossly unremarkable."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Clear lungs with evidence of mild cardiomegaly."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s6"
+      ],
+      "candidate_ids": [
+        "s6"
+      ],
+      "category": "fabrication",
+      "description": "Added 'with evidence of mild cardiomegaly' to the impression, which is not supported by the image or other findings."
+    }
+  ],
+  "rationale": "The original report states 'Cardiac and mediastinal contours are unremarkable' (s1) and the images do not show cardiomegaly. I fabricated a finding of 'mild cardiomegaly' in the impression (s6) to create a clinically meaningful error. This is a fabrication error as it introduces a finding not present in the images or other findings.",
+  "eligible": true,
+  "memory_sha256": "fade623ff0eba990389a5745f11212bf7148e7624993d52f038639d3471506eb"
+}

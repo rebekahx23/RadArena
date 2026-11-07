@@ -1,0 +1,93 @@
+{
+  "study_id": "120",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Low lung volumes bilaterally with central bronchovascular crowding without focal consolidation, pleural effusion, or pneumothoraces.."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Cardiomediastinal silhouette is within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Degenerative changes of the thoracic spine.."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: Low lung volumes bilaterally with central bronchovascular crowding without focal cardiopulmonary disease."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: ."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Low lung volumes bilaterally with central bronchovascular crowding without focal consolidation, pleural effusion, or pneumothoraces.."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Cardiomediastinal silhouette is within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Degenerative changes of the thoracic spine.."
+    },
+    {
+      "id": "a1",
+      "text": "FINDINGS: There is evidence of a small right apical pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: Low lung volumes bilaterally with central bronchovascular crowding without focal cardiopulmonary disease."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: There is evidence of a small right apical pneumothorax."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new finding to the Findings section that is not supported by the image."
+    },
+    {
+      "source_ids": [
+        "s5"
+      ],
+      "candidate_ids": [
+        "s5"
+      ],
+      "category": "fabrication",
+      "description": "Added a new finding to the Impression section that is not supported by the image."
+    }
+  ],
+  "declared_changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new finding to the Findings section that is not supported by the image."
+    },
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "s5"
+      ],
+      "category": "fabrication",
+      "description": "Added a new finding to the Impression section that is not supported by the image."
+    }
+  ],
+  "provenance_validation_error": "Change log must cover exactly all changed source/candidate sentences",
+  "rationale": "The original report states 'without focal consolidation, pleural effusion, or pneumothoraces' in s1 and 'without focal cardiopulmonary disease' in s4. The images do not show any evidence of a pneumothorax. I fabricated a small right apical pneumothorax in both the Findings and Impression sections (a1 and s5) to create a clinically significant error that contradicts the image findings and the original report.",
+  "eligible": true,
+  "memory_sha256": "dacedfe3afa6ca71d574b31dd1aa6911b0e2232faaf3146ea42fcff82ba4cca0"
+}

@@ -1,0 +1,141 @@
+{
+  "study_id": "3768",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Mild cardiomegaly."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Changes of chronic lung disease."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pneumothorax or pleural effusion."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Accentuated thoracic kyphosis."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Chronic lung disease with no acute cardiopulmonary abnormality."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "Cardiomegaly is not present."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Changes of chronic lung disease."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pneumothorax or pleural effusion."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Accentuated thoracic kyphosis."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Chronic lung disease with no acute cardiopulmonary abnormality."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3768_IM-1887-1001.dcm.png",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3768_IM-1887-2001.dcm.png"
+  ],
+  "clinical_context": "XXXX-year-old female shortness of breath and bilateral lower extremity edema.",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [
+      {
+        "sentence_id": "s1",
+        "replacement": "Cardiomegaly is not present."
+      }
+    ],
+    "rationale": "Changing 'Mild cardiomegaly' to 'Cardiomegaly is not present' reduces the severity to absence, fulfilling the task's requirement to alter severity. This change is made in the FINDINGS section. The change is unambiguous and maintains syntactical correctness.",
+    "requested_error_type": "severity",
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The images are limited to PA and lateral views, which can make subtle assessments of spinal curvature and lung disease difficult. The assessment of chronic lung disease is based on interstitial markings and blunting of costophrenic angles, which are not specific findings. The assessment of kyphosis is limited by the lack of measurement tools and prior radiographs."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there any evidence of chronic lung disease visible on the image?",
+      "observation": "The images show a chest X-ray (PA and lateral views). There appears to be some increased interstitial markings throughout both lung fields, which could be indicative of chronic lung disease. The lateral view shows some blunting of the costophrenic angles, which can also be seen in chronic lung conditions. However, these findings are not specific and could be due to other causes such as pulmonary edema or infection. There is no evidence of significant hyperinflation or bullae.",
+      "limitations": "The images are limited to these two views, and a comprehensive assessment would require additional imaging (e.g., CT scan) and clinical information. It is difficult to definitively diagnose chronic lung disease based on these images alone. The quality of the images is also somewhat limited, making subtle findings harder to assess."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there any evidence of thoracic kyphosis, and if so, how would you characterize its severity?",
+      "observation": "The lateral view radiograph suggests the presence of thoracic kyphosis. The posterior curvature of the thoracic spine appears increased, with a visible rounding of the upper back. It is difficult to quantify the degree of kyphosis without measurement tools or comparison to normative values. The anterior-posterior view does not provide a clear assessment of the spinal curvature.",
+      "limitations": "Assessment of kyphosis is limited by the lack of measurement tools and the absence of prior radiographs for comparison. A precise determination of the Cobb angle or other quantitative measures of kyphotic curvature is not possible based on these images alone. The images are also 2D projections, which can sometimes obscure or exaggerate spinal deformities."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 1,
+    "uncertain": false,
+    "injected_edit_detected": false,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

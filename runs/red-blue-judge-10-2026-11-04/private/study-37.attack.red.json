@@ -1,0 +1,9 @@
+{
+  "edits": [
+    {
+      "sentence_id": "s3",
+      "replacement": "FINDINGS: XXXX XXXX opacities in left mid lung."
+    }
+  ],
+  "rationale": "Changing the laterality of the opacities from right to left lung, as requested by the error type 'laterality'. The rest of the sentence is preserved."
+}

@@ -1,0 +1,129 @@
+{
+  "scope": "source-report-relative synthetic edits; clinical validity unreviewed",
+  "split": "dev",
+  "complete": false,
+  "variants": {
+    "text_only": {
+      "expected": 6,
+      "attempted": 6,
+      "completed": 5,
+      "runtime_failures": 1,
+      "not_attempted": 0,
+      "completion_rate": 0.8333333333333334,
+      "strict_decision_accuracy_all_expected": 0.5,
+      "detection_precision": null,
+      "detection_recall": 0.0,
+      "detection_f1_completed": 0.0,
+      "localization_f1_completed": 0.0,
+      "localization_counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      },
+      "false_positive_rate_completed_controls": 0.0,
+      "abstention_rate_completed": 0.0,
+      "decision_coverage_completed": 1.0,
+      "category_localized_recall": {
+        "laterality": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "severity": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        }
+      },
+      "mean_elapsed_seconds": 4.2726,
+      "reported_cost_usd_sum": 0.00125688,
+      "calls_missing_cost": 0,
+      "recorded_model_calls": 5
+    },
+    "direct_vlm": {
+      "expected": 6,
+      "attempted": 6,
+      "completed": 6,
+      "runtime_failures": 0,
+      "not_attempted": 0,
+      "completion_rate": 1.0,
+      "strict_decision_accuracy_all_expected": 0.5,
+      "detection_precision": 0.5,
+      "detection_recall": 0.3333333333333333,
+      "detection_f1_completed": 0.4,
+      "localization_f1_completed": 0.4,
+      "localization_counts": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 2
+      },
+      "false_positive_rate_completed_controls": 0.3333333333333333,
+      "abstention_rate_completed": 0.0,
+      "decision_coverage_completed": 1.0,
+      "category_localized_recall": {
+        "laterality": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "severity": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "presence_absence": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        }
+      },
+      "mean_elapsed_seconds": 5.8975,
+      "reported_cost_usd_sum": 0.00175288,
+      "calls_missing_cost": 0,
+      "recorded_model_calls": 6
+    },
+    "blue_tools": {
+      "expected": 6,
+      "attempted": 6,
+      "completed": 6,
+      "runtime_failures": 0,
+      "not_attempted": 0,
+      "completion_rate": 1.0,
+      "strict_decision_accuracy_all_expected": 0.6666666666666666,
+      "detection_precision": 0.6,
+      "detection_recall": 1.0,
+      "detection_f1_completed": 0.75,
+      "localization_f1_completed": 0.46153846153846156,
+      "localization_counts": {
+        "tp": 3,
+        "fp": 7,
+        "fn": 0
+      },
+      "false_positive_rate_completed_controls": 0.6666666666666666,
+      "abstention_rate_completed": 0.0,
+      "decision_coverage_completed": 1.0,
+      "category_localized_recall": {
+        "laterality": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "severity": {
+          "hits": 1,
+          "n": 1,
+          "recall": 1.0
+        },
+        "presence_absence": {
+          "hits": 1,
+          "n": 1,
+          "recall": 1.0
+        }
+      },
+      "mean_elapsed_seconds": 23.78616666666667,
+      "reported_cost_usd_sum": 0.00492488,
+      "calls_missing_cost": 0,
+      "recorded_model_calls": 30
+    }
+  },
+  "paired_comparisons": {}
+}

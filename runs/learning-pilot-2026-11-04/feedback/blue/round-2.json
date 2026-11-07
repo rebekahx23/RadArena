@@ -1,0 +1,146 @@
+{
+  "attack": {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Normal heart size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Clear, hyperaerated lungs."
+      },
+      {
+        "id": "s3",
+        "text": "Pneumothorax is present."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: XXXX substernal density may be related to a pectus deformity."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      }
+    ],
+    "indication": "Syncope. XXXX attack.",
+    "verdict": {
+      "decision": "error",
+      "findings": [
+        {
+          "sentence_id": "s3",
+          "error_type": "presence_absence",
+          "evidence": "The frontal chest x-ray shows a radiopaque linear object traversing the right hemithorax. This could be a chest tube. The lateral view does not clearly demonstrate a pneumothorax, but the presence of a chest tube makes assessment difficult. There is some subtle lucency in the right apex, but this is not definitive for pneumothorax and could be normal lung anatomy or artifact.",
+          "tool_call_ids": [
+            "vision_1"
+          ]
+        },
+        {
+          "sentence_id": "s5",
+          "error_type": "presence_absence",
+          "evidence": "The frontal chest radiograph shows a radiopaque linear structure projecting over the anterior mediastinum. This appears to be a central venous catheter with the tip terminating in the superior vena cava. There is no obvious substernal density or mass identified on either the frontal or lateral chest radiograph.",
+          "tool_call_ids": [
+            "vision_2"
+          ]
+        }
+      ],
+      "limitations": "The assessment of pneumothorax is complicated by the presence of a chest tube and the limited image quality. The assessment of substernal density is limited by the 2D nature of the radiographs and potential obscuration by overlapping structures."
+    },
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Is pneumothorax visible on the image?",
+        "observation": "The frontal chest x-ray shows a radiopaque linear object traversing the right hemithorax. This could be a chest tube. The lateral view does not clearly demonstrate a pneumothorax, but the presence of a chest tube makes assessment difficult. There is some subtle lucency in the right apex, but this is not definitive for pneumothorax and could be normal lung anatomy or artifact. ",
+        "limitations": "The images are limited to these two views. A full series of chest x-rays or a CT scan would be needed to definitively rule out or confirm pneumothorax. The presence of a chest tube complicates the assessment of pneumothorax. The quality of the images is moderate, and subtle findings may be difficult to interpret."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "Is there any substernal density, and if so, where is it located?",
+        "observation": "The frontal chest radiograph shows a radiopaque linear structure projecting over the anterior mediastinum. This appears to be a central venous catheter with the tip terminating in the superior vena cava. There is no obvious substernal density or mass identified on either the frontal or lateral chest radiograph. However, the lateral view is limited in its ability to fully assess the retrosternal space. The heart border and mediastinal contours appear within normal limits for the views provided.",
+        "limitations": "The assessment of substernal density is limited by the 2D nature of the radiographs. Subtle densities could be obscured by overlapping structures. A CT scan would be more sensitive for detecting and characterizing any subtle substernal abnormalities. The lateral view is not fully representative of the entire retrosternal space."
+      }
+    ],
+    "training_label": {
+      "has_injected_edit": true,
+      "changed_sentence_ids": [
+        "s3"
+      ],
+      "requested_error_type": "presence_absence"
+    },
+    "score": {
+      "localization_tp": 1,
+      "localization_fp": 1,
+      "localization_fn": 0,
+      "uncertain": false,
+      "injected_edit_detected": true,
+      "unchanged_control_flagged": null,
+      "ground_truth_scope": "synthetic edits; image support not adjudicated"
+    }
+  },
+  "control": {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Normal heart size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Clear, hyperaerated lungs."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: XXXX substernal density may be related to a pectus deformity."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      }
+    ],
+    "indication": "Syncope. XXXX attack.",
+    "verdict": {
+      "decision": "no_error_detected",
+      "findings": [],
+      "limitations": "The assessment of heart size is limited by the lack of prior imaging for comparison. The assessment of lung hyperaeration is limited by the lack of prior imaging and the presence of a radiopaque object obscuring some of the lung fields. A possible small pleural effusion was noted, but confirmation requires further imaging."
+    },
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Is the heart size normal on the image?",
+        "observation": "The frontal chest radiograph shows a central line with the tip appearing to be in the superior vena cava. The cardiac silhouette appears within normal limits for size, but a precise assessment is difficult without prior imaging for comparison. The lateral view does not provide a clear assessment of cardiac size. There are no obvious signs of cardiomegaly on the available images.",
+        "limitations": "Assessing heart size accurately requires comparison to previous radiographs of the same patient. The lateral view is not optimally positioned for cardiac size assessment. The quality of the images limits detailed evaluation. Without clinical context, it is difficult to determine if the observed size is appropriate for the patient."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "Are the lungs clear and hyperaerated on the image?",
+        "observation": "The frontal chest x-ray shows a radiopaque linear object projecting across the right hemithorax. The lungs appear generally clear, without obvious consolidations or large effusions. The lateral view does not show any obvious signs of hyperaeration, but it is difficult to assess lung volumes accurately without a prior image for comparison. There is a possible small pleural effusion on the right side, but this is difficult to confirm without further imaging.",
+        "limitations": "Assessment of hyperaeration is limited by the lack of a prior chest x-ray for comparison. The quality of the images is moderate, and subtle findings may be missed. The presence of the radiopaque object obscures some of the underlying lung fields. A definitive assessment of lung clarity and hyperaeration would require additional clinical information and potentially further imaging."
+      }
+    ],
+    "training_label": {
+      "has_injected_edit": false,
+      "changed_sentence_ids": [],
+      "requested_error_type": null
+    },
+    "score": {
+      "localization_tp": 0,
+      "localization_fp": 0,
+      "localization_fn": 0,
+      "uncertain": false,
+      "injected_edit_detected": null,
+      "unchanged_control_flagged": false,
+      "ground_truth_scope": "synthetic edits; image support not adjudicated"
+    }
+  },
+  "scope": "Training-only synthetic labels. Unchanged source reports are not adjudicated error-free."
+}

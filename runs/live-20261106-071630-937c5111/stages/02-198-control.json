@@ -1,0 +1,51 @@
+{
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The observations are based on a single lateral chest radiograph, which limits the comprehensive assessment of both lungs and the cardiac silhouette. A posteroanterior (PA) view would be necessary for a more complete evaluation. The image quality in some cropped areas is grainy, which could obscure subtle findings."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "no_error_detected",
+        "findings": [],
+        "limitations": "The observations are based on a single lateral chest radiograph, which limits the comprehensive assessment of both lungs and the cardiac silhouette. A posteroanterior (PA) view would be necessary for a more complete evaluation. The image quality in some cropped areas is grainy, which could obscure subtle findings."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Are both lungs clear and expanded?",
+      "observation": "The lateral chest radiograph shows the lungs are expanded. There is no clear evidence of consolidation or pleural effusion that would suggest the lungs are not clear.",
+      "limitations": "This is a single lateral view of the chest, which limits the assessment of both lungs comprehensively. A posteroanterior (PA) view would be necessary to fully evaluate both lung fields for clarity and expansion, as some pathologies might be obscured in a single lateral projection. The image quality in some cropped areas is grainy, which could potentially obscure subtle findings."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is the heart normal in size and contour?",
+      "observation": "The cardiac silhouette is partially obscured by overlying structures and patient positioning, making a definitive assessment of its size and contour challenging. However, based on the visible portions, the heart appears to be within normal limits for size and contour.",
+      "limitations": "The lateral chest X-ray projection and patient positioning limit the complete visualization of the cardiac silhouette. Overlying soft tissues and bony structures further obscure the cardiac borders, making a precise evaluation of heart size and contour difficult. A frontal view or additional imaging might be necessary for a more comprehensive assessment."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart and lungs have XXXX XXXX in the interval."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Both lungs are clear and expanded."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Heart and mediastinum normal."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No active disease."
+    }
+  ],
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

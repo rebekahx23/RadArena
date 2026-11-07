@@ -1,0 +1,15 @@
+{
+  "role": "blue",
+  "round": 3,
+  "rules": [
+    "Avoid flagging the absence of a finding when subtle image features suggest its possible presence.",
+    "When image quality or views are limited, prioritize uncertainty and avoid confident error flags.",
+    "Do not confidently flag a claim as incorrect if the image findings are open to multiple interpretations.",
+    "Acknowledge limitations of single-view radiographs when assessing findings.",
+    "Be cautious when assessing subtle differences in image density, especially when characterizing opacities."
+  ],
+  "explanation": "The feedback highlights a case where a subtle difference in opacity description (increased vs. minimally increased) led to a disagreement between the model and the synthetic edit. The model initially flagged the absence of airspace opacity, but the vision tool identified some increased opacity. This reinforces the need to avoid strong negative claims when image evidence is subtle or open to interpretation. The feedback also shows the importance of acknowledging limitations in single-view radiographs. We should prioritize uncertainty when the image quality or view limits definitive characterization of findings.",
+  "previous_memory_sha256": "ec1cc4371a817aef463f97ea740d091ecd683d5914bd74eb950fc22705b4d9cf",
+  "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1",
+  "training_study_id": "1187"
+}

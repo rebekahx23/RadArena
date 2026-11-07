@@ -1,0 +1,51 @@
+{
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The assessment is based on a single frontal and lateral chest radiograph, which may not fully capture all cardiac and mediastinal structures. Subtle abnormalities or those obscured by overlying structures may not be detectable. Further imaging, such as CT, would provide a more detailed evaluation if clinically indicated. The images provided are standard chest radiographs, which may have limitations in detecting subtle lung pathologies compared to cross-sectional imaging like CT scans. Overlying soft tissue and bony structures can obscure certain areas of the lung. The resolution and single plane views may not reveal all details."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "no_error_detected",
+        "findings": [],
+        "limitations": "The assessment is based on a single frontal and lateral chest radiograph, which may not fully capture all cardiac and mediastinal structures. Subtle abnormalities or those obscured by overlying structures may not be detectable. Further imaging, such as CT, would provide a more detailed evaluation if clinically indicated. The images provided are standard chest radiographs, which may have limitations in detecting subtle lung pathologies compared to cross-sectional imaging like CT scans. Overlying soft tissue and bony structures can obscure certain areas of the lung. The resolution and single plane views may not reveal all details."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Are the cardiac and mediastinal contours within normal limits?",
+      "observation": "The cardiac and mediastinal contours appear within normal limits on the frontal and lateral chest radiographs. The heart size is not enlarged, and the mediastinum does not show any obvious widening or masses.",
+      "limitations": "The assessment is based on a single frontal and lateral chest radiograph, which may not fully capture all cardiac and mediastinal structures. Subtle abnormalities or those obscured by overlying structures may not be detectable. Further imaging, such as CT, would provide a more detailed evaluation if clinically indicated."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are the lungs clear?",
+      "observation": "The frontal and lateral chest radiographs show clear lungs without evidence of focal consolidation, pleural effusion, or pneumothorax. The lung fields appear well-aerated.",
+      "limitations": "The images provided are standard chest radiographs, which may have limitations in detecting subtle lung pathologies compared to cross-sectional imaging like CT scans. Overlying soft tissue and bony structures can obscure certain areas of the lung. The resolution and single plane views may not reveal all details."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Cardiac and mediastinal contours are within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The lungs are clear."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Bony structures are intact."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No acute preoperative findings."
+    }
+  ],
+  "memory_sha256": "076e2645fb8db62ba4fd687c1bc93a2886dc9f4d3c8c910e989a7000d2880f8e"
+}

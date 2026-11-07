@@ -1,0 +1,15 @@
+{
+  "role": "blue",
+  "round": 1,
+  "rules": [
+    "Do not flag 'clear lungs' as incorrect based on subtle opacities without strong image evidence.",
+    "Avoid confident error flags when image findings are ambiguous or could have multiple explanations.",
+    "Do not flag sentences that are identical to the control report.",
+    "If image evidence supports a claim, avoid flagging the claim as incorrect.",
+    "Prioritize uncertainty when image findings are not definitive."
+  ],
+  "explanation": "The feedback indicates a tendency to flag sentences as incorrect when image evidence supports a finding (e.g., a nodule) that contradicts a 'clear lungs' statement. The system also incorrectly flagged an unchanged control sentence.  The rules should focus on avoiding confident error flags when evidence is ambiguous or doesn't definitively disprove a statement, and avoiding flagging unchanged sentences. Prioritize uncertainty when image findings are not conclusive.",
+  "previous_memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "memory_sha256": "23e5d6fa1a4f5e43e58d8059c640b89840739c6bd768dac96448fcfd9735cf0d",
+  "training_study_id": "113"
+}

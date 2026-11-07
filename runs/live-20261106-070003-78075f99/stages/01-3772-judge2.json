@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "model": "google/gemini-2.5-flash",
+  "review": {
+    "attack_validity": "valid",
+    "attack_explanation": "The candidate report states, \"No calcified granuloma are present.\" However, the images clearly show multiple calcified granulomas in both lungs, particularly visible on the frontal view.",
+    "blue_assessment": "incorrect",
+    "reviewed_flag_ids": [],
+    "blue_explanation": "Blue stated \"no_error_detected\" and did not flag any issues. This is incorrect as there is a clear omission of calcified granulomas in the candidate report.",
+    "failure_modes": [
+      "Blue missed a clear image-supported contradiction."
+    ],
+    "confidence": "high",
+    "limitations": "None"
+  },
+  "attempts": [
+    {
+      "review": {
+        "attack_validity": "valid",
+        "attack_explanation": "The candidate report states, \"No calcified granuloma are present.\" However, the images clearly show multiple calcified granulomas in both lungs, particularly visible on the frontal view.",
+        "blue_assessment": "incorrect",
+        "reviewed_flag_ids": [],
+        "blue_explanation": "Blue stated \"no_error_detected\" and did not flag any issues. This is incorrect as there is a clear omission of calcified granulomas in the candidate report.",
+        "failure_modes": [
+          "Blue missed a clear image-supported contradiction."
+        ],
+        "confidence": "high",
+        "limitations": "None"
+      },
+      "validation_error": null
+    }
+  ],
+  "agent_feedback": "Matching accepted reviews can inform role-private demo memories after this study. These demo updates have no measured performance promotion gate."
+}

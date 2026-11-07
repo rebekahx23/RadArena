@@ -1,0 +1,930 @@
+[
+  {
+    "study_id": "1849",
+    "split": "train",
+    "image_ids": [
+      "1849_IM-0550-1001.dcm.png",
+      "1849_IM-0550-1002.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1849_IM-0550-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1849_IM-0550-1002.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Heart size is within normal limits."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: 8mm calcified granuloma in the right base."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No focal airspace consolidations."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pneumothorax or effusion."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute cardiopulmonary findings."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "6ea3dba70092372aff3752794c4f42e016b5d5ddb881f71152e9b591bc57d0c7",
+      "f9142d3949ec919f144f2df7786c5d72a7036f8cdbb31d6550cfeeb7a8123b5a"
+    ]
+  },
+  {
+    "study_id": "2470",
+    "split": "train",
+    "image_ids": [
+      "2470_IM-1001-1001.dcm.png",
+      "2470_IM-1001-3001.dcm.png",
+      "2470_IM-1001-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2470_IM-1001-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2470_IM-1001-3001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2470_IM-1001-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart is normal in size and contour."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There is no mediastinal widening."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No focal airspace disease."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No large pleural effusion or pneumothorax."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: The XXXX are intact."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute abnormality."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "bc7c6bdb111d101f5011099d1e989a73aaea3232cb05b66f6ca11398f29f9fcf",
+      "36756ea02b762766c21c2521686fc1575c53e157a60c1238146e565b1eb83206",
+      "ec7cc87b751fa826ab827c52770bcd8f6d6e0029c94a84d0fbca30d4586b570c"
+    ]
+  },
+  {
+    "study_id": "2539",
+    "split": "train",
+    "image_ids": [
+      "2539_IM-1050-1001.dcm.png",
+      "2539_IM-1050-3001.dcm.png",
+      "2539_IM-1050-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2539_IM-1050-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2539_IM-1050-3001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2539_IM-1050-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Normal cardiomediastinal contours."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: No pneumothorax or pleural effusions."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No focal lung consolidation."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormalities."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "364fcec706ff3d270a8489a4b7f576ccc69da007daca4798af0598e13428cff3",
+      "d5734c4ad5cd4c7061b05c4e385a695722def7dc232acba85c132dc7f85d92f6",
+      "210305026fe884592b9bc136221eb63165d6f98bc5cdedafeca24f1825a39ba6"
+    ]
+  },
+  {
+    "study_id": "1223",
+    "split": "train",
+    "image_ids": [
+      "1223_IM-0150-1001.dcm.png",
+      "1223_IM-0150-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1223_IM-0150-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1223_IM-0150-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart size and pulmonary vascularity appear within normal limits."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Lungs are free of focal airspace disease."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pleural effusion or pneumothorax is seen."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: XXXX XXXX foreign body is noted in the soft tissues of the left chest wall."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No evidence of active disease."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "67f8fedfd0a0703cea438a80dc72167a5e5d4bc967b6cab0497b310641e11f5f",
+      "d70703b54cc300c931af300f17f03038f4ba4d800e02d00d5d4bb49fa71fad05"
+    ]
+  },
+  {
+    "study_id": "2488",
+    "split": "train",
+    "image_ids": [
+      "2488_IM-1015-1001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2488_IM-1015-1001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "IMPRESSION: Heart size is normal."
+      },
+      {
+        "id": "s2",
+        "text": "IMPRESSION: 2 cm calcified granuloma in the right midlung."
+      },
+      {
+        "id": "s3",
+        "text": "IMPRESSION: Calcified right hilar lymph XXXX."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: No other nodules or masses."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: It is unchanged XXXX compared to a XXXX for the abdomen CT scan from XXXX."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: The XXXX 40% of the nodule is on the upper portion of the XXXX film."
+      }
+    ],
+    "image_views": [
+      "Frontal"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "2f77bf50441e8ed9d7859e5c83e99203fc1adb22ebd130411979b32352902a9b"
+    ]
+  },
+  {
+    "study_id": "2941",
+    "split": "train",
+    "image_ids": [
+      "2941_IM-1342-1001.dcm.png",
+      "2941_IM-1342-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2941_IM-1342-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2941_IM-1342-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Cardiac and mediastinal contours are unremarkable."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Pulmonary vascularity is within normal limits."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No focal air space opacities, pleural effusion, or pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: XXXX are grossly unremarkable."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Clear lungs."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "827f7cda21a4893f0c31cc51a79ab917bc55d6894ad9310a40fd189881f8c6b1",
+      "5c562de360278c1e053bae34c719cc21de61acb7197c4f78070c53e2d849492f"
+    ]
+  },
+  {
+    "study_id": "2766",
+    "split": "train",
+    "image_ids": [
+      "2766_IM-1211-4004.dcm.png",
+      "2766_IM-1211-3001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2766_IM-1211-4004.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2766_IM-1211-3001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "IMPRESSION: There is mild to moderate cardiomegaly."
+      },
+      {
+        "id": "s2",
+        "text": "IMPRESSION: Tortuous and ectatic appearing aorta."
+      },
+      {
+        "id": "s3",
+        "text": "IMPRESSION: No overt edema."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: No focal infiltrate."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No pleural effusion or pneumothorax is seen."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "451a962892887589b56014324ed0d195cc1701ff5ba588526b7dd08d149eb0eb",
+      "767bac0139a7c9886bd2f4b7b9d6c4d94774c8246cb5fe92b8dd8ff4ec1d285b"
+    ]
+  },
+  {
+    "study_id": "294",
+    "split": "train",
+    "image_ids": [
+      "294_IM-1340-3001.dcm.png",
+      "294_IM-1340-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/294_IM-1340-3001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/294_IM-1340-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart is normal in size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The mediastinum is unremarkable."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: The lungs are grossly clear."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Underlying emphysematous changes are noted."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Emphysema without acute disease."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "2055333c23f5241ce048bc0cda07dd303758c865440c97345dda24eee04cd644",
+      "a94a14a2f538e06cc55889ec765fb946d81f60950a484380d133f8ba5bd03b07"
+    ]
+  },
+  {
+    "study_id": "886",
+    "split": "train",
+    "image_ids": [
+      "886_IM-2400-1001.dcm.png",
+      "886_IM-2400-1002.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/886_IM-2400-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/886_IM-2400-1002.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart is normal in size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The mediastinum is unremarkable."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: The lungs are clear."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: No acute disease."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "dfbc748d937067052ac5e8d17491ef38822dd7f334af61e9569366b26b7e2aee",
+      "0e818ea3d847132a2ba54071631fc4edfd8c5c65c0347ac673ac9292639df776"
+    ]
+  },
+  {
+    "study_id": "3848",
+    "split": "train",
+    "image_ids": [
+      "3848_IM-1946-1001-0001.dcm.png",
+      "3848_IM-1946-1001-0002.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3848_IM-1946-1001-0001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3848_IM-1946-1001-0002.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart size is moderate to severely enlarged."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There is prominence of the central pulmonary XXXX suggesting pulmonary artery hypertension."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: There has been removal of the right-sided PICC line."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: There is persistent left basilar airspace opacity with left costophrenic XXXX blunting which is not evident on the lateral exam."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: There are mild degenerative changes of the spine."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: There is no pneumothorax."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: Moderate-to-severe cardiomegaly with probable pulmonary artery hypertension."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: Persistent left basilar opacity without significant effusion."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "4023ca4520eac06127a09d8ee63f963e8f61f9f62921056ff496d9c662012fd3",
+      "bfd6acc2f0848068062d7863a45061468f7602b87437f2ad54f2f443b299d8d6"
+    ]
+  },
+  {
+    "study_id": "2643",
+    "split": "train",
+    "image_ids": [
+      "2643_IM-1129-1001.dcm.png",
+      "2643_IM-1129-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2643_IM-1129-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2643_IM-1129-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The lungs and pleural spaces show no acute abnormality."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size and pulmonary vascularity within normal limits."
+      },
+      {
+        "id": "s3",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: No acute pulmonary abnormality."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "fbaf9f19fd3ebae3e03b1ab28fabcb33009501a63394f71a2cc9a07bbfff820d",
+      "b70ecc7f9a2ac3584e63291f2c741f66d0b050f490d33ad378fd0ab511ce66dc"
+    ]
+  },
+  {
+    "study_id": "120",
+    "split": "train",
+    "image_ids": [
+      "120_IM-0133-1001.dcm.png",
+      "120_IM-0133-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/120_IM-0133-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/120_IM-0133-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Low lung volumes bilaterally with central bronchovascular crowding without focal consolidation, pleural effusion, or pneumothoraces.."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Cardiomediastinal silhouette is within normal limits."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Degenerative changes of the thoracic spine.."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: Low lung volumes bilaterally with central bronchovascular crowding without focal cardiopulmonary disease."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "3588990f1f76a20b84ce3771b3d4daee26cebee1671c0d229643038d0c662a61",
+      "63a9b75960a1dc25612ecbe62482e9b44c12fdbf1a1f007e55a1e6d7152a123c"
+    ]
+  },
+  {
+    "study_id": "1556",
+    "split": "train",
+    "image_ids": [
+      "1556_IM-0363-1001.dcm.png",
+      "1556_IM-0363-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1556_IM-0363-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1556_IM-0363-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Heart size appears upper limits of normal."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Tortuous aorta."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Otherwise normal mediastinum."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Confluent and XXXX opacities seen within the left base."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: There are no visible nodules or masses."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: No visible pneumothorax."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: The XXXX are grossly normal."
+      },
+      {
+        "id": "s8",
+        "text": "FINDINGS: There is no visible free intraperitoneal air under the diaphragm."
+      },
+      {
+        "id": "s9",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s10",
+        "text": "IMPRESSION: Left basilar mixed interstitial and alveolar infiltrate."
+      },
+      {
+        "id": "s11",
+        "text": "IMPRESSION: Interval followup to resolution is recommended."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "f39461fc04e9820c1eea7ca7e0f5015d5f608ce34cea1c9e500566e424eaa888",
+      "8f5466a9e5a460695b0135d071929f95cf1d4e7e1bc3e4aeab10755357d7cf46"
+    ]
+  },
+  {
+    "study_id": "74",
+    "split": "train",
+    "image_ids": [
+      "74_IM-2296-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/74_IM-2296-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Lungs appear to be clear other than a calcified granuloma on left."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart is not enlarged."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: There are atherosclerotic changes of the aorta."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: There is increased kyphosis of the thoracic spine and there are multiple XXXX deformities."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: A stimulator is seen."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute pulmonary disease."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: Multiple thoracic XXXX deformities XXXX due to osteoporosis."
+      }
+    ],
+    "image_views": [
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "c25be56a2f67cdd749a9c449e1d36de88c31e31a43ee7dfef7c1949a7e61674c"
+    ]
+  },
+  {
+    "study_id": "3830",
+    "split": "train",
+    "image_ids": [
+      "3830_IM-1933-1001.dcm.png",
+      "3830_IM-1933-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3830_IM-1933-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3830_IM-1933-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Cardiac and mediastinal contours are within normal limits."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The lungs are clear."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Bony structures are intact."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: No acute preoperative findings."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "7b917ea3d99f00e6475e1478be5d432318483d4c21ec79aaee708356470f690e",
+      "29f65afe68205fed896d54fe6cbf926a07b283d75f48842d24e935ffaf3c7919"
+    ]
+  },
+  {
+    "study_id": "3865",
+    "split": "train",
+    "image_ids": [
+      "3865_IM-1958-1001.dcm.png",
+      "3865_IM-1958-1002.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3865_IM-1958-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3865_IM-1958-1002.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart is top normal in size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The mediastinum is stable."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: The lungs are grossly clear."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Bilateral rib deformities are noted, possibly old fractures."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: There is no pleural effusion or pneumothorax."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute disease."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "c4460b25e6bc819f990daf80aa2a8b3845a1eff4e2dfc4dd88409d961286bce5",
+      "fcc49488d10e17cb25143c133360dd338f8b4b13c8e07626216371aba3d54f35"
+    ]
+  },
+  {
+    "study_id": "1284",
+    "split": "train",
+    "image_ids": [
+      "1284_IM-0188-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1284_IM-0188-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Left-sided dual-XXXX cardiac XXXX in stable position."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The heart is of normal size."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Interval decrease and left basilar opacity."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Increase in XXXX opacities in the right lung base."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No pneumothorax or large effusion."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: The pulmonary vascularity is unremarkable."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: Calcification of the thoracic aorta."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s9",
+        "text": "IMPRESSION: Cardiac XXXX in stable position."
+      },
+      {
+        "id": "s10",
+        "text": "IMPRESSION: 2."
+      },
+      {
+        "id": "s11",
+        "text": "IMPRESSION: Increase in right and decrease in left basilar atelectasis."
+      }
+    ],
+    "image_views": [
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "add2808c2630941a995866f7b30537d480890e20e2df605170860b4dca5d908f"
+    ]
+  },
+  {
+    "study_id": "1818",
+    "split": "train",
+    "image_ids": [
+      "1818_IM-0530-4004.dcm.png",
+      "1818_IM-0530-1001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1818_IM-0530-4004.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1818_IM-0530-1001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "IMPRESSION: Very low lung volumes, bronchovascular crowding and bibasilar areas of atelectasis."
+      },
+      {
+        "id": "s2",
+        "text": "IMPRESSION: No lobar consolidation."
+      },
+      {
+        "id": "s3",
+        "text": "IMPRESSION: No appreciable pleural effusion or pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: Heart size within normal limits."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "0f7e9139bec79316dfcc10dac094f944f802e7b252631316130373b7f9cf1073",
+      "d3a5ba459d3a1f6b735bbfb600a30d1231223e86340955665fa4b365cf96c965"
+    ]
+  },
+  {
+    "study_id": "22",
+    "split": "train",
+    "image_ids": [
+      "22_IM-0810-1001.dcm.png",
+      "22_IM-0810-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/22_IM-0810-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/22_IM-0810-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The lungs are clear, and without focal air space opacity."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The cardiomediastinal silhouette is normal in size and contour, and stable."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: There is no pneumothorax large pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "87989a29d36fe3ef51bb6b7b45d7b38d39cc5428f760b7abea3102df06e2c4e1",
+      "88139416d75b4d732e1f90a68064e34bfa77519e794579654ec118921f475796"
+    ]
+  },
+  {
+    "study_id": "1946",
+    "split": "train",
+    "image_ids": [
+      "1946_IM-0615-1001.dcm.png",
+      "1946_IM-0615-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1946_IM-0615-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1946_IM-0615-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Portable frontal view of the chest with overlying external cardiac monitor leads shows normal cardiomediastinal silhouette, central airways, pulmonary vasculature and lung volumes without focal air space consolidation or pleural effusion."
+      },
+      {
+        "id": "s2",
+        "text": "IMPRESSION: No acute intrathoracic disease."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "703c5715b16be5f1f92f845f4a26003056f09d91dc20aa3d21c351ba4460b632",
+      "bad21f08396771d825a6f6ce1460859c0b7a8851b63984f4e0a92dc48bc68e88"
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "verdict": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s4",
+        "error_type": "contradiction",
+        "evidence": "There are no obvious rib deformities visible on the provided frontal and lateral chest radiographs. The ribs appear to have a normal contour and alignment.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      },
+      {
+        "sentence_id": "a1",
+        "error_type": "contradiction",
+        "evidence": "There is no clear evidence of a left pleural effusion on the provided images. The left costophrenic angle appears clear on both the frontal and lateral views.",
+        "tool_call_ids": [
+          "vision_2"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      }
+    ],
+    "limitations": "The provided images are two-dimensional radiographs, which may not fully capture subtle deformities or very small effusions. Overlying structures and patient positioning can limit detailed visualization."
+  },
+  "accepted": true
+}

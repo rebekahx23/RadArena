@@ -1,0 +1,43 @@
+{
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The observations are based on a single frontal view of the chest, and subtle abnormalities may not be detectable on plain radiographs. No prior imaging is available for comparison."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "no_error_detected",
+        "findings": [],
+        "limitations": "The observations are based on a single frontal view of the chest, and subtle abnormalities may not be detectable on plain radiographs. No prior imaging is available for comparison."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Are the cardiomediastinal silhouette, central airways, pulmonary vasculature, and lung volumes within normal limits?",
+      "observation": "The cardiomediastinal silhouette, central airways, pulmonary vasculature, and lung volumes appear within normal limits on the provided images. There is no evidence of cardiomegaly, mediastinal widening, or significant airway obstruction. The pulmonary vessels are appropriately sized and distributed, and the lung fields are well-inflated.",
+      "limitations": "The assessment is based solely on the provided frontal and lateral chest radiographs. Subtle abnormalities may not be detectable on plain radiographs. No prior imaging is available for comparison. The quality of the images is adequate for general assessment, but fine details may be obscured by overlying structures or patient motion, if present."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there any focal air space consolidation or pleural effusion visible?",
+      "observation": "There is no definite focal airspace consolidation or pleural effusion visible on these images. The lung fields appear clear, and the costophrenic angles are sharp.",
+      "limitations": "The images provided are a single frontal and lateral chest radiograph. Small effusions or subtle consolidations may be obscured by overlying structures or limited by the two-dimensional nature of the imaging. No prior imaging is available for comparison."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Portable frontal view of the chest with overlying external cardiac monitor leads shows normal cardiomediastinal silhouette, central airways, pulmonary vasculature and lung volumes without focal air space consolidation or pleural effusion."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No acute intrathoracic disease."
+    }
+  ],
+  "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+}

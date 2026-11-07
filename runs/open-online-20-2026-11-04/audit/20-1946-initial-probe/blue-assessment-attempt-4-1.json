@@ -1,0 +1,20 @@
+{
+  "verdict": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s2",
+        "error_type": "Misleading impression",
+        "evidence": "The frontal chest radiograph shows the cardiac silhouette to be within the normal limits for size. The cardiothoracic ratio appears to be less than 0.5.",
+        "tool_call_ids": [
+          "vision_1",
+          "vision_2"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      }
+    ],
+    "limitations": "The assessment of cardiomegaly is based on a single frontal chest radiograph, which may not fully represent cardiac size due to factors such as patient positioning, phase of respiration, and body habitus. A lateral view is provided but does not aid in the assessment of cardiomegaly. No prior imaging is available for comparison. Echocardiography or CT would provide a more definitive assessment of cardiac size and function."
+  },
+  "accepted": true
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "study_id": "3498",
+    "split": "train",
+    "image_ids": [
+      "3498_IM-1702-1001.dcm.png",
+      "3498_IM-1702-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3498_IM-1702-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3498_IM-1702-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Chest."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: A minimally displaced fracture is present on right rib 4."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: The small amount of pleural fluid is XXXX deep to the fracture."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural air collection."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: Both lungs clear and expanded."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: Heart and mediastinum normal."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: Note XXXX of a levoscoliosis of the thoracolumbar spine."
+      },
+      {
+        "id": "s8",
+        "text": "FINDINGS: Right shoulder."
+      },
+      {
+        "id": "s9",
+        "text": "FINDINGS: XXXX, soft tissues, and alignment are normal."
+      },
+      {
+        "id": "s10",
+        "text": "FINDINGS: Right humerus."
+      },
+      {
+        "id": "s11",
+        "text": "FINDINGS: XXXX and soft tissues are intact."
+      },
+      {
+        "id": "s12",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s13",
+        "text": "IMPRESSION: Chest."
+      },
+      {
+        "id": "s14",
+        "text": "IMPRESSION: Right 4th rib fracture."
+      },
+      {
+        "id": "s15",
+        "text": "IMPRESSION: No cardiopulmonary injury."
+      },
+      {
+        "id": "s16",
+        "text": "IMPRESSION: No pleural air collection."
+      },
+      {
+        "id": "s17",
+        "text": "IMPRESSION: 2."
+      },
+      {
+        "id": "s18",
+        "text": "IMPRESSION: Right shoulder negative."
+      },
+      {
+        "id": "s19",
+        "text": "IMPRESSION: 3."
+      },
+      {
+        "id": "s20",
+        "text": "IMPRESSION: Right humerus negative."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "ae992c0afca567ed6d17b5f144f1db6dcfc2464d902eb6751109f6a629e9bdf6",
+      "dd989e66144b37bd940955e4855a85186bd359864f6aaa21b71c36585a719dc3"
+    ]
+  },
+  {
+    "study_id": "3844",
+    "split": "train",
+    "image_ids": [
+      "3844_IM-1945-1001.dcm.png",
+      "3844_IM-1945-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3844_IM-1945-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3844_IM-1945-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Lungs are clear."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: No pleural effusions or pneumothoraces."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: heart size is upper limits of normal."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: Heart size upper limits of normal with clear lungs."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "de4bbf18c9d01ae3ad9f2c3902f051dfd2e84cb98feb9262031701602c458d89",
+      "dae8ac1807dfb2ad9dc7fa77bc77dd593005b0be56c346256da95b87e4cd23dd"
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "accepted_under_current_rubric": false,
+  "reason": "Original judge called Blue correct while marking its flagged claims supported by evidence. It also certified attack validity using text edit alone. Raw output retained; replaced rubric with explicit consistency guards and withheld code scores.",
+  "new_rubric": "judge-v2",
+  "agents_and_code_scores_changed": false
+}

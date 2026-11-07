@@ -1,0 +1,7 @@
+{
+  "observed_at_utc": "2026-11-04T08:20:27.459694+00:00",
+  "usage_before_usd": 0.69364881,
+  "usage_after_usd": 0.70605185,
+  "observed_key_usage_increase_usd": 0.01240304,
+  "scope": "key-level usage; can include unrelated concurrent activity; excludes purchase fees"
+}

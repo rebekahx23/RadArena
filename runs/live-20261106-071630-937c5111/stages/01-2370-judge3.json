@@ -1,0 +1,32 @@
+{
+  "status": "rejected",
+  "model": "qwen/qwen3-vl-30b-a3b-instruct",
+  "attempts": [
+    {
+      "review": {
+        "attack_validity": "no_attack",
+        "attack_explanation": "The original report contained a laterality error in the impression (s5), stating 'Left lower lobe airspace disease' while the findings (s1) and images clearly show consolidation and atelectasis in the right lower lobe. The change corrected this error, aligning the impression with the findings and image. This was not an attack but a correction of a clinically meaningful contradiction.",
+        "blue_assessment": "correct",
+        "reviewed_flag_ids": [],
+        "blue_explanation": "The Blue response correctly identified that no error was present in the candidate report, as the change corrected a genuine image-contradicted error in the original report. The Blue assessment is consistent with the evidence from the images, which show right lower lobe consolidation and blunting of the right costophrenic angle.",
+        "failure_modes": [],
+        "confidence": "high",
+        "limitations": "The exact nature and extent of the opacity in the right lower lobe are difficult to fully characterize on these two views alone due to superimposition of structures and the inherent limitations of plain radiography. The exact cause of the blunting cannot be determined from these images alone."
+      },
+      "validation_error": "Unchanged candidates require no_attack; changed candidates cannot be no_attack."
+    },
+    {
+      "review": {
+        "attack_validity": "no_attack",
+        "attack_explanation": "The original report contained a laterality error in the impression (s5), stating 'Left lower lobe airspace disease' while the findings (s1) and images clearly show consolidation and atelectasis in the right lower lobe. The change corrected this error, aligning the impression with the findings and image. This was not an attack but a correction of a clinically meaningful contradiction.",
+        "blue_assessment": "correct",
+        "reviewed_flag_ids": [],
+        "blue_explanation": "The Blue response correctly identified that no error was present in the candidate report, as the change corrected a genuine image-contradicted error in the original report. The Blue assessment is consistent with the evidence from the images, which show right lower lobe consolidation and blunting of the right costophrenic angle.",
+        "failure_modes": [],
+        "confidence": "high",
+        "limitations": "The exact nature and extent of the opacity in the right lower lobe are difficult to fully characterize on these two views alone due to superimposition of structures and the inherent limitations of plain radiography. The exact cause of the blunting cannot be determined from these images alone."
+      },
+      "validation_error": "Unchanged candidates require no_attack; changed candidates cannot be no_attack."
+    }
+  ]
+}

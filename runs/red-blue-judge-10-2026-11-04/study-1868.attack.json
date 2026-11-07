@@ -1,0 +1,157 @@
+{
+  "study_id": "1868",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Heart size and pulmonary vascularity normal."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is a small right pleural effusion."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: There is infrahilar interstitial prominence which may represent bronchovascular crowding lung."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Small left pleural effusion."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Small bilateral pleural effusions and right infrahilar infiltrate versus bronchovascular crowding."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Heart size and pulmonary vascularity normal."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is no right pleural effusion."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: There is infrahilar interstitial prominence which may represent bronchovascular crowding lung."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: There is no left pleural effusion."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No pleural effusions and right infrahilar infiltrate versus bronchovascular crowding."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1868_IM-0561-1001.dcm.png",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1868_IM-0561-2001.dcm.png"
+  ],
+  "clinical_context": "Ovarian hyperstimulation syndrome, rest for abnormality",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [
+      {
+        "sentence_id": "s2",
+        "replacement": "FINDINGS: There is no right pleural effusion."
+      },
+      {
+        "sentence_id": "s4",
+        "replacement": "FINDINGS: There is no left pleural effusion."
+      },
+      {
+        "sentence_id": "s6",
+        "replacement": "IMPRESSION: No pleural effusions and right infrahilar infiltrate versus bronchovascular crowding."
+      }
+    ],
+    "rationale": "The error type is presence_absence. The report indicates small bilateral pleural effusions. I have changed the presence of both effusions to absence in the findings section and updated the impression to reflect this change. This maintains consistency across the report.",
+    "requested_error_type": "presence_absence",
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "uncertain",
+    "findings": [],
+    "limitations": "The assessment of interstitial markings and pleural effusions can be subjective and limited by image quality and patient positioning. The lateral view is limited in its ability to assess the infrahilar regions. There is some subtle blunting of the costophrenic angles bilaterally, and subtle interstitial markings in the right infrahilar region, but these findings are not definitive and could be due to normal lung markings or image quality limitations. Without prior imaging for comparison, it is difficult to determine if these findings are new or chronic."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there any interstitial prominence visible in the infrahilar regions, and if so, on which side(s)?",
+      "observation": "The frontal chest radiograph shows some subtle increased interstitial markings in the lower lung fields bilaterally. The lateral view does not clearly demonstrate interstitial prominence in the infrahilar regions. It is difficult to definitively assess interstitial prominence in the infrahilar regions due to the normal lung markings and potential for image quality limitations. There appears to be some subtle interstitial markings in the right infrahilar region, but this is not definitive.",
+      "limitations": "The assessment of interstitial markings can be subjective and is dependent on image quality and the observer's experience. The lateral view is limited in its ability to assess the infrahilar regions. Without prior imaging for comparison, it is difficult to determine if these findings are new or chronic."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there any evidence of pleural effusion, and if so, on which side(s)?",
+      "observation": "The frontal chest x-ray shows some blunting of the costophrenic angles bilaterally, which could suggest a small amount of pleural effusion. The left lateral view does not clearly demonstrate any free fluid layering along the chest wall. However, subtle effusions can be difficult to detect on x-ray, and the blunting of the costophrenic angles is a relatively non-specific finding. ",
+      "limitations": "The assessment of pleural effusion on radiographs can be subjective and limited by patient positioning and other factors. A more definitive assessment would require a lateral decubitus view or ultrasound. It is also difficult to quantify the amount of effusion present based on these images alone. There is no prior imaging available for comparison."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 3,
+    "uncertain": true,
+    "injected_edit_detected": false,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

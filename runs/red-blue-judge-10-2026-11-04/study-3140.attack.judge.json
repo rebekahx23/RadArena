@@ -1,0 +1,54 @@
+{
+  "format_version": 1,
+  "case_id": "demo",
+  "variant": "red_blue",
+  "study_id": "3140",
+  "judge_model": "google/gemini-2.5-flash",
+  "rubric_version": "judge-v2",
+  "episode_sha256": "07b7f7bcf4a77dcde0575912ebd732ecdd2b5442d129bd36e7176415a85763c4",
+  "image_sha256": {
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3140_IM-1477-1001.dcm.png": "475714d0da668587f15fda0cf044b0e1a480e6b9665fae800d5496df35b86d25",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3140_IM-1477-2001.dcm.png": "a59d68301579dff1fea378009529f5db2cdb6ea8485abc3bb3c408a1a9962f3c"
+  },
+  "image_review": true,
+  "scope": "fallible independent post-hoc analysis; not clinical ground truth",
+  "agent_feedback": "none; researcher-only",
+  "source_run": "runs/red-blue-judge-10-2026-11-04/study-3140.attack.json",
+  "attempts": [
+    {
+      "review": {
+        "attack_validity": "valid",
+        "attack_image_support": "source_supported_candidate_contradicted",
+        "attack_explanation": "The source report states \"Streaky opacities in the right lower lobe\". The candidate report states \"Streaky opacities in the left lower lobe\". The images show streaky opacities in the right lower lobe, supporting the source and contradicting the candidate.",
+        "blue_assessment": "incorrect",
+        "flag_reviews": [],
+        "failure_modes": [
+          "uncertainty_handling",
+          "visual_interpretation"
+        ],
+        "explanation": "The attack is valid as the laterality of the streaky opacities was changed from right to left. The images show streaky opacities in the right lower lobe, supporting the source and contradicting the candidate. Blue failed to identify this error, stating \"no error detected\". Blue's observation for the left lower lobe was uncertain, but it should have also checked the right lower lobe.",
+        "confidence": "high",
+        "limitations": "None"
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "analysis": {
+    "attack_validity": "valid",
+    "attack_image_support": "source_supported_candidate_contradicted",
+    "attack_explanation": "The source report states \"Streaky opacities in the right lower lobe\". The candidate report states \"Streaky opacities in the left lower lobe\". The images show streaky opacities in the right lower lobe, supporting the source and contradicting the candidate.",
+    "blue_assessment": "incorrect",
+    "flag_reviews": [],
+    "failure_modes": [
+      "uncertainty_handling",
+      "visual_interpretation"
+    ],
+    "explanation": "The attack is valid as the laterality of the streaky opacities was changed from right to left. The images show streaky opacities in the right lower lobe, supporting the source and contradicting the candidate. Blue failed to identify this error, stating \"no error detected\". Blue's observation for the left lower lobe was uncertain, but it should have also checked the right lower lobe.",
+    "confidence": "high",
+    "limitations": "None"
+  },
+  "red_outcome": "escaped",
+  "accounted_cost_usd": 0.000914130000000013,
+  "calls": 1
+}

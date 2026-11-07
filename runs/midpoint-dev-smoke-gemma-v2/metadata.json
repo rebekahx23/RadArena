@@ -1,0 +1,36 @@
+{
+  "benchmark_sha256": "43f0f1033f2c30627c50c2921549de916c400c7b28a4e39ba136d82dcd239d84",
+  "implementation_sha256": "181ebce1f93c17576df297e5831e9f6ab5d4c153172b7fe048cfa5569d0c2c84",
+  "split": "dev",
+  "variants": [
+    "text_only",
+    "direct_vlm",
+    "blue_tools"
+  ],
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "case_ids": [
+    "1698dfe12a9edd966d1f7e2b",
+    "c5f396adceacaefd9711b818",
+    "115b953dcd11c46f401bc84b",
+    "2661c37027547abb480f1f41",
+    "2eb8ef815cadd0931827eee4",
+    "18dac685b8a3abe4283e2415"
+  ],
+  "seed": "midpoint-v2",
+  "scope": "source-report-relative synthetic edits; clinical validity unreviewed",
+  "memory": "none",
+  "knowledge": {
+    "handbook_id": "radarena-radiology-handbook",
+    "version": "0.2.0",
+    "sha256": "9976b82596a81ee42dc21666089984056182b7b99d9337268710988c5ef5525d",
+    "condition": "full",
+    "max_chapters": 3,
+    "selection": "one bounded DSPy selection call",
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "expected_records": 18
+}

@@ -1,0 +1,71 @@
+{
+  "complete": true,
+  "counts": {
+    "episodes": 20,
+    "eligible_text_changes": 20,
+    "blue_invalid": 1,
+    "control_invalid": 0,
+    "blue_error": 13,
+    "blue_uncertain": 1,
+    "control_flags": 7,
+    "control_uncertain": 2,
+    "accepted_reviews": 40,
+    "consensus_valid": 15,
+    "valid_error": 10,
+    "validity_disagreement_or_rejection": 5,
+    "valid_no_error_detected": 4,
+    "valid_invalid_output": 1
+  },
+  "categories": {
+    "omission": 6,
+    "fabrication": 16,
+    "unlogged_text_change": 1
+  },
+  "rounds": {
+    "1": {
+      "episodes": 5,
+      "attack_flags": 3,
+      "control_flags": 2
+    },
+    "2": {
+      "episodes": 5,
+      "attack_flags": 2,
+      "control_flags": 2
+    },
+    "3": {
+      "episodes": 5,
+      "attack_flags": 3,
+      "control_flags": 2
+    },
+    "4": {
+      "episodes": 5,
+      "attack_flags": 5,
+      "control_flags": 1
+    }
+  },
+  "final_five_paired_probe": {
+    "initial": {
+      "reports": 5,
+      "attack_flags": 4,
+      "invalid_outputs": 0,
+      "attack_abstentions": 1,
+      "control_flags": 2,
+      "control_invalid_outputs": 0
+    },
+    "learned": {
+      "reports": 5,
+      "attack_flags": 5,
+      "invalid_outputs": 0,
+      "attack_abstentions": 0,
+      "control_flags": 1,
+      "control_invalid_outputs": 0
+    }
+  },
+  "accounted_cost_usd": 0.5338977300000007,
+  "limitations": [
+    "Online round changes are confounded by case mix. Only final five have paired initial-memory comparisons.",
+    "Two reviewers are fallible; Flash family is shared with contestants. Consensus is not clinical truth.",
+    "Open rewrites/omissions do not support the earlier injected-sentence localization F1; report-level outcomes are primary.",
+    "All studies are unused training studies, not the project final test split."
+  ]
+}

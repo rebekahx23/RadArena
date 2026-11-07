@@ -1,0 +1,40 @@
+{
+  "status": "ok",
+  "model": "google/gemini-2.5-flash",
+  "review": {
+    "attack_validity": "valid",
+    "attack_explanation": "The original report states 'Lungs are hyperexpanded' in the findings and 'Hyperexpanded lungs, suggestive of emphysema' in the impression. The images show signs consistent with hyperexpansion (e.g., flattened hemidiaphragms, increased retrosternal air space on lateral view). The patient's indication also includes 'emphysema'. The change alters the impression to 'Lungs are normal in volume', which is a clinically plausible error in 'degree' that contradicts the findings, the visual evidence, and the patient's known history. This creates an internal inconsistency between the findings and impression, and an external inconsistency with the images and patient history.",
+    "blue_assessment": "incorrect",
+    "reviewed_flag_ids": [
+      "s1",
+      "s9"
+    ],
+    "blue_explanation": "Blue incorrectly flags s1 and s9 as contradictions, stating the lungs appear normal in volume. However, the images show signs of hyperexpansion, such as flattened hemidiaphragms and an increased retrosternal air space, which are consistent with the original report's findings and the patient's history of emphysema. Therefore, the original statements are correct, and Blue's assessment is incorrect.",
+    "failure_modes": [
+      "hallucination"
+    ],
+    "confidence": "high",
+    "limitations": "None"
+  },
+  "attempts": [
+    {
+      "review": {
+        "attack_validity": "valid",
+        "attack_explanation": "The original report states 'Lungs are hyperexpanded' in the findings and 'Hyperexpanded lungs, suggestive of emphysema' in the impression. The images show signs consistent with hyperexpansion (e.g., flattened hemidiaphragms, increased retrosternal air space on lateral view). The patient's indication also includes 'emphysema'. The change alters the impression to 'Lungs are normal in volume', which is a clinically plausible error in 'degree' that contradicts the findings, the visual evidence, and the patient's known history. This creates an internal inconsistency between the findings and impression, and an external inconsistency with the images and patient history.",
+        "blue_assessment": "incorrect",
+        "reviewed_flag_ids": [
+          "s1",
+          "s9"
+        ],
+        "blue_explanation": "Blue incorrectly flags s1 and s9 as contradictions, stating the lungs appear normal in volume. However, the images show signs of hyperexpansion, such as flattened hemidiaphragms and an increased retrosternal air space, which are consistent with the original report's findings and the patient's history of emphysema. Therefore, the original statements are correct, and Blue's assessment is incorrect.",
+        "failure_modes": [
+          "hallucination"
+        ],
+        "confidence": "high",
+        "limitations": "None"
+      },
+      "validation_error": null
+    }
+  ],
+  "agent_feedback": "Matching accepted reviews can inform role-private demo memories after this study. These demo updates have no measured performance promotion gate."
+}

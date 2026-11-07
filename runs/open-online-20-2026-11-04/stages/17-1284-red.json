@@ -1,0 +1,123 @@
+{
+  "study_id": "1284",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Left-sided dual-XXXX cardiac XXXX in stable position."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The heart is of normal size."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Interval decrease and left basilar opacity."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Increase in XXXX opacities in the right lung base."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pneumothorax or large effusion."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: The pulmonary vascularity is unremarkable."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: Calcification of the thoracic aorta."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: Cardiac XXXX in stable position."
+    },
+    {
+      "id": "s10",
+      "text": "IMPRESSION: 2."
+    },
+    {
+      "id": "s11",
+      "text": "IMPRESSION: Increase in right and decrease in left basilar atelectasis."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Left-sided dual-XXXX cardiac XXXX in stable position."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The heart is of normal size."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Interval decrease and left basilar opacity."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Increase in XXXX opacities in the right lung base."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pneumothorax or large effusion."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: The pulmonary vascularity is unremarkable."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: Calcification of the thoracic aorta."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: Cardiac XXXX in stable position."
+    },
+    {
+      "id": "s10",
+      "text": "IMPRESSION: 2."
+    },
+    {
+      "id": "s11",
+      "text": "IMPRESSION: No significant basilar atelectasis."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s11"
+      ],
+      "candidate_ids": [
+        "s11"
+      ],
+      "category": "omission",
+      "description": "The impression regarding basilar atelectasis was changed from an increase in right and decrease in left basilar atelectasis to no significant basilar atelectasis, which contradicts the findings of interval decrease and left basilar opacity and increase in XXXX opacities in the right lung base."
+    }
+  ],
+  "declared_changes": [
+    {
+      "source_ids": [
+        "s11"
+      ],
+      "candidate_ids": [
+        "s11"
+      ],
+      "category": "omission",
+      "description": "The impression regarding basilar atelectasis was changed from an increase in right and decrease in left basilar atelectasis to no significant basilar atelectasis, which contradicts the findings of interval decrease and left basilar opacity and increase in XXXX opacities in the right lung base."
+    }
+  ],
+  "provenance_validation_error": null,
+  "rationale": "The original report states an 'increase in right and decrease in left basilar atelectasis' in the impression, which is supported by the findings of 'Interval decrease and left basilar opacity' and 'Increase in XXXX opacities in the right lung base'. The change to 'No significant basilar atelectasis' in the impression creates an omission error by negating a finding that is present and described in the findings section, and visible in the image (basilar opacities).",
+  "eligible": true,
+  "memory_sha256": "9e2c6863cfd07475f26530793ee035d4aaee4240f9223b5a74193fc0298785b6"
+}

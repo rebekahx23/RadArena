@@ -1,0 +1,40 @@
+{
+  "library": {
+    "initial": [
+      "Avoid flagging the absence of a finding when subtle image features suggest its possible presence.",
+      "When image quality or views are limited, prioritize uncertainty and avoid confident error flags.",
+      "Do not confidently flag a claim as incorrect if the image findings are open to multiple interpretations.",
+      "Acknowledge limitations of single-view radiographs when assessing findings.",
+      "Be cautious when assessing subtle differences in image density, especially when characterizing opacities."
+    ],
+    "error detection": [
+      "When an observation from a vision tool explicitly identifies a finding (e.g., a calcified nodule or cardiomegaly), and the candidate report explicitly denies or contradicts this finding, confidently flag it as a contradiction."
+    ],
+    "limitations handling": [
+      "Do not allow general limitations of plain radiographs (e.g., difficulty with precise localization or subtle findings) to prevent flagging clear contradictions when a specific finding is visible and explicitly denied by the candidate."
+    ]
+  },
+  "lessons": [
+    {
+      "category": "Error Detection",
+      "rule": "When an observation from a vision tool explicitly identifies a finding (e.g., a calcified nodule or cardiomegaly), and the candidate report explicitly denies or contradicts this finding, confidently flag it as a contradiction.",
+      "supporting_episode_ids": [
+        "1",
+        "2",
+        "5"
+      ]
+    },
+    {
+      "category": "Limitations Handling",
+      "rule": "Do not allow general limitations of plain radiographs (e.g., difficulty with precise localization or subtle findings) to prevent flagging clear contradictions when a specific finding is visible and explicitly denied by the candidate.",
+      "supporting_episode_ids": [
+        "1",
+        "2",
+        "5"
+      ]
+    }
+  ],
+  "rejected": [],
+  "explanation": "The feedback indicates that Blue correctly identified contradictions when vision tools clearly observed a finding (calcified granuloma, mild cardiomegaly) that the candidate report then denied. This pattern is seen in episodes 1, 2, and 5. The first lesson reinforces this direct contradiction detection. The second lesson addresses the tendency to sometimes over-rely on general limitations of plain radiographs, as seen in episode 4 where a visible foreign body was missed despite the limitations section acknowledging the possibility of missing small lesions. The feedback for episodes 1, 2, and 5 praises Blue for correctly identifying errors despite acknowledging limitations, suggesting that clear findings should override general limitations as a reason to abstain from flagging. Therefore, the second lesson encourages flagging clear contradictions even when general limitations are present, preventing a repeat of the issue in episode 4 where a visible finding was overlooked.",
+  "previous_memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+}

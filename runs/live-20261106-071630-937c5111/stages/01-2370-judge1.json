@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "model": "google/gemma-3-27b-it",
+  "error_type": "AdapterParseError",
+  "attempts": [],
+  "requested_model": "google/gemma-3-27b-it",
+  "fallback_used": false,
+  "message": "Reviewer unavailable. No assessment was substituted. Inspect the audited failed request."
+}

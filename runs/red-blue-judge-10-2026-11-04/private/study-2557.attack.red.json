@@ -1,0 +1,9 @@
+{
+  "edits": [
+    {
+      "sentence_id": "s1",
+      "replacement": "IMPRESSION: No cardiomegaly."
+    }
+  ],
+  "rationale": "Reduced the severity of cardiomegaly from 'mild' to 'none' as per the error type and strategies. This change aligns with the task of altering a semantic attribute (severity) while preserving the overall report structure and other findings."
+}

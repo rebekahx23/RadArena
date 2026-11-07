@@ -1,0 +1,135 @@
+{
+  "study_id": "394",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: There is a large airspace opacity in the right lower and middle lobes."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is no pneumothorax."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Heart size is normal."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Soft tissue and bony structures unremarkable."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Multilobar airspace consolidation."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: There is a large airspace opacity in the right lower and middle lobes."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is no pneumothorax."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Heart size is normal."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Soft tissue and bony structures unremarkable."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Multilobar airspace consolidation."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/394_IM-2010-1001.dcm.png"
+  ],
+  "clinical_context": "Shortness of breath",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [],
+    "rationale": "Unchanged source report control",
+    "requested_error_type": null,
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The image quality is moderate, and the findings are subtle, introducing some uncertainty. The assessment is based on a single view (PA), and a lateral view would be helpful for better assessment. Clinical context is unavailable."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there an airspace opacity visible in the right lower lobe?",
+      "observation": "The image is a chest X-ray. There appears to be some increased opacity in the right lower lobe compared to the left. This could potentially represent an airspace opacity, but it is subtle and could also be due to other factors like normal anatomy or technical issues with the image acquisition. The heart border and mediastinum appear normal. No obvious pneumothorax is seen.",
+      "limitations": "The assessment is based on a single static image. It is difficult to definitively determine if the opacity represents a true airspace opacity without comparison to prior imaging or additional views. The quality of the image and subtle nature of the finding introduce some uncertainty. Clinical context is unavailable."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there an airspace opacity visible in the right middle lobe?",
+      "observation": "The image is a chest X-ray. There appears to be some increased opacity in the right middle lobe compared to the left, but it is subtle. It could represent airspace opacity, but could also be due to vascular prominence or other factors. The heart border and mediastinum appear normal. There are no obvious large pleural effusions or pneumothorax.",
+      "limitations": "The image is a single view (PA). A lateral view would be helpful to better assess the depth and location of the opacity. The quality of the image is moderate, making subtle findings difficult to definitively characterize. Without clinical context or prior imaging for comparison, it is difficult to determine if this is a new finding or chronic process."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 0,
+    "uncertain": false,
+    "injected_edit_detected": null,
+    "unchanged_control_flagged": false,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

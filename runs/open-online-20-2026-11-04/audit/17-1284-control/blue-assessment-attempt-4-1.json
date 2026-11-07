@@ -1,0 +1,8 @@
+{
+  "verdict": {
+    "decision": "uncertain",
+    "findings": [],
+    "limitations": "The provided image is a lateral view of the left side of the chest, which limits the assessment of the right lung base and the precise stability of the cardiac device leads. No prior imaging was provided for comparison."
+  },
+  "accepted": true
+}

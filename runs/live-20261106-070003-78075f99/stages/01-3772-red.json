@@ -1,0 +1,159 @@
+{
+  "study_id": "3772",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size and pulmonary vascularity appear within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The lungs are free of focal airspace disease."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pleural effusion or pneumothorax is seen."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Calcified granuloma are present."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: Degenerative changes are present in the spine."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No evidence of active disease."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size and pulmonary vascularity appear within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The lungs are free of focal airspace disease."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pleural effusion or pneumothorax is seen."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No calcified granuloma are present."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: Degenerative changes are present in the spine."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No evidence of active disease."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s4"
+      ],
+      "candidate_ids": [
+        "s4"
+      ],
+      "category": "omission",
+      "description": "The presence of calcified granuloma was changed from present to absent, despite visible calcified granulomas in the images."
+    }
+  ],
+  "rationale": "The original report correctly identified calcified granulomas. The attack changes this to 'No calcified granuloma are present', which is a clinically plausible omission error, as calcified granulomas are often benign and can be overlooked or misreported as absent. The images clearly show multiple calcified granulomas in both lungs, making this an image-contradicted error.",
+  "eligible": true,
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attempts": [
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: The heart size and pulmonary vascularity appear within normal limits."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: The lungs are free of focal airspace disease."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: No pleural effusion or pneumothorax is seen."
+        },
+        {
+          "id": "s4",
+          "text": "FINDINGS: Calcified granuloma are present."
+        },
+        {
+          "id": "s5",
+          "text": "FINDINGS: Degenerative changes are present in the spine."
+        },
+        {
+          "id": "s6",
+          "text": "IMPRESSION: 1."
+        },
+        {
+          "id": "s7",
+          "text": "IMPRESSION: No evidence of active disease."
+        }
+      ],
+      "changes": [],
+      "eligible": false
+    },
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: The heart size and pulmonary vascularity appear within normal limits."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: The lungs are free of focal airspace disease."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: No pleural effusion or pneumothorax is seen."
+        },
+        {
+          "id": "s4",
+          "text": "FINDINGS: No calcified granuloma are present."
+        },
+        {
+          "id": "s5",
+          "text": "FINDINGS: Degenerative changes are present in the spine."
+        },
+        {
+          "id": "s6",
+          "text": "IMPRESSION: 1."
+        },
+        {
+          "id": "s7",
+          "text": "IMPRESSION: No evidence of active disease."
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [
+            "s4"
+          ],
+          "candidate_ids": [
+            "s4"
+          ],
+          "category": "omission",
+          "description": "The presence of calcified granuloma was changed from present to absent, despite visible calcified granulomas in the images."
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "verdict": {
+    "decision": "uncertain",
+    "findings": [],
+    "limitations": "The stability of the cardiac device leads could not be definitively assessed due to limitations in visualization on the provided imaging. The assessment of interval decrease in left basilar opacity could not be made without prior imaging."
+  },
+  "accepted": true
+}

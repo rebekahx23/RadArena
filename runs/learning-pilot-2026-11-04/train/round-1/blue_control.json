@@ -1,0 +1,83 @@
+{
+  "study_id": "113",
+  "case_id": "446a04222afdb34666562b6f",
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart and mediastinum are unremarkable."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There are two subcentimeter hyperdense nodular opacities are noted within the right lung."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: These may represent XXXX on end or alternatively, calcified granulomas."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: The lungs are clear without infiltrate."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: There is no effusion or pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No acute cardiopulmonary disease."
+    }
+  ],
+  "clinical_context": "Chest pain.",
+  "error_type": null,
+  "changed_sentence_ids": [],
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s2",
+        "error_type": "presence_absence",
+        "evidence": "The provided images show a subtle area of increased density in the right lung field on the PA and AP views, appearing as a somewhat rounded opacity approximately 1-2 cm in diameter.",
+        "tool_call_ids": [
+          "vision_1"
+        ]
+      },
+      {
+        "sentence_id": "s4",
+        "error_type": "presence_absence",
+        "evidence": "The images show some increased opacity in the lower lung fields bilaterally, which could potentially represent infiltrates. However, it is difficult to definitively characterize these findings as infiltrates.",
+        "tool_call_ids": [
+          "vision_2"
+        ]
+      }
+    ],
+    "limitations": "The size estimate of the opacity in the right lung is approximate and subject to interpretation. The potential infiltrates are difficult to definitively characterize based on the image quality and without prior imaging for comparison."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there a hyperdense nodular opacity in the right lung, and if so, what is its approximate size?",
+      "observation": "The provided images are chest radiographs, including a PA view, an AP view, and a lateral view. There is a subtle area of increased density in the right lung field on the PA and AP views. It appears as a somewhat rounded opacity. On the lateral view, this area is less clearly defined. Estimating size is difficult without scale or comparison to known structures, but it appears to be approximately 1-2 cm in diameter. It is difficult to definitively characterize this finding as a 'nodule' without further information.",
+      "limitations": "The images are in grayscale and of moderate resolution. The density could be due to a variety of factors, including a nodule, a mass, atelectasis, or overlying structures. Without prior imaging for comparison, it is impossible to determine if this is a new finding. The size estimate is approximate and subject to interpretation. A definitive diagnosis requires further investigation, such as a CT scan."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are there any infiltrates visible in the lungs?",
+      "observation": "The images show chest radiographs in multiple views (AP, PA, and lateral). There appears to be some increased opacity in the lower lung fields bilaterally, which could potentially represent infiltrates. However, it is difficult to definitively characterize these findings as infiltrates without further information. The heart size appears normal. The bony structures of the chest wall are intact. There is some artifact present in the images which may obscure subtle findings.",
+      "limitations": "The quality of the images is moderate, and subtle infiltrates could be missed. It is impossible to determine the etiology of any potential infiltrates (e.g., pneumonia, edema, malignancy) based on these images alone. A comparison to prior imaging studies would be helpful. Clinical correlation is necessary to interpret these findings."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 2,
+    "localization_fn": 0,
+    "uncertain": false,
+    "injected_edit_detected": null,
+    "unchanged_control_flagged": true,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "blue_memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

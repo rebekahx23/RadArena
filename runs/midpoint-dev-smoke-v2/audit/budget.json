@@ -1,0 +1,15 @@
+{
+  "max_cost_usd": 0.3,
+  "max_calls": 80,
+  "started_calls": 1,
+  "accounted_cost_usd": 0.13312,
+  "unknown_cost_policy": "retain full conservative request reserve",
+  "provider_price_caps": {
+    "prompt": 0.5,
+    "completion": 1.0,
+    "image": 0,
+    "request": 0
+  },
+  "model_context_bound": 262144,
+  "scope": "sequential audited Qwen calls; excludes unrelated account usage and credit-purchase fees"
+}

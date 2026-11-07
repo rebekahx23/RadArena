@@ -1,0 +1,167 @@
+{
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s1",
+        "error_type": "Contradiction",
+        "evidence": "The cardiothoracic ratio appears to be at the upper limits of normal or mildly enlarged on the frontal chest radiograph. The lateral view does not clearly show significant posterior displacement of the esophagus or other definitive signs of cardiomegaly.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "mixed",
+        "report_sentence_ids": [
+          "s1",
+          "a1"
+        ]
+      },
+      {
+        "sentence_id": "a1",
+        "error_type": "Contradiction",
+        "evidence": "The cardiothoracic ratio appears to be at the upper limits of normal or mildly enlarged on the frontal chest radiograph. The lateral view does not clearly show significant posterior displacement of the esophagus or other definitive signs of cardiomegaly.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "mixed",
+        "report_sentence_ids": [
+          "s1",
+          "a1"
+        ]
+      }
+    ],
+    "limitations": "The assessment of heart size on plain radiographs can be influenced by patient positioning, inspiration, and body habitus. A definitive assessment of cardiomegaly often requires echocardiography or CT imaging. Without prior imaging for comparison, it is difficult to determine if there has been a change in heart size."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "error",
+        "findings": [
+          {
+            "sentence_id": "s1",
+            "error_type": "Contradiction",
+            "evidence": "The cardiothoracic ratio appears to be at the upper limits of normal or mildly enlarged on the frontal chest radiograph. The lateral view does not clearly show significant posterior displacement of the esophagus or other definitive signs of cardiomegaly.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "mixed",
+            "report_sentence_ids": [
+              "a1"
+            ]
+          },
+          {
+            "sentence_id": "a1",
+            "error_type": "Contradiction",
+            "evidence": "The cardiothoracic ratio appears to be at the upper limits of normal or mildly enlarged on the frontal chest radiograph. The lateral view does not clearly show significant posterior displacement of the esophagus or other definitive signs of cardiomegaly.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "mixed",
+            "report_sentence_ids": [
+              "s1"
+            ]
+          }
+        ],
+        "limitations": "The assessment of heart size on plain radiographs can be influenced by patient positioning, inspiration, and body habitus. A definitive assessment of cardiomegaly often requires echocardiography or CT imaging. Without prior imaging for comparison, it is difficult to determine if there has been a change in heart size."
+      },
+      "accepted": false,
+      "validation_error": "Text citations must include the flagged sentence"
+    },
+    {
+      "verdict": {
+        "decision": "error",
+        "findings": [
+          {
+            "sentence_id": "s1",
+            "error_type": "Contradiction",
+            "evidence": "The cardiothoracic ratio appears to be at the upper limits of normal or mildly enlarged on the frontal chest radiograph. The lateral view does not clearly show significant posterior displacement of the esophagus or other definitive signs of cardiomegaly.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "mixed",
+            "report_sentence_ids": [
+              "s1",
+              "a1"
+            ]
+          },
+          {
+            "sentence_id": "a1",
+            "error_type": "Contradiction",
+            "evidence": "The cardiothoracic ratio appears to be at the upper limits of normal or mildly enlarged on the frontal chest radiograph. The lateral view does not clearly show significant posterior displacement of the esophagus or other definitive signs of cardiomegaly.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "mixed",
+            "report_sentence_ids": [
+              "s1",
+              "a1"
+            ]
+          }
+        ],
+        "limitations": "The assessment of heart size on plain radiographs can be influenced by patient positioning, inspiration, and body habitus. A definitive assessment of cardiomegaly often requires echocardiography or CT imaging. Without prior imaging for comparison, it is difficult to determine if there has been a change in heart size."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is the heart size normal, or is there mild cardiomegaly?",
+      "observation": "The cardiothoracic ratio appears to be at the upper limits of normal or mildly enlarged on the frontal chest radiograph. The lateral view does not clearly show significant posterior displacement of the esophagus or other definitive signs of cardiomegaly.",
+      "limitations": "Assessment of heart size on plain radiographs can be influenced by patient positioning, inspiration, and body habitus. A definitive assessment of cardiomegaly often requires echocardiography or CT imaging. Without prior imaging for comparison, it is difficult to determine if there has been a change in heart size."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are there any focal infiltrates, nodules, or masses in the lungs?",
+      "observation": "The frontal and lateral chest radiographs show no definite focal infiltrates, nodules, or masses in the lungs. The lung fields appear clear.",
+      "limitations": "The sensitivity for detecting small nodules or subtle infiltrates on plain radiographs is limited. Overlying structures and patient positioning can obscure pathology. Without prior imaging for comparison, subtle changes cannot be assessed for chronicity or progression."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size is normal."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The mediastinal contour is within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: The lungs are free of any focal infiltrates."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: There are no nodules or masses."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No visible pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: No visible pleural fluid."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: The XXXX are grossly normal."
+    },
+    {
+      "id": "s8",
+      "text": "FINDINGS: There is no visible free intraperitoneal air under the diaphragm."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s10",
+      "text": "IMPRESSION: No acute radiographic cardiopulmonary process."
+    },
+    {
+      "id": "a1",
+      "text": "IMPRESSION: 2. Mild cardiomegaly."
+    }
+  ],
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

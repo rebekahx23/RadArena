@@ -1,0 +1,15 @@
+{
+  "role": "blue",
+  "round": 2,
+  "rules": [
+    "When image evidence is inconclusive or limited, prioritize uncertainty and avoid confident error flags.",
+    "Do not flag the absence of pneumothorax when a chest tube is present, as assessment is complicated.",
+    "Avoid flagging findings as incorrect based solely on subtle image features without strong supporting evidence.",
+    "If image findings could have multiple explanations, avoid flagging a claim as incorrect.",
+    "Be cautious when assessing substernal densities on standard radiographs due to potential obscuration."
+  ],
+  "explanation": "The feedback highlights challenges in pneumothorax and substernal density assessment due to image limitations (chest tube, image quality, 2D views) and the need to avoid confident error flags when findings are ambiguous. The rules should emphasize uncertainty and the importance of image evidence. We need to reinforce avoiding flags based on subtle findings without strong support and the potential for multiple interpretations.",
+  "previous_memory_sha256": "23e5d6fa1a4f5e43e58d8059c640b89840739c6bd768dac96448fcfd9735cf0d",
+  "memory_sha256": "ec1cc4371a817aef463f97ea740d091ecd683d5914bd74eb950fc22705b4d9cf",
+  "training_study_id": "102"
+}

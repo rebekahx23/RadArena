@@ -1,0 +1,9 @@
+{
+  "edits": [
+    {
+      "sentence_id": "s1",
+      "replacement": "Cardiomegaly is not present."
+    }
+  ],
+  "rationale": "Changing 'Mild cardiomegaly' to 'Cardiomegaly is not present' reduces the severity to absence, fulfilling the task's requirement to alter severity. This change is made in the FINDINGS section. The change is unambiguous and maintains syntactical correctness."
+}

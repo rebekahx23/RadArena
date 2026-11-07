@@ -1,0 +1,988 @@
+[
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Minimally increased XXXX airspace opacities bilaterally, most prominent in the lung bases."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size is within normal limits."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Osseous structures are grossly intact."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Minimally increased air space opacities bilaterally, most prominent in the lung bases."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Findings are nonspecific, but may represent subsegmental atelectasis versus mild interstitial edema or an atypical infectious process."
+      }
+    ],
+    "case_id": "d3fc223100aa912d390017e4",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1187_IM-0126-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1187_IM-0126-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "6051b657c5995804318038a6761b75273ddeed1061550c2095ea159e6fc14c5a",
+      "7918b57aeab597e43f6d9f333cde255ee870ae79a94478152d77a0b2e527937b"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [],
+      "edits": [],
+      "error_type": null,
+      "has_error": false,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Minimally increased XXXX airspace opacities bilaterally, most prominent in the lung bases."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size is within normal limits."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Osseous structures are grossly intact."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Minimally increased air space opacities bilaterally, most prominent in the lung bases."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Findings are nonspecific, but may represent subsegmental atelectasis versus mild interstitial edema or an atypical infectious process."
+      }
+    ],
+    "split": "train",
+    "study_id": "1187"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The cardiomediastinal silhouette is within normal limits for appearance."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: No focal areas of pulmonary consolidation."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: Mild degenerative changes of the thoracic spine."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute cardiopulmonary process."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "case_id": "7dcd0f825a73778f1479899a",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1411_IM-0261-0001-0001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1411_IM-0261-0001-0002.dcm.png"
+    ],
+    "image_sha256": [
+      "e2000eb0b365ecee3e1e17a7552c461f33059c31eeec711fbf16f36538e07658",
+      "00b69584ed7806da4645bf472c0edaaa33293382a4488e5b83cfb4c8f4d22908"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [],
+      "edits": [],
+      "error_type": null,
+      "has_error": false,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The cardiomediastinal silhouette is within normal limits for appearance."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: No focal areas of pulmonary consolidation."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: Mild degenerative changes of the thoracic spine."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute cardiopulmonary process."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "split": "dev",
+    "study_id": "1411"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart and mediastinum are unremarkable."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There are two subcentimeter hyperdense nodular opacities are noted within the right lung."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: These may represent XXXX on end or alternatively, calcified granulomas."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: The lungs are clear without infiltrate."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: There is no effusion or pneumothorax."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: No acute cardiopulmonary disease."
+      }
+    ],
+    "case_id": "0681198e190d968eadf46077",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/113_IM-0086-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/113_IM-0086-3001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/113_IM-0086-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "7e5809685c65113477c894911cf5d26ef3d9397a9e3f2e7d35e23b3f9f0f09fc",
+      "09403899c524f6016ff5497eb4c23ff3f37a5ab69e08f0d315f464dd2f05b8de",
+      "39442e050c2bed6a90149674c96ef42fc7c0681077c232360ac130f2187796a1"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [],
+      "edits": [],
+      "error_type": null,
+      "has_error": false,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart and mediastinum are unremarkable."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There are two subcentimeter hyperdense nodular opacities are noted within the right lung."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: These may represent XXXX on end or alternatively, calcified granulomas."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: The lungs are clear without infiltrate."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: There is no effusion or pneumothorax."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: No acute cardiopulmonary disease."
+      }
+    ],
+    "split": "train",
+    "study_id": "113"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Minimally increased XXXX airspace opacities bilaterally, most prominent in the lung bases."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size is within normal limits."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Osseous structures are grossly intact."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Minimally increased air space opacities bilaterally, most prominent in the lung bases."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Findings are nonspecific, but may represent subsegmental atelectasis versus severe interstitial edema or an atypical infectious process."
+      }
+    ],
+    "case_id": "587c60da289b6eab6f1810d5",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1187_IM-0126-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1187_IM-0126-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "6051b657c5995804318038a6761b75273ddeed1061550c2095ea159e6fc14c5a",
+      "7918b57aeab597e43f6d9f333cde255ee870ae79a94478152d77a0b2e527937b"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s6"
+      ],
+      "edits": [
+        {
+          "replacement": "IMPRESSION: Findings are nonspecific, but may represent subsegmental atelectasis versus severe interstitial edema or an atypical infectious process.",
+          "sentence_id": "s6"
+        }
+      ],
+      "error_type": "severity",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Minimally increased XXXX airspace opacities bilaterally, most prominent in the lung bases."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size is within normal limits."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Osseous structures are grossly intact."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Minimally increased air space opacities bilaterally, most prominent in the lung bases."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Findings are nonspecific, but may represent subsegmental atelectasis versus mild interstitial edema or an atypical infectious process."
+      }
+    ],
+    "split": "train",
+    "study_id": "1187"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Compared to prior examination from XXXX, there has been extubation and removal of central line and enteric tube."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Stable cardiomegaly and mild thoracolumbar dextroscoliosis."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Left basilar opacity XXXX represents chronic fibrosis/scar."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No focal consolidation, pneumothorax, or effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No acute osseous abnormality."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Stable cardiomegaly without acute cardiopulmonary abnormality."
+      }
+    ],
+    "case_id": "65eb29900649f22adf3041ec",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2088_IM-0719-2001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2088_IM-0719-3001.dcm.png"
+    ],
+    "image_sha256": [
+      "1bca55a46ad3286a20058e8e04280a5728cf9936f47b6d5ad8396c2f9ed2ae0e",
+      "d39f9219e6b03f8ad728b37caf64f09a4746f0bb2106a69045642f7e7b8c93fd"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [],
+      "edits": [],
+      "error_type": null,
+      "has_error": false,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Compared to prior examination from XXXX, there has been extubation and removal of central line and enteric tube."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Stable cardiomegaly and mild thoracolumbar dextroscoliosis."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Left basilar opacity XXXX represents chronic fibrosis/scar."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No focal consolidation, pneumothorax, or effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No acute osseous abnormality."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Stable cardiomegaly without acute cardiopulmonary abnormality."
+      }
+    ],
+    "split": "dev",
+    "study_id": "2088"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Normal heart size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Clear, hyperaerated lungs."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: XXXX substernal density may be related to a pectus deformity."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      }
+    ],
+    "case_id": "980616c26063b5662c271d58",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/102_IM-0016-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/102_IM-0016-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "3e3838f0d55699c16205669e357dc0dbc273b8c0f98a775cef86afdb01b27a88",
+      "1add9ee0e7c8132e35aed55a610c7fd0a9ee0f52ec9a49aec274a8340f8e93fc"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [],
+      "edits": [],
+      "error_type": null,
+      "has_error": false,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Normal heart size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Clear, hyperaerated lungs."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: XXXX substernal density may be related to a pectus deformity."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      }
+    ],
+    "split": "train",
+    "study_id": "102"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Compared to prior examination from XXXX, there has been extubation and removal of central line and enteric tube."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Stable cardiomegaly and mild thoracolumbar dextroscoliosis."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Right basilar opacity XXXX represents chronic fibrosis/scar."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No focal consolidation, pneumothorax, or effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No acute osseous abnormality."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Stable cardiomegaly without acute cardiopulmonary abnormality."
+      }
+    ],
+    "case_id": "7e3d544f3b50a2cdfde18eea",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2088_IM-0719-2001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2088_IM-0719-3001.dcm.png"
+    ],
+    "image_sha256": [
+      "1bca55a46ad3286a20058e8e04280a5728cf9936f47b6d5ad8396c2f9ed2ae0e",
+      "d39f9219e6b03f8ad728b37caf64f09a4746f0bb2106a69045642f7e7b8c93fd"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s3"
+      ],
+      "edits": [
+        {
+          "replacement": "FINDINGS: Right basilar opacity XXXX represents chronic fibrosis/scar.",
+          "sentence_id": "s3"
+        }
+      ],
+      "error_type": "laterality",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Compared to prior examination from XXXX, there has been extubation and removal of central line and enteric tube."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Stable cardiomegaly and mild thoracolumbar dextroscoliosis."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Left basilar opacity XXXX represents chronic fibrosis/scar."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No focal consolidation, pneumothorax, or effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No acute osseous abnormality."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Stable cardiomegaly without acute cardiopulmonary abnormality."
+      }
+    ],
+    "split": "dev",
+    "study_id": "2088"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: There are no acute osseous abnormalities."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Questionable old left posterior third and fourth rib fractures."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Visualized soft tissues are within normal limits."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Normal heart size."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: Normal hilar vascular markings."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: Subtle prominence of interstitial markings in the bases, left worse than right."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: No focal area of consolidation, pleural effusion, or pneumothorax."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: Subtle interstitial markings bilateral, may represent severe pulmonary edema or chronic interstitial changes."
+      }
+    ],
+    "case_id": "1ed684742b01e5925585d31e",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2070_IM-0704-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2070_IM-0704-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "4d9d4f222fb51199d5f3d6889f301d6f0ac5e4f7666ead25c30ee55681f5bc55",
+      "bdaae75dc020494c8871ca443c2bbcc9e8edd463abd81b67a67baa7477e88369"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s8"
+      ],
+      "edits": [
+        {
+          "replacement": "IMPRESSION: Subtle interstitial markings bilateral, may represent severe pulmonary edema or chronic interstitial changes.",
+          "sentence_id": "s8"
+        }
+      ],
+      "error_type": "severity",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: There are no acute osseous abnormalities."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Questionable old left posterior third and fourth rib fractures."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Visualized soft tissues are within normal limits."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Normal heart size."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: Normal hilar vascular markings."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: Subtle prominence of interstitial markings in the bases, left worse than right."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: No focal area of consolidation, pleural effusion, or pneumothorax."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: Subtle interstitial markings bilateral, may represent mild pulmonary edema or chronic interstitial changes."
+      }
+    ],
+    "split": "dev",
+    "study_id": "2070"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Normal heart size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Clear, hyperaerated lungs."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: XXXX substernal density may be related to a pectus deformity."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      }
+    ],
+    "case_id": "dc98faeafcb70ac5a2fe05a8",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/102_IM-0016-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/102_IM-0016-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "3e3838f0d55699c16205669e357dc0dbc273b8c0f98a775cef86afdb01b27a88",
+      "1add9ee0e7c8132e35aed55a610c7fd0a9ee0f52ec9a49aec274a8340f8e93fc"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s3"
+      ],
+      "edits": [
+        {
+          "replacement": "FINDINGS: pneumothorax.",
+          "sentence_id": "s3"
+        }
+      ],
+      "error_type": "presence_absence",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Normal heart size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Clear, hyperaerated lungs."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: XXXX substernal density may be related to a pectus deformity."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      }
+    ],
+    "split": "train",
+    "study_id": "102"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The cardiomediastinal silhouette is within normal limits for appearance."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: No focal areas of pulmonary consolidation."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: Mild degenerative changes of the thoracic spine."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute cardiopulmonary process."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "case_id": "d9718540f272eed2cfeb93dd",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1411_IM-0261-0001-0001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1411_IM-0261-0001-0002.dcm.png"
+    ],
+    "image_sha256": [
+      "e2000eb0b365ecee3e1e17a7552c461f33059c31eeec711fbf16f36538e07658",
+      "00b69584ed7806da4645bf472c0edaaa33293382a4488e5b83cfb4c8f4d22908"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s3"
+      ],
+      "edits": [
+        {
+          "replacement": "FINDINGS: pneumothorax.",
+          "sentence_id": "s3"
+        }
+      ],
+      "error_type": "presence_absence",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The cardiomediastinal silhouette is within normal limits for appearance."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: No focal areas of pulmonary consolidation."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: Mild degenerative changes of the thoracic spine."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: No acute cardiopulmonary process."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "split": "dev",
+    "study_id": "1411"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart and mediastinum are unremarkable."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There are two subcentimeter hyperdense nodular opacities are noted within the left lung."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: These may represent XXXX on end or alternatively, calcified granulomas."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: The lungs are clear without infiltrate."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: There is no effusion or pneumothorax."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: No acute cardiopulmonary disease."
+      }
+    ],
+    "case_id": "446a04222afdb34666562b6f",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/113_IM-0086-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/113_IM-0086-3001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/113_IM-0086-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "7e5809685c65113477c894911cf5d26ef3d9397a9e3f2e7d35e23b3f9f0f09fc",
+      "09403899c524f6016ff5497eb4c23ff3f37a5ab69e08f0d315f464dd2f05b8de",
+      "39442e050c2bed6a90149674c96ef42fc7c0681077c232360ac130f2187796a1"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s2"
+      ],
+      "edits": [
+        {
+          "replacement": "FINDINGS: There are two subcentimeter hyperdense nodular opacities are noted within the left lung.",
+          "sentence_id": "s2"
+        }
+      ],
+      "error_type": "laterality",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart and mediastinum are unremarkable."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There are two subcentimeter hyperdense nodular opacities are noted within the right lung."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: These may represent XXXX on end or alternatively, calcified granulomas."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: The lungs are clear without infiltrate."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: There is no effusion or pneumothorax."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: No acute cardiopulmonary disease."
+      }
+    ],
+    "split": "train",
+    "study_id": "113"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: There are no acute osseous abnormalities."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Questionable old left posterior third and fourth rib fractures."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Visualized soft tissues are within normal limits."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Normal heart size."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: Normal hilar vascular markings."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: Subtle prominence of interstitial markings in the bases, left worse than right."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: No focal area of consolidation, pleural effusion, or pneumothorax."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: Subtle interstitial markings bilateral, may represent mild pulmonary edema or chronic interstitial changes."
+      }
+    ],
+    "case_id": "abdd0f5ed21aab9ecd6df2d6",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2070_IM-0704-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2070_IM-0704-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "4d9d4f222fb51199d5f3d6889f301d6f0ac5e4f7666ead25c30ee55681f5bc55",
+      "bdaae75dc020494c8871ca443c2bbcc9e8edd463abd81b67a67baa7477e88369"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [],
+      "edits": [],
+      "error_type": null,
+      "has_error": false,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: There are no acute osseous abnormalities."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Questionable old left posterior third and fourth rib fractures."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Visualized soft tissues are within normal limits."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Normal heart size."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: Normal hilar vascular markings."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: Subtle prominence of interstitial markings in the bases, left worse than right."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: No focal area of consolidation, pleural effusion, or pneumothorax."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: Subtle interstitial markings bilateral, may represent mild pulmonary edema or chronic interstitial changes."
+      }
+    ],
+    "split": "dev",
+    "study_id": "2070"
+  }
+]

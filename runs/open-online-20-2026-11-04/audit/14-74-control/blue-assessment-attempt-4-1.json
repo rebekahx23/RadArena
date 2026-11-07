@@ -1,0 +1,19 @@
+{
+  "verdict": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s1",
+        "error_type": "contradiction",
+        "evidence": "There is no definite calcified granuloma visible in the provided lateral chest radiograph. The lung fields appear clear without focal calcifications.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      }
+    ],
+    "limitations": "The single lateral chest radiograph provides limited visualization of the aorta, making it difficult to definitively assess for atherosclerotic changes. The observation for atherosclerotic changes is inconclusive due to the limitations of the single lateral view."
+  },
+  "accepted": true
+}

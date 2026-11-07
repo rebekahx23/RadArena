@@ -1,0 +1,219 @@
+{
+  "status": "local extraction tested; performance ablation not run",
+  "candidate_reports": 6,
+  "extractor": {
+    "sha256": "5f0cda63262a85f7618ce9327456cd154d43e97010f56d737f448d9ef336e495",
+    "extractor": {
+      "tool": "RadGraph",
+      "package_version": "0.1.18",
+      "model_type": "radgraph-xl",
+      "device": "cpu",
+      "model_files_sha256": {
+        "config.json": "985554e4df559a6b6d348bf4c4541cc4c353a768dfe7d533464cbf101d9a39b2",
+        "vocabulary/.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "vocabulary/non_padded_namespaces.txt": "863044919d9f9c1c04aba282ac981ab0157d6ab08737a96c72f7e15887911db0",
+        "vocabulary/radgraph-xl__ner_labels.txt": "c532272c568f3beddd583cd643441cd7102f2e9b958fee57d64745b1f6213755",
+        "vocabulary/radgraph-xl__relation_labels.txt": "cb735684302c8abb3a906adf01be34d2205473f146dc6e90c6ba9ea5d65082b9",
+        "weights.th": "fdc4780bbeb7c2f9a2457ed20da842f80b2eaf057063e54951991645fa1d5464"
+      },
+      "scope": "sentence-level extraction; cross-sentence relations are not modeled",
+      "evidence_type": "report text claims, not image observations"
+    },
+    "scope": "exact candidate report only; no original/candidate difference"
+  },
+  "checks": [
+    {
+      "study_id": "1094",
+      "sentence_id": "s4",
+      "outputs": [
+        {
+          "variant": "unchanged",
+          "sentence": "FINDINGS: Left lower lobe XXXX density XXXX representing atelectasis.",
+          "claims": [
+            {
+              "entity_id": "4",
+              "observation": "density",
+              "qualified_observation": "density",
+              "status": "present",
+              "anatomy": [
+                "Left lower lobe"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "3",
+                  "target_text": "Left lower lobe"
+                },
+                {
+                  "type": "suggestive_of",
+                  "target_entity_id": "5",
+                  "target_text": "atelectasis"
+                }
+              ]
+            },
+            {
+              "entity_id": "5",
+              "observation": "atelectasis",
+              "qualified_observation": "atelectasis",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "variant": "edited",
+          "sentence": "FINDINGS: Right lower lobe XXXX density XXXX representing atelectasis.",
+          "claims": [
+            {
+              "entity_id": "4",
+              "observation": "density",
+              "qualified_observation": "density",
+              "status": "present",
+              "anatomy": [
+                "Right lower lobe"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "3",
+                  "target_text": "Right lower lobe"
+                },
+                {
+                  "type": "suggestive_of",
+                  "target_entity_id": "5",
+                  "target_text": "atelectasis"
+                }
+              ]
+            },
+            {
+              "entity_id": "5",
+              "observation": "atelectasis",
+              "qualified_observation": "atelectasis",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "study_id": "2036",
+      "sentence_id": "s1",
+      "outputs": [
+        {
+          "variant": "unchanged",
+          "sentence": "FINDINGS: There is mild cardiomegaly.",
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "mild",
+              "qualified_observation": "mild",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "2",
+                  "target_text": "mild cardiomegaly"
+                }
+              ]
+            },
+            {
+              "entity_id": "2",
+              "observation": "cardiomegaly",
+              "qualified_observation": "mild cardiomegaly",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [
+                "mild"
+              ],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "variant": "edited",
+          "sentence": "FINDINGS: There is severe cardiomegaly.",
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "severe",
+              "qualified_observation": "severe",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "2",
+                  "target_text": "severe cardiomegaly"
+                }
+              ]
+            },
+            {
+              "entity_id": "2",
+              "observation": "cardiomegaly",
+              "qualified_observation": "severe cardiomegaly",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [
+                "severe"
+              ],
+              "relations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "study_id": "1106",
+      "sentence_id": "s7",
+      "outputs": [
+        {
+          "variant": "unchanged",
+          "sentence": "IMPRESSION: No pneumothorax.",
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "pneumothorax",
+              "qualified_observation": "pneumothorax",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "variant": "edited",
+          "sentence": "IMPRESSION: pneumothorax.",
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "pneumothorax",
+              "qualified_observation": "pneumothorax",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "paid_api_calls": 0,
+  "software_tests_passed": 53,
+  "additional_diagnostics": {
+    "explicit_positive_pneumothorax_sentence": "incorrectly labeled absent",
+    "full_report_context_study_1106": "status edit still not recovered",
+    "scope": "local spot checks, not a general accuracy estimate"
+  }
+}

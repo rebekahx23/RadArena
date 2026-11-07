@@ -1,0 +1,9 @@
+{
+  "edits": [
+    {
+      "sentence_id": "s1",
+      "replacement": "IMPRESSION: Streaky opacities in the left lower lobe most suggestive of atelectasis, differential diagnosis includes atypical infection."
+    }
+  ],
+  "rationale": "Changed 'right lower lobe' to 'left lower lobe' to alter the laterality of the finding, as requested by the error type. This change is consistent with the instructions to modify only one semantic attribute and preserve the rest of the sentence."
+}

@@ -1,0 +1,127 @@
+{
+  "format_version": 1,
+  "benchmark_sha256": "43f0f1033f2c30627c50c2921549de916c400c7b28a4e39ba136d82dcd239d84",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "judge_model": "google/gemini-2.5-flash",
+  "max_cost_usd": 1.0,
+  "max_checks": 2,
+  "clinical_context": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "selection": [
+    {
+      "study_id": "37",
+      "error_type": "laterality",
+      "image_count": 2
+    },
+    {
+      "study_id": "394",
+      "error_type": "laterality",
+      "image_count": 1
+    },
+    {
+      "study_id": "2402",
+      "error_type": "laterality",
+      "image_count": 2
+    },
+    {
+      "study_id": "3140",
+      "error_type": "laterality",
+      "image_count": 2
+    },
+    {
+      "study_id": "1656",
+      "error_type": "presence_absence",
+      "image_count": 2
+    },
+    {
+      "study_id": "1868",
+      "error_type": "presence_absence",
+      "image_count": 2
+    },
+    {
+      "study_id": "2398",
+      "error_type": "presence_absence",
+      "image_count": 3
+    },
+    {
+      "study_id": "2557",
+      "error_type": "severity",
+      "image_count": 2
+    },
+    {
+      "study_id": "3244",
+      "error_type": "severity",
+      "image_count": 2
+    },
+    {
+      "study_id": "3768",
+      "error_type": "severity",
+      "image_count": 2
+    }
+  ],
+  "implementation_sha256": {
+    "__init__.py": "52a11edd15b06b91febc6d016d6c31f4754ff3c14f57b132967fcc13ae445e5c",
+    "agents.py": "aec86a67a2053f88d320717bc9e315f0360099bb6271be8ad74d1d7823a32e74",
+    "batch.py": "ed7123bc6b25a297fbfccd9434371dcc19cefc08cf489ad8b2ba4fa9198c3858",
+    "benchmark.py": "823af8f7bd3d035646e3a276ff9b5773fe63ea64ebd3af7c50399513284441e2",
+    "cli.py": "12f0cb85d605bff6a16998eb1f6dbef0a8453304c8c67a61a66eb1133f5c6c9e",
+    "clinical_context.py": "897a5715c43151a34ee7504f4a7354175e6df12933ebcb28383767dd99148fa7",
+    "data.py": "4c8f89ca603f90e7a56bfb94f01cd6e5588ecee0aec351f479ecac3b89064c72",
+    "evaluate.py": "a34552b812bd882740c973704a2c5ec0ac784ef069fb606c9773242891d73b56",
+    "handbook.py": "88b8c70d3646a38edbf7d678cf08db45a1743eea55ec312f4677d1c2f3816ecf",
+    "judge.py": "5bf926d36ce05e8a3504e1d095c101ccf85785d2cdf9b72f627c1dd5931e633a",
+    "knowledge.py": "afb5ba1f2ec0c4cc789c2b295d536108ce0eb3ff0d5097d092fbaa3bed9badc1",
+    "learning.py": "18cf291fd4f2959008d461c5bfb229548e5767bb37620dcd695a7ee8cafecc06",
+    "memory.py": "d90428e6161e3eef19ac425bb31a11aa84eea4f62e4c663d3eb7ab5ea58421fc",
+    "report_graph.py": "277c4d216e246ab2fbcb6ca247ec11b6f5b1f91a8a4e0064288f18ab9a84781b",
+    "runtime.py": "0a04177493e9ce161060bf7fd417362619b3ce60e0fdda45b775ff17d90d9627",
+    "tracing.py": "1ca02a86b5c3e511581ad4f0f3fec7ef5dd322d6e799c69dbc68321bd09ba75c",
+    "viewer.py": "17e8a769067475b1d97ec0ea38d019333998b559c3ea6a3f482ce3d76a1e1024"
+  },
+  "protocol": "Frozen memories. Ten generated attacks plus ten unchanged controls. Image judge on attacks. No judge feedback to agents."
+}

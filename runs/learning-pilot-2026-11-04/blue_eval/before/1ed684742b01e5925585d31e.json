@@ -1,0 +1,81 @@
+{
+  "study_id": "2070",
+  "case_id": "1ed684742b01e5925585d31e",
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: There are no acute osseous abnormalities."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Questionable old left posterior third and fourth rib fractures."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Visualized soft tissues are within normal limits."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Normal heart size."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: Normal hilar vascular markings."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: Subtle prominence of interstitial markings in the bases, left worse than right."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: No focal area of consolidation, pleural effusion, or pneumothorax."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: Subtle interstitial markings bilateral, may represent severe pulmonary edema or chronic interstitial changes."
+    }
+  ],
+  "clinical_context": "XXXX-year-old woman with chest pain.",
+  "error_type": "severity",
+  "changed_sentence_ids": [
+    "s8"
+  ],
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s2",
+        "error_type": "presence_absence",
+        "evidence": "The left lateral view shows a subtle area of increased opacity and possible distortion of the left posterior third and fourth ribs, which could potentially represent an old fracture. This contradicts the claim that there are no acute osseous abnormalities.",
+        "tool_call_ids": [
+          "vision_1"
+        ]
+      }
+    ],
+    "limitations": "The assessment of the ribs is limited by the inherent challenges of visualizing subtle fractures on plain radiography and the lack of prior imaging for comparison. The images are adequate but not ideal for detailed bony assessment."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there evidence of old fractures in the left posterior third and fourth ribs?",
+      "observation": "The provided images are a PA chest radiograph and a left lateral chest radiograph. On the PA view, the bony structures of the ribs are somewhat obscured by the soft tissues of the chest wall. On the left lateral view, there is a subtle area of increased opacity and possible distortion of the left posterior third and fourth ribs. This could potentially represent an old fracture, but it is not definitive. There is no clear evidence of acute fracture or displacement. The lateral view is the more helpful of the two for assessing the ribs.",
+      "limitations": "The images are limited by the inherent challenges of visualizing subtle fractures on plain radiography. The quality of the images is adequate, but not ideal for detailed bony assessment. Without prior imaging for comparison, it is difficult to definitively determine if the observed changes represent old fractures or normal anatomical variation. A CT scan would be more sensitive for detecting subtle fractures."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are there any focal areas of consolidation, pleural effusion, or pneumothorax?",
+      "observation": "The provided images are chest radiographs. The frontal view shows generally clear lung fields, though there is some opacity in the lower lung zones which could be due to normal anatomy or mild congestion. The lateral view shows a relatively clear lung field as well. There is no obvious evidence of pneumothorax (no visible pleural line) or large pleural effusion. However, subtle consolidation could be present, but is difficult to definitively assess without comparison to prior imaging or clinical context. The heart size appears within normal limits. There is a marker 'LT' on the frontal view indicating left side.",
+      "limitations": "The assessment is limited by the single set of images provided. A comparison to prior imaging is necessary to determine if any observed findings are new or changing. Clinical correlation is also needed to interpret the findings in the context of the patient's symptoms and history. Subtle findings, such as small effusions or early consolidation, may be difficult to detect on a single radiographic view."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 1,
+    "localization_fn": 1,
+    "uncertain": false,
+    "injected_edit_detected": false,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "blue_memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

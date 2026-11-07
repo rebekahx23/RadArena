@@ -1,0 +1,86 @@
+[
+  {
+    "study_id": "2370",
+    "split": "train",
+    "image_ids": [
+      "2370_IM-0931-1001.dcm.png",
+      "2370_IM-0931-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2370_IM-0931-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2370_IM-0931-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: In the interval, consolidation and atelectasis have developed in the right lower lobe."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Costophrenic XXXX blunted on the right."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Left lung clear."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Heart size normal."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Left lower lobe airspace disease consistent with pneumonia."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Associated right pleural effusion."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "d18568ff7d9b315a0f2a12cb17b70e8349014fbe7c84e227a4ab38b2db051a4a",
+      "1de285a60faf28ed8b7a6c170e9dbb8326a8c26674c73b2857188e4b97cdad1b"
+    ]
+  },
+  {
+    "study_id": "198",
+    "split": "train",
+    "image_ids": [
+      "198_IM-0637-1002.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/198_IM-0637-1002.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart and lungs have XXXX XXXX in the interval."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Both lungs are clear and expanded."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Heart and mediastinum normal."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: No active disease."
+      }
+    ],
+    "image_views": [
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "1c8c38a2883606640155bfae86df82c811f0d732a7d1c31ca454c6668c3e1fbc"
+    ]
+  }
+]

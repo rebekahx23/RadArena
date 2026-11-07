@@ -1,0 +1,5 @@
+{
+  "provider_request_sent": false,
+  "reason": "Local audit serializer encountered a Pydantic schema class before writing request-start or invoking provider. Fixed schema-class serialization. Raw failed setup artifact preserved.",
+  "original_demo_modified": false
+}

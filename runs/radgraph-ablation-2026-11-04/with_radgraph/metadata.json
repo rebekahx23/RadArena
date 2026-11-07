@@ -1,0 +1,65 @@
+{
+  "benchmark_sha256": "43f0f1033f2c30627c50c2921549de916c400c7b28a4e39ba136d82dcd239d84",
+  "implementation_sha256": "c223fd00337707c626a5b30702c2872db8643d3669a875a33b22e7202c967575",
+  "split": "dev",
+  "variants": [
+    "text_only",
+    "direct_vlm",
+    "blue_tools"
+  ],
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "case_ids": [
+    "1698dfe12a9edd966d1f7e2b",
+    "c5f396adceacaefd9711b818",
+    "115b953dcd11c46f401bc84b",
+    "2661c37027547abb480f1f41",
+    "2eb8ef815cadd0931827eee4",
+    "18dac685b8a3abe4283e2415"
+  ],
+  "seed": "midpoint-v2",
+  "scope": "source-report-relative synthetic edits; clinical validity unreviewed",
+  "memory": "none",
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "report_graphs": {
+    "sha256": "b5881c44cf94d97e303d9b1643b9e9b53acc92579f7e459bf7980c8e90ada115",
+    "extractor": {
+      "tool": "RadGraph",
+      "package_version": "0.1.18",
+      "model_type": "radgraph-xl",
+      "device": "cpu",
+      "model_files_sha256": {
+        "config.json": "985554e4df559a6b6d348bf4c4541cc4c353a768dfe7d533464cbf101d9a39b2",
+        "vocabulary/.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "vocabulary/non_padded_namespaces.txt": "863044919d9f9c1c04aba282ac981ab0157d6ab08737a96c72f7e15887911db0",
+        "vocabulary/radgraph-xl__ner_labels.txt": "c532272c568f3beddd583cd643441cd7102f2e9b958fee57d64745b1f6213755",
+        "vocabulary/radgraph-xl__relation_labels.txt": "cb735684302c8abb3a906adf01be34d2205473f146dc6e90c6ba9ea5d65082b9",
+        "weights.th": "fdc4780bbeb7c2f9a2457ed20da842f80b2eaf057063e54951991645fa1d5464"
+      },
+      "scope": "whole-report extraction; global spans mapped to sentence IDs; cross-sentence edges retained",
+      "adapter_version": 2,
+      "evidence_type": "report text claims, not image observations"
+    },
+    "scope": "exact candidate report only; no original/candidate difference"
+  },
+  "expected_records": 18
+}

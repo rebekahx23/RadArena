@@ -1,0 +1,7 @@
+{
+  "reason": "Graph text-only verifier returned an uncited finding and is retained failed. Finish only the two unattempted image-based verifier episodes. No changes to prompts, agent source, model, cases or budgets.",
+  "failed_case_id": "18dac685b8a3abe4283e2415",
+  "failed_variant": "text_only",
+  "failed_prediction_retried": false,
+  "continuation_script_sha256": "40e41b9e218122e85729dfc25b62d25b1c05386877471bd904880630c5f3011b"
+}

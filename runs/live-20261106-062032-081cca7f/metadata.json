@@ -1,0 +1,27 @@
+{
+  "live_demo": true,
+  "initial_memories": {
+    "red": {
+      "initial": []
+    },
+    "blue": {
+      "initial": []
+    }
+  },
+  "judges": [
+    "google/gemma-3-27b-it",
+    "google/gemini-2.5-flash"
+  ],
+  "model": "google/gemini-2.5-flash",
+  "response_cache": false,
+  "options": {
+    "studies": 1,
+    "budget": 1,
+    "controls": true,
+    "learn": true,
+    "red_rules": [],
+    "blue_rules": [],
+    "launch_id": "7654ce77-a294-418e-97a6-a9f7d7d40d67"
+  },
+  "protocol": "Fresh uncached model calls on randomly selected original training reports. Red edits at runtime; Blue receives only candidate reports and its own memories. Optional unchanged controls. Two independent-call reviews; one shares the contestant model family. Demo memory updates use consensus feedback and rule review, without measured performance gates."
+}

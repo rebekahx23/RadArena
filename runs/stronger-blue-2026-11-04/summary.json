@@ -1,0 +1,174 @@
+{
+  "arms": {
+    "gemma_legacy": {
+      "expected": 6,
+      "attempted": 6,
+      "completed": 6,
+      "runtime_failures": 0,
+      "not_attempted": 0,
+      "completion_rate": 1.0,
+      "strict_decision_accuracy_all_expected": 0.16666666666666666,
+      "detection_precision": 0.3333333333333333,
+      "detection_recall": 0.3333333333333333,
+      "detection_f1_completed": 0.3333333333333333,
+      "localization_f1_completed": 0.2857142857142857,
+      "localization_counts": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 3
+      },
+      "false_positive_rate_completed_controls": 0.6666666666666666,
+      "abstention_rate_completed": 0.3333333333333333,
+      "decision_coverage_completed": 0.6666666666666666,
+      "category_localized_recall": {
+        "laterality": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "presence_absence": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "severity": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        }
+      },
+      "mean_elapsed_seconds": 0.0,
+      "reported_cost_usd_sum": 0,
+      "calls_missing_cost": 0,
+      "recorded_model_calls": 0
+    },
+    "flash_legacy": {
+      "expected": 6,
+      "attempted": 6,
+      "completed": 6,
+      "runtime_failures": 0,
+      "not_attempted": 0,
+      "completion_rate": 1.0,
+      "strict_decision_accuracy_all_expected": 0.6666666666666666,
+      "detection_precision": 0.6666666666666666,
+      "detection_recall": 0.6666666666666666,
+      "detection_f1_completed": 0.6666666666666666,
+      "localization_f1_completed": 0.6666666666666666,
+      "localization_counts": {
+        "tp": 3,
+        "fp": 2,
+        "fn": 1
+      },
+      "false_positive_rate_completed_controls": 0.3333333333333333,
+      "abstention_rate_completed": 0.0,
+      "decision_coverage_completed": 1.0,
+      "category_localized_recall": {
+        "laterality": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "presence_absence": {
+          "hits": 1,
+          "n": 1,
+          "recall": 1.0
+        },
+        "severity": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        }
+      },
+      "mean_elapsed_seconds": 0.0,
+      "reported_cost_usd_sum": 0,
+      "calls_missing_cost": 0,
+      "recorded_model_calls": 0
+    },
+    "gemma_structured": {
+      "expected": 6,
+      "attempted": 6,
+      "completed": 6,
+      "runtime_failures": 0,
+      "not_attempted": 0,
+      "completion_rate": 1.0,
+      "strict_decision_accuracy_all_expected": 0.16666666666666666,
+      "detection_precision": 0.3333333333333333,
+      "detection_recall": 0.3333333333333333,
+      "detection_f1_completed": 0.3333333333333333,
+      "localization_f1_completed": 0.25,
+      "localization_counts": {
+        "tp": 1,
+        "fp": 3,
+        "fn": 3
+      },
+      "false_positive_rate_completed_controls": 0.6666666666666666,
+      "abstention_rate_completed": 0.5,
+      "decision_coverage_completed": 0.5,
+      "category_localized_recall": {
+        "laterality": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "presence_absence": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "severity": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        }
+      },
+      "mean_elapsed_seconds": 0.0,
+      "reported_cost_usd_sum": 0,
+      "calls_missing_cost": 0,
+      "recorded_model_calls": 0
+    },
+    "flash_structured": {
+      "expected": 6,
+      "attempted": 6,
+      "completed": 6,
+      "runtime_failures": 0,
+      "not_attempted": 0,
+      "completion_rate": 1.0,
+      "strict_decision_accuracy_all_expected": 0.3333333333333333,
+      "detection_precision": 0.6666666666666666,
+      "detection_recall": 0.6666666666666666,
+      "detection_f1_completed": 0.6666666666666666,
+      "localization_f1_completed": 0.5454545454545454,
+      "localization_counts": {
+        "tp": 3,
+        "fp": 4,
+        "fn": 1
+      },
+      "false_positive_rate_completed_controls": 0.3333333333333333,
+      "abstention_rate_completed": 0.5,
+      "decision_coverage_completed": 0.5,
+      "category_localized_recall": {
+        "laterality": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "presence_absence": {
+          "hits": 1,
+          "n": 1,
+          "recall": 1.0
+        },
+        "severity": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        }
+      },
+      "mean_elapsed_seconds": 0.0,
+      "reported_cost_usd_sum": 0,
+      "calls_missing_cost": 0,
+      "recorded_model_calls": 0
+    }
+  },
+  "new_audited_cost_usd": 0.03617854000000002,
+  "limitations": "Three dev studies. Saved Red severity edit 3768 violates requested family; this tests detection of the fixed edit, not clean severity accuracy. Prior Judge shares Flash family and is not an independent grader here."
+}

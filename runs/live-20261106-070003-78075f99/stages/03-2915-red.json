@@ -1,0 +1,165 @@
+{
+  "study_id": "2915",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size is normal."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The mediastinal contour is within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: The lungs are free of any focal infiltrates."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: There are no nodules or masses."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No visible pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: No visible pleural fluid."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: The XXXX are grossly normal."
+    },
+    {
+      "id": "s8",
+      "text": "FINDINGS: There is no visible free intraperitoneal air under the diaphragm."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s10",
+      "text": "IMPRESSION: No acute radiographic cardiopulmonary process."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size is normal."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The mediastinal contour is within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: The lungs are free of any focal infiltrates."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: There are no nodules or masses."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No visible pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: No visible pleural fluid."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: The XXXX are grossly normal."
+    },
+    {
+      "id": "s8",
+      "text": "FINDINGS: There is no visible free intraperitoneal air under the diaphragm."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s10",
+      "text": "IMPRESSION: No acute radiographic cardiopulmonary process."
+    },
+    {
+      "id": "a1",
+      "text": "IMPRESSION: 2. Mild cardiomegaly."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Fabricated a new impression point stating 'Mild cardiomegaly' which contradicts the finding of 'normal heart size' and is not supported by the images."
+    }
+  ],
+  "rationale": "The attack introduces a fabrication by adding an impression of 'Mild cardiomegaly' (a1) which directly contradicts the finding in s1 ('The heart size is normal.') and is not supported by the provided images. This creates an internal inconsistency within the report and a clinically plausible error.",
+  "eligible": true,
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attempts": [
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: The heart size is normal."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: The mediastinal contour is within normal limits."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: The lungs are free of any focal infiltrates."
+        },
+        {
+          "id": "s4",
+          "text": "FINDINGS: There are no nodules or masses."
+        },
+        {
+          "id": "s5",
+          "text": "FINDINGS: No visible pneumothorax."
+        },
+        {
+          "id": "s6",
+          "text": "FINDINGS: No visible pleural fluid."
+        },
+        {
+          "id": "s7",
+          "text": "FINDINGS: The XXXX are grossly normal."
+        },
+        {
+          "id": "s8",
+          "text": "FINDINGS: There is no visible free intraperitoneal air under the diaphragm."
+        },
+        {
+          "id": "s9",
+          "text": "IMPRESSION: 1."
+        },
+        {
+          "id": "s10",
+          "text": "IMPRESSION: No acute radiographic cardiopulmonary process."
+        },
+        {
+          "id": "a1",
+          "text": "IMPRESSION: 2. Mild cardiomegaly."
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [],
+          "candidate_ids": [
+            "a1"
+          ],
+          "category": "fabrication",
+          "description": "Fabricated a new impression point stating 'Mild cardiomegaly' which contradicts the finding of 'normal heart size' and is not supported by the images."
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

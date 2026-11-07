@@ -1,0 +1,67 @@
+{
+  "study_id": "22",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The lungs are clear, and without focal air space opacity."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The cardiomediastinal silhouette is normal in size and contour, and stable."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: There is no pneumothorax large pleural effusion."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The lungs are clear, and without focal air space opacity."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The cardiomediastinal silhouette is normal in size and contour, and stable."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: There is no pneumothorax large pleural effusion."
+    },
+    {
+      "id": "a1",
+      "text": "FINDINGS: There is evidence of a small right apical pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new finding of a small right apical pneumothorax, which is not present in the image."
+    }
+  ],
+  "declared_changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new finding of a small right apical pneumothorax, which is not present in the image."
+    }
+  ],
+  "provenance_validation_error": null,
+  "rationale": "I have introduced a fabrication error by adding a new finding of a small right apical pneumothorax in the 'FINDINGS' section. This finding is not supported by the provided images, which show no evidence of a pneumothorax. This creates a clinically significant error that contradicts the visual evidence.",
+  "eligible": true,
+  "memory_sha256": "9e2c6863cfd07475f26530793ee035d4aaee4240f9223b5a74193fc0298785b6"
+}

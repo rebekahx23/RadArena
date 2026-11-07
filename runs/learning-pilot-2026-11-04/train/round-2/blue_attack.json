@@ -1,0 +1,81 @@
+{
+  "study_id": "102",
+  "case_id": "dc98faeafcb70ac5a2fe05a8",
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Normal heart size."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Clear, hyperaerated lungs."
+    },
+    {
+      "id": "s3",
+      "text": "Pneumothorax is present."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pleural effusion."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: XXXX substernal density may be related to a pectus deformity."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+    }
+  ],
+  "clinical_context": "Syncope. XXXX attack.",
+  "error_type": "presence_absence",
+  "changed_sentence_ids": [
+    "s3"
+  ],
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s3",
+        "error_type": "presence_absence",
+        "evidence": "The frontal chest x-ray shows a radiopaque linear object traversing the right hemithorax. This could be a chest tube. The lateral view does not clearly demonstrate a pneumothorax, but the presence of a chest tube makes assessment difficult. There is some subtle lucency in the right apex, but this is not definitive for pneumothorax and could be normal lung anatomy or artifact.",
+        "tool_call_ids": [
+          "vision_1"
+        ]
+      },
+      {
+        "sentence_id": "s5",
+        "error_type": "presence_absence",
+        "evidence": "The frontal chest radiograph shows a radiopaque linear structure projecting over the anterior mediastinum. This appears to be a central venous catheter with the tip terminating in the superior vena cava. There is no obvious substernal density or mass identified on either the frontal or lateral chest radiograph.",
+        "tool_call_ids": [
+          "vision_2"
+        ]
+      }
+    ],
+    "limitations": "The assessment of pneumothorax is complicated by the presence of a chest tube and the limited image quality. The assessment of substernal density is limited by the 2D nature of the radiographs and potential obscuration by overlapping structures."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is pneumothorax visible on the image?",
+      "observation": "The frontal chest x-ray shows a radiopaque linear object traversing the right hemithorax. This could be a chest tube. The lateral view does not clearly demonstrate a pneumothorax, but the presence of a chest tube makes assessment difficult. There is some subtle lucency in the right apex, but this is not definitive for pneumothorax and could be normal lung anatomy or artifact. ",
+      "limitations": "The images are limited to these two views. A full series of chest x-rays or a CT scan would be needed to definitively rule out or confirm pneumothorax. The presence of a chest tube complicates the assessment of pneumothorax. The quality of the images is moderate, and subtle findings may be difficult to interpret."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there any substernal density, and if so, where is it located?",
+      "observation": "The frontal chest radiograph shows a radiopaque linear structure projecting over the anterior mediastinum. This appears to be a central venous catheter with the tip terminating in the superior vena cava. There is no obvious substernal density or mass identified on either the frontal or lateral chest radiograph. However, the lateral view is limited in its ability to fully assess the retrosternal space. The heart border and mediastinal contours appear within normal limits for the views provided.",
+      "limitations": "The assessment of substernal density is limited by the 2D nature of the radiographs. Subtle densities could be obscured by overlapping structures. A CT scan would be more sensitive for detecting and characterizing any subtle substernal abnormalities. The lateral view is not fully representative of the entire retrosternal space."
+    }
+  ],
+  "score": {
+    "localization_tp": 1,
+    "localization_fp": 1,
+    "localization_fn": 0,
+    "uncertain": false,
+    "injected_edit_detected": true,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "blue_memory_sha256": "23e5d6fa1a4f5e43e58d8059c640b89840739c6bd768dac96448fcfd9735cf0d"
+}

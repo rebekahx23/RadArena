@@ -1,0 +1,137 @@
+{
+  "study_id": "3281",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size is within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Cardiomediastinal contour is normal."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: There is a right upper lobe nodule measuring 8 mm in diameter."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Trachea is midline."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: The lungs otherwise clear."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: XXXX and soft tissues are unremarkable."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: Right upper lobe pulmonary nodule, XXXX granuloma."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size is within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Cardiomediastinal contour is normal."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: There is a right upper lobe nodule measuring 8 mm in diameter."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Trachea is midline."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: The lungs otherwise clear."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: XXXX and soft tissues are unremarkable."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: Right upper lobe pulmonary nodule, likely granuloma."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s8"
+      ],
+      "candidate_ids": [
+        "s8"
+      ],
+      "category": "certainty",
+      "description": "Changed the certainty of the diagnosis from 'XXXX granuloma' (which implies a high degree of certainty or a specific type of granuloma) to 'likely granuloma' to introduce a subtle, clinically plausible reduction in certainty, as definitive characterization often requires further imaging or biopsy."
+    }
+  ],
+  "rationale": "The original report states 'XXXX granuloma' in the impression, which implies a high degree of certainty or a specific type of granuloma. While the nodule is present, definitively characterizing it as a granuloma without further imaging or clinical context can be an overstatement of certainty. I have changed 'XXXX granuloma' to 'likely granuloma' to introduce a subtle, clinically plausible reduction in certainty. This change is image-grounded as the images show a nodule, but its specific etiology (e.g., granuloma vs. other benign or malignant causes) cannot be definitively determined from a single chest X-ray. This falls under the 'certainty' attack category.",
+  "eligible": true,
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attempts": [
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: The heart size is within normal limits."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: Cardiomediastinal contour is normal."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: There is a right upper lobe nodule measuring 8 mm in diameter."
+        },
+        {
+          "id": "s4",
+          "text": "FINDINGS: Trachea is midline."
+        },
+        {
+          "id": "s5",
+          "text": "FINDINGS: The lungs otherwise clear."
+        },
+        {
+          "id": "s6",
+          "text": "FINDINGS: XXXX and soft tissues are unremarkable."
+        },
+        {
+          "id": "s7",
+          "text": "IMPRESSION: 1."
+        },
+        {
+          "id": "s8",
+          "text": "IMPRESSION: Right upper lobe pulmonary nodule, likely granuloma."
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [
+            "s8"
+          ],
+          "candidate_ids": [
+            "s8"
+          ],
+          "category": "certainty",
+          "description": "Changed the certainty of the diagnosis from 'XXXX granuloma' (which implies a high degree of certainty or a specific type of granuloma) to 'likely granuloma' to introduce a subtle, clinically plausible reduction in certainty, as definitive characterization often requires further imaging or biopsy."
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

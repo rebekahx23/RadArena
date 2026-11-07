@@ -1,0 +1,59 @@
+{
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The exact nature and extent of the opacity in the right lower lobe are difficult to fully characterize on these two views alone due to superimposition of structures and the inherent limitations of plain radiography. The exact cause of the blunting cannot be determined from these images alone. The lateral view does not clearly differentiate between right and left posterior costophrenic angles."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "no_error_detected",
+        "findings": [],
+        "limitations": "The exact nature and extent of the opacity in the right lower lobe are difficult to fully characterize on these two views alone due to superimposition of structures and the inherent limitations of plain radiography. The exact cause of the blunting cannot be determined from these images alone. The lateral view does not clearly differentiate between right and left posterior costophrenic angles."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there consolidation or atelectasis visible in the right lower lobe?",
+      "observation": "There is an ill-defined opacity in the right lower lobe, which could represent consolidation or atelectasis. The right hemidiaphragm is obscured.",
+      "limitations": "The exact nature and extent of the opacity in the right lower lobe are difficult to fully characterize on these two views alone due to superimposition of structures and the inherent limitations of plain radiography."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are the costophrenic angles blunted, and if so, on which side?",
+      "observation": "The right costophrenic angle appears blunted on the frontal radiograph. The left costophrenic angle is clear. The lateral view also shows blunting of the posterior costophrenic angle.",
+      "limitations": "The exact cause of the blunting cannot be determined from these images alone. The lateral view does not clearly differentiate between right and left posterior costophrenic angles."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: In the interval, consolidation and atelectasis have developed in the right lower lobe."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Costophrenic XXXX blunted on the right."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Left lung clear."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Heart size normal."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Right lower lobe airspace disease consistent with pneumonia."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Associated right pleural effusion."
+    }
+  ],
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

@@ -1,0 +1,62 @@
+{
+  "study_id": "1223",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size and pulmonary vascularity appear within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Lungs are free of focal airspace disease."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pleural effusion or pneumothorax is seen."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: XXXX XXXX foreign body is noted in the soft tissues of the left chest wall."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No evidence of active disease."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size and pulmonary vascularity appear within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Lungs are free of focal airspace disease."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pleural effusion or pneumothorax is seen."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No foreign body is noted in the soft tissues of the left chest wall."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No evidence of active disease."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s4"
+      ],
+      "candidate_ids": [
+        "s4"
+      ],
+      "category": "omission",
+      "description": "The foreign body in the left chest wall was omitted from the findings."
+    }
+  ],
+  "rationale": "The original report correctly identifies a foreign body in the left chest wall. The images clearly show a small, dense foreign body in the soft tissues of the left chest wall. To introduce a clinically meaningful error, I have omitted this finding from the report. This constitutes an 'omission' error, as a visible finding is not reported. The impression remains consistent with the altered findings, creating a subtle error where the impression of 'no evidence of active disease' is now misleading due to the omitted foreign body.",
+  "eligible": true,
+  "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+}

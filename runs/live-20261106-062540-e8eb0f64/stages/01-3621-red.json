@@ -1,0 +1,101 @@
+{
+  "study_id": "3621",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Lung volumes remain low."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: No infiltrates."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Heart and pulmonary XXXX are normal."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: XXXX change."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Hypoinflation with no visible active cardiopulmonary disease."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Lung volumes remain low."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: No infiltrates."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Heart and pulmonary XXXX are normal."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: XXXX change."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Hypoinflation with active cardiopulmonary disease."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s5"
+      ],
+      "candidate_ids": [
+        "s5"
+      ],
+      "category": "omission",
+      "description": "The word 'no' was removed from the impression, changing 'no visible active cardiopulmonary disease' to 'active cardiopulmonary disease'. This is an omission of a negation, leading to a fabrication of disease presence."
+    }
+  ],
+  "rationale": "The change introduces a fabrication error by removing the negation 'no' from the impression sentence s5. The original sentence states 'no visible active cardiopulmonary disease', which is consistent with the findings of 'No infiltrates' (s2) and 'Heart and pulmonary XXXX are normal' (s3), and the images do not show clear signs of active cardiopulmonary disease. By changing it to 'active cardiopulmonary disease', a clinically significant finding is fabricated, contradicting the image findings and other report statements. This is a subtle yet impactful error.",
+  "eligible": true,
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attempts": [
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: Lung volumes remain low."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: No infiltrates."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: Heart and pulmonary XXXX are normal."
+        },
+        {
+          "id": "s4",
+          "text": "IMPRESSION: XXXX change."
+        },
+        {
+          "id": "s5",
+          "text": "IMPRESSION: Hypoinflation with active cardiopulmonary disease."
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [
+            "s5"
+          ],
+          "candidate_ids": [
+            "s5"
+          ],
+          "category": "omission",
+          "description": "The word 'no' was removed from the impression, changing 'no visible active cardiopulmonary disease' to 'active cardiopulmonary disease'. This is an omission of a negation, leading to a fabrication of disease presence."
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

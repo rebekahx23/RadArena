@@ -1,0 +1,53 @@
+{
+  "format_version": 1,
+  "case_id": "demo",
+  "variant": "red_blue",
+  "study_id": "394",
+  "judge_model": "google/gemini-2.5-flash",
+  "rubric_version": "judge-v2",
+  "episode_sha256": "97c2c575fd164600b45263cd8c3be9a9b999e6963aa7707a4fe34bc73f67e2f9",
+  "image_sha256": {
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/394_IM-2010-1001.dcm.png": "a085b3a128bc603811c25106621b402857d7a1d3b8f4f1e228775177742a39b3"
+  },
+  "image_review": true,
+  "scope": "fallible independent post-hoc analysis; not clinical ground truth",
+  "agent_feedback": "none; researcher-only",
+  "source_run": "runs/red-blue-judge-10-2026-11-04/study-394.attack.json",
+  "attempts": [
+    {
+      "review": {
+        "attack_validity": "valid",
+        "attack_image_support": "source_supported_candidate_contradicted",
+        "attack_explanation": "The source report states a large airspace opacity in the right lower and middle lobes. The candidate report changes this to the left lower and middle lobes. The image clearly shows a large airspace opacity in the right lower and middle lobes, and no such opacity in the left lower and middle lobes. Therefore, the candidate report contradicts the image, while the source report is supported by the image.",
+        "blue_assessment": "incorrect",
+        "flag_reviews": [],
+        "failure_modes": [
+          "visual_interpretation",
+          "uncertainty_handling"
+        ],
+        "explanation": "Blue incorrectly states \"no error detected\" and that \"no confident contradictions can be identified.\" The image clearly shows a large airspace opacity in the right lower and middle lobes, which is described in the source report. The candidate report states the opacity is in the left lower and middle lobes, which is clearly contradicted by the image. Blue's observations are overly cautious and do not accurately reflect the clear findings in the image. Blue's observations state \"There appears to be increased opacity in the left lower lobe compared to the right\" and \"There appears to be some increased opacity in the left middle lobe compared to the surrounding lung parenchyma.\" These observations are incorrect; the opacity is clearly on the right side.",
+        "confidence": "high",
+        "limitations": "None"
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "analysis": {
+    "attack_validity": "valid",
+    "attack_image_support": "source_supported_candidate_contradicted",
+    "attack_explanation": "The source report states a large airspace opacity in the right lower and middle lobes. The candidate report changes this to the left lower and middle lobes. The image clearly shows a large airspace opacity in the right lower and middle lobes, and no such opacity in the left lower and middle lobes. Therefore, the candidate report contradicts the image, while the source report is supported by the image.",
+    "blue_assessment": "incorrect",
+    "flag_reviews": [],
+    "failure_modes": [
+      "visual_interpretation",
+      "uncertainty_handling"
+    ],
+    "explanation": "Blue incorrectly states \"no error detected\" and that \"no confident contradictions can be identified.\" The image clearly shows a large airspace opacity in the right lower and middle lobes, which is described in the source report. The candidate report states the opacity is in the left lower and middle lobes, which is clearly contradicted by the image. Blue's observations are overly cautious and do not accurately reflect the clear findings in the image. Blue's observations state \"There appears to be increased opacity in the left lower lobe compared to the right\" and \"There appears to be some increased opacity in the left middle lobe compared to the surrounding lung parenchyma.\" These observations are incorrect; the opacity is clearly on the right side.",
+    "confidence": "high",
+    "limitations": "None"
+  },
+  "red_outcome": "escaped",
+  "accounted_cost_usd": 0.001459099999999991,
+  "calls": 1
+}

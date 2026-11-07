@@ -1,0 +1,123 @@
+{
+  "study_id": "1556",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Heart size appears upper limits of normal."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Tortuous aorta."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Otherwise normal mediastinum."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Confluent and XXXX opacities seen within the left base."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: There are no visible nodules or masses."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: No visible pneumothorax."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: The XXXX are grossly normal."
+    },
+    {
+      "id": "s8",
+      "text": "FINDINGS: There is no visible free intraperitoneal air under the diaphragm."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s10",
+      "text": "IMPRESSION: Left basilar mixed interstitial and alveolar infiltrate."
+    },
+    {
+      "id": "s11",
+      "text": "IMPRESSION: Interval followup to resolution is recommended."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Heart size appears upper limits of normal."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Tortuous aorta."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Otherwise normal mediastinum."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Confluent and XXXX opacities seen within the left base."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: There are no visible nodules or masses."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: No visible pneumothorax."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: The XXXX are grossly normal."
+    },
+    {
+      "id": "s8",
+      "text": "FINDINGS: There is no visible free intraperitoneal air under the diaphragm."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s10",
+      "text": "IMPRESSION: Left basilar mixed interstitial and alveolar infiltrate."
+    },
+    {
+      "id": "a1",
+      "text": "IMPRESSION: No interval followup is recommended."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s11"
+      ],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "omission",
+      "description": "The recommendation for interval followup was omitted, creating a false negative for the need for further evaluation of the infiltrate."
+    }
+  ],
+  "declared_changes": [
+    {
+      "source_ids": [
+        "s11"
+      ],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "omission",
+      "description": "The recommendation for interval followup was omitted, creating a false negative for the need for further evaluation of the infiltrate."
+    }
+  ],
+  "provenance_validation_error": null,
+  "rationale": "The original report recommended interval followup for the left basilar infiltrate. The image shows a clear infiltrate that would typically warrant follow-up. By changing the recommendation to 'No interval followup is recommended,' a clinically significant omission error is introduced, as the patient would not receive the necessary follow-up for a potentially resolving or worsening condition.",
+  "eligible": true,
+  "memory_sha256": "dacedfe3afa6ca71d574b31dd1aa6911b0e2232faaf3146ea42fcff82ba4cca0"
+}

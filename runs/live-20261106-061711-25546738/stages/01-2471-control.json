@@ -1,0 +1,59 @@
+{
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The observations are limited to a single frontal and lateral view of the chest, and no prior imaging is available for comparison, which may limit the detection of subtle abnormalities or changes over time."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "no_error_detected",
+        "findings": [],
+        "limitations": "The observations are limited to a single frontal and lateral view of the chest, and no prior imaging is available for comparison, which may limit the detection of subtle abnormalities or changes over time."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is the trachea midline?",
+      "observation": "The trachea appears to be midline on the frontal chest radiograph. There is no obvious deviation to either side.",
+      "limitations": "The lateral view does not provide sufficient information to assess the midline position of the trachea. Without prior imaging for comparison, subtle tracheal deviation cannot be entirely excluded."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are the cardiomediastinal silhouette and lungs normal?",
+      "observation": "The cardiomediastinal silhouette appears within normal limits. The lungs are clear without evidence of focal consolidation, pleural effusion, or pneumothorax. The diaphragms are intact and the costophrenic angles are sharp. There is no evidence of acute osseous abnormality.",
+      "limitations": "The provided images are limited to a single frontal and lateral view of the chest, which may not capture all potential abnormalities. No prior imaging is available for comparison."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The trachea is midline."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The cardiomediastinal silhouette is normal and unchanged compared to prior examination."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Lungs are clear, without evidence of acute infiltrate or effusion."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: There is no pneumothorax."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: The visualized bony structures reveal no acute abnormalities."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute cardiopulmonary abnormalities."
+    }
+  ],
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

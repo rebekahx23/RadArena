@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-06",
+  "raw_directory": {
+    "previous": "data/archive (1)",
+    "current": "data/raw/iu_xray",
+    "image_directory_previous": "images/images_normalized",
+    "image_directory_current": "images",
+    "raw_bytes_changed": false
+  },
+  "renamed_processed_files": [
+    {
+      "previous_path": "data/processed/midpoint-v2.jsonl",
+      "current_path": "data/processed/synthetic_benchmark_v2.jsonl",
+      "sha256": "43f0f1033f2c30627c50c2921549de916c400c7b28a4e39ba136d82dcd239d84"
+    },
+    {
+      "previous_path": "data/processed/iu.summary.json",
+      "current_path": "data/processed/dataset_summary.json",
+      "sha256": "ef03f4346c490def37b4bec3e4144287edfc94267a5fb47cb53096938bbfd524"
+    },
+    {
+      "previous_path": "data/processed/iu.jsonl",
+      "current_path": "data/processed/studies.jsonl",
+      "sha256": "4111156df28315b9f18cb3e999818afd477121b491d939dcc2f18f855bef2a37"
+    },
+    {
+      "previous_path": "data/processed/radgraph-dev-smoke-v2-full-report.json",
+      "current_path": "data/processed/radgraph_smoke_full_report_v2.json",
+      "sha256": "b5881c44cf94d97e303d9b1643b9e9b53acc92579f7e459bf7980c8e90ada115"
+    },
+    {
+      "previous_path": "data/processed/midpoint-v2.metadata.json",
+      "current_path": "data/processed/synthetic_benchmark_v2.metadata.json",
+      "sha256": "67e7cf13793eef31c62884dab388a4009c21e4cb225f04256323f6e58c4e2ce9"
+    },
+    {
+      "previous_path": "data/processed/midpoint-v1.jsonl",
+      "current_path": "data/processed/synthetic_benchmark_v1.jsonl",
+      "sha256": "a0c41dc12de4268d499464d5ad702f7712f854891d378392782011a438fa2430"
+    },
+    {
+      "previous_path": "data/processed/midpoint-v1.metadata.json",
+      "current_path": "data/processed/synthetic_benchmark_v1.metadata.json",
+      "sha256": "d30bc84fd392c1785f07234d2734ccc625840ec85f64401b9f65190db8f76ec1"
+    },
+    {
+      "previous_path": "data/processed/radgraph-dev-smoke-v1.json",
+      "current_path": "data/processed/radgraph_smoke_sentence_v1.json",
+      "sha256": "5f0cda63262a85f7618ce9327456cd154d43e97010f56d737f448d9ef336e495"
+    },
+    {
+      "previous_path": "data/processed/review/organizer_key.jsonl",
+      "current_path": "data/processed/human_review/organizer_key.jsonl",
+      "sha256": "2704faa59599dbfd67513ffaf4448793b14689fd2312d0a7daef82a99ba3100f"
+    },
+    {
+      "previous_path": "data/processed/review/blinded_cases.jsonl",
+      "current_path": "data/processed/human_review/blinded_cases.jsonl",
+      "sha256": "48c9bf5ec12d87715f15475afd5b67d253a8eb95d88adc1b382f40fe4bd47301"
+    },
+    {
+      "previous_path": "data/processed/review/metadata.json",
+      "current_path": "data/processed/human_review/metadata.json",
+      "sha256": "dd4e877218d118b9a2e36068258ddf8db8aab2e34b920bc475d156eeef68b87a"
+    }
+  ],
+  "verified_existing_artifact_count": 1368,
+  "existing_artifacts_changed": 0,
+  "path_resolution": "radarena.paths.resolve_data_path; translate in memory after checksum verification"
+}

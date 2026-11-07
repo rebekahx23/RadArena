@@ -1,0 +1,91 @@
+{
+  "study_id": "74",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Lungs appear to be clear other than a calcified granuloma on left."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Heart is not enlarged."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: There are atherosclerotic changes of the aorta."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: There is increased kyphosis of the thoracic spine and there are multiple XXXX deformities."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: A stimulator is seen."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute pulmonary disease."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: Multiple thoracic XXXX deformities XXXX due to osteoporosis."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Lungs appear to be clear other than a calcified granuloma on left."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Heart is not enlarged."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: There are atherosclerotic changes of the aorta."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: There is increased kyphosis of the thoracic spine and there are multiple XXXX deformities."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: A stimulator is seen."
+    },
+    {
+      "id": "a1",
+      "text": "FINDINGS: There is evidence of a small left pleural effusion."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute pulmonary disease."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: Multiple thoracic XXXX deformities XXXX due to osteoporosis."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new finding of a small left pleural effusion which is not supported by the image."
+    }
+  ],
+  "declared_changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new finding of a small left pleural effusion which is not supported by the image."
+    }
+  ],
+  "provenance_validation_error": null,
+  "rationale": "The original image does not show any evidence of a pleural effusion. Adding a finding of a small left pleural effusion constitutes a fabrication error, as it introduces a clinically significant finding not supported by the visual evidence. This aligns with the 'fabrication' attack category by adding a new, clinically significant finding to the findings section that is not supported by the image.",
+  "eligible": true,
+  "memory_sha256": "dacedfe3afa6ca71d574b31dd1aa6911b0e2232faaf3146ea42fcff82ba4cca0"
+}

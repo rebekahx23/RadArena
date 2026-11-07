@@ -1,0 +1,33 @@
+{
+  "status": "ok",
+  "model": "google/gemini-2.5-flash",
+  "review": {
+    "attack_validity": "valid",
+    "attack_explanation": "The original report correctly identifies a foreign body in the soft tissues of the left chest wall. The candidate report omits this finding. The images clearly show a small, dense foreign body in the soft tissues of the left chest wall on both the PA and lateral views. This omission is clinically meaningful as it fails to report an objective finding.",
+    "blue_assessment": "incorrect",
+    "reviewed_flag_ids": [],
+    "blue_explanation": "Blue failed to identify the omission of the foreign body in the left chest wall. The images clearly show this finding.",
+    "failure_modes": [
+      "Blue was not able to find the error."
+    ],
+    "confidence": "high",
+    "limitations": "None"
+  },
+  "attempts": [
+    {
+      "review": {
+        "attack_validity": "valid",
+        "attack_explanation": "The original report correctly identifies a foreign body in the soft tissues of the left chest wall. The candidate report omits this finding. The images clearly show a small, dense foreign body in the soft tissues of the left chest wall on both the PA and lateral views. This omission is clinically meaningful as it fails to report an objective finding.",
+        "blue_assessment": "incorrect",
+        "reviewed_flag_ids": [],
+        "blue_explanation": "Blue failed to identify the omission of the foreign body in the left chest wall. The images clearly show this finding.",
+        "failure_modes": [
+          "Blue was not able to find the error."
+        ],
+        "confidence": "high",
+        "limitations": "None"
+      },
+      "validation_error": null
+    }
+  ]
+}

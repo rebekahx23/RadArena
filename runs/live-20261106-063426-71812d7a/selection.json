@@ -1,0 +1,62 @@
+[
+  {
+    "study_id": "1145",
+    "split": "train",
+    "image_ids": [
+      "1145_IM-0097-2002.dcm.png",
+      "1145_IM-0097-3003.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1145_IM-0097-2002.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1145_IM-0097-3003.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Lungs are hyperexpanded."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There is no focal airspace consolidation."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No suspicious pulmonary mass or nodule is seen."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural effusion or pneumothorax."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: Normal heart size and mediastinal contour."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: No focal air space consolidation."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: 2."
+      },
+      {
+        "id": "s9",
+        "text": "IMPRESSION: Hyperexpanded lungs, suggestive of emphysema."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "8128470ca71fae285e95c39e659617cb80ae4d1a295bd7091e6b5f76dda516f4",
+      "f32e71d91567d7b3efd334345884da54f68c79cee7d2824a44c777d5d3a8629a"
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The assessment is based solely on the provided frontal view of the chest. Subtle abnormalities may not be detectable on plain radiographs. No prior imaging is available for comparison. The quality of the images is adequate for general assessment, but fine details may be obscured by overlying structures or patient motion, if present."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "no_error_detected",
+        "findings": [],
+        "limitations": "The assessment is based solely on the provided frontal view of the chest. Subtle abnormalities may not be detectable on plain radiographs. No prior imaging is available for comparison. The quality of the images is adequate for general assessment, but fine details may be obscured by overlying structures or patient motion, if present."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Are the cardiomediastinal silhouette, central airways, pulmonary vasculature, and lung volumes within normal limits?",
+      "observation": "The cardiomediastinal silhouette, central airways, pulmonary vasculature, and lung volumes appear within normal limits on the provided images. There is no evidence of cardiomegaly, mediastinal widening, or significant airway obstruction. The pulmonary vessels are appropriately sized and distributed, and the lung fields are well-inflated.",
+      "limitations": "The assessment is based solely on the provided frontal and lateral chest radiographs. Subtle abnormalities may not be detectable on plain radiographs. No prior imaging is available for comparison. The quality of the images is adequate for general assessment, but fine details may be obscured by overlying structures or patient motion, if present."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there any focal air space consolidation visible?",
+      "observation": "There is no definite focal airspace consolidation visible on these images. The lung fields appear clear.",
+      "limitations": "The images provided are plain radiographs, which may have limitations in detecting subtle airspace consolidation compared to cross-sectional imaging like CT scans. Overlying structures and patient positioning can also obscure findings. No prior imaging is available for comparison."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Portable frontal view of the chest with overlying external cardiac monitor leads shows normal cardiomediastinal silhouette, central airways, pulmonary vasculature and lung volumes without focal air space consolidation or pleural effusion."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No acute intrathoracic disease."
+    }
+  ],
+  "memory_sha256": "bfd302f95ec0e3544439172bb4de0cebb54cc9c3ac07715c850319eea4bc8860"
+}

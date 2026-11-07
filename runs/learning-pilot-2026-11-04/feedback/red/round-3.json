@@ -1,0 +1,51 @@
+{
+  "requested_error_type": "severity",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Minimally increased XXXX airspace opacities bilaterally, most prominent in the lung bases."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Heart size is within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pneumothorax or pleural effusion."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Osseous structures are grossly intact."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Minimally increased air space opacities bilaterally, most prominent in the lung bases."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Findings are nonspecific, but may represent subsegmental atelectasis versus mild interstitial edema or an atypical infectious process."
+    }
+  ],
+  "own_edits": [
+    {
+      "sentence_id": "s1",
+      "replacement": "FINDINGS: No airspace opacities bilaterally, most prominent in the lung bases."
+    },
+    {
+      "sentence_id": "s5",
+      "replacement": "IMPRESSION: No air space opacities bilaterally, most prominent in the lung bases."
+    }
+  ],
+  "own_rationale": "Changed the severity of the airspace opacities from 'minimally increased' to 'no' to introduce a false negative finding, as per the error type (severity) and strategies provided. The change was applied consistently in both the Findings and Impression sections.",
+  "attack_status": "syntactically_valid_clinically_unreviewed",
+  "edit_localization": {
+    "localization_tp": 1,
+    "localization_fp": 0,
+    "localization_fn": 1,
+    "uncertain": false,
+    "injected_edit_detected": true,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "validity": "Syntactic edits only; clinical image support not adjudicated"
+}

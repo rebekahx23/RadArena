@@ -1,0 +1,76 @@
+{
+  "study_id": "113",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart and mediastinum are unremarkable."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There are two subcentimeter hyperdense nodular opacities are noted within the right lung."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: These may represent XXXX on end or alternatively, calcified granulomas."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: The lungs are clear without infiltrate."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: There is no effusion or pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No acute cardiopulmonary disease."
+    }
+  ],
+  "error_type": "laterality",
+  "red_rationale": "Changed the laterality of the lung nodules from right to left to introduce a laterality error as requested.",
+  "edits": [
+    {
+      "sentence_id": "s2",
+      "replacement": "There are two subcentimeter hyperdense nodular opacities are noted within the left lung."
+    }
+  ],
+  "red_memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attack_status": "syntactically_valid_clinically_unreviewed",
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart and mediastinum are unremarkable."
+    },
+    {
+      "id": "s2",
+      "text": "There are two subcentimeter hyperdense nodular opacities are noted within the left lung."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: These may represent XXXX on end or alternatively, calcified granulomas."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: The lungs are clear without infiltrate."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: There is no effusion or pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No acute cardiopulmonary disease."
+    }
+  ],
+  "changed_sentence_ids": [
+    "s2"
+  ]
+}

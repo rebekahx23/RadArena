@@ -1,0 +1,880 @@
+{
+  "37.attack": {
+    "study_id": "37",
+    "split": "dev",
+    "models": {
+      "text": "google/gemma-3-27b-it",
+      "vision": "google/gemma-3-27b-it",
+      "max_tokens": 2048
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart is normal in size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The mediastinum is unremarkable."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: XXXX XXXX opacities in right mid lung."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: The lungs are otherwise grossly clear."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute disease."
+      }
+    ],
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart is normal in size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The mediastinum is unremarkable."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: XXXX XXXX opacities in left mid lung."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: The lungs are otherwise grossly clear."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute disease."
+      }
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/37_IM-1847-0001-0002.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/37_IM-1847-0001-0001.dcm.png"
+    ],
+    "clinical_context": "HYPOXIA;",
+    "clinical_context_config": {
+      "condition": "indication",
+      "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+      "fields": [
+        "indication"
+      ],
+      "reports": 3851,
+      "reports_with_indication": 3765,
+      "missing_policy": "empty indication retained; unknown study ID fails before calls"
+    },
+    "private_attack": {
+      "edits": [
+        {
+          "sentence_id": "s3",
+          "replacement": "FINDINGS: XXXX XXXX opacities in left mid lung."
+        }
+      ],
+      "rationale": "Changing the laterality of the opacities from right to left lung, as requested by the error type 'laterality'. The rest of the sentence is preserved.",
+      "requested_error_type": "laterality",
+      "clinical_validity": "not_adjudicated"
+    },
+    "blue": {
+      "decision": "error",
+      "findings": [
+        {
+          "sentence_id": "s3",
+          "error_type": "presence_absence",
+          "evidence": "The frontal chest x-ray shows a possible opacity in the left mid-lung field, indicated by the white arrow. The lateral view does not clearly demonstrate this opacity, but there is some increased density in the left mid-lung region.",
+          "tool_call_ids": [
+            "vision_1"
+          ]
+        }
+      ],
+      "limitations": "The assessment of the opacity in the left mid-lung is limited by the 2D nature of the x-ray images and the potential for overlap of structures. A CT scan would be more helpful to further evaluate this finding."
+    },
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Is there any opacity visible in the left mid lung?",
+        "observation": "The frontal chest x-ray shows a possible opacity in the left mid-lung field, indicated by the white arrow. The lateral view does not clearly demonstrate this opacity, but there is some increased density in the left mid-lung region. It is difficult to definitively characterize the nature of this density (e.g., consolidation, mass, effusion) based on these images alone.",
+        "limitations": "The assessment is limited by the 2D nature of the x-ray images. Overlap of structures can make it difficult to accurately assess the extent and characteristics of any opacity. A CT scan would be more helpful to further evaluate this finding. Without prior imaging for comparison, it is difficult to determine if this is a new finding."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "Can the size of the heart be assessed, and if so, is it normal?",
+        "observation": "The provided images are chest radiographs (AP and lateral views). Assessing cardiac size on a standard chest radiograph can be challenging and is not a precise measurement. However, based on visual assessment, the cardiac silhouette appears within normal limits for size in both the AP and lateral projections. The cardiothoracic ratio (the ratio of the heart's width to the chest's width) appears to be less than 0.5 on the AP view, which is generally considered normal. The lateral view does not show obvious cardiomegaly. There is an arrow pointing to a region on the AP view, but it is unclear what the arrow is indicating in relation to cardiac size.",
+        "limitations": "Cardiac size assessment on chest radiographs is subjective and can be affected by patient positioning, inspiration, and other factors. A more accurate assessment would require echocardiography or other cardiac imaging modalities. I cannot determine if this is a baseline assessment or if there is a change in cardiac size compared to previous images. The clinical context of the patient is unknown, which is important for interpreting cardiac size."
+      }
+    ],
+    "score": {
+      "localization_tp": 1,
+      "localization_fp": 0,
+      "localization_fn": 0,
+      "uncertain": false,
+      "injected_edit_detected": true,
+      "unchanged_control_flagged": null,
+      "ground_truth_scope": "synthetic edits; image support not adjudicated"
+    },
+    "strategy_memories": {
+      "red": {
+        "condition": "learned",
+        "role": "red",
+        "round": 3,
+        "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+        "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+      },
+      "blue": {
+        "condition": "learned",
+        "role": "blue",
+        "round": 3,
+        "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+        "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+      }
+    },
+    "knowledge": {
+      "pack_id": "radiology_reporting_v1",
+      "version": "2026-11-03",
+      "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+      "card_ids": [
+        "report_sections",
+        "terminology_and_limits",
+        "template_role",
+        "standard_vocabulary",
+        "claim_attributes",
+        "negation_uncertainty",
+        "side_severity",
+        "internal_consistency",
+        "reference_vs_image"
+      ],
+      "review_status": "draft; qualified radiologist review pending"
+    },
+    "memory_learning": "frozen; no updates during batch"
+  },
+  "37.control": {
+    "study_id": "37",
+    "split": "dev",
+    "models": {
+      "text": "google/gemma-3-27b-it",
+      "vision": "google/gemma-3-27b-it",
+      "max_tokens": 2048
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart is normal in size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The mediastinum is unremarkable."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: XXXX XXXX opacities in right mid lung."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: The lungs are otherwise grossly clear."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute disease."
+      }
+    ],
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart is normal in size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The mediastinum is unremarkable."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: XXXX XXXX opacities in right mid lung."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: The lungs are otherwise grossly clear."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute disease."
+      }
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/37_IM-1847-0001-0002.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/37_IM-1847-0001-0001.dcm.png"
+    ],
+    "clinical_context": "HYPOXIA;",
+    "clinical_context_config": {
+      "condition": "indication",
+      "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+      "fields": [
+        "indication"
+      ],
+      "reports": 3851,
+      "reports_with_indication": 3765,
+      "missing_policy": "empty indication retained; unknown study ID fails before calls"
+    },
+    "private_attack": {
+      "edits": [],
+      "rationale": "Unchanged source report control",
+      "requested_error_type": null,
+      "clinical_validity": "not_adjudicated"
+    },
+    "blue": {
+      "decision": "uncertain",
+      "findings": [],
+      "limitations": "The assessment of heart size is limited by the lack of prior imaging for comparison. The assessment of opacity in the right mid lung is limited by the 2D nature of the x-ray images and the lack of clinical history."
+    },
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Is there any opacity visible in the right mid lung?",
+        "observation": "The frontal chest x-ray shows a possible opacity in the right mid lung field, indicated by the white arrow. The lateral view does not clearly demonstrate this opacity, but there is some increased density in the right mid lung compared to the left. It is difficult to definitively characterize the opacity without further imaging or clinical context. The opacity could be due to a number of factors, including pneumonia, atelectasis, or a mass.",
+        "limitations": "The assessment is limited by the 2D nature of the x-ray images. It is difficult to determine the exact location and size of the opacity without additional imaging modalities such as a CT scan. There is also no clinical history available to help interpret the findings. The quality of the images is adequate, but not ideal for detailed assessment."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "Is the heart normal in size?",
+        "observation": "The frontal chest radiograph shows the cardiac silhouette. An arrow points to the right lung apex. The lateral view shows the cardiac silhouette and the right hemidiaphragm. Visually assessing the heart size on a single chest radiograph can be subjective. Without prior radiographs for comparison, it is difficult to definitively state whether the heart is normal in size. The cardiothoracic ratio is not easily assessed without precise measurements. ",
+        "limitations": "Assessment of heart size is limited by the lack of prior imaging for comparison. The quality of the images and potential for magnification due to positioning can also affect the assessment. A precise measurement of the cardiothoracic ratio would require additional tools and expertise."
+      }
+    ],
+    "score": {
+      "localization_tp": 0,
+      "localization_fp": 0,
+      "localization_fn": 0,
+      "uncertain": true,
+      "injected_edit_detected": null,
+      "unchanged_control_flagged": false,
+      "ground_truth_scope": "synthetic edits; image support not adjudicated"
+    },
+    "strategy_memories": {
+      "red": {
+        "condition": "learned",
+        "role": "red",
+        "round": 3,
+        "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+        "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+      },
+      "blue": {
+        "condition": "learned",
+        "role": "blue",
+        "round": 3,
+        "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+        "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+      }
+    },
+    "knowledge": {
+      "pack_id": "radiology_reporting_v1",
+      "version": "2026-11-03",
+      "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+      "card_ids": [
+        "report_sections",
+        "terminology_and_limits",
+        "template_role",
+        "standard_vocabulary",
+        "claim_attributes",
+        "negation_uncertainty",
+        "side_severity",
+        "internal_consistency",
+        "reference_vs_image"
+      ],
+      "review_status": "draft; qualified radiologist review pending"
+    },
+    "memory_learning": "frozen; no updates during batch"
+  },
+  "1656.attack": {
+    "study_id": "1656",
+    "split": "dev",
+    "models": {
+      "text": "google/gemma-3-27b-it",
+      "vision": "google/gemma-3-27b-it",
+      "max_tokens": 2048
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The lungs are clear."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size is normal."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: Clear lungs."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "The lungs show mild congestion."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size is normal."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "Mild congestion is present in the lungs."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1656_IM-0431-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1656_IM-0431-2001.dcm.png"
+    ],
+    "clinical_context": "XXXX and Chest congestion.",
+    "clinical_context_config": {
+      "condition": "indication",
+      "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+      "fields": [
+        "indication"
+      ],
+      "reports": 3851,
+      "reports_with_indication": 3765,
+      "missing_policy": "empty indication retained; unknown study ID fails before calls"
+    },
+    "private_attack": {
+      "edits": [
+        {
+          "sentence_id": "s1",
+          "replacement": "The lungs show mild congestion."
+        },
+        {
+          "sentence_id": "s4",
+          "replacement": "Mild congestion is present in the lungs."
+        }
+      ],
+      "rationale": "The original report states the lungs are clear. The clinical context mentions chest congestion, and the images show some opacities. I have changed the report to reflect mild congestion in the lungs, aligning it with the clinical context and image findings while introducing a presence error (changing 'clear' to 'mild congestion').",
+      "requested_error_type": "presence_absence",
+      "clinical_validity": "not_adjudicated"
+    },
+    "blue": {
+      "decision": "uncertain",
+      "findings": [],
+      "limitations": "The images show increased opacity in the lungs, which is consistent with congestion, but other causes are possible. The heart size appears within the expected range, but a definitive assessment requires quantitative measurements or comparison to prior imaging. Due to these limitations, it is difficult to definitively confirm or refute the candidate claims."
+    },
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Is there visible congestion in the lungs?",
+        "observation": "The images show increased opacity in both lung fields, particularly in the lower lobes. This could be indicative of congestion, though other causes are possible. The lateral view shows some blunting of the costophrenic angles, which can also be a sign of fluid accumulation or congestion. There appears to be some interstitial markings throughout both lungs.",
+        "limitations": "It is difficult to definitively determine the cause of the increased opacity without further clinical information or comparison to prior imaging. The images are limited to these two views, and a comprehensive assessment would require additional imaging modalities and clinical context. The degree of congestion, if present, is subjective and requires expert interpretation."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "Is the heart size normal on the image?",
+        "observation": "The frontal chest radiograph shows the cardiac silhouette. The lateral view also demonstrates the heart. Without specific measurements (cardiothoracic ratio) or comparison to prior imaging, it is difficult to definitively assess whether the heart size is normal. The heart appears within the expected range based on a qualitative assessment, but this is not a precise determination.",
+        "limitations": "I lack the ability to perform quantitative measurements of cardiac size. A definitive assessment requires a cardiothoracic ratio or comparison to previous imaging studies. The image quality and positioning could also affect the assessment of heart size."
+      }
+    ],
+    "score": {
+      "localization_tp": 0,
+      "localization_fp": 0,
+      "localization_fn": 2,
+      "uncertain": true,
+      "injected_edit_detected": false,
+      "unchanged_control_flagged": null,
+      "ground_truth_scope": "synthetic edits; image support not adjudicated"
+    },
+    "strategy_memories": {
+      "red": {
+        "condition": "learned",
+        "role": "red",
+        "round": 3,
+        "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+        "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+      },
+      "blue": {
+        "condition": "learned",
+        "role": "blue",
+        "round": 3,
+        "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+        "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+      }
+    },
+    "knowledge": {
+      "pack_id": "radiology_reporting_v1",
+      "version": "2026-11-03",
+      "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+      "card_ids": [
+        "report_sections",
+        "terminology_and_limits",
+        "template_role",
+        "standard_vocabulary",
+        "claim_attributes",
+        "negation_uncertainty",
+        "side_severity",
+        "internal_consistency",
+        "reference_vs_image"
+      ],
+      "review_status": "draft; qualified radiologist review pending"
+    },
+    "memory_learning": "frozen; no updates during batch"
+  },
+  "1656.control": {
+    "study_id": "1656",
+    "split": "dev",
+    "models": {
+      "text": "google/gemma-3-27b-it",
+      "vision": "google/gemma-3-27b-it",
+      "max_tokens": 2048
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The lungs are clear."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size is normal."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: Clear lungs."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The lungs are clear."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size is normal."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: Clear lungs."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1656_IM-0431-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1656_IM-0431-2001.dcm.png"
+    ],
+    "clinical_context": "XXXX and Chest congestion.",
+    "clinical_context_config": {
+      "condition": "indication",
+      "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+      "fields": [
+        "indication"
+      ],
+      "reports": 3851,
+      "reports_with_indication": 3765,
+      "missing_policy": "empty indication retained; unknown study ID fails before calls"
+    },
+    "private_attack": {
+      "edits": [],
+      "rationale": "Unchanged source report control",
+      "requested_error_type": null,
+      "clinical_validity": "not_adjudicated"
+    },
+    "blue": {
+      "decision": "error",
+      "findings": [
+        {
+          "sentence_id": "s1",
+          "error_type": "presence_absence",
+          "evidence": "The frontal chest x-ray shows increased opacity in the bilateral lower lung fields, which could represent consolidation, edema, or other infiltrates. The lateral view also demonstrates some increased density in the lower lung, consistent with the findings on the frontal view. There is also some subtle haziness in the right mid-lung field.",
+          "tool_call_ids": [
+            "vision_1"
+          ]
+        }
+      ],
+      "limitations": "The image shows opacities in the lungs, contradicting the claim that the lungs are clear. It is difficult to definitively determine the nature of the opacities (consolidation vs. other causes) without clinical context or comparison to prior imaging."
+    },
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Is there any evidence of consolidation or opacity in the lungs?",
+        "observation": "The frontal chest x-ray shows increased opacity in the bilateral lower lung fields, which could represent consolidation, edema, or other infiltrates. The lateral view also demonstrates some increased density in the lower lung, consistent with the findings on the frontal view. There is also some subtle haziness in the right mid-lung field. The heart size appears normal. The bony structures appear intact.",
+        "limitations": "It is difficult to definitively determine the nature of the opacities (consolidation vs. other causes) without clinical context or comparison to prior imaging. The quality of the images is adequate, but higher resolution imaging might be needed for a more precise assessment. I am unable to provide a diagnosis."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "Does the heart size appear normal in the image?",
+        "observation": "The frontal chest radiograph shows the cardiac silhouette. Assessing cardiac size accurately requires a comparison to prior imaging or established norms. The cardiothoracic ratio appears within normal limits on the frontal view, but this is a limited assessment. The lateral view does not provide a clear assessment of cardiac size. There is some haziness in the lung fields bilaterally, which could potentially obscure the cardiac borders.",
+        "limitations": "A definitive assessment of heart size requires comparison to previous imaging or established norms. The provided images are single views and do not allow for precise measurement of cardiac dimensions. The presence of lung pathology may affect the assessment of cardiac size."
+      }
+    ],
+    "score": {
+      "localization_tp": 0,
+      "localization_fp": 1,
+      "localization_fn": 0,
+      "uncertain": false,
+      "injected_edit_detected": null,
+      "unchanged_control_flagged": true,
+      "ground_truth_scope": "synthetic edits; image support not adjudicated"
+    },
+    "strategy_memories": {
+      "red": {
+        "condition": "learned",
+        "role": "red",
+        "round": 3,
+        "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+        "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+      },
+      "blue": {
+        "condition": "learned",
+        "role": "blue",
+        "round": 3,
+        "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+        "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+      }
+    },
+    "knowledge": {
+      "pack_id": "radiology_reporting_v1",
+      "version": "2026-11-03",
+      "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+      "card_ids": [
+        "report_sections",
+        "terminology_and_limits",
+        "template_role",
+        "standard_vocabulary",
+        "claim_attributes",
+        "negation_uncertainty",
+        "side_severity",
+        "internal_consistency",
+        "reference_vs_image"
+      ],
+      "review_status": "draft; qualified radiologist review pending"
+    },
+    "memory_learning": "frozen; no updates during batch"
+  },
+  "3768.attack": {
+    "study_id": "3768",
+    "split": "dev",
+    "models": {
+      "text": "google/gemma-3-27b-it",
+      "vision": "google/gemma-3-27b-it",
+      "max_tokens": 2048
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Mild cardiomegaly."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Changes of chronic lung disease."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Accentuated thoracic kyphosis."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Chronic lung disease with no acute cardiopulmonary abnormality."
+      }
+    ],
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "Cardiomegaly is not present."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Changes of chronic lung disease."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Accentuated thoracic kyphosis."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Chronic lung disease with no acute cardiopulmonary abnormality."
+      }
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3768_IM-1887-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3768_IM-1887-2001.dcm.png"
+    ],
+    "clinical_context": "XXXX-year-old female shortness of breath and bilateral lower extremity edema.",
+    "clinical_context_config": {
+      "condition": "indication",
+      "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+      "fields": [
+        "indication"
+      ],
+      "reports": 3851,
+      "reports_with_indication": 3765,
+      "missing_policy": "empty indication retained; unknown study ID fails before calls"
+    },
+    "private_attack": {
+      "edits": [
+        {
+          "sentence_id": "s1",
+          "replacement": "Cardiomegaly is not present."
+        }
+      ],
+      "rationale": "Changing 'Mild cardiomegaly' to 'Cardiomegaly is not present' reduces the severity to absence, fulfilling the task's requirement to alter severity. This change is made in the FINDINGS section. The change is unambiguous and maintains syntactical correctness.",
+      "requested_error_type": "severity",
+      "clinical_validity": "not_adjudicated"
+    },
+    "blue": {
+      "decision": "no_error_detected",
+      "findings": [],
+      "limitations": "The images are limited to PA and lateral views, which can make subtle assessments of spinal curvature and lung disease difficult. The assessment of chronic lung disease is based on interstitial markings and blunting of costophrenic angles, which are not specific findings. The assessment of kyphosis is limited by the lack of measurement tools and prior radiographs."
+    },
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Is there any evidence of chronic lung disease visible on the image?",
+        "observation": "The images show a chest X-ray (PA and lateral views). There appears to be some increased interstitial markings throughout both lung fields, which could be indicative of chronic lung disease. The lateral view shows some blunting of the costophrenic angles, which can also be seen in chronic lung conditions. However, these findings are not specific and could be due to other causes such as pulmonary edema or infection. There is no evidence of significant hyperinflation or bullae.",
+        "limitations": "The images are limited to these two views, and a comprehensive assessment would require additional imaging (e.g., CT scan) and clinical information. It is difficult to definitively diagnose chronic lung disease based on these images alone. The quality of the images is also somewhat limited, making subtle findings harder to assess."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "Is there any evidence of thoracic kyphosis, and if so, how would you characterize its severity?",
+        "observation": "The lateral view radiograph suggests the presence of thoracic kyphosis. The posterior curvature of the thoracic spine appears increased, with a visible rounding of the upper back. It is difficult to quantify the degree of kyphosis without measurement tools or comparison to normative values. The anterior-posterior view does not provide a clear assessment of the spinal curvature.",
+        "limitations": "Assessment of kyphosis is limited by the lack of measurement tools and the absence of prior radiographs for comparison. A precise determination of the Cobb angle or other quantitative measures of kyphotic curvature is not possible based on these images alone. The images are also 2D projections, which can sometimes obscure or exaggerate spinal deformities."
+      }
+    ],
+    "score": {
+      "localization_tp": 0,
+      "localization_fp": 0,
+      "localization_fn": 1,
+      "uncertain": false,
+      "injected_edit_detected": false,
+      "unchanged_control_flagged": null,
+      "ground_truth_scope": "synthetic edits; image support not adjudicated"
+    },
+    "strategy_memories": {
+      "red": {
+        "condition": "learned",
+        "role": "red",
+        "round": 3,
+        "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+        "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+      },
+      "blue": {
+        "condition": "learned",
+        "role": "blue",
+        "round": 3,
+        "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+        "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+      }
+    },
+    "knowledge": {
+      "pack_id": "radiology_reporting_v1",
+      "version": "2026-11-03",
+      "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+      "card_ids": [
+        "report_sections",
+        "terminology_and_limits",
+        "template_role",
+        "standard_vocabulary",
+        "claim_attributes",
+        "negation_uncertainty",
+        "side_severity",
+        "internal_consistency",
+        "reference_vs_image"
+      ],
+      "review_status": "draft; qualified radiologist review pending"
+    },
+    "memory_learning": "frozen; no updates during batch"
+  },
+  "3768.control": {
+    "study_id": "3768",
+    "split": "dev",
+    "models": {
+      "text": "google/gemma-3-27b-it",
+      "vision": "google/gemma-3-27b-it",
+      "max_tokens": 2048
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Mild cardiomegaly."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Changes of chronic lung disease."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Accentuated thoracic kyphosis."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Chronic lung disease with no acute cardiopulmonary abnormality."
+      }
+    ],
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Mild cardiomegaly."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Changes of chronic lung disease."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Accentuated thoracic kyphosis."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Chronic lung disease with no acute cardiopulmonary abnormality."
+      }
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3768_IM-1887-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3768_IM-1887-2001.dcm.png"
+    ],
+    "clinical_context": "XXXX-year-old female shortness of breath and bilateral lower extremity edema.",
+    "clinical_context_config": {
+      "condition": "indication",
+      "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+      "fields": [
+        "indication"
+      ],
+      "reports": 3851,
+      "reports_with_indication": 3765,
+      "missing_policy": "empty indication retained; unknown study ID fails before calls"
+    },
+    "private_attack": {
+      "edits": [],
+      "rationale": "Unchanged source report control",
+      "requested_error_type": null,
+      "clinical_validity": "not_adjudicated"
+    },
+    "blue": {
+      "decision": "error",
+      "findings": [
+        {
+          "sentence_id": "s1",
+          "error_type": "presence_absence",
+          "evidence": "The frontal chest radiograph shows a widened mediastinum and the cardiac silhouette appears enlarged. The cardiothoracic ratio appears to be greater than 0.5, suggesting cardiomegaly. The lateral view also demonstrates an increased anterior-posterior diameter of the heart.",
+          "tool_call_ids": [
+            "vision_1"
+          ]
+        }
+      ],
+      "limitations": "Assessment of cardiomegaly is subjective and can be affected by patient positioning and inspiration. A precise measurement of the cardiothoracic ratio requires a standardized technique. Without prior imaging, it is difficult to determine if this is an acute or chronic finding, or to quantify the degree of enlargement accurately. The images are limited to these two views, and additional views might provide more information."
+    },
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Is cardiomegaly visible, and if so, how would you characterize its severity?",
+        "observation": "The frontal chest radiograph shows a widened mediastinum and the cardiac silhouette appears enlarged. The cardiothoracic ratio appears to be greater than 0.5, suggesting cardiomegaly. The lateral view also demonstrates an increased anterior-posterior diameter of the heart. Based on these observations, cardiomegaly is visible. Characterizing the severity is difficult without prior imaging for comparison, but it appears to be at least moderate cardiomegaly.",
+        "limitations": "Assessment of cardiomegaly is subjective and can be affected by patient positioning and inspiration. A precise measurement of the cardiothoracic ratio requires a standardized technique. Without prior imaging, it is difficult to determine if this is an acute or chronic finding, or to quantify the degree of enlargement accurately. The images are limited to these two views, and additional views might provide more information."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "Are there imaging findings consistent with chronic lung disease, and if so, what are the specific features observed?",
+        "observation": "The provided chest radiographs demonstrate several findings potentially consistent with chronic lung disease. The frontal view shows increased interstitial markings, particularly in the lower lung fields, which could represent fibrosis or thickening of the interstitium. There is also some degree of hyperinflation, suggested by the flattened diaphragms. The lateral view shows some distortion of the normal lung architecture, with areas of increased density. These findings could be indicative of conditions like chronic obstructive pulmonary disease (COPD), interstitial lung disease, or other chronic lung processes. However, the images lack definitive features to pinpoint a specific diagnosis.",
+        "limitations": "The images are limited in that they represent a single point in time and lack prior imaging for comparison. Without a clinical history or pulmonary function tests, it is difficult to definitively diagnose chronic lung disease or determine its severity. The image quality is also somewhat limited, making subtle findings difficult to assess. A high-resolution CT scan would be more sensitive for evaluating interstitial lung disease."
+      }
+    ],
+    "score": {
+      "localization_tp": 0,
+      "localization_fp": 1,
+      "localization_fn": 0,
+      "uncertain": false,
+      "injected_edit_detected": null,
+      "unchanged_control_flagged": true,
+      "ground_truth_scope": "synthetic edits; image support not adjudicated"
+    },
+    "strategy_memories": {
+      "red": {
+        "condition": "learned",
+        "role": "red",
+        "round": 3,
+        "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+        "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+      },
+      "blue": {
+        "condition": "learned",
+        "role": "blue",
+        "round": 3,
+        "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+        "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+      }
+    },
+    "knowledge": {
+      "pack_id": "radiology_reporting_v1",
+      "version": "2026-11-03",
+      "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+      "card_ids": [
+        "report_sections",
+        "terminology_and_limits",
+        "template_role",
+        "standard_vocabulary",
+        "claim_attributes",
+        "negation_uncertainty",
+        "side_severity",
+        "internal_consistency",
+        "reference_vs_image"
+      ],
+      "review_status": "draft; qualified radiologist review pending"
+    },
+    "memory_learning": "frozen; no updates during batch"
+  }
+}

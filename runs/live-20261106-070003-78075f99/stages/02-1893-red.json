@@ -1,0 +1,125 @@
+{
+  "study_id": "1893",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Mildly low lung volumes."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Lungs are clear without focal air space disease."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Persistent mild elevation right hemidiaphragm."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pleural effusions or pneumothoraces."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: Heart and mediastinum of normal size and contour."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: Degenerative changes in the spine."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: Stable appearance of the chest without focal air space disease."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Mildly low lung volumes."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Lungs are clear without focal air space disease."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Persistent mild elevation right hemidiaphragm."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pleural effusions or pneumothoraces."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: Heart and mediastinum of normal size and contour."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: Degenerative changes in the spine."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: Stable appearance of the chest with focal air space disease."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s7"
+      ],
+      "candidate_ids": [
+        "s7"
+      ],
+      "category": "fabrication",
+      "description": "The impression was changed to state 'with focal air space disease' which contradicts the findings and the image, which shows clear lungs."
+    }
+  ],
+  "rationale": "The change introduces a fabrication error by stating 'with focal air space disease' in the impression, directly contradicting the 'Lungs are clear without focal air space disease' finding (s2) and the visual evidence in the images. This creates a clinically significant discrepancy.",
+  "eligible": true,
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attempts": [
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: Mildly low lung volumes."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: Lungs are clear without focal air space disease."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: Persistent mild elevation right hemidiaphragm."
+        },
+        {
+          "id": "s4",
+          "text": "FINDINGS: No pleural effusions or pneumothoraces."
+        },
+        {
+          "id": "s5",
+          "text": "FINDINGS: Heart and mediastinum of normal size and contour."
+        },
+        {
+          "id": "s6",
+          "text": "FINDINGS: Degenerative changes in the spine."
+        },
+        {
+          "id": "s7",
+          "text": "IMPRESSION: Stable appearance of the chest with focal air space disease."
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [
+            "s7"
+          ],
+          "candidate_ids": [
+            "s7"
+          ],
+          "category": "fabrication",
+          "description": "The impression was changed to state 'with focal air space disease' which contradicts the findings and the image, which shows clear lungs."
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

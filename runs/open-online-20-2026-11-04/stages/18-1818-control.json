@@ -1,0 +1,51 @@
+{
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The semi-upright position and single lateral view limit the full assessment of lung volumes and the extent of atelectasis. The diffuse nature of interstitial opacification makes it difficult to definitively rule out subtle areas of consolidation."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "no_error_detected",
+        "findings": [],
+        "limitations": "The semi-upright position and single lateral view limit the full assessment of lung volumes and the extent of atelectasis. The diffuse nature of interstitial opacification makes it difficult to definitively rule out subtle areas of consolidation."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Are there very low lung volumes, bronchovascular crowding, and bibasilar areas of atelectasis visible?",
+      "observation": "The images show very low lung volumes. There is evidence of bronchovascular crowding, particularly in the lower lung zones. Bibasilar areas of atelectasis are visible, consistent with the low lung volumes and crowding.",
+      "limitations": "The semi-upright position of the frontal radiograph and the single lateral view may limit the full assessment of lung volumes and the extent of atelectasis, especially in the posterior sulci. The overall image quality is suboptimal for detailed evaluation of subtle parenchymal changes."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there any lobar consolidation visible?",
+      "observation": "There is diffuse bilateral interstitial opacification, which is more prominent in the lower lung zones. There is no clear evidence of lobar consolidation.",
+      "limitations": "The images are limited by their semi-upright and lateral projections, which may obscure some areas of the lung. The diffuse nature of the opacities makes it difficult to definitively rule out subtle areas of consolidation, especially in the context of overlying interstitial changes."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: Very low lung volumes, bronchovascular crowding and bibasilar areas of atelectasis."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No lobar consolidation."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: No appreciable pleural effusion or pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: Heart size within normal limits."
+    }
+  ],
+  "memory_sha256": "bfd302f95ec0e3544439172bb4de0cebb54cc9c3ac07715c850319eea4bc8860"
+}

@@ -1,0 +1,97 @@
+{
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s1",
+        "error_type": "contradiction",
+        "evidence": "The lung volumes appear within normal limits. There is no clear evidence of central bronchovascular crowding.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      },
+      {
+        "sentence_id": "s2",
+        "error_type": "contradiction",
+        "evidence": "The cardiomediastinal silhouette appears enlarged on the frontal radiograph. The cardiac borders are indistinct in some areas, particularly on the right, which could be due to overlying lung pathology or fluid.",
+        "tool_call_ids": [
+          "vision_2"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      }
+    ],
+    "limitations": "The assessment of lung volumes and central bronchovascular crowding can be subjective and may be influenced by patient positioning and inspiratory effort. Without prior imaging for comparison, subtle changes are difficult to definitively assess. The assessment of the cardiomediastinal silhouette is limited by the supine position of the patient, which can exaggerate cardiac size. The presence of bilateral patchy opacities in the lungs, particularly in the lower zones, may obscure the cardiac borders and make precise measurement difficult. The quality of the lateral view is suboptimal for a detailed cardiac assessment due to patient positioning and potential rotation."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "error",
+        "findings": [
+          {
+            "sentence_id": "s1",
+            "error_type": "contradiction",
+            "evidence": "The lung volumes appear within normal limits. There is no clear evidence of central bronchovascular crowding.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          },
+          {
+            "sentence_id": "s2",
+            "error_type": "contradiction",
+            "evidence": "The cardiomediastinal silhouette appears enlarged on the frontal radiograph. The cardiac borders are indistinct in some areas, particularly on the right, which could be due to overlying lung pathology or fluid.",
+            "tool_call_ids": [
+              "vision_2"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          }
+        ],
+        "limitations": "The assessment of lung volumes and central bronchovascular crowding can be subjective and may be influenced by patient positioning and inspiratory effort. Without prior imaging for comparison, subtle changes are difficult to definitively assess. The assessment of the cardiomediastinal silhouette is limited by the supine position of the patient, which can exaggerate cardiac size. The presence of bilateral patchy opacities in the lungs, particularly in the lower zones, may obscure the cardiac borders and make precise measurement difficult. The quality of the lateral view is suboptimal for a detailed cardiac assessment due to patient positioning and potential rotation."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Are there low lung volumes bilaterally, and is there central bronchovascular crowding?",
+      "observation": "The lung volumes appear within normal limits. There is no clear evidence of central bronchovascular crowding.",
+      "limitations": "The assessment of lung volumes and central bronchovascular crowding can be subjective and may be influenced by patient positioning and inspiratory effort. Without prior imaging for comparison, subtle changes are difficult to definitively assess."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is the cardiomediastinal silhouette within normal limits?",
+      "observation": "The cardiomediastinal silhouette appears enlarged on the frontal radiograph. The cardiac borders are indistinct in some areas, particularly on the right, which could be due to overlying lung pathology or fluid. The lateral view shows a prominent retrosternal clear space, but the cardiac silhouette itself is difficult to fully assess due to superimposition and patient positioning.",
+      "limitations": "The assessment of the cardiomediastinal silhouette is limited by the supine position of the patient, which can exaggerate cardiac size. The presence of bilateral patchy opacities in the lungs, particularly in the lower zones, may obscure the cardiac borders and make precise measurement difficult. The quality of the lateral view is suboptimal for a detailed cardiac assessment due to patient positioning and potential rotation."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Low lung volumes bilaterally with central bronchovascular crowding without focal consolidation, pleural effusion, or pneumothoraces.."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Cardiomediastinal silhouette is within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Degenerative changes of the thoracic spine.."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: Low lung volumes bilaterally with central bronchovascular crowding without focal cardiopulmonary disease."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: ."
+    }
+  ],
+  "memory_sha256": "076e2645fb8db62ba4fd687c1bc93a2886dc9f4d3c8c910e989a7000d2880f8e"
+}

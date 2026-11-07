@@ -1,0 +1,3443 @@
+{
+  "format_version": 1,
+  "extractor": {
+    "tool": "RadGraph",
+    "package_version": "0.1.18",
+    "model_type": "radgraph-xl",
+    "device": "cpu",
+    "model_files_sha256": {
+      "config.json": "985554e4df559a6b6d348bf4c4541cc4c353a768dfe7d533464cbf101d9a39b2",
+      "vocabulary/.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vocabulary/non_padded_namespaces.txt": "863044919d9f9c1c04aba282ac981ab0157d6ab08737a96c72f7e15887911db0",
+      "vocabulary/radgraph-xl__ner_labels.txt": "c532272c568f3beddd583cd643441cd7102f2e9b958fee57d64745b1f6213755",
+      "vocabulary/radgraph-xl__relation_labels.txt": "cb735684302c8abb3a906adf01be34d2205473f146dc6e90c6ba9ea5d65082b9",
+      "weights.th": "fdc4780bbeb7c2f9a2457ed20da842f80b2eaf057063e54951991645fa1d5464"
+    },
+    "scope": "sentence-level extraction; cross-sentence relations are not modeled",
+    "evidence_type": "report text claims, not image observations"
+  },
+  "benchmark_sha256": "43f0f1033f2c30627c50c2921549de916c400c7b28a4e39ba136d82dcd239d84",
+  "split": "dev",
+  "graphs": {
+    "32cae3397e160cefcdd4a73077f2618f4144c8f0ff9010a8e2706744604be617": {
+      "report_sha256": "32cae3397e160cefcdd4a73077f2618f4144c8f0ff9010a8e2706744604be617",
+      "extractor_fingerprint": "cc57ec1986bde7c3b856fbd3e7ab4de15af78ce9bc7b9696def135e31318a930",
+      "sentences": [
+        {
+          "sentence_id": "s1",
+          "source_text": "IMPRESSION: Heart size and mediastinal contour are normal.",
+          "extraction_input": "Heart size and mediastinal contour are normal.",
+          "raw_annotation": {
+            "text": "Heart size and mediastinal contour are normal .",
+            "entities": {
+              "1": {
+                "tokens": "Heart",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": []
+              },
+              "2": {
+                "tokens": "size",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": [
+                  [
+                    "modify",
+                    "1"
+                  ]
+                ]
+              },
+              "3": {
+                "tokens": "mediastinal",
+                "label": "Anatomy::definitely present",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": []
+              },
+              "4": {
+                "tokens": "contour",
+                "label": "Anatomy::definitely present",
+                "start_ix": 4,
+                "end_ix": 4,
+                "relations": []
+              },
+              "5": {
+                "tokens": "normal",
+                "label": "Observation::definitely present",
+                "start_ix": 6,
+                "end_ix": 6,
+                "relations": [
+                  [
+                    "located_at",
+                    "1"
+                  ],
+                  [
+                    "located_at",
+                    "3"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "5",
+              "observation": "normal",
+              "qualified_observation": "normal",
+              "status": "present",
+              "anatomy": [
+                "Heart size",
+                "mediastinal"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "1",
+                  "target_text": "Heart size"
+                },
+                {
+                  "type": "located_at",
+                  "target_entity_id": "3",
+                  "target_text": "mediastinal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s2",
+          "source_text": "IMPRESSION: Pulmonary vascularity is normal.",
+          "extraction_input": "Pulmonary vascularity is normal.",
+          "raw_annotation": {
+            "text": "Pulmonary vascularity is normal .",
+            "entities": {
+              "1": {
+                "tokens": "Pulmonary",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": [
+                  [
+                    "modify",
+                    "2"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "vascularity",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              },
+              "3": {
+                "tokens": "normal",
+                "label": "Observation::definitely present",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "3",
+              "observation": "normal",
+              "qualified_observation": "normal",
+              "status": "present",
+              "anatomy": [
+                "Pulmonary vascularity"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "Pulmonary vascularity"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s3",
+          "source_text": "IMPRESSION: Subtle airspace density within the medial right lung base, not obscuring the right heart XXXX.",
+          "extraction_input": "Subtle airspace density within the medial right lung base, not obscuring the right heart XXXX.",
+          "raw_annotation": {
+            "text": "Subtle airspace density within the medial right lung base , not obscuring the right heart XXXX .",
+            "entities": {
+              "1": {
+                "tokens": "Subtle",
+                "label": "Observation::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "airspace",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              },
+              "3": {
+                "tokens": "density",
+                "label": "Observation::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              },
+              "4": {
+                "tokens": "medial",
+                "label": "Anatomy::definitely present",
+                "start_ix": 5,
+                "end_ix": 5,
+                "relations": [
+                  [
+                    "modify",
+                    "6"
+                  ]
+                ]
+              },
+              "5": {
+                "tokens": "right",
+                "label": "Anatomy::definitely present",
+                "start_ix": 6,
+                "end_ix": 6,
+                "relations": []
+              },
+              "6": {
+                "tokens": "lung",
+                "label": "Anatomy::definitely present",
+                "start_ix": 7,
+                "end_ix": 7,
+                "relations": []
+              },
+              "7": {
+                "tokens": "base",
+                "label": "Anatomy::definitely present",
+                "start_ix": 8,
+                "end_ix": 8,
+                "relations": [
+                  [
+                    "modify",
+                    "6"
+                  ]
+                ]
+              },
+              "8": {
+                "tokens": "obscuring",
+                "label": "Observation::definitely absent",
+                "start_ix": 11,
+                "end_ix": 11,
+                "relations": []
+              },
+              "9": {
+                "tokens": "right",
+                "label": "Anatomy::definitely present",
+                "start_ix": 13,
+                "end_ix": 13,
+                "relations": [
+                  [
+                    "modify",
+                    "10"
+                  ]
+                ]
+              },
+              "10": {
+                "tokens": "heart",
+                "label": "Anatomy::definitely present",
+                "start_ix": 14,
+                "end_ix": 14,
+                "relations": []
+              },
+              "11": {
+                "tokens": "XXXX",
+                "label": "Anatomy::definitely present",
+                "start_ix": 15,
+                "end_ix": 15,
+                "relations": [
+                  [
+                    "modify",
+                    "10"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "Subtle",
+              "qualified_observation": "Subtle",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "3",
+                  "target_text": "Subtle density"
+                }
+              ]
+            },
+            {
+              "entity_id": "3",
+              "observation": "density",
+              "qualified_observation": "Subtle density",
+              "status": "present",
+              "anatomy": [
+                "airspace"
+              ],
+              "modifiers": [
+                "Subtle"
+              ],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "airspace"
+                }
+              ]
+            },
+            {
+              "entity_id": "8",
+              "observation": "obscuring",
+              "qualified_observation": "obscuring",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s4",
+          "source_text": "IMPRESSION: This may represent focal right lower lobe pneumonia given history.",
+          "extraction_input": "This may represent focal right lower lobe pneumonia given history.",
+          "raw_annotation": {
+            "text": "This may represent focal right lower lobe pneumonia given history .",
+            "entities": {
+              "1": {
+                "tokens": "focal",
+                "label": "Observation::uncertain",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "right lower lobe",
+                "label": "Anatomy::definitely present",
+                "start_ix": 4,
+                "end_ix": 6,
+                "relations": []
+              },
+              "3": {
+                "tokens": "pneumonia",
+                "label": "Observation::uncertain",
+                "start_ix": 7,
+                "end_ix": 7,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "focal",
+              "qualified_observation": "focal",
+              "status": "uncertain",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "3",
+                  "target_text": "focal pneumonia"
+                }
+              ]
+            },
+            {
+              "entity_id": "3",
+              "observation": "pneumonia",
+              "qualified_observation": "focal pneumonia",
+              "status": "uncertain",
+              "anatomy": [
+                "right lower lobe"
+              ],
+              "modifiers": [
+                "focal"
+              ],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "right lower lobe"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s5",
+          "source_text": "IMPRESSION: Left lung clear.",
+          "extraction_input": "Left lung clear.",
+          "raw_annotation": {
+            "text": "Left lung clear .",
+            "entities": {
+              "1": {
+                "tokens": "Left",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": []
+              },
+              "2": {
+                "tokens": "lung",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              },
+              "3": {
+                "tokens": "clear",
+                "label": "Observation::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "3",
+              "observation": "clear",
+              "qualified_observation": "clear",
+              "status": "present",
+              "anatomy": [
+                "lung"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "lung"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s6",
+          "source_text": "IMPRESSION: No effusions.",
+          "extraction_input": "No effusions.",
+          "raw_annotation": {
+            "text": "No effusions .",
+            "entities": {
+              "1": {
+                "tokens": "effusions",
+                "label": "Observation::definitely absent",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "effusions",
+              "qualified_observation": "effusions",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s7",
+          "source_text": "IMPRESSION: No pneumothorax.",
+          "extraction_input": "No pneumothorax.",
+          "raw_annotation": {
+            "text": "No pneumothorax .",
+            "entities": {
+              "1": {
+                "tokens": "pneumothorax",
+                "label": "Observation::definitely absent",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "pneumothorax",
+              "qualified_observation": "pneumothorax",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s8",
+          "source_text": "IMPRESSION: Skeletal structures unremarkable.",
+          "extraction_input": "Skeletal structures unremarkable.",
+          "raw_annotation": {
+            "text": "Skeletal structures unremarkable .",
+            "entities": {
+              "1": {
+                "tokens": "Skeletal",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": []
+              },
+              "2": {
+                "tokens": "structures",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              },
+              "3": {
+                "tokens": "unremarkable",
+                "label": "Observation::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "3",
+              "observation": "unremarkable",
+              "qualified_observation": "unremarkable",
+              "status": "present",
+              "anatomy": [
+                "structures"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "structures"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "a6a0609e4c45b903c81b614fd75d612ddecf2d1018e9bbee2f0b7117da613872": {
+      "report_sha256": "a6a0609e4c45b903c81b614fd75d612ddecf2d1018e9bbee2f0b7117da613872",
+      "extractor_fingerprint": "cc57ec1986bde7c3b856fbd3e7ab4de15af78ce9bc7b9696def135e31318a930",
+      "sentences": [
+        {
+          "sentence_id": "s1",
+          "source_text": "FINDINGS: No acute osseous abnormality.",
+          "extraction_input": "No acute osseous abnormality.",
+          "raw_annotation": {
+            "text": "No acute osseous abnormality .",
+            "entities": {
+              "1": {
+                "tokens": "acute",
+                "label": "Observation::definitely absent",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "osseous",
+                "label": "Anatomy::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": []
+              },
+              "3": {
+                "tokens": "abnormality",
+                "label": "Observation::definitely absent",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "acute",
+              "qualified_observation": "acute",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "3",
+                  "target_text": "acute abnormality"
+                }
+              ]
+            },
+            {
+              "entity_id": "3",
+              "observation": "abnormality",
+              "qualified_observation": "acute abnormality",
+              "status": "absent",
+              "anatomy": [
+                "osseous"
+              ],
+              "modifiers": [
+                "acute"
+              ],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "osseous"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s2",
+          "source_text": "FINDINGS: The soft tissues are within normal limits.",
+          "extraction_input": "The soft tissues are within normal limits.",
+          "raw_annotation": {
+            "text": "The soft tissues are within normal limits .",
+            "entities": {
+              "1": {
+                "tokens": "soft tissues",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 2,
+                "relations": []
+              },
+              "2": {
+                "tokens": "normal limits",
+                "label": "Observation::definitely present",
+                "start_ix": 5,
+                "end_ix": 6,
+                "relations": [
+                  [
+                    "located_at",
+                    "1"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "2",
+              "observation": "normal limits",
+              "qualified_observation": "normal limits",
+              "status": "present",
+              "anatomy": [
+                "soft tissues"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "1",
+                  "target_text": "soft tissues"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s3",
+          "source_text": "FINDINGS: Normal appearing cardiomediastinal silhouette and hilar contours.",
+          "extraction_input": "Normal appearing cardiomediastinal silhouette and hilar contours.",
+          "raw_annotation": {
+            "text": "Normal appearing cardiomediastinal silhouette and hilar contours .",
+            "entities": {
+              "1": {
+                "tokens": "Normal",
+                "label": "Observation::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ],
+                  [
+                    "located_at",
+                    "4"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "cardiomediastinal",
+                "label": "Anatomy::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": []
+              },
+              "3": {
+                "tokens": "silhouette",
+                "label": "Anatomy::definitely present",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": [
+                  [
+                    "modify",
+                    "2"
+                  ]
+                ]
+              },
+              "4": {
+                "tokens": "hilar",
+                "label": "Anatomy::definitely present",
+                "start_ix": 5,
+                "end_ix": 5,
+                "relations": []
+              },
+              "5": {
+                "tokens": "contours",
+                "label": "Anatomy::definitely present",
+                "start_ix": 6,
+                "end_ix": 6,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "Normal",
+              "qualified_observation": "Normal",
+              "status": "present",
+              "anatomy": [
+                "cardiomediastinal silhouette",
+                "hilar"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "cardiomediastinal silhouette"
+                },
+                {
+                  "type": "located_at",
+                  "target_entity_id": "4",
+                  "target_text": "hilar"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s4",
+          "source_text": "FINDINGS: Right lower lobe XXXX density XXXX representing atelectasis.",
+          "extraction_input": "Right lower lobe XXXX density XXXX representing atelectasis.",
+          "raw_annotation": {
+            "text": "Right lower lobe XXXX density XXXX representing atelectasis .",
+            "entities": {
+              "1": {
+                "tokens": "Right",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "lower",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "3": {
+                "tokens": "lobe",
+                "label": "Anatomy::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": []
+              },
+              "4": {
+                "tokens": "density",
+                "label": "Observation::definitely present",
+                "start_ix": 4,
+                "end_ix": 4,
+                "relations": [
+                  [
+                    "located_at",
+                    "3"
+                  ],
+                  [
+                    "suggestive_of",
+                    "5"
+                  ]
+                ]
+              },
+              "5": {
+                "tokens": "atelectasis",
+                "label": "Observation::definitely present",
+                "start_ix": 7,
+                "end_ix": 7,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "4",
+              "observation": "density",
+              "qualified_observation": "density",
+              "status": "present",
+              "anatomy": [
+                "Right lower lobe"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "3",
+                  "target_text": "Right lower lobe"
+                },
+                {
+                  "type": "suggestive_of",
+                  "target_entity_id": "5",
+                  "target_text": "atelectasis"
+                }
+              ]
+            },
+            {
+              "entity_id": "5",
+              "observation": "atelectasis",
+              "qualified_observation": "atelectasis",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s5",
+          "source_text": "FINDINGS: No focal area of consolidation, pleural effusion, pneumothorax.",
+          "extraction_input": "No focal area of consolidation, pleural effusion, pneumothorax.",
+          "raw_annotation": {
+            "text": "No focal area of consolidation , pleural effusion , pneumothorax .",
+            "entities": {
+              "1": {
+                "tokens": "consolidation",
+                "label": "Observation::definitely absent",
+                "start_ix": 4,
+                "end_ix": 4,
+                "relations": []
+              },
+              "2": {
+                "tokens": "pleural",
+                "label": "Anatomy::definitely present",
+                "start_ix": 6,
+                "end_ix": 6,
+                "relations": []
+              },
+              "3": {
+                "tokens": "effusion",
+                "label": "Observation::definitely absent",
+                "start_ix": 7,
+                "end_ix": 7,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              },
+              "4": {
+                "tokens": "pneumothorax",
+                "label": "Observation::definitely absent",
+                "start_ix": 9,
+                "end_ix": 9,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "consolidation",
+              "qualified_observation": "consolidation",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            },
+            {
+              "entity_id": "3",
+              "observation": "effusion",
+              "qualified_observation": "effusion",
+              "status": "absent",
+              "anatomy": [
+                "pleural"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "pleural"
+                }
+              ]
+            },
+            {
+              "entity_id": "4",
+              "observation": "pneumothorax",
+              "qualified_observation": "pneumothorax",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s6",
+          "source_text": "IMPRESSION: No focal lung consolidation.",
+          "extraction_input": "No focal lung consolidation.",
+          "raw_annotation": {
+            "text": "No focal lung consolidation .",
+            "entities": {
+              "1": {
+                "tokens": "focal",
+                "label": "Observation::definitely absent",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "lung",
+                "label": "Anatomy::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": []
+              },
+              "3": {
+                "tokens": "consolidation",
+                "label": "Observation::definitely absent",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "focal",
+              "qualified_observation": "focal",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "3",
+                  "target_text": "focal consolidation"
+                }
+              ]
+            },
+            {
+              "entity_id": "3",
+              "observation": "consolidation",
+              "qualified_observation": "focal consolidation",
+              "status": "absent",
+              "anatomy": [
+                "lung"
+              ],
+              "modifiers": [
+                "focal"
+              ],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "lung"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "ac4dbd262f1e83ccbfda04b93a8d34a80e9203d7c88ab69d56ce8064e135ceb2": {
+      "report_sha256": "ac4dbd262f1e83ccbfda04b93a8d34a80e9203d7c88ab69d56ce8064e135ceb2",
+      "extractor_fingerprint": "cc57ec1986bde7c3b856fbd3e7ab4de15af78ce9bc7b9696def135e31318a930",
+      "sentences": [
+        {
+          "sentence_id": "s1",
+          "source_text": "FINDINGS: No acute osseous abnormality.",
+          "extraction_input": "No acute osseous abnormality.",
+          "raw_annotation": {
+            "text": "No acute osseous abnormality .",
+            "entities": {
+              "1": {
+                "tokens": "acute",
+                "label": "Observation::definitely absent",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "osseous",
+                "label": "Anatomy::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": []
+              },
+              "3": {
+                "tokens": "abnormality",
+                "label": "Observation::definitely absent",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "acute",
+              "qualified_observation": "acute",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "3",
+                  "target_text": "acute abnormality"
+                }
+              ]
+            },
+            {
+              "entity_id": "3",
+              "observation": "abnormality",
+              "qualified_observation": "acute abnormality",
+              "status": "absent",
+              "anatomy": [
+                "osseous"
+              ],
+              "modifiers": [
+                "acute"
+              ],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "osseous"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s2",
+          "source_text": "FINDINGS: The soft tissues are within normal limits.",
+          "extraction_input": "The soft tissues are within normal limits.",
+          "raw_annotation": {
+            "text": "The soft tissues are within normal limits .",
+            "entities": {
+              "1": {
+                "tokens": "soft tissues",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 2,
+                "relations": []
+              },
+              "2": {
+                "tokens": "normal limits",
+                "label": "Observation::definitely present",
+                "start_ix": 5,
+                "end_ix": 6,
+                "relations": [
+                  [
+                    "located_at",
+                    "1"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "2",
+              "observation": "normal limits",
+              "qualified_observation": "normal limits",
+              "status": "present",
+              "anatomy": [
+                "soft tissues"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "1",
+                  "target_text": "soft tissues"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s3",
+          "source_text": "FINDINGS: Normal appearing cardiomediastinal silhouette and hilar contours.",
+          "extraction_input": "Normal appearing cardiomediastinal silhouette and hilar contours.",
+          "raw_annotation": {
+            "text": "Normal appearing cardiomediastinal silhouette and hilar contours .",
+            "entities": {
+              "1": {
+                "tokens": "Normal",
+                "label": "Observation::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ],
+                  [
+                    "located_at",
+                    "4"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "cardiomediastinal",
+                "label": "Anatomy::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": []
+              },
+              "3": {
+                "tokens": "silhouette",
+                "label": "Anatomy::definitely present",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": [
+                  [
+                    "modify",
+                    "2"
+                  ]
+                ]
+              },
+              "4": {
+                "tokens": "hilar",
+                "label": "Anatomy::definitely present",
+                "start_ix": 5,
+                "end_ix": 5,
+                "relations": []
+              },
+              "5": {
+                "tokens": "contours",
+                "label": "Anatomy::definitely present",
+                "start_ix": 6,
+                "end_ix": 6,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "Normal",
+              "qualified_observation": "Normal",
+              "status": "present",
+              "anatomy": [
+                "cardiomediastinal silhouette",
+                "hilar"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "cardiomediastinal silhouette"
+                },
+                {
+                  "type": "located_at",
+                  "target_entity_id": "4",
+                  "target_text": "hilar"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s4",
+          "source_text": "FINDINGS: Left lower lobe XXXX density XXXX representing atelectasis.",
+          "extraction_input": "Left lower lobe XXXX density XXXX representing atelectasis.",
+          "raw_annotation": {
+            "text": "Left lower lobe XXXX density XXXX representing atelectasis .",
+            "entities": {
+              "1": {
+                "tokens": "Left",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "lower",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "3": {
+                "tokens": "lobe",
+                "label": "Anatomy::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": []
+              },
+              "4": {
+                "tokens": "density",
+                "label": "Observation::definitely present",
+                "start_ix": 4,
+                "end_ix": 4,
+                "relations": [
+                  [
+                    "located_at",
+                    "3"
+                  ],
+                  [
+                    "suggestive_of",
+                    "5"
+                  ]
+                ]
+              },
+              "5": {
+                "tokens": "atelectasis",
+                "label": "Observation::definitely present",
+                "start_ix": 7,
+                "end_ix": 7,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "4",
+              "observation": "density",
+              "qualified_observation": "density",
+              "status": "present",
+              "anatomy": [
+                "Left lower lobe"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "3",
+                  "target_text": "Left lower lobe"
+                },
+                {
+                  "type": "suggestive_of",
+                  "target_entity_id": "5",
+                  "target_text": "atelectasis"
+                }
+              ]
+            },
+            {
+              "entity_id": "5",
+              "observation": "atelectasis",
+              "qualified_observation": "atelectasis",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s5",
+          "source_text": "FINDINGS: No focal area of consolidation, pleural effusion, pneumothorax.",
+          "extraction_input": "No focal area of consolidation, pleural effusion, pneumothorax.",
+          "raw_annotation": {
+            "text": "No focal area of consolidation , pleural effusion , pneumothorax .",
+            "entities": {
+              "1": {
+                "tokens": "consolidation",
+                "label": "Observation::definitely absent",
+                "start_ix": 4,
+                "end_ix": 4,
+                "relations": []
+              },
+              "2": {
+                "tokens": "pleural",
+                "label": "Anatomy::definitely present",
+                "start_ix": 6,
+                "end_ix": 6,
+                "relations": []
+              },
+              "3": {
+                "tokens": "effusion",
+                "label": "Observation::definitely absent",
+                "start_ix": 7,
+                "end_ix": 7,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              },
+              "4": {
+                "tokens": "pneumothorax",
+                "label": "Observation::definitely absent",
+                "start_ix": 9,
+                "end_ix": 9,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "consolidation",
+              "qualified_observation": "consolidation",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            },
+            {
+              "entity_id": "3",
+              "observation": "effusion",
+              "qualified_observation": "effusion",
+              "status": "absent",
+              "anatomy": [
+                "pleural"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "pleural"
+                }
+              ]
+            },
+            {
+              "entity_id": "4",
+              "observation": "pneumothorax",
+              "qualified_observation": "pneumothorax",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s6",
+          "source_text": "IMPRESSION: No focal lung consolidation.",
+          "extraction_input": "No focal lung consolidation.",
+          "raw_annotation": {
+            "text": "No focal lung consolidation .",
+            "entities": {
+              "1": {
+                "tokens": "focal",
+                "label": "Observation::definitely absent",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "lung",
+                "label": "Anatomy::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": []
+              },
+              "3": {
+                "tokens": "consolidation",
+                "label": "Observation::definitely absent",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "focal",
+              "qualified_observation": "focal",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "3",
+                  "target_text": "focal consolidation"
+                }
+              ]
+            },
+            {
+              "entity_id": "3",
+              "observation": "consolidation",
+              "qualified_observation": "focal consolidation",
+              "status": "absent",
+              "anatomy": [
+                "lung"
+              ],
+              "modifiers": [
+                "focal"
+              ],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "lung"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "e94196a477215ba594df76559440cdc5a99e3f089963e42f9e832805096a667e": {
+      "report_sha256": "e94196a477215ba594df76559440cdc5a99e3f089963e42f9e832805096a667e",
+      "extractor_fingerprint": "cc57ec1986bde7c3b856fbd3e7ab4de15af78ce9bc7b9696def135e31318a930",
+      "sentences": [
+        {
+          "sentence_id": "s1",
+          "source_text": "FINDINGS: There is mild cardiomegaly.",
+          "extraction_input": "There is mild cardiomegaly.",
+          "raw_annotation": {
+            "text": "There is mild cardiomegaly .",
+            "entities": {
+              "1": {
+                "tokens": "mild",
+                "label": "Observation::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": [
+                  [
+                    "modify",
+                    "2"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "cardiomegaly",
+                "label": "Observation::definitely present",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "mild",
+              "qualified_observation": "mild",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "2",
+                  "target_text": "mild cardiomegaly"
+                }
+              ]
+            },
+            {
+              "entity_id": "2",
+              "observation": "cardiomegaly",
+              "qualified_observation": "mild cardiomegaly",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [
+                "mild"
+              ],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s2",
+          "source_text": "FINDINGS: The thoracic aorta is tortuous.",
+          "extraction_input": "The thoracic aorta is tortuous.",
+          "raw_annotation": {
+            "text": "The thoracic aorta is tortuous .",
+            "entities": {
+              "1": {
+                "tokens": "thoracic aorta",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 2,
+                "relations": []
+              },
+              "2": {
+                "tokens": "tortuous",
+                "label": "Observation::definitely present",
+                "start_ix": 4,
+                "end_ix": 4,
+                "relations": [
+                  [
+                    "located_at",
+                    "1"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "2",
+              "observation": "tortuous",
+              "qualified_observation": "tortuous",
+              "status": "present",
+              "anatomy": [
+                "thoracic aorta"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "1",
+                  "target_text": "thoracic aorta"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s3",
+          "source_text": "FINDINGS: Lung volumes are low with asymmetric elevation of the right hemidiaphragm.",
+          "extraction_input": "Lung volumes are low with asymmetric elevation of the right hemidiaphragm.",
+          "raw_annotation": {
+            "text": "Lung volumes are low with asymmetric elevation of the right hemidiaphragm .",
+            "entities": {
+              "1": {
+                "tokens": "Lung",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": []
+              },
+              "2": {
+                "tokens": "volumes",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": [
+                  [
+                    "modify",
+                    "1"
+                  ]
+                ]
+              },
+              "3": {
+                "tokens": "low",
+                "label": "Observation::definitely present",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": [
+                  [
+                    "located_at",
+                    "1"
+                  ]
+                ]
+              },
+              "4": {
+                "tokens": "asymmetric",
+                "label": "Observation::definitely present",
+                "start_ix": 5,
+                "end_ix": 5,
+                "relations": [
+                  [
+                    "modify",
+                    "5"
+                  ]
+                ]
+              },
+              "5": {
+                "tokens": "elevation",
+                "label": "Observation::definitely present",
+                "start_ix": 6,
+                "end_ix": 6,
+                "relations": [
+                  [
+                    "located_at",
+                    "7"
+                  ]
+                ]
+              },
+              "6": {
+                "tokens": "right",
+                "label": "Anatomy::definitely present",
+                "start_ix": 9,
+                "end_ix": 9,
+                "relations": []
+              },
+              "7": {
+                "tokens": "hemidiaphragm",
+                "label": "Anatomy::definitely present",
+                "start_ix": 10,
+                "end_ix": 10,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "3",
+              "observation": "low",
+              "qualified_observation": "low",
+              "status": "present",
+              "anatomy": [
+                "Lung volumes"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "1",
+                  "target_text": "Lung volumes"
+                }
+              ]
+            },
+            {
+              "entity_id": "4",
+              "observation": "asymmetric",
+              "qualified_observation": "asymmetric",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "5",
+                  "target_text": "asymmetric elevation"
+                }
+              ]
+            },
+            {
+              "entity_id": "5",
+              "observation": "elevation",
+              "qualified_observation": "asymmetric elevation",
+              "status": "present",
+              "anatomy": [
+                "hemidiaphragm"
+              ],
+              "modifiers": [
+                "asymmetric"
+              ],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "7",
+                  "target_text": "hemidiaphragm"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s4",
+          "source_text": "FINDINGS: There is platelike atelectasis in the right midlung along with bibasilar airspace disease, either atelectasis or infiltrate.",
+          "extraction_input": "There is platelike atelectasis in the right midlung along with bibasilar airspace disease, either atelectasis or infiltrate.",
+          "raw_annotation": {
+            "text": "There is platelike atelectasis in the right midlung along with bibasilar airspace disease , either atelectasis or infiltrate .",
+            "entities": {
+              "1": {
+                "tokens": "platelike atelectasis",
+                "label": "Observation::definitely present",
+                "start_ix": 2,
+                "end_ix": 3,
+                "relations": []
+              },
+              "2": {
+                "tokens": "right midlung",
+                "label": "Anatomy::definitely present",
+                "start_ix": 6,
+                "end_ix": 7,
+                "relations": []
+              },
+              "3": {
+                "tokens": "bibasilar",
+                "label": "Anatomy::definitely present",
+                "start_ix": 10,
+                "end_ix": 10,
+                "relations": []
+              },
+              "4": {
+                "tokens": "airspace",
+                "label": "Anatomy::definitely present",
+                "start_ix": 11,
+                "end_ix": 11,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "5": {
+                "tokens": "disease",
+                "label": "Observation::definitely present",
+                "start_ix": 12,
+                "end_ix": 12,
+                "relations": [
+                  [
+                    "located_at",
+                    "4"
+                  ],
+                  [
+                    "suggestive_of",
+                    "6"
+                  ],
+                  [
+                    "suggestive_of",
+                    "7"
+                  ]
+                ]
+              },
+              "6": {
+                "tokens": "atelectasis",
+                "label": "Observation::uncertain",
+                "start_ix": 15,
+                "end_ix": 15,
+                "relations": []
+              },
+              "7": {
+                "tokens": "infiltrate",
+                "label": "Observation::uncertain",
+                "start_ix": 17,
+                "end_ix": 17,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "platelike atelectasis",
+              "qualified_observation": "platelike atelectasis",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            },
+            {
+              "entity_id": "5",
+              "observation": "disease",
+              "qualified_observation": "disease",
+              "status": "present",
+              "anatomy": [
+                "airspace"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "4",
+                  "target_text": "airspace"
+                },
+                {
+                  "type": "suggestive_of",
+                  "target_entity_id": "6",
+                  "target_text": "atelectasis"
+                },
+                {
+                  "type": "suggestive_of",
+                  "target_entity_id": "7",
+                  "target_text": "infiltrate"
+                }
+              ]
+            },
+            {
+              "entity_id": "6",
+              "observation": "atelectasis",
+              "qualified_observation": "atelectasis",
+              "status": "uncertain",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            },
+            {
+              "entity_id": "7",
+              "observation": "infiltrate",
+              "qualified_observation": "infiltrate",
+              "status": "uncertain",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s5",
+          "source_text": "FINDINGS: No pneumothorax.",
+          "extraction_input": "No pneumothorax.",
+          "raw_annotation": {
+            "text": "No pneumothorax .",
+            "entities": {
+              "1": {
+                "tokens": "pneumothorax",
+                "label": "Observation::definitely absent",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "pneumothorax",
+              "qualified_observation": "pneumothorax",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s6",
+          "source_text": "IMPRESSION: 1.",
+          "extraction_input": "1.",
+          "raw_annotation": {
+            "text": "1 .",
+            "entities": {},
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": []
+        },
+        {
+          "sentence_id": "s7",
+          "source_text": "IMPRESSION: Bibasilar airspace disease, greater on the right, either atelectasis or infiltrate.",
+          "extraction_input": "Bibasilar airspace disease, greater on the right, either atelectasis or infiltrate.",
+          "raw_annotation": {
+            "text": "Bibasilar airspace disease , greater on the right , either atelectasis or infiltrate .",
+            "entities": {
+              "1": {
+                "tokens": "Bibasilar",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": []
+              },
+              "2": {
+                "tokens": "airspace",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": [
+                  [
+                    "modify",
+                    "1"
+                  ]
+                ]
+              },
+              "3": {
+                "tokens": "disease",
+                "label": "Observation::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ],
+                  [
+                    "suggestive_of",
+                    "6"
+                  ],
+                  [
+                    "suggestive_of",
+                    "7"
+                  ]
+                ]
+              },
+              "4": {
+                "tokens": "greater",
+                "label": "Observation::definitely present",
+                "start_ix": 4,
+                "end_ix": 4,
+                "relations": []
+              },
+              "5": {
+                "tokens": "right",
+                "label": "Anatomy::definitely present",
+                "start_ix": 7,
+                "end_ix": 7,
+                "relations": []
+              },
+              "6": {
+                "tokens": "atelectasis",
+                "label": "Observation::uncertain",
+                "start_ix": 10,
+                "end_ix": 10,
+                "relations": []
+              },
+              "7": {
+                "tokens": "infiltrate",
+                "label": "Observation::uncertain",
+                "start_ix": 12,
+                "end_ix": 12,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "3",
+              "observation": "disease",
+              "qualified_observation": "disease",
+              "status": "present",
+              "anatomy": [
+                "airspace"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "airspace"
+                },
+                {
+                  "type": "suggestive_of",
+                  "target_entity_id": "6",
+                  "target_text": "atelectasis"
+                },
+                {
+                  "type": "suggestive_of",
+                  "target_entity_id": "7",
+                  "target_text": "infiltrate"
+                }
+              ]
+            },
+            {
+              "entity_id": "4",
+              "observation": "greater",
+              "qualified_observation": "greater",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            },
+            {
+              "entity_id": "6",
+              "observation": "atelectasis",
+              "qualified_observation": "atelectasis",
+              "status": "uncertain",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            },
+            {
+              "entity_id": "7",
+              "observation": "infiltrate",
+              "qualified_observation": "infiltrate",
+              "status": "uncertain",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s8",
+          "source_text": "IMPRESSION: 2.",
+          "extraction_input": "2.",
+          "raw_annotation": {
+            "text": "2 .",
+            "entities": {},
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": []
+        },
+        {
+          "sentence_id": "s9",
+          "source_text": "IMPRESSION: Platelike right midlung atelectasis.",
+          "extraction_input": "Platelike right midlung atelectasis.",
+          "raw_annotation": {
+            "text": "Platelike right midlung atelectasis .",
+            "entities": {
+              "1": {
+                "tokens": "Platelike",
+                "label": "Observation::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": [
+                  [
+                    "modify",
+                    "4"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "right",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              },
+              "3": {
+                "tokens": "midlung",
+                "label": "Anatomy::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": []
+              },
+              "4": {
+                "tokens": "atelectasis",
+                "label": "Observation::definitely present",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "Platelike",
+              "qualified_observation": "Platelike",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "4",
+                  "target_text": "Platelike atelectasis"
+                }
+              ]
+            },
+            {
+              "entity_id": "4",
+              "observation": "atelectasis",
+              "qualified_observation": "Platelike atelectasis",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [
+                "Platelike"
+              ],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s10",
+          "source_text": "IMPRESSION: .",
+          "extraction_input": ".",
+          "raw_annotation": {
+            "text": ".",
+            "entities": {},
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": []
+        }
+      ]
+    },
+    "7021abdf453888a584d8b62d07ad18aa5ebfb9058f3b502874ad097d220554f7": {
+      "report_sha256": "7021abdf453888a584d8b62d07ad18aa5ebfb9058f3b502874ad097d220554f7",
+      "extractor_fingerprint": "cc57ec1986bde7c3b856fbd3e7ab4de15af78ce9bc7b9696def135e31318a930",
+      "sentences": [
+        {
+          "sentence_id": "s1",
+          "source_text": "FINDINGS: There is severe cardiomegaly.",
+          "extraction_input": "There is severe cardiomegaly.",
+          "raw_annotation": {
+            "text": "There is severe cardiomegaly .",
+            "entities": {
+              "1": {
+                "tokens": "severe",
+                "label": "Observation::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": [
+                  [
+                    "modify",
+                    "2"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "cardiomegaly",
+                "label": "Observation::definitely present",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "severe",
+              "qualified_observation": "severe",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "2",
+                  "target_text": "severe cardiomegaly"
+                }
+              ]
+            },
+            {
+              "entity_id": "2",
+              "observation": "cardiomegaly",
+              "qualified_observation": "severe cardiomegaly",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [
+                "severe"
+              ],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s2",
+          "source_text": "FINDINGS: The thoracic aorta is tortuous.",
+          "extraction_input": "The thoracic aorta is tortuous.",
+          "raw_annotation": {
+            "text": "The thoracic aorta is tortuous .",
+            "entities": {
+              "1": {
+                "tokens": "thoracic aorta",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 2,
+                "relations": []
+              },
+              "2": {
+                "tokens": "tortuous",
+                "label": "Observation::definitely present",
+                "start_ix": 4,
+                "end_ix": 4,
+                "relations": [
+                  [
+                    "located_at",
+                    "1"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "2",
+              "observation": "tortuous",
+              "qualified_observation": "tortuous",
+              "status": "present",
+              "anatomy": [
+                "thoracic aorta"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "1",
+                  "target_text": "thoracic aorta"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s3",
+          "source_text": "FINDINGS: Lung volumes are low with asymmetric elevation of the right hemidiaphragm.",
+          "extraction_input": "Lung volumes are low with asymmetric elevation of the right hemidiaphragm.",
+          "raw_annotation": {
+            "text": "Lung volumes are low with asymmetric elevation of the right hemidiaphragm .",
+            "entities": {
+              "1": {
+                "tokens": "Lung",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": []
+              },
+              "2": {
+                "tokens": "volumes",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": [
+                  [
+                    "modify",
+                    "1"
+                  ]
+                ]
+              },
+              "3": {
+                "tokens": "low",
+                "label": "Observation::definitely present",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": [
+                  [
+                    "located_at",
+                    "1"
+                  ]
+                ]
+              },
+              "4": {
+                "tokens": "asymmetric",
+                "label": "Observation::definitely present",
+                "start_ix": 5,
+                "end_ix": 5,
+                "relations": [
+                  [
+                    "modify",
+                    "5"
+                  ]
+                ]
+              },
+              "5": {
+                "tokens": "elevation",
+                "label": "Observation::definitely present",
+                "start_ix": 6,
+                "end_ix": 6,
+                "relations": [
+                  [
+                    "located_at",
+                    "7"
+                  ]
+                ]
+              },
+              "6": {
+                "tokens": "right",
+                "label": "Anatomy::definitely present",
+                "start_ix": 9,
+                "end_ix": 9,
+                "relations": []
+              },
+              "7": {
+                "tokens": "hemidiaphragm",
+                "label": "Anatomy::definitely present",
+                "start_ix": 10,
+                "end_ix": 10,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "3",
+              "observation": "low",
+              "qualified_observation": "low",
+              "status": "present",
+              "anatomy": [
+                "Lung volumes"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "1",
+                  "target_text": "Lung volumes"
+                }
+              ]
+            },
+            {
+              "entity_id": "4",
+              "observation": "asymmetric",
+              "qualified_observation": "asymmetric",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "5",
+                  "target_text": "asymmetric elevation"
+                }
+              ]
+            },
+            {
+              "entity_id": "5",
+              "observation": "elevation",
+              "qualified_observation": "asymmetric elevation",
+              "status": "present",
+              "anatomy": [
+                "hemidiaphragm"
+              ],
+              "modifiers": [
+                "asymmetric"
+              ],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "7",
+                  "target_text": "hemidiaphragm"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s4",
+          "source_text": "FINDINGS: There is platelike atelectasis in the right midlung along with bibasilar airspace disease, either atelectasis or infiltrate.",
+          "extraction_input": "There is platelike atelectasis in the right midlung along with bibasilar airspace disease, either atelectasis or infiltrate.",
+          "raw_annotation": {
+            "text": "There is platelike atelectasis in the right midlung along with bibasilar airspace disease , either atelectasis or infiltrate .",
+            "entities": {
+              "1": {
+                "tokens": "platelike atelectasis",
+                "label": "Observation::definitely present",
+                "start_ix": 2,
+                "end_ix": 3,
+                "relations": []
+              },
+              "2": {
+                "tokens": "right midlung",
+                "label": "Anatomy::definitely present",
+                "start_ix": 6,
+                "end_ix": 7,
+                "relations": []
+              },
+              "3": {
+                "tokens": "bibasilar",
+                "label": "Anatomy::definitely present",
+                "start_ix": 10,
+                "end_ix": 10,
+                "relations": []
+              },
+              "4": {
+                "tokens": "airspace",
+                "label": "Anatomy::definitely present",
+                "start_ix": 11,
+                "end_ix": 11,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "5": {
+                "tokens": "disease",
+                "label": "Observation::definitely present",
+                "start_ix": 12,
+                "end_ix": 12,
+                "relations": [
+                  [
+                    "located_at",
+                    "4"
+                  ],
+                  [
+                    "suggestive_of",
+                    "6"
+                  ],
+                  [
+                    "suggestive_of",
+                    "7"
+                  ]
+                ]
+              },
+              "6": {
+                "tokens": "atelectasis",
+                "label": "Observation::uncertain",
+                "start_ix": 15,
+                "end_ix": 15,
+                "relations": []
+              },
+              "7": {
+                "tokens": "infiltrate",
+                "label": "Observation::uncertain",
+                "start_ix": 17,
+                "end_ix": 17,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "platelike atelectasis",
+              "qualified_observation": "platelike atelectasis",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            },
+            {
+              "entity_id": "5",
+              "observation": "disease",
+              "qualified_observation": "disease",
+              "status": "present",
+              "anatomy": [
+                "airspace"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "4",
+                  "target_text": "airspace"
+                },
+                {
+                  "type": "suggestive_of",
+                  "target_entity_id": "6",
+                  "target_text": "atelectasis"
+                },
+                {
+                  "type": "suggestive_of",
+                  "target_entity_id": "7",
+                  "target_text": "infiltrate"
+                }
+              ]
+            },
+            {
+              "entity_id": "6",
+              "observation": "atelectasis",
+              "qualified_observation": "atelectasis",
+              "status": "uncertain",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            },
+            {
+              "entity_id": "7",
+              "observation": "infiltrate",
+              "qualified_observation": "infiltrate",
+              "status": "uncertain",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s5",
+          "source_text": "FINDINGS: No pneumothorax.",
+          "extraction_input": "No pneumothorax.",
+          "raw_annotation": {
+            "text": "No pneumothorax .",
+            "entities": {
+              "1": {
+                "tokens": "pneumothorax",
+                "label": "Observation::definitely absent",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "pneumothorax",
+              "qualified_observation": "pneumothorax",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s6",
+          "source_text": "IMPRESSION: 1.",
+          "extraction_input": "1.",
+          "raw_annotation": {
+            "text": "1 .",
+            "entities": {},
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": []
+        },
+        {
+          "sentence_id": "s7",
+          "source_text": "IMPRESSION: Bibasilar airspace disease, greater on the right, either atelectasis or infiltrate.",
+          "extraction_input": "Bibasilar airspace disease, greater on the right, either atelectasis or infiltrate.",
+          "raw_annotation": {
+            "text": "Bibasilar airspace disease , greater on the right , either atelectasis or infiltrate .",
+            "entities": {
+              "1": {
+                "tokens": "Bibasilar",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": []
+              },
+              "2": {
+                "tokens": "airspace",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": [
+                  [
+                    "modify",
+                    "1"
+                  ]
+                ]
+              },
+              "3": {
+                "tokens": "disease",
+                "label": "Observation::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ],
+                  [
+                    "suggestive_of",
+                    "6"
+                  ],
+                  [
+                    "suggestive_of",
+                    "7"
+                  ]
+                ]
+              },
+              "4": {
+                "tokens": "greater",
+                "label": "Observation::definitely present",
+                "start_ix": 4,
+                "end_ix": 4,
+                "relations": []
+              },
+              "5": {
+                "tokens": "right",
+                "label": "Anatomy::definitely present",
+                "start_ix": 7,
+                "end_ix": 7,
+                "relations": []
+              },
+              "6": {
+                "tokens": "atelectasis",
+                "label": "Observation::uncertain",
+                "start_ix": 10,
+                "end_ix": 10,
+                "relations": []
+              },
+              "7": {
+                "tokens": "infiltrate",
+                "label": "Observation::uncertain",
+                "start_ix": 12,
+                "end_ix": 12,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "3",
+              "observation": "disease",
+              "qualified_observation": "disease",
+              "status": "present",
+              "anatomy": [
+                "airspace"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "airspace"
+                },
+                {
+                  "type": "suggestive_of",
+                  "target_entity_id": "6",
+                  "target_text": "atelectasis"
+                },
+                {
+                  "type": "suggestive_of",
+                  "target_entity_id": "7",
+                  "target_text": "infiltrate"
+                }
+              ]
+            },
+            {
+              "entity_id": "4",
+              "observation": "greater",
+              "qualified_observation": "greater",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            },
+            {
+              "entity_id": "6",
+              "observation": "atelectasis",
+              "qualified_observation": "atelectasis",
+              "status": "uncertain",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            },
+            {
+              "entity_id": "7",
+              "observation": "infiltrate",
+              "qualified_observation": "infiltrate",
+              "status": "uncertain",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s8",
+          "source_text": "IMPRESSION: 2.",
+          "extraction_input": "2.",
+          "raw_annotation": {
+            "text": "2 .",
+            "entities": {},
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": []
+        },
+        {
+          "sentence_id": "s9",
+          "source_text": "IMPRESSION: Platelike right midlung atelectasis.",
+          "extraction_input": "Platelike right midlung atelectasis.",
+          "raw_annotation": {
+            "text": "Platelike right midlung atelectasis .",
+            "entities": {
+              "1": {
+                "tokens": "Platelike",
+                "label": "Observation::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": [
+                  [
+                    "modify",
+                    "4"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "right",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              },
+              "3": {
+                "tokens": "midlung",
+                "label": "Anatomy::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": []
+              },
+              "4": {
+                "tokens": "atelectasis",
+                "label": "Observation::definitely present",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "Platelike",
+              "qualified_observation": "Platelike",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "4",
+                  "target_text": "Platelike atelectasis"
+                }
+              ]
+            },
+            {
+              "entity_id": "4",
+              "observation": "atelectasis",
+              "qualified_observation": "Platelike atelectasis",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [
+                "Platelike"
+              ],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s10",
+          "source_text": "IMPRESSION: .",
+          "extraction_input": ".",
+          "raw_annotation": {
+            "text": ".",
+            "entities": {},
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": []
+        }
+      ]
+    },
+    "a6bb2a73f5c9de727e4e36566833a5813f753eff3d33f82559eaea438e598cf2": {
+      "report_sha256": "a6bb2a73f5c9de727e4e36566833a5813f753eff3d33f82559eaea438e598cf2",
+      "extractor_fingerprint": "cc57ec1986bde7c3b856fbd3e7ab4de15af78ce9bc7b9696def135e31318a930",
+      "sentences": [
+        {
+          "sentence_id": "s1",
+          "source_text": "IMPRESSION: Heart size and mediastinal contour are normal.",
+          "extraction_input": "Heart size and mediastinal contour are normal.",
+          "raw_annotation": {
+            "text": "Heart size and mediastinal contour are normal .",
+            "entities": {
+              "1": {
+                "tokens": "Heart",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": []
+              },
+              "2": {
+                "tokens": "size",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": [
+                  [
+                    "modify",
+                    "1"
+                  ]
+                ]
+              },
+              "3": {
+                "tokens": "mediastinal",
+                "label": "Anatomy::definitely present",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": []
+              },
+              "4": {
+                "tokens": "contour",
+                "label": "Anatomy::definitely present",
+                "start_ix": 4,
+                "end_ix": 4,
+                "relations": []
+              },
+              "5": {
+                "tokens": "normal",
+                "label": "Observation::definitely present",
+                "start_ix": 6,
+                "end_ix": 6,
+                "relations": [
+                  [
+                    "located_at",
+                    "1"
+                  ],
+                  [
+                    "located_at",
+                    "3"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "5",
+              "observation": "normal",
+              "qualified_observation": "normal",
+              "status": "present",
+              "anatomy": [
+                "Heart size",
+                "mediastinal"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "1",
+                  "target_text": "Heart size"
+                },
+                {
+                  "type": "located_at",
+                  "target_entity_id": "3",
+                  "target_text": "mediastinal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s2",
+          "source_text": "IMPRESSION: Pulmonary vascularity is normal.",
+          "extraction_input": "Pulmonary vascularity is normal.",
+          "raw_annotation": {
+            "text": "Pulmonary vascularity is normal .",
+            "entities": {
+              "1": {
+                "tokens": "Pulmonary",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": [
+                  [
+                    "modify",
+                    "2"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "vascularity",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              },
+              "3": {
+                "tokens": "normal",
+                "label": "Observation::definitely present",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "3",
+              "observation": "normal",
+              "qualified_observation": "normal",
+              "status": "present",
+              "anatomy": [
+                "Pulmonary vascularity"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "Pulmonary vascularity"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s3",
+          "source_text": "IMPRESSION: Subtle airspace density within the medial right lung base, not obscuring the right heart XXXX.",
+          "extraction_input": "Subtle airspace density within the medial right lung base, not obscuring the right heart XXXX.",
+          "raw_annotation": {
+            "text": "Subtle airspace density within the medial right lung base , not obscuring the right heart XXXX .",
+            "entities": {
+              "1": {
+                "tokens": "Subtle",
+                "label": "Observation::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "airspace",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              },
+              "3": {
+                "tokens": "density",
+                "label": "Observation::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              },
+              "4": {
+                "tokens": "medial",
+                "label": "Anatomy::definitely present",
+                "start_ix": 5,
+                "end_ix": 5,
+                "relations": [
+                  [
+                    "modify",
+                    "6"
+                  ]
+                ]
+              },
+              "5": {
+                "tokens": "right",
+                "label": "Anatomy::definitely present",
+                "start_ix": 6,
+                "end_ix": 6,
+                "relations": []
+              },
+              "6": {
+                "tokens": "lung",
+                "label": "Anatomy::definitely present",
+                "start_ix": 7,
+                "end_ix": 7,
+                "relations": []
+              },
+              "7": {
+                "tokens": "base",
+                "label": "Anatomy::definitely present",
+                "start_ix": 8,
+                "end_ix": 8,
+                "relations": [
+                  [
+                    "modify",
+                    "6"
+                  ]
+                ]
+              },
+              "8": {
+                "tokens": "obscuring",
+                "label": "Observation::definitely absent",
+                "start_ix": 11,
+                "end_ix": 11,
+                "relations": []
+              },
+              "9": {
+                "tokens": "right",
+                "label": "Anatomy::definitely present",
+                "start_ix": 13,
+                "end_ix": 13,
+                "relations": [
+                  [
+                    "modify",
+                    "10"
+                  ]
+                ]
+              },
+              "10": {
+                "tokens": "heart",
+                "label": "Anatomy::definitely present",
+                "start_ix": 14,
+                "end_ix": 14,
+                "relations": []
+              },
+              "11": {
+                "tokens": "XXXX",
+                "label": "Anatomy::definitely present",
+                "start_ix": 15,
+                "end_ix": 15,
+                "relations": [
+                  [
+                    "modify",
+                    "10"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "Subtle",
+              "qualified_observation": "Subtle",
+              "status": "present",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "3",
+                  "target_text": "Subtle density"
+                }
+              ]
+            },
+            {
+              "entity_id": "3",
+              "observation": "density",
+              "qualified_observation": "Subtle density",
+              "status": "present",
+              "anatomy": [
+                "airspace"
+              ],
+              "modifiers": [
+                "Subtle"
+              ],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "airspace"
+                }
+              ]
+            },
+            {
+              "entity_id": "8",
+              "observation": "obscuring",
+              "qualified_observation": "obscuring",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s4",
+          "source_text": "IMPRESSION: This may represent focal right lower lobe pneumonia given history.",
+          "extraction_input": "This may represent focal right lower lobe pneumonia given history.",
+          "raw_annotation": {
+            "text": "This may represent focal right lower lobe pneumonia given history .",
+            "entities": {
+              "1": {
+                "tokens": "focal",
+                "label": "Observation::uncertain",
+                "start_ix": 3,
+                "end_ix": 3,
+                "relations": [
+                  [
+                    "modify",
+                    "3"
+                  ]
+                ]
+              },
+              "2": {
+                "tokens": "right lower lobe",
+                "label": "Anatomy::definitely present",
+                "start_ix": 4,
+                "end_ix": 6,
+                "relations": []
+              },
+              "3": {
+                "tokens": "pneumonia",
+                "label": "Observation::uncertain",
+                "start_ix": 7,
+                "end_ix": 7,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "focal",
+              "qualified_observation": "focal",
+              "status": "uncertain",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "modify",
+                  "target_entity_id": "3",
+                  "target_text": "focal pneumonia"
+                }
+              ]
+            },
+            {
+              "entity_id": "3",
+              "observation": "pneumonia",
+              "qualified_observation": "focal pneumonia",
+              "status": "uncertain",
+              "anatomy": [
+                "right lower lobe"
+              ],
+              "modifiers": [
+                "focal"
+              ],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "right lower lobe"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s5",
+          "source_text": "IMPRESSION: Left lung clear.",
+          "extraction_input": "Left lung clear.",
+          "raw_annotation": {
+            "text": "Left lung clear .",
+            "entities": {
+              "1": {
+                "tokens": "Left",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": []
+              },
+              "2": {
+                "tokens": "lung",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              },
+              "3": {
+                "tokens": "clear",
+                "label": "Observation::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "3",
+              "observation": "clear",
+              "qualified_observation": "clear",
+              "status": "present",
+              "anatomy": [
+                "lung"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "lung"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sentence_id": "s6",
+          "source_text": "IMPRESSION: No effusions.",
+          "extraction_input": "No effusions.",
+          "raw_annotation": {
+            "text": "No effusions .",
+            "entities": {
+              "1": {
+                "tokens": "effusions",
+                "label": "Observation::definitely absent",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "effusions",
+              "qualified_observation": "effusions",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s7",
+          "source_text": "IMPRESSION: pneumothorax.",
+          "extraction_input": "pneumothorax.",
+          "raw_annotation": {
+            "text": "pneumothorax .",
+            "entities": {
+              "1": {
+                "tokens": "pneumothorax",
+                "label": "Observation::definitely absent",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": []
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "1",
+              "observation": "pneumothorax",
+              "qualified_observation": "pneumothorax",
+              "status": "absent",
+              "anatomy": [],
+              "modifiers": [],
+              "relations": []
+            }
+          ]
+        },
+        {
+          "sentence_id": "s8",
+          "source_text": "IMPRESSION: Skeletal structures unremarkable.",
+          "extraction_input": "Skeletal structures unremarkable.",
+          "raw_annotation": {
+            "text": "Skeletal structures unremarkable .",
+            "entities": {
+              "1": {
+                "tokens": "Skeletal",
+                "label": "Anatomy::definitely present",
+                "start_ix": 0,
+                "end_ix": 0,
+                "relations": []
+              },
+              "2": {
+                "tokens": "structures",
+                "label": "Anatomy::definitely present",
+                "start_ix": 1,
+                "end_ix": 1,
+                "relations": []
+              },
+              "3": {
+                "tokens": "unremarkable",
+                "label": "Observation::definitely present",
+                "start_ix": 2,
+                "end_ix": 2,
+                "relations": [
+                  [
+                    "located_at",
+                    "2"
+                  ]
+                ]
+              }
+            },
+            "data_source": null,
+            "data_split": "inference"
+          },
+          "claims": [
+            {
+              "entity_id": "3",
+              "observation": "unremarkable",
+              "qualified_observation": "unremarkable",
+              "status": "present",
+              "anatomy": [
+                "structures"
+              ],
+              "modifiers": [],
+              "relations": [
+                {
+                  "type": "located_at",
+                  "target_entity_id": "2",
+                  "target_text": "structures"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

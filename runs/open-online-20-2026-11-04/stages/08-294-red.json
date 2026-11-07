@@ -1,0 +1,62 @@
+{
+  "study_id": "294",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart is normal in size."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The mediastinum is unremarkable."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: The lungs are grossly clear."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Underlying emphysematous changes are noted."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Emphysema without acute disease."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart is normal in size."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The mediastinum is unremarkable."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: The lungs are grossly clear."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Underlying emphysematous changes are noted."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No acute disease."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s5"
+      ],
+      "candidate_ids": [
+        "s5"
+      ],
+      "category": "omission",
+      "description": "The mention of emphysema in the impression was removed, despite being noted in the findings and visible in the images."
+    }
+  ],
+  "rationale": "The original report correctly identified emphysematous changes in both the findings and impression. The images clearly show signs of emphysema (hyperinflation, flattened diaphragms, increased retrosternal air space). To introduce an omission error, I removed the mention of emphysema from the impression, creating a discrepancy with the findings and an omission of a visible and reported finding.",
+  "eligible": true,
+  "memory_sha256": "fade623ff0eba990389a5745f11212bf7148e7624993d52f038639d3471506eb"
+}

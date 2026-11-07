@@ -1,0 +1,136 @@
+{
+  "study_id": "2402",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size and mediastinal contours appear within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There are low lung volumes with left basilar subsegmental atelectasis."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No focal airspace consolidation, effusions or pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No acute bony abnormalities."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No acute cardiopulmonary findings."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size and mediastinal contours appear within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There are low lung volumes with left basilar subsegmental atelectasis."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No focal airspace consolidation, effusions or pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No acute bony abnormalities."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No acute cardiopulmonary findings."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2402_IM-0951-1001.dcm.png",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2402_IM-0951-2001.dcm.png"
+  ],
+  "clinical_context": "XXXX-year-old female presenting with DKA",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [],
+    "rationale": "Unchanged source report control",
+    "requested_error_type": null,
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "uncertain",
+    "findings": [],
+    "limitations": "The assessment of lung volumes is limited by the single PA and lateral view radiographs. While the report mentions low lung volumes and basilar atelectasis, the images do not definitively demonstrate significantly reduced lung volumes or clear atelectasis. The heart size assessment is also limited by the lack of precise measurement and comparison to prior imaging. Therefore, it is difficult to confidently contradict the report's findings."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is the heart size within normal limits?",
+      "observation": "The frontal chest x-ray shows the cardiac silhouette. Visually, the heart does not appear enlarged compared to the chest cavity. The lateral view also shows the heart size in profile, and again, it does not appear significantly enlarged. However, precise measurement of the cardiothoracic ratio would be needed for a definitive assessment.",
+      "limitations": "A definitive assessment of heart size requires measurement of the cardiothoracic ratio, which cannot be done with visual inspection alone. The quality of the images and potential patient positioning could also affect the assessment. There is no prior imaging available for comparison."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are there low lung volumes, and if so, are they visible?",
+      "observation": "The provided chest radiographs show lung fields that appear relatively clear without obvious large-scale consolidation or effusions. However, assessing lung volumes accurately from a single PA and lateral view can be challenging. The heart size appears within normal limits. There is no clear evidence of significantly reduced lung volumes, but subtle changes could be present and difficult to quantify without comparison to prior imaging or clinical context. The lateral view shows the posterior costophrenic angle, which appears relatively sharp, but this alone isn't definitive for lung volume assessment.",
+      "limitations": "Assessment of lung volumes is subjective and relies on comparison to prior imaging or established norms. A single PA and lateral view provide limited information. The absence of clinical history and other imaging modalities (e.g., CT scan) limits a comprehensive evaluation. It is difficult to definitively state whether lung volumes are low based solely on these images."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 0,
+    "uncertain": true,
+    "injected_edit_detected": null,
+    "unchanged_control_flagged": false,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

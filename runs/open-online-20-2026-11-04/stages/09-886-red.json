@@ -1,0 +1,56 @@
+{
+  "study_id": "886",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart is normal in size."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The mediastinum is unremarkable."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: The lungs are clear."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No acute disease."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart is normal in size."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The mediastinum is unremarkable."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: The lungs are clear."
+    },
+    {
+      "id": "a1",
+      "text": "FINDINGS: There is a small right pleural effusion."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No acute disease."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new finding (small right pleural effusion) that is not present in the image."
+    }
+  ],
+  "rationale": "I have introduced a fabrication error by adding a new finding, 'small right pleural effusion', to the FINDINGS section. This finding is not visible in the provided images, making it a clinically significant error. The impression remains unchanged to create a subtle inconsistency, as a pleural effusion would typically be mentioned in the impression if considered acute disease. This aligns with the instruction to create a plausible clinically meaningful error and to introduce fabrication errors by adding new, clinically significant findings not supported by the image.",
+  "eligible": true,
+  "memory_sha256": "fade623ff0eba990389a5745f11212bf7148e7624993d52f038639d3471506eb"
+}

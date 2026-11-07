@@ -1,0 +1,113 @@
+{
+  "study_id": "2471",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The trachea is midline."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The cardiomediastinal silhouette is normal and unchanged compared to prior examination."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Lungs are clear, without evidence of acute infiltrate or effusion."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: There is no pneumothorax."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: The visualized bony structures reveal no acute abnormalities."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute cardiopulmonary abnormalities."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The trachea is midline."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The cardiomediastinal silhouette is normal and unchanged compared to prior examination."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Lungs are clear, without evidence of acute infiltrate or effusion."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: There is a small right pneumothorax."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: The visualized bony structures reveal no acute abnormalities."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute cardiopulmonary abnormalities."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s4"
+      ],
+      "candidate_ids": [
+        "s4"
+      ],
+      "category": "fabrication",
+      "description": "Fabricated a small right pneumothorax where none is visible in the image."
+    }
+  ],
+  "rationale": "The original report states no pneumothorax. I have fabricated a small right pneumothorax in the findings section (s4). This is a clinically plausible error as a small pneumothorax can be subtle, but in this case, the images clearly show no pneumothorax. The impression (s6) was left unchanged to create an inconsistency within the report, which is also a common type of error.",
+  "eligible": true,
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attempts": [
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: The trachea is midline."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: The cardiomediastinal silhouette is normal and unchanged compared to prior examination."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: Lungs are clear, without evidence of acute infiltrate or effusion."
+        },
+        {
+          "id": "s4",
+          "text": "FINDINGS: There is a small right pneumothorax."
+        },
+        {
+          "id": "s5",
+          "text": "FINDINGS: The visualized bony structures reveal no acute abnormalities."
+        },
+        {
+          "id": "s6",
+          "text": "IMPRESSION: No acute cardiopulmonary abnormalities."
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [
+            "s4"
+          ],
+          "candidate_ids": [
+            "s4"
+          ],
+          "category": "fabrication",
+          "description": "Fabricated a small right pneumothorax where none is visible in the image."
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

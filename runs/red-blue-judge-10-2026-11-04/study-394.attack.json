@@ -1,0 +1,140 @@
+{
+  "study_id": "394",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: There is a large airspace opacity in the right lower and middle lobes."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is no pneumothorax."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Heart size is normal."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Soft tissue and bony structures unremarkable."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Multilobar airspace consolidation."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: There is a large airspace opacity in the left lower and middle lobes."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is no pneumothorax."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Heart size is normal."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Soft tissue and bony structures unremarkable."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Multilobar airspace consolidation."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/394_IM-2010-1001.dcm.png"
+  ],
+  "clinical_context": "Shortness of breath",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [
+      {
+        "sentence_id": "s1",
+        "replacement": "FINDINGS: There is a large airspace opacity in the left lower and middle lobes."
+      }
+    ],
+    "rationale": "Changed the laterality of the airspace opacity from right to left to introduce a laterality error, as requested. The change is made in the first sentence where the finding is mentioned.",
+    "requested_error_type": "laterality",
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The image quality and single view limit definitive assessment of the airspace opacities. The observations suggest possible opacities in the left lower and middle lobes, but these are not definitively confirmed as airspace opacities. Therefore, no confident contradictions can be identified."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there an airspace opacity visible in the left lower lobe?",
+      "observation": "The image is a chest X-ray. There appears to be increased opacity in the left lower lobe compared to the right. This could represent an airspace opacity, but could also be due to other factors like volume loss or overlying structures. The heart border is visible and appears within normal limits. The bony structures of the thorax are also visible.",
+      "limitations": "It is difficult to definitively determine if the opacity is an airspace opacity without further imaging or clinical information. The image is a single view, limiting the ability to fully assess the findings. There is no comparison image available to assess for changes over time. The quality of the image is adequate, but not optimal for detailed assessment."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there an airspace opacity visible in the left middle lobe?",
+      "observation": "The image is a chest X-ray. There appears to be some increased opacity in the left middle lobe compared to the surrounding lung parenchyma. However, it is subtle and could potentially be due to normal anatomical structures or technical factors like patient positioning. It's difficult to definitively state whether this is a true airspace opacity without further information.",
+      "limitations": "I am limited by only having a single image. A comparison to previous imaging, or additional views, would be necessary to confirm the presence and significance of the opacity. The image quality and resolution also limit precise assessment. I am an AI and cannot provide medical diagnoses."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 1,
+    "uncertain": false,
+    "injected_edit_detected": false,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

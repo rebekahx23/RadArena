@@ -1,0 +1,17 @@
+{
+  "edits": [
+    {
+      "sentence_id": "s2",
+      "replacement": "FINDINGS: There is no right pleural effusion."
+    },
+    {
+      "sentence_id": "s4",
+      "replacement": "FINDINGS: There is no left pleural effusion."
+    },
+    {
+      "sentence_id": "s6",
+      "replacement": "IMPRESSION: No pleural effusions and right infrahilar infiltrate versus bronchovascular crowding."
+    }
+  ],
+  "rationale": "The error type is presence_absence. The report indicates small bilateral pleural effusions. I have changed the presence of both effusions to absence in the findings section and updated the impression to reflect this change. This maintains consistency across the report."
+}

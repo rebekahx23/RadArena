@@ -1,0 +1,42 @@
+{
+  "status": "ok",
+  "model": "google/gemini-2.5-flash",
+  "review": {
+    "attack_validity": "valid",
+    "attack_explanation": "The Red team correctly identified a fabrication in the candidate report. The candidate report states 'Right humerus fracture' in the impression (s20), but the provided images do not show any evidence of a right humerus fracture. The original report correctly states 'Right humerus negative'.",
+    "blue_assessment": "incorrect",
+    "reviewed_flag_ids": [
+      "s2",
+      "s3",
+      "s14"
+    ],
+    "blue_explanation": "Blue incorrectly flagged s2 and s14, stating there is no clear evidence of a fracture on the right 4th rib. However, a subtle, minimally displaced fracture of the right 4th rib is visible on the PA view. Blue also incorrectly flagged s3, stating there is no definite pleural fluid. However, a small amount of pleural fluid is visible deep to the fracture on the PA view.",
+    "failure_modes": [
+      "misinterpretation"
+    ],
+    "confidence": "high",
+    "limitations": "None"
+  },
+  "attempts": [
+    {
+      "review": {
+        "attack_validity": "valid",
+        "attack_explanation": "The Red team correctly identified a fabrication in the candidate report. The candidate report states 'Right humerus fracture' in the impression (s20), but the provided images do not show any evidence of a right humerus fracture. The original report correctly states 'Right humerus negative'.",
+        "blue_assessment": "incorrect",
+        "reviewed_flag_ids": [
+          "s2",
+          "s3",
+          "s14"
+        ],
+        "blue_explanation": "Blue incorrectly flagged s2 and s14, stating there is no clear evidence of a fracture on the right 4th rib. However, a subtle, minimally displaced fracture of the right 4th rib is visible on the PA view. Blue also incorrectly flagged s3, stating there is no definite pleural fluid. However, a small amount of pleural fluid is visible deep to the fracture on the PA view.",
+        "failure_modes": [
+          "misinterpretation"
+        ],
+        "confidence": "high",
+        "limitations": "None"
+      },
+      "validation_error": null
+    }
+  ],
+  "agent_feedback": "Matching accepted reviews can inform role-private demo memories after this study. These demo updates have no measured performance promotion gate."
+}

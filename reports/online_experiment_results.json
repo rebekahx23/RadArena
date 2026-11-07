@@ -1,0 +1,1471 @@
+{
+  "schema_version": 1,
+  "scope": "Saved-decision arithmetic; not independent prediction or clinical validation",
+  "run": "open-online-20-2026-11-04",
+  "model": "google/gemini-2.5-flash",
+  "judges": [
+    "google/gemma-3-27b-it",
+    "google/gemini-2.5-flash"
+  ],
+  "implementation_sha256": {
+    "tracing.py": "1ca02a86b5c3e511581ad4f0f3fec7ef5dd322d6e799c69dbc68321bd09ba75c",
+    "handbook.py": "88b8c70d3646a38edbf7d678cf08db45a1743eea55ec312f4677d1c2f3816ecf",
+    "viewer.py": "17e8a769067475b1d97ec0ea38d019333998b559c3ea6a3f482ce3d76a1e1024",
+    "benchmark.py": "823af8f7bd3d035646e3a276ff9b5773fe63ea64ebd3af7c50399513284441e2",
+    "memory.py": "d90428e6161e3eef19ac425bb31a11aa84eea4f62e4c663d3eb7ab5ea58421fc",
+    "attack_validation.py": "f4ec66284d8d64b3666c8b5b683304e63d4ac107fe549e1b8349e2e49943329b",
+    "batch.py": "0cf8f860a6da1f2dc635f40365d46046a61f27c820700f3fcc1013f822b03f3e",
+    "__init__.py": "52a11edd15b06b91febc6d016d6c31f4754ff3c14f57b132967fcc13ae445e5c",
+    "runtime.py": "08e792a2c32dfbb05a57fc9be4526b0729a25ce1d1dc960d9995165c1162de55",
+    "agents.py": "aec9c3651e1bc2c3568b4b4325932c1db065efe475b0f3959aad638d271721b8",
+    "clinical_context.py": "897a5715c43151a34ee7504f4a7354175e6df12933ebcb28383767dd99148fa7",
+    "cli.py": "553c8efd4b114c6337b56a0ccd1db9d02e2d117e7f7c5fc382edb7a6807f26f2",
+    "judge.py": "bb5ea49ad036c1f66365daf9404cbda3ac10c5eedc32ba203ab53f7bd10f080b",
+    "structured_blue.py": "6c8a3d12080dc366069449578e6012915ff43cf69ad08d8a516cd0eeb730e994",
+    "evaluate.py": "7632486c3030e620770dc9c3a50a584271537fb69684a9ef3749a1bb6e39f8ba",
+    "learning.py": "18cf291fd4f2959008d461c5bfb229548e5767bb37620dcd695a7ee8cafecc06",
+    "open_online.py": "cf542a0d550c23cb9816e2d500701d763341bb0111dbfa0fa917ea4a06763f25",
+    "knowledge.py": "afb5ba1f2ec0c4cc789c2b295d536108ce0eb3ff0d5097d092fbaa3bed9badc1",
+    "report_graph.py": "277c4d216e246ab2fbcb6ca247ec11b6f5b1f91a8a4e0064288f18ab9a84781b",
+    "data.py": "4c8f89ca603f90e7a56bfb94f01cd6e5588ecee0aec351f479ecac3b89064c72"
+  },
+  "source_file_sha256": {
+    "episodes/01-1849.json": "c7968f27c2cb925fbddc335efa39ecb743135b2d1e63c80c94e3b7fcc10eea7c",
+    "episodes/02-2470.json": "8c4eb6ec6c482d9758c9cd39a3c12c3016da9127897a17d768231709d4299ae5",
+    "episodes/03-2539.json": "b11627ccf933900ada05685b57cc0c3912e1d79c5885d5d3d365bd2b6e1b3d41",
+    "episodes/04-1223.json": "4f3f535c41f7bf290a8070dce03c2747cd71cd192b6be06b33b26a6f43d8ea37",
+    "episodes/05-2488.json": "36524e2c572c18030cc06f727ddf4dc9c16f04d4cd054874101aa67a86f8b73f",
+    "episodes/06-2941.json": "6bd88b67e36dcc951c73e9a58b5bb69bf775f3472da4b9d858c18e192b6e2b2b",
+    "episodes/07-2766.json": "64303a9c7ec14a154427c09c17d84952de72d02015cecda3d23de0bf2abe4c77",
+    "episodes/08-294.json": "df0b941e159bfbf3aa0b3dd06f9d1c0a8fe4fc4b7c7b445dc04c2675ac6444e5",
+    "episodes/09-886.json": "4ffabe063b74305d12c6029c3bc27e4ec7490fde56c1b4f1c0a04ae337b6eea3",
+    "episodes/10-3848.json": "83ebd051d0e6db7fb220feee4354ebdb05a3b3da1d6620f48fa3f2317d3f84bd",
+    "episodes/11-2643.json": "bf49b2a0fc0c03c4530eaecf27225583780fdc82322133e2e664825231a06423",
+    "episodes/12-120.json": "c37d9979a325da75a2a5dd31eaa55577ba36f75e8a94790d74eb467365c266dc",
+    "episodes/13-1556.json": "00882e81db0c69186866ebae6d4678ab16412bacf38415823878bdc13260b8a0",
+    "episodes/14-74.json": "44e124eb766f7f3854f228879b253ab4593df69d069c7bf5f721fc742c9666d5",
+    "episodes/15-3830.json": "7a46724833f8f24ebea737cfa4c4427dbce37c53842cd67c1abd9e508541f614",
+    "episodes/16-3865.json": "954f4d9fa896ab508b3ef4a78c662ad677901d4da34d37dbfa01a98423108c89",
+    "episodes/17-1284.json": "3c77f9c52186733994958785b2f7e1d070d32cfaeae27270ebe8562313162626",
+    "episodes/18-1818.json": "f430023e7195bf368a8313941a699422a2cb03b89e223ee54c8009515590d5c8",
+    "episodes/19-22.json": "71e72c51d4991e2f1cc855a48ca087bc8b9cb2207ceecaa3c9f1c3da795a0c66",
+    "episodes/20-1946.json": "45693280d6c75be38033fb333c64f2eb90d2d1c76f2b8be3765c1e7a18795f79",
+    "metadata.json": "8c5ac4b0caf47d0e47b281aec48e8938c9d24ac3b82498b794a96c86bd76fc00",
+    "selection.json": "8100f4b26de03007e25bb8e04f8258e866a1ac3a355c2941693ce33dd5d5bc78"
+  },
+  "image_files": 39,
+  "memory_updates": {
+    "red": 3,
+    "blue": 3
+  },
+  "records": [
+    {
+      "index": 1,
+      "attack": "error",
+      "control": "error",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "attack": "error",
+      "control": "error",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "attack": "no_error_detected",
+      "control": "no_error_detected",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "uncertain"
+        },
+        {
+          "status": "ok",
+          "validity": "invalid"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "attack": "no_error_detected",
+      "control": "no_error_detected",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "attack": "error",
+      "control": "no_error_detected",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "attack": "error",
+      "control": "no_error_detected",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "attack": "invalid_output",
+      "control": "uncertain",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "attack": "uncertain",
+      "control": "error",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "invalid"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "attack": "error",
+      "control": "error",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "attack": "no_error_detected",
+      "control": "no_error_detected",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "attack": "error",
+      "control": "no_error_detected",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "attack": "error",
+      "control": "error",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "invalid"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "attack": "no_error_detected",
+      "control": "no_error_detected",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "attack": "no_error_detected",
+      "control": "error",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "attack": "error",
+      "control": "no_error_detected",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "attack": "error",
+      "control": "error",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ],
+      "initial_attack": "error",
+      "initial_control": "uncertain"
+    },
+    {
+      "index": 17,
+      "attack": "error",
+      "control": "uncertain",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "invalid"
+        }
+      ],
+      "initial_attack": "uncertain",
+      "initial_control": "error"
+    },
+    {
+      "index": 18,
+      "attack": "error",
+      "control": "no_error_detected",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "invalid"
+        }
+      ],
+      "initial_attack": "error",
+      "initial_control": "error"
+    },
+    {
+      "index": 19,
+      "attack": "error",
+      "control": "no_error_detected",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ],
+      "initial_attack": "error",
+      "initial_control": "no_error_detected"
+    },
+    {
+      "index": 20,
+      "attack": "error",
+      "control": "no_error_detected",
+      "reviewers": [
+        {
+          "status": "ok",
+          "validity": "valid"
+        },
+        {
+          "status": "ok",
+          "validity": "valid"
+        }
+      ],
+      "initial_attack": "error",
+      "initial_control": "no_error_detected"
+    }
+  ],
+  "call_costs": [
+    {
+      "cost": 0.0005113,
+      "known": true
+    },
+    {
+      "cost": 0.0004537,
+      "known": true
+    },
+    {
+      "cost": 0.0005274,
+      "known": true
+    },
+    {
+      "cost": 0.0009258,
+      "known": true
+    },
+    {
+      "cost": 0.0005269,
+      "known": true
+    },
+    {
+      "cost": 0.000439,
+      "known": true
+    },
+    {
+      "cost": 0.0004739,
+      "known": true
+    },
+    {
+      "cost": 0.0010036,
+      "known": true
+    },
+    {
+      "cost": 0.00020856,
+      "known": true
+    },
+    {
+      "cost": 0.0010475,
+      "known": true
+    },
+    {
+      "cost": 0.0015731,
+      "known": true
+    },
+    {
+      "cost": 0.0005301,
+      "known": true
+    },
+    {
+      "cost": 0.0005651,
+      "known": true
+    },
+    {
+      "cost": 0.0006804,
+      "known": true
+    },
+    {
+      "cost": 0.0012778,
+      "known": true
+    },
+    {
+      "cost": 0.0004923,
+      "known": true
+    },
+    {
+      "cost": 0.000682,
+      "known": true
+    },
+    {
+      "cost": 0.0005489,
+      "known": true
+    },
+    {
+      "cost": 0.0010395,
+      "known": true
+    },
+    {
+      "cost": 0.00023992,
+      "known": true
+    },
+    {
+      "cost": 0.0015492,
+      "known": true
+    },
+    {
+      "cost": 0.001574,
+      "known": true
+    },
+    {
+      "cost": 0.0005191,
+      "known": true
+    },
+    {
+      "cost": 0.0005717,
+      "known": true
+    },
+    {
+      "cost": 0.000746,
+      "known": true
+    },
+    {
+      "cost": 0.0008133,
+      "known": true
+    },
+    {
+      "cost": 0.0004839,
+      "known": true
+    },
+    {
+      "cost": 0.0005323,
+      "known": true
+    },
+    {
+      "cost": 0.0005807,
+      "known": true
+    },
+    {
+      "cost": 0.0008535,
+      "known": true
+    },
+    {
+      "cost": 0.00027888,
+      "known": true
+    },
+    {
+      "cost": 0.0012364,
+      "known": true
+    },
+    {
+      "cost": 0.0017881,
+      "known": true
+    },
+    {
+      "cost": 0.000489,
+      "known": true
+    },
+    {
+      "cost": 0.0005324,
+      "known": true
+    },
+    {
+      "cost": 0.000434,
+      "known": true
+    },
+    {
+      "cost": 0.00066263,
+      "known": true
+    },
+    {
+      "cost": 0.0005649,
+      "known": true
+    },
+    {
+      "cost": 0.0004536,
+      "known": true
+    },
+    {
+      "cost": 0.0005068,
+      "known": true
+    },
+    {
+      "cost": 0.00060606,
+      "known": true
+    },
+    {
+      "cost": 0.00020616,
+      "known": true
+    },
+    {
+      "cost": 0.0010236,
+      "known": true
+    },
+    {
+      "cost": 0.0015486,
+      "known": true
+    },
+    {
+      "cost": 0.0005232,
+      "known": true
+    },
+    {
+      "cost": 0.0004051,
+      "known": true
+    },
+    {
+      "cost": 0.00031366,
+      "known": true
+    },
+    {
+      "cost": 0.0011402,
+      "known": true
+    },
+    {
+      "cost": 0.0005363,
+      "known": true
+    },
+    {
+      "cost": 0.00028429,
+      "known": true
+    },
+    {
+      "cost": 0.0004108,
+      "known": true
+    },
+    {
+      "cost": 0.00057687,
+      "known": true
+    },
+    {
+      "cost": 0.00019088,
+      "known": true
+    },
+    {
+      "cost": 0.0011755,
+      "known": true
+    },
+    {
+      "cost": 0.00143899,
+      "known": true
+    },
+    {
+      "cost": 0.0005123,
+      "known": true
+    },
+    {
+      "cost": 0.0004271,
+      "known": true
+    },
+    {
+      "cost": 0.0005365,
+      "known": true
+    },
+    {
+      "cost": 0.0008858,
+      "known": true
+    },
+    {
+      "cost": 0.0005677,
+      "known": true
+    },
+    {
+      "cost": 0.0005365,
+      "known": true
+    },
+    {
+      "cost": 0.0004715,
+      "known": true
+    },
+    {
+      "cost": 0.0009485,
+      "known": true
+    },
+    {
+      "cost": 0.00020504,
+      "known": true
+    },
+    {
+      "cost": 0.0011552,
+      "known": true
+    },
+    {
+      "cost": 0.00135044,
+      "known": true
+    },
+    {
+      "cost": 0.0005534,
+      "known": true
+    },
+    {
+      "cost": 0.0005189,
+      "known": true
+    },
+    {
+      "cost": 0.0005043,
+      "known": true
+    },
+    {
+      "cost": 0.00115616,
+      "known": true
+    },
+    {
+      "cost": 0.0005534,
+      "known": true
+    },
+    {
+      "cost": 0.0005189,
+      "known": true
+    },
+    {
+      "cost": 0.0005043,
+      "known": true
+    },
+    {
+      "cost": 0.00115616,
+      "known": true
+    },
+    {
+      "cost": 0.001374,
+      "known": true
+    },
+    {
+      "cost": 0.0005434,
+      "known": true
+    },
+    {
+      "cost": 0.0005189,
+      "known": true
+    },
+    {
+      "cost": 0.000559,
+      "known": true
+    },
+    {
+      "cost": 0.0007673,
+      "known": true
+    },
+    {
+      "cost": 0.00020848,
+      "known": true
+    },
+    {
+      "cost": 0.0011123,
+      "known": true
+    },
+    {
+      "cost": 0.00130918,
+      "known": true
+    },
+    {
+      "cost": 0.0005619,
+      "known": true
+    },
+    {
+      "cost": 0.0006855,
+      "known": true
+    },
+    {
+      "cost": 0.0004637,
+      "known": true
+    },
+    {
+      "cost": 0.0009546,
+      "known": true
+    },
+    {
+      "cost": 0.00053,
+      "known": true
+    },
+    {
+      "cost": 0.0006855,
+      "known": true
+    },
+    {
+      "cost": 0.0006114,
+      "known": true
+    },
+    {
+      "cost": 0.0013003,
+      "known": true
+    },
+    {
+      "cost": 0.00020704,
+      "known": true
+    },
+    {
+      "cost": 0.0011614,
+      "known": true
+    },
+    {
+      "cost": 0.0014669,
+      "known": true
+    },
+    {
+      "cost": 0.0005632,
+      "known": true
+    },
+    {
+      "cost": 0.0005943,
+      "known": true
+    },
+    {
+      "cost": 0.0006861,
+      "known": true
+    },
+    {
+      "cost": 0.0012577,
+      "known": true
+    },
+    {
+      "cost": 0.0005191,
+      "known": true
+    },
+    {
+      "cost": 0.0004799,
+      "known": true
+    },
+    {
+      "cost": 0.0006811,
+      "known": true
+    },
+    {
+      "cost": 0.0011523,
+      "known": true
+    },
+    {
+      "cost": 0.00022304,
+      "known": true
+    },
+    {
+      "cost": 0.0012025,
+      "known": true
+    },
+    {
+      "cost": 0.001496,
+      "known": true
+    },
+    {
+      "cost": 0.0006791,
+      "known": true
+    },
+    {
+      "cost": 0.0006639,
+      "known": true
+    },
+    {
+      "cost": 0.0007798,
+      "known": true
+    },
+    {
+      "cost": 0.00064586,
+      "known": true
+    },
+    {
+      "cost": 0.0006407,
+      "known": true
+    },
+    {
+      "cost": 0.000568,
+      "known": true
+    },
+    {
+      "cost": 0.0007798,
+      "known": true
+    },
+    {
+      "cost": 0.00091874,
+      "known": true
+    },
+    {
+      "cost": 0.00023968,
+      "known": true
+    },
+    {
+      "cost": 0.0011598,
+      "known": true
+    },
+    {
+      "cost": 0.00172432,
+      "known": true
+    },
+    {
+      "cost": 0.0005851,
+      "known": true
+    },
+    {
+      "cost": 0.0004596,
+      "known": true
+    },
+    {
+      "cost": 0.0004546,
+      "known": true
+    },
+    {
+      "cost": 0.00079325,
+      "known": true
+    },
+    {
+      "cost": 0.0005632,
+      "known": true
+    },
+    {
+      "cost": 0.0004896,
+      "known": true
+    },
+    {
+      "cost": 0.0004587,
+      "known": true
+    },
+    {
+      "cost": 0.00062242,
+      "known": true
+    },
+    {
+      "cost": 0.00019352,
+      "known": true
+    },
+    {
+      "cost": 0.00076078,
+      "known": true
+    },
+    {
+      "cost": 0.0014562,
+      "known": true
+    },
+    {
+      "cost": 0.0006043,
+      "known": true
+    },
+    {
+      "cost": 0.0005124,
+      "known": true
+    },
+    {
+      "cost": 0.0005752,
+      "known": true
+    },
+    {
+      "cost": 0.0016511,
+      "known": true
+    },
+    {
+      "cost": 0.0006007,
+      "known": true
+    },
+    {
+      "cost": 0.0004136,
+      "known": true
+    },
+    {
+      "cost": 0.0006449,
+      "known": true
+    },
+    {
+      "cost": 0.0014214,
+      "known": true
+    },
+    {
+      "cost": 0.00023592,
+      "known": true
+    },
+    {
+      "cost": 0.0011919,
+      "known": true
+    },
+    {
+      "cost": 0.00159677,
+      "known": true
+    },
+    {
+      "cost": 0.00159677,
+      "known": true
+    },
+    {
+      "cost": 0.0006434,
+      "known": true
+    },
+    {
+      "cost": 0.0004886,
+      "known": true
+    },
+    {
+      "cost": 0.0005592,
+      "known": true
+    },
+    {
+      "cost": 0.0010428,
+      "known": true
+    },
+    {
+      "cost": 0.000619,
+      "known": true
+    },
+    {
+      "cost": 0.0004886,
+      "known": true
+    },
+    {
+      "cost": 0.0004946,
+      "known": true
+    },
+    {
+      "cost": 0.0010044,
+      "known": true
+    },
+    {
+      "cost": 0.00023368,
+      "known": true
+    },
+    {
+      "cost": 0.0013793,
+      "known": true
+    },
+    {
+      "cost": 0.001987,
+      "known": true
+    },
+    {
+      "cost": 0.0006218,
+      "known": true
+    },
+    {
+      "cost": 0.0003687,
+      "known": true
+    },
+    {
+      "cost": 0.00042612,
+      "known": true
+    },
+    {
+      "cost": 0.0009338,
+      "known": true
+    },
+    {
+      "cost": 0.0006421,
+      "known": true
+    },
+    {
+      "cost": 0.0003303,
+      "known": true
+    },
+    {
+      "cost": 0.00042612,
+      "known": true
+    },
+    {
+      "cost": 0.0008195,
+      "known": true
+    },
+    {
+      "cost": 0.00019072,
+      "known": true
+    },
+    {
+      "cost": 0.0011293,
+      "known": true
+    },
+    {
+      "cost": 0.00158242,
+      "known": true
+    },
+    {
+      "cost": 0.0005589,
+      "known": true
+    },
+    {
+      "cost": 0.0005168,
+      "known": true
+    },
+    {
+      "cost": 0.0005046,
+      "known": true
+    },
+    {
+      "cost": 0.00081049,
+      "known": true
+    },
+    {
+      "cost": 0.0005423,
+      "known": true
+    },
+    {
+      "cost": 0.0005046,
+      "known": true
+    },
+    {
+      "cost": 0.0004653,
+      "known": true
+    },
+    {
+      "cost": 0.0009866,
+      "known": true
+    },
+    {
+      "cost": 0.00019856,
+      "known": true
+    },
+    {
+      "cost": 0.0012054,
+      "known": true
+    },
+    {
+      "cost": 0.0014303,
+      "known": true
+    },
+    {
+      "cost": 0.0005943,
+      "known": true
+    },
+    {
+      "cost": 0.0005537,
+      "known": true
+    },
+    {
+      "cost": 0.0004817,
+      "known": true
+    },
+    {
+      "cost": 0.00133805,
+      "known": true
+    },
+    {
+      "cost": 0.0006377,
+      "known": true
+    },
+    {
+      "cost": 0.0004073,
+      "known": true
+    },
+    {
+      "cost": 0.0006774,
+      "known": true
+    },
+    {
+      "cost": 0.0017203,
+      "known": true
+    },
+    {
+      "cost": 0.0004976,
+      "known": true
+    },
+    {
+      "cost": 0.0005299,
+      "known": true
+    },
+    {
+      "cost": 0.000558,
+      "known": true
+    },
+    {
+      "cost": 0.0008527,
+      "known": true
+    },
+    {
+      "cost": 0.0005542,
+      "known": true
+    },
+    {
+      "cost": 0.000487,
+      "known": true
+    },
+    {
+      "cost": 0.0005314,
+      "known": true
+    },
+    {
+      "cost": 0.0011639,
+      "known": true
+    },
+    {
+      "cost": 0.00023264,
+      "known": true
+    },
+    {
+      "cost": 0.0014052,
+      "known": true
+    },
+    {
+      "cost": 0.0016322,
+      "known": true
+    },
+    {
+      "cost": 0.0007229,
+      "known": true
+    },
+    {
+      "cost": 0.0004674,
+      "known": true
+    },
+    {
+      "cost": 0.00041102,
+      "known": true
+    },
+    {
+      "cost": 0.00129739,
+      "known": true
+    },
+    {
+      "cost": 0.0007144,
+      "known": true
+    },
+    {
+      "cost": 0.0004674,
+      "known": true
+    },
+    {
+      "cost": 0.00036596,
+      "known": true
+    },
+    {
+      "cost": 0.00068126,
+      "known": true
+    },
+    {
+      "cost": 0.0006668,
+      "known": true
+    },
+    {
+      "cost": 0.00026813,
+      "known": true
+    },
+    {
+      "cost": 0.00029099,
+      "known": true
+    },
+    {
+      "cost": 0.0014149,
+      "known": true
+    },
+    {
+      "cost": 0.0005853,
+      "known": true
+    },
+    {
+      "cost": 0.0004674,
+      "known": true
+    },
+    {
+      "cost": 0.00024033,
+      "known": true
+    },
+    {
+      "cost": 0.00056964,
+      "known": true
+    },
+    {
+      "cost": 0.000256,
+      "known": true
+    },
+    {
+      "cost": 0.0015135,
+      "known": true
+    },
+    {
+      "cost": 0.0021184,
+      "known": true
+    },
+    {
+      "cost": 0.0006776,
+      "known": true
+    },
+    {
+      "cost": 0.0005154,
+      "known": true
+    },
+    {
+      "cost": 0.0006061,
+      "known": true
+    },
+    {
+      "cost": 0.0015469,
+      "known": true
+    },
+    {
+      "cost": 0.0006341,
+      "known": true
+    },
+    {
+      "cost": 0.0005154,
+      "known": true
+    },
+    {
+      "cost": 0.0004712,
+      "known": true
+    },
+    {
+      "cost": 0.0006455,
+      "known": true
+    },
+    {
+      "cost": 0.0005615,
+      "known": true
+    },
+    {
+      "cost": 0.0005163,
+      "known": true
+    },
+    {
+      "cost": 0.0005146,
+      "known": true
+    },
+    {
+      "cost": 0.0014416,
+      "known": true
+    },
+    {
+      "cost": 0.000585,
+      "known": true
+    },
+    {
+      "cost": 0.3276928,
+      "known": false
+    },
+    {
+      "cost": 0.000585,
+      "known": true
+    },
+    {
+      "cost": 0.0005163,
+      "known": true
+    },
+    {
+      "cost": 0.0005517,
+      "known": true
+    },
+    {
+      "cost": 0.0014411,
+      "known": true
+    },
+    {
+      "cost": 0.00023472,
+      "known": true
+    },
+    {
+      "cost": 0.0015131,
+      "known": true
+    },
+    {
+      "cost": 0.0015236,
+      "known": true
+    },
+    {
+      "cost": 0.0006592,
+      "known": true
+    },
+    {
+      "cost": 0.0005001,
+      "known": true
+    },
+    {
+      "cost": 0.0005346,
+      "known": true
+    },
+    {
+      "cost": 0.0013368,
+      "known": true
+    },
+    {
+      "cost": 0.0006214,
+      "known": true
+    },
+    {
+      "cost": 0.0005346,
+      "known": true
+    },
+    {
+      "cost": 0.0004855,
+      "known": true
+    },
+    {
+      "cost": 0.0009826,
+      "known": true
+    },
+    {
+      "cost": 0.0005338,
+      "known": true
+    },
+    {
+      "cost": 0.0005346,
+      "known": true
+    },
+    {
+      "cost": 0.0004855,
+      "known": true
+    },
+    {
+      "cost": 0.00061164,
+      "known": true
+    },
+    {
+      "cost": 0.0005316,
+      "known": true
+    },
+    {
+      "cost": 0.000524,
+      "known": true
+    },
+    {
+      "cost": 0.0005008,
+      "known": true
+    },
+    {
+      "cost": 0.00122673,
+      "known": true
+    },
+    {
+      "cost": 0.00021624,
+      "known": true
+    },
+    {
+      "cost": 0.0012686,
+      "known": true
+    },
+    {
+      "cost": 0.0015109,
+      "known": true
+    },
+    {
+      "cost": 0.0006202,
+      "known": true
+    },
+    {
+      "cost": 0.0005061,
+      "known": true
+    },
+    {
+      "cost": 0.0005812,
+      "known": true
+    },
+    {
+      "cost": 0.00106713,
+      "known": true
+    },
+    {
+      "cost": 0.0006206,
+      "known": true
+    },
+    {
+      "cost": 0.0005604,
+      "known": true
+    },
+    {
+      "cost": 0.0004115,
+      "known": true
+    },
+    {
+      "cost": 0.00067187,
+      "known": true
+    },
+    {
+      "cost": 0.0005055,
+      "known": true
+    },
+    {
+      "cost": 0.0005604,
+      "known": true
+    },
+    {
+      "cost": 0.0004474,
+      "known": true
+    },
+    {
+      "cost": 0.00052031,
+      "known": true
+    },
+    {
+      "cost": 0.0004951,
+      "known": true
+    },
+    {
+      "cost": 0.0005405,
+      "known": true
+    },
+    {
+      "cost": 0.0004699,
+      "known": true
+    },
+    {
+      "cost": 0.0010787,
+      "known": true
+    },
+    {
+      "cost": 0.000214,
+      "known": true
+    },
+    {
+      "cost": 0.0012855,
+      "known": true
+    },
+    {
+      "cost": 0.0014151,
+      "known": true
+    },
+    {
+      "cost": 0.0022921,
+      "known": true
+    },
+    {
+      "cost": 0.0009293,
+      "known": true
+    },
+    {
+      "cost": 0.0021107,
+      "known": true
+    },
+    {
+      "cost": 0.000917,
+      "known": true
+    },
+    {
+      "cost": 0.0018787,
+      "known": true
+    },
+    {
+      "cost": 0.000883,
+      "known": true
+    }
+  ]
+}

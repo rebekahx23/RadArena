@@ -1,0 +1,66 @@
+{
+  "study_id": "1411",
+  "case_id": "7dcd0f825a73778f1479899a",
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The cardiomediastinal silhouette is within normal limits for appearance."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: No focal areas of pulmonary consolidation."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pleural effusion."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: Mild degenerative changes of the thoracic spine."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute cardiopulmonary process."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: ."
+    }
+  ],
+  "clinical_context": "XXXX-year-old female with XXXX.",
+  "error_type": null,
+  "changed_sentence_ids": [],
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The assessment is limited by the single set of images provided and the lack of prior imaging for comparison. Subtle findings may be missed due to moderate image resolution."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is the cardiomediastinal silhouette within normal limits?",
+      "observation": "The frontal chest radiograph shows a cardiomediastinal silhouette that appears within normal limits in size and contour. The lateral view also does not demonstrate any obvious enlargement of the cardiac silhouette. However, subtle changes can be difficult to assess on a single radiograph without prior imaging for comparison.",
+      "limitations": "Assessment is limited by the lack of prior imaging for comparison. It is difficult to determine if there are subtle changes from baseline. The quality of the images is adequate, but higher resolution imaging might reveal more subtle findings. A full clinical context is unavailable."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are there any focal areas of pulmonary consolidation visible?",
+      "observation": "The frontal chest x-ray shows clear lung fields bilaterally with visible vascular markings. There are no obvious focal areas of increased opacity suggestive of pulmonary consolidation. The lateral chest x-ray also demonstrates clear lung fields without apparent consolidation. However, subtle consolidation could be obscured by normal anatomy or technical factors.",
+      "limitations": "The assessment is limited by the single set of images provided. Comparison to prior imaging is unavailable, which would be helpful to assess for new or evolving changes. The resolution of the images is moderate, and subtle findings may be missed. A definitive diagnosis requires clinical correlation and potentially further investigation."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 0,
+    "uncertain": false,
+    "injected_edit_detected": null,
+    "unchanged_control_flagged": false,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "blue_memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+}

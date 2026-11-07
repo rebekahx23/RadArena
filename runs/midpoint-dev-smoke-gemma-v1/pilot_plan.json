@@ -1,0 +1,43 @@
+{
+  "created_at_utc": "2026-11-04T07:30:54.126844+00:00",
+  "purpose": "development debugging; not a held-out performance claim",
+  "selection_rule": "lexicographically first study_id within each error category in frozen dev split",
+  "study_ids": [
+    "1094",
+    "1106",
+    "2036"
+  ],
+  "candidate_reports": 6,
+  "variants": [
+    "text_only",
+    "direct_vlm",
+    "blue_tools"
+  ],
+  "knowledge": "handbooks/radiology-handbook",
+  "condition": "full",
+  "max_cost_usd": 0.2,
+  "max_calls": 80,
+  "test_split_access": "none",
+  "source_sha256": {
+    "src/radarena/__init__.py": "52a11edd15b06b91febc6d016d6c31f4754ff3c14f57b132967fcc13ae445e5c",
+    "src/radarena/agents.py": "f060998b5507aaba73b87d93550bac4602bcfba5d14b2e85740d52282fe45882",
+    "src/radarena/benchmark.py": "823af8f7bd3d035646e3a276ff9b5773fe63ea64ebd3af7c50399513284441e2",
+    "src/radarena/cli.py": "4143eea5df8f9fc2e76b12fde79f5a99a5e5226ec6cbc0edb48f06bf2e39a397",
+    "src/radarena/data.py": "4c8f89ca603f90e7a56bfb94f01cd6e5588ecee0aec351f479ecac3b89064c72",
+    "src/radarena/evaluate.py": "79601fd3434ea2c6d7fa99432127e0db9a1a51382a27ddab3353f37bf6847e5b",
+    "src/radarena/handbook.py": "88b8c70d3646a38edbf7d678cf08db45a1743eea55ec312f4677d1c2f3816ecf",
+    "src/radarena/knowledge.py": "afb5ba1f2ec0c4cc789c2b295d536108ce0eb3ff0d5097d092fbaa3bed9badc1",
+    "src/radarena/runtime.py": "b738f81959c2489461395b0cb87fe994b6bdaa564ab226ce473f3b8c1933b7c4",
+    "src/radarena/tracing.py": "48beecce43db61153d37e6ff32093a4201cde6cf4b7bb7a545776b045dc4f9b3"
+  },
+  "success_checks": [
+    "runtime/schema completion",
+    "unchanged-control false alarms",
+    "changed-sentence localization",
+    "image observation agrees with visible evidence (manual review pending)",
+    "role-boundary and neutral-question audit",
+    "actual cost and failure analysis"
+  ],
+  "previous_attempt": "Qwen shared upstream pool rate-limited; no verdict completed. Use Gemma for every verifier arm, not a mixture of models.",
+  "model": "google/gemma-3-27b-it"
+}

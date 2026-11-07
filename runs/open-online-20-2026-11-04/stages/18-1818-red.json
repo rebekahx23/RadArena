@@ -1,0 +1,67 @@
+{
+  "study_id": "1818",
+  "source": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: Very low lung volumes, bronchovascular crowding and bibasilar areas of atelectasis."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No lobar consolidation."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: No appreciable pleural effusion or pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: Heart size within normal limits."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: Very low lung volumes, bronchovascular crowding and bibasilar areas of atelectasis."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No lobar consolidation."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: No appreciable pleural effusion or pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: Heart size within normal limits."
+    },
+    {
+      "id": "a1",
+      "text": "IMPRESSION: Mild cardiomegaly."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new impression of mild cardiomegaly, which is not supported by the image or other findings."
+    }
+  ],
+  "declared_changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new impression of mild cardiomegaly, which is not supported by the image or other findings."
+    }
+  ],
+  "provenance_validation_error": null,
+  "rationale": "The original report states 'Heart size within normal limits' (s4). I introduced a fabrication error by adding a new impression 'Mild cardiomegaly' (a1). This contradicts the original finding and is not supported by the provided images, which show a heart size within normal limits. This change falls under the 'fabrication' category as it adds a clinically significant finding that is not present.",
+  "eligible": true,
+  "memory_sha256": "9e2c6863cfd07475f26530793ee035d4aaee4240f9223b5a74193fc0298785b6"
+}

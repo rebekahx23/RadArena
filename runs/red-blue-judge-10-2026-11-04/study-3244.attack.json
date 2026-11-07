@@ -1,0 +1,209 @@
+{
+  "study_id": "3244",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Heart size within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Right paratracheal prominence XXXX represents tortuous XXXX."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: XXXX lung volumes."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Mild streaky bibasilar opacities."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pleural effusion or pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No evidence of pulmonary tuberculosis."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: 2."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: Low lung volumes with minimal streaky basilar airspace disease, XXXX atelectasis."
+    },
+    {
+      "id": "s10",
+      "text": "IMPRESSION: 3."
+    },
+    {
+      "id": "s11",
+      "text": "IMPRESSION: Right paratracheal prominence XXXX represents tortuous XXXX."
+    },
+    {
+      "id": "s12",
+      "text": "IMPRESSION: Comparison with prior imaging studies could confirm this if available."
+    },
+    {
+      "id": "s13",
+      "text": "IMPRESSION: ."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Heart size within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Right paratracheal prominence XXXX represents tortuous XXXX."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: XXXX lung volumes."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No streaky bibasilar opacities."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pleural effusion or pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No evidence of pulmonary tuberculosis."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: 2."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: Low lung volumes with minimal basilar airspace disease, XXXX atelectasis."
+    },
+    {
+      "id": "s10",
+      "text": "IMPRESSION: 3."
+    },
+    {
+      "id": "s11",
+      "text": "IMPRESSION: Right paratracheal prominence XXXX represents tortuous XXXX."
+    },
+    {
+      "id": "s12",
+      "text": "IMPRESSION: Comparison with prior imaging studies could confirm this if available."
+    },
+    {
+      "id": "s13",
+      "text": "IMPRESSION: ."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3244_IM-1536-1001.dcm.png",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3244_IM-1536-2002.dcm.png"
+  ],
+  "clinical_context": "XXXX-year-old woman screening for assisted living facility.",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [
+      {
+        "sentence_id": "s4",
+        "replacement": "FINDINGS: No streaky bibasilar opacities."
+      },
+      {
+        "sentence_id": "s9",
+        "replacement": "IMPRESSION: Low lung volumes with minimal basilar airspace disease, XXXX atelectasis."
+      }
+    ],
+    "rationale": "The error type is severity. I have reduced the severity of the bibasilar opacities from 'mild' to 'none' in the findings section and removed the 'streaky' descriptor. I also removed 'streaky' from the impression section to maintain consistency.",
+    "requested_error_type": "severity",
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "uncertain",
+    "findings": [],
+    "limitations": "The image quality is moderate, limiting detailed evaluation. Assessment of lung volumes and right paratracheal prominence is limited by the 2D nature of the radiograph and the lack of prior imaging for comparison. Subtle changes may be missed."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there any prominence visible in the right paratracheal region?",
+      "observation": "The frontal chest radiograph shows the trachea appearing midline. The right paratracheal region appears unremarkable. The lateral view shows the trachea and right paratracheal region without obvious prominence. However, subtle changes can be difficult to assess on a single radiograph, and the quality of the images limits detailed evaluation.",
+      "limitations": "Assessment is limited by the 2D nature of the radiograph. Subtle prominence may be missed. There is no comparison to prior imaging to assess for interval change. The image quality is moderate, which could obscure fine details."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are the lung volumes low, and if so, how would you characterize them?",
+      "observation": "The provided chest radiographs demonstrate lung volumes that appear relatively normal. There is no obvious evidence of global hypovolemia or hypervolemia. The heart size appears within normal limits. The hemidiaphragms are at appropriate levels for inspiration. However, subtle changes in lung volumes can be difficult to assess on a single static image, and comparison to prior imaging would be helpful.",
+      "limitations": "Assessment of lung volumes is subjective and can be affected by patient positioning and inspiration depth during the radiograph. Without prior imaging for comparison, it is difficult to definitively state whether there is a change in lung volumes. The images are limited to these two views, and additional views might provide more information."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 2,
+    "uncertain": true,
+    "injected_edit_detected": false,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

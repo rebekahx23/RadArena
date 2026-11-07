@@ -1,0 +1,666 @@
+{
+  "scope": "researcher diagnostic; full-report context comparison",
+  "outputs": [
+    {
+      "case_id": "1698dfe12a9edd966d1f7e2b",
+      "text": "Heart size and mediastinal contour are normal. Pulmonary vascularity is normal. Subtle airspace density within the medial right lung base, not obscuring the right heart XXXX. This may represent focal right lower lobe pneumonia given history. Left lung clear. No effusions. No pneumothorax. Skeletal structures unremarkable.",
+      "annotation": {
+        "text": "Heart size and mediastinal contour are normal . Pulmonary vascularity is normal . Subtle airspace density within the medial right lung base , not obscuring the right heart XXXX . This may represent focal right lower lobe pneumonia given history . Left lung clear . No effusions . No pneumothorax . Skeletal structures unremarkable .",
+        "entities": {
+          "1": {
+            "tokens": "Heart",
+            "label": "Anatomy::definitely present",
+            "start_ix": 0,
+            "end_ix": 0,
+            "relations": []
+          },
+          "2": {
+            "tokens": "size",
+            "label": "Anatomy::definitely present",
+            "start_ix": 1,
+            "end_ix": 1,
+            "relations": [
+              [
+                "modify",
+                "1"
+              ]
+            ]
+          },
+          "3": {
+            "tokens": "mediastinal",
+            "label": "Anatomy::definitely present",
+            "start_ix": 3,
+            "end_ix": 3,
+            "relations": []
+          },
+          "4": {
+            "tokens": "contour",
+            "label": "Anatomy::definitely present",
+            "start_ix": 4,
+            "end_ix": 4,
+            "relations": [
+              [
+                "modify",
+                "3"
+              ]
+            ]
+          },
+          "5": {
+            "tokens": "normal",
+            "label": "Observation::definitely present",
+            "start_ix": 6,
+            "end_ix": 6,
+            "relations": [
+              [
+                "located_at",
+                "1"
+              ],
+              [
+                "located_at",
+                "3"
+              ]
+            ]
+          },
+          "6": {
+            "tokens": "Pulmonary",
+            "label": "Anatomy::definitely present",
+            "start_ix": 8,
+            "end_ix": 8,
+            "relations": []
+          },
+          "7": {
+            "tokens": "vascularity",
+            "label": "Anatomy::definitely present",
+            "start_ix": 9,
+            "end_ix": 9,
+            "relations": []
+          },
+          "8": {
+            "tokens": "normal",
+            "label": "Observation::definitely present",
+            "start_ix": 11,
+            "end_ix": 11,
+            "relations": [
+              [
+                "located_at",
+                "7"
+              ]
+            ]
+          },
+          "9": {
+            "tokens": "Subtle",
+            "label": "Observation::definitely present",
+            "start_ix": 13,
+            "end_ix": 13,
+            "relations": [
+              [
+                "modify",
+                "11"
+              ]
+            ]
+          },
+          "10": {
+            "tokens": "airspace",
+            "label": "Anatomy::definitely present",
+            "start_ix": 14,
+            "end_ix": 14,
+            "relations": [
+              [
+                "modify",
+                "14"
+              ]
+            ]
+          },
+          "11": {
+            "tokens": "density",
+            "label": "Observation::definitely present",
+            "start_ix": 15,
+            "end_ix": 15,
+            "relations": [
+              [
+                "located_at",
+                "10"
+              ],
+              [
+                "suggestive_of",
+                "24"
+              ]
+            ]
+          },
+          "12": {
+            "tokens": "medial",
+            "label": "Anatomy::definitely present",
+            "start_ix": 18,
+            "end_ix": 18,
+            "relations": [
+              [
+                "modify",
+                "14"
+              ]
+            ]
+          },
+          "13": {
+            "tokens": "right",
+            "label": "Anatomy::definitely present",
+            "start_ix": 19,
+            "end_ix": 19,
+            "relations": [
+              [
+                "modify",
+                "14"
+              ]
+            ]
+          },
+          "14": {
+            "tokens": "lung",
+            "label": "Anatomy::definitely present",
+            "start_ix": 20,
+            "end_ix": 20,
+            "relations": []
+          },
+          "15": {
+            "tokens": "base",
+            "label": "Anatomy::definitely present",
+            "start_ix": 21,
+            "end_ix": 21,
+            "relations": [
+              [
+                "modify",
+                "14"
+              ]
+            ]
+          },
+          "16": {
+            "tokens": "obscuring",
+            "label": "Observation::definitely absent",
+            "start_ix": 24,
+            "end_ix": 24,
+            "relations": []
+          },
+          "17": {
+            "tokens": "right",
+            "label": "Anatomy::definitely present",
+            "start_ix": 26,
+            "end_ix": 26,
+            "relations": []
+          },
+          "18": {
+            "tokens": "heart",
+            "label": "Anatomy::definitely present",
+            "start_ix": 27,
+            "end_ix": 27,
+            "relations": []
+          },
+          "19": {
+            "tokens": "XXXX",
+            "label": "Anatomy::definitely present",
+            "start_ix": 28,
+            "end_ix": 28,
+            "relations": [
+              [
+                "modify",
+                "18"
+              ]
+            ]
+          },
+          "20": {
+            "tokens": "focal",
+            "label": "Observation::uncertain",
+            "start_ix": 33,
+            "end_ix": 33,
+            "relations": [
+              [
+                "modify",
+                "24"
+              ]
+            ]
+          },
+          "21": {
+            "tokens": "right",
+            "label": "Anatomy::definitely present",
+            "start_ix": 34,
+            "end_ix": 34,
+            "relations": [
+              [
+                "modify",
+                "23"
+              ]
+            ]
+          },
+          "22": {
+            "tokens": "lower",
+            "label": "Anatomy::definitely present",
+            "start_ix": 35,
+            "end_ix": 35,
+            "relations": []
+          },
+          "23": {
+            "tokens": "lobe",
+            "label": "Anatomy::definitely present",
+            "start_ix": 36,
+            "end_ix": 36,
+            "relations": []
+          },
+          "24": {
+            "tokens": "pneumonia",
+            "label": "Observation::uncertain",
+            "start_ix": 37,
+            "end_ix": 37,
+            "relations": [
+              [
+                "located_at",
+                "23"
+              ]
+            ]
+          },
+          "25": {
+            "tokens": "Left",
+            "label": "Anatomy::definitely present",
+            "start_ix": 41,
+            "end_ix": 41,
+            "relations": [
+              [
+                "modify",
+                "26"
+              ]
+            ]
+          },
+          "26": {
+            "tokens": "lung",
+            "label": "Anatomy::definitely present",
+            "start_ix": 42,
+            "end_ix": 42,
+            "relations": []
+          },
+          "27": {
+            "tokens": "clear",
+            "label": "Observation::definitely present",
+            "start_ix": 43,
+            "end_ix": 43,
+            "relations": [
+              [
+                "located_at",
+                "26"
+              ]
+            ]
+          },
+          "28": {
+            "tokens": "effusions",
+            "label": "Observation::definitely absent",
+            "start_ix": 46,
+            "end_ix": 46,
+            "relations": []
+          },
+          "29": {
+            "tokens": "pneumothorax",
+            "label": "Observation::definitely absent",
+            "start_ix": 49,
+            "end_ix": 49,
+            "relations": []
+          },
+          "30": {
+            "tokens": "Skeletal",
+            "label": "Anatomy::definitely present",
+            "start_ix": 51,
+            "end_ix": 51,
+            "relations": []
+          },
+          "31": {
+            "tokens": "structures",
+            "label": "Anatomy::definitely present",
+            "start_ix": 52,
+            "end_ix": 52,
+            "relations": [
+              [
+                "modify",
+                "30"
+              ]
+            ]
+          },
+          "32": {
+            "tokens": "unremarkable",
+            "label": "Observation::definitely present",
+            "start_ix": 53,
+            "end_ix": 53,
+            "relations": [
+              [
+                "located_at",
+                "30"
+              ]
+            ]
+          }
+        },
+        "data_source": null,
+        "data_split": "inference"
+      }
+    },
+    {
+      "case_id": "18dac685b8a3abe4283e2415",
+      "text": "Heart size and mediastinal contour are normal. Pulmonary vascularity is normal. Subtle airspace density within the medial right lung base, not obscuring the right heart XXXX. This may represent focal right lower lobe pneumonia given history. Left lung clear. No effusions. pneumothorax. Skeletal structures unremarkable.",
+      "annotation": {
+        "text": "Heart size and mediastinal contour are normal . Pulmonary vascularity is normal . Subtle airspace density within the medial right lung base , not obscuring the right heart XXXX . This may represent focal right lower lobe pneumonia given history . Left lung clear . No effusions . pneumothorax . Skeletal structures unremarkable .",
+        "entities": {
+          "1": {
+            "tokens": "Heart",
+            "label": "Anatomy::definitely present",
+            "start_ix": 0,
+            "end_ix": 0,
+            "relations": []
+          },
+          "2": {
+            "tokens": "size",
+            "label": "Anatomy::definitely present",
+            "start_ix": 1,
+            "end_ix": 1,
+            "relations": [
+              [
+                "modify",
+                "1"
+              ]
+            ]
+          },
+          "3": {
+            "tokens": "mediastinal",
+            "label": "Anatomy::definitely present",
+            "start_ix": 3,
+            "end_ix": 3,
+            "relations": []
+          },
+          "4": {
+            "tokens": "contour",
+            "label": "Anatomy::definitely present",
+            "start_ix": 4,
+            "end_ix": 4,
+            "relations": []
+          },
+          "5": {
+            "tokens": "normal",
+            "label": "Observation::definitely present",
+            "start_ix": 6,
+            "end_ix": 6,
+            "relations": [
+              [
+                "located_at",
+                "1"
+              ],
+              [
+                "located_at",
+                "3"
+              ]
+            ]
+          },
+          "6": {
+            "tokens": "Pulmonary",
+            "label": "Anatomy::definitely present",
+            "start_ix": 8,
+            "end_ix": 8,
+            "relations": []
+          },
+          "7": {
+            "tokens": "vascularity",
+            "label": "Anatomy::definitely present",
+            "start_ix": 9,
+            "end_ix": 9,
+            "relations": []
+          },
+          "8": {
+            "tokens": "normal",
+            "label": "Observation::definitely present",
+            "start_ix": 11,
+            "end_ix": 11,
+            "relations": [
+              [
+                "located_at",
+                "7"
+              ]
+            ]
+          },
+          "9": {
+            "tokens": "Subtle",
+            "label": "Observation::definitely present",
+            "start_ix": 13,
+            "end_ix": 13,
+            "relations": [
+              [
+                "modify",
+                "11"
+              ]
+            ]
+          },
+          "10": {
+            "tokens": "airspace",
+            "label": "Anatomy::definitely present",
+            "start_ix": 14,
+            "end_ix": 14,
+            "relations": [
+              [
+                "modify",
+                "14"
+              ]
+            ]
+          },
+          "11": {
+            "tokens": "density",
+            "label": "Observation::definitely present",
+            "start_ix": 15,
+            "end_ix": 15,
+            "relations": [
+              [
+                "located_at",
+                "10"
+              ],
+              [
+                "suggestive_of",
+                "24"
+              ]
+            ]
+          },
+          "12": {
+            "tokens": "medial",
+            "label": "Anatomy::definitely present",
+            "start_ix": 18,
+            "end_ix": 18,
+            "relations": [
+              [
+                "modify",
+                "14"
+              ]
+            ]
+          },
+          "13": {
+            "tokens": "right",
+            "label": "Anatomy::definitely present",
+            "start_ix": 19,
+            "end_ix": 19,
+            "relations": [
+              [
+                "modify",
+                "14"
+              ]
+            ]
+          },
+          "14": {
+            "tokens": "lung",
+            "label": "Anatomy::definitely present",
+            "start_ix": 20,
+            "end_ix": 20,
+            "relations": []
+          },
+          "15": {
+            "tokens": "base",
+            "label": "Anatomy::definitely present",
+            "start_ix": 21,
+            "end_ix": 21,
+            "relations": [
+              [
+                "modify",
+                "14"
+              ]
+            ]
+          },
+          "16": {
+            "tokens": "obscuring",
+            "label": "Observation::definitely absent",
+            "start_ix": 24,
+            "end_ix": 24,
+            "relations": []
+          },
+          "17": {
+            "tokens": "right",
+            "label": "Anatomy::definitely present",
+            "start_ix": 26,
+            "end_ix": 26,
+            "relations": []
+          },
+          "18": {
+            "tokens": "heart",
+            "label": "Anatomy::definitely present",
+            "start_ix": 27,
+            "end_ix": 27,
+            "relations": []
+          },
+          "19": {
+            "tokens": "XXXX",
+            "label": "Anatomy::definitely present",
+            "start_ix": 28,
+            "end_ix": 28,
+            "relations": [
+              [
+                "modify",
+                "18"
+              ]
+            ]
+          },
+          "20": {
+            "tokens": "focal",
+            "label": "Observation::uncertain",
+            "start_ix": 33,
+            "end_ix": 33,
+            "relations": [
+              [
+                "modify",
+                "24"
+              ]
+            ]
+          },
+          "21": {
+            "tokens": "right",
+            "label": "Anatomy::definitely present",
+            "start_ix": 34,
+            "end_ix": 34,
+            "relations": [
+              [
+                "modify",
+                "23"
+              ]
+            ]
+          },
+          "22": {
+            "tokens": "lower",
+            "label": "Anatomy::definitely present",
+            "start_ix": 35,
+            "end_ix": 35,
+            "relations": []
+          },
+          "23": {
+            "tokens": "lobe",
+            "label": "Anatomy::definitely present",
+            "start_ix": 36,
+            "end_ix": 36,
+            "relations": []
+          },
+          "24": {
+            "tokens": "pneumonia",
+            "label": "Observation::uncertain",
+            "start_ix": 37,
+            "end_ix": 37,
+            "relations": [
+              [
+                "located_at",
+                "23"
+              ]
+            ]
+          },
+          "25": {
+            "tokens": "Left",
+            "label": "Anatomy::definitely present",
+            "start_ix": 41,
+            "end_ix": 41,
+            "relations": [
+              [
+                "modify",
+                "26"
+              ]
+            ]
+          },
+          "26": {
+            "tokens": "lung",
+            "label": "Anatomy::definitely present",
+            "start_ix": 42,
+            "end_ix": 42,
+            "relations": []
+          },
+          "27": {
+            "tokens": "clear",
+            "label": "Observation::definitely present",
+            "start_ix": 43,
+            "end_ix": 43,
+            "relations": [
+              [
+                "located_at",
+                "26"
+              ]
+            ]
+          },
+          "28": {
+            "tokens": "effusions",
+            "label": "Observation::definitely absent",
+            "start_ix": 46,
+            "end_ix": 46,
+            "relations": []
+          },
+          "29": {
+            "tokens": "pneumothorax",
+            "label": "Observation::definitely absent",
+            "start_ix": 48,
+            "end_ix": 48,
+            "relations": []
+          },
+          "30": {
+            "tokens": "Skeletal",
+            "label": "Anatomy::definitely present",
+            "start_ix": 50,
+            "end_ix": 50,
+            "relations": []
+          },
+          "31": {
+            "tokens": "structures",
+            "label": "Anatomy::definitely present",
+            "start_ix": 51,
+            "end_ix": 51,
+            "relations": [
+              [
+                "modify",
+                "30"
+              ]
+            ]
+          },
+          "32": {
+            "tokens": "unremarkable",
+            "label": "Observation::definitely present",
+            "start_ix": 52,
+            "end_ix": 52,
+            "relations": [
+              [
+                "located_at",
+                "30"
+              ]
+            ]
+          }
+        },
+        "data_source": null,
+        "data_split": "inference"
+      }
+    }
+  ]
+}

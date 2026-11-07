@@ -1,0 +1,40 @@
+{
+  "library": {
+    "initial": [
+      "Avoid flagging the absence of a finding when subtle image features suggest its possible presence.",
+      "When image quality or views are limited, prioritize uncertainty and avoid confident error flags.",
+      "Do not confidently flag a claim as incorrect if the image findings are open to multiple interpretations.",
+      "Acknowledge limitations of single-view radiographs when assessing findings.",
+      "Be cautious when assessing subtle differences in image density, especially when characterizing opacities."
+    ],
+    "error detection": [
+      "When an observation from a vision tool explicitly identifies a finding (e.g., a calcified nodule or cardiomegaly), and the candidate report explicitly denies or contradicts this finding, confidently flag it as a contradiction.",
+      "Do not overlook significant discrepancies or fabricated findings in the candidate report, such as the addition of a pneumothorax, even if the primary focus of the vision tool observations was on other findings like cardiomegaly or pulmonary artery hypertension."
+    ],
+    "limitations handling": [
+      "Do not allow general limitations of plain radiographs (e.g., difficulty with precise localization or subtle findings) to prevent flagging clear contradictions when a specific finding is visible and explicitly denied by the candidate."
+    ],
+    "contradiction detection": [
+      "When a vision tool explicitly states the absence of a finding (e.g., 'No definite focal consolidation, pleural effusion, or pneumothorax is identified'), and the candidate report explicitly claims the presence of that finding, confidently flag it as a contradiction, even if other vision tool observations are less definitive or conflicting."
+    ]
+  },
+  "lessons": [
+    {
+      "category": "Contradiction Detection",
+      "rule": "When a vision tool explicitly states the absence of a finding (e.g., 'No definite focal consolidation, pleural effusion, or pneumothorax is identified'), and the candidate report explicitly claims the presence of that finding, confidently flag it as a contradiction, even if other vision tool observations are less definitive or conflicting.",
+      "supporting_episode_ids": [
+        "9"
+      ]
+    },
+    {
+      "category": "Error Detection",
+      "rule": "Do not overlook significant discrepancies or fabricated findings in the candidate report, such as the addition of a pneumothorax, even if the primary focus of the vision tool observations was on other findings like cardiomegaly or pulmonary artery hypertension.",
+      "supporting_episode_ids": [
+        "10"
+      ]
+    }
+  ],
+  "rejected": [],
+  "explanation": "Episode 9 highlights the importance of prioritizing explicit denials from a vision tool when conflicting observations exist, leading to a clear contradiction flag. Episode 10 demonstrates a failure to detect a clear fabrication (pneumothorax) because the vision tool observations did not directly address it, indicating a need to ensure all significant claims are checked, not just those directly prompted by the vision tool's primary questions.",
+  "previous_memory_sha256": "a969a6cc96d2358b498259047701d0f4df8d3c527c32bf65671a11f13a435508"
+}

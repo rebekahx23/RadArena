@@ -1,0 +1,22 @@
+{
+  "format_version": 1,
+  "case_id": "demo",
+  "variant": "red_blue",
+  "study_id": "113",
+  "judge_model": "google/gemini-2.5-flash",
+  "rubric_version": "judge-v1",
+  "episode_sha256": "b8ed4e87f2fc5381050bd10692c267bee8f25fbcda56c571c54992298bc4828c",
+  "image_sha256": {
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/113_IM-0086-1001.dcm.png": "7e5809685c65113477c894911cf5d26ef3d9397a9e3f2e7d35e23b3f9f0f09fc",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/113_IM-0086-3001.dcm.png": "09403899c524f6016ff5497eb4c23ff3f37a5ab69e08f0d315f464dd2f05b8de",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/113_IM-0086-2001.dcm.png": "39442e050c2bed6a90149674c96ef42fc7c0681077c232360ac130f2187796a1"
+  },
+  "image_review": true,
+  "scope": "fallible independent post-hoc analysis; not clinical ground truth",
+  "agent_feedback": "none; researcher-only",
+  "source_run": "runs/midpoint-red-blue-demo.json",
+  "status": "failed",
+  "exception_type": "TypeError",
+  "accounted_cost_usd": 0.3276928,
+  "calls": 1
+}

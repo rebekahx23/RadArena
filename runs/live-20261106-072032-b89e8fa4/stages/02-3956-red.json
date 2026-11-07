@@ -1,0 +1,113 @@
+{
+  "study_id": "3956",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: AP and lateral views of the chest were obtained."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The heart is normal size."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Mediastinum is unremarkable."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Lungs are hypoinflated but clear."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No focal consolidation is seen."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute disease"
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: AP and lateral views of the chest were obtained."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The heart is normal size."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Mediastinum is unremarkable."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Lungs are clear."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No focal consolidation is seen."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute disease"
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s4"
+      ],
+      "candidate_ids": [
+        "s4"
+      ],
+      "category": "omission",
+      "description": "The description of 'hypoinflated' lungs was omitted, which is visible on the images."
+    }
+  ],
+  "rationale": "The original report states 'Lungs are hypoinflated but clear.' The images clearly show hypoinflated lungs, indicated by the elevated hemidiaphragms and crowded lung markings. The change removes the 'hypoinflated' descriptor, creating an omission error regarding a visible finding. This is a subtle but clinically relevant omission, as hypoinflation can be a sign of underlying issues or affect interpretation of other findings.",
+  "eligible": true,
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attempts": [
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: AP and lateral views of the chest were obtained."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: The heart is normal size."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: Mediastinum is unremarkable."
+        },
+        {
+          "id": "s4",
+          "text": "FINDINGS: Lungs are clear."
+        },
+        {
+          "id": "s5",
+          "text": "FINDINGS: No focal consolidation is seen."
+        },
+        {
+          "id": "s6",
+          "text": "IMPRESSION: No acute disease"
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [
+            "s4"
+          ],
+          "candidate_ids": [
+            "s4"
+          ],
+          "category": "omission",
+          "description": "The description of 'hypoinflated' lungs was omitted, which is visible on the images."
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

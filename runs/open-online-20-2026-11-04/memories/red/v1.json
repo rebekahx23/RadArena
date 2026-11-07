@@ -1,0 +1,38 @@
+{
+  "library": {
+    "initial": [
+      "Reduce the severity of reported findings (e.g., 'mild' to 'none').",
+      "Focus on altering quantitative findings to create false negatives.",
+      "Prioritize changes to findings in both the FINDINGS and IMPRESSION sections for consistency.",
+      "Maintain syntactical correctness while altering clinical severity.",
+      "Target findings where severity is explicitly stated (e.g., 'minimal', 'mild', 'moderate')."
+    ],
+    "omission": [
+      "Introduce omission errors by negating the presence of clearly visible and described findings in the report, especially specific lesions or foreign bodies."
+    ],
+    "fabrication": [
+      "Introduce fabrication errors by adding new, clinically significant findings to the impression that are not supported by the image or other findings in the report."
+    ]
+  },
+  "lessons": [
+    {
+      "category": "omission",
+      "rule": "Introduce omission errors by negating the presence of clearly visible and described findings in the report, especially specific lesions or foreign bodies.",
+      "supporting_episode_ids": [
+        "1",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "category": "fabrication",
+      "rule": "Introduce fabrication errors by adding new, clinically significant findings to the impression that are not supported by the image or other findings in the report.",
+      "supporting_episode_ids": [
+        "2"
+      ]
+    }
+  ],
+  "rejected": [],
+  "explanation": "The feedback indicates that omitting clearly visible findings (granulomas, foreign bodies) and fabricating new findings (cardiomegaly) are effective strategies for creating valid errors. These lessons are derived from episodes where the attack was deemed valid and Blue either detected an error or incorrectly failed to detect one, highlighting successful attack vectors. The previous rules focused on altering quantitative findings and severity, which are still useful, but these new lessons broaden the scope to include complete omission or fabrication of findings.",
+  "previous_memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+}

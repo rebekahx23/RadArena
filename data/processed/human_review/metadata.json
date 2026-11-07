@@ -1,0 +1,7 @@
+{
+  "benchmark_sha256": "43f0f1033f2c30627c50c2921549de916c400c7b28a4e39ba136d82dcd239d84",
+  "studies": 12,
+  "cases": 24,
+  "review_status": "pending",
+  "instruction": "Reviewer sees only blinded_cases initially. Keep organizer_key separate."
+}

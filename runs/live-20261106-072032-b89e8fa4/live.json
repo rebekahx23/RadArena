@@ -1,0 +1,34 @@
+{
+  "id": "live-20261106-072032-b89e8fa4",
+  "status": "complete",
+  "phase": "complete",
+  "message": "Live run complete. All visible results were generated during this run.",
+  "judges": [
+    "google/gemma-3-27b-it",
+    "google/gemini-2.5-flash",
+    "qwen/qwen3-vl-30b-a3b-instruct"
+  ],
+  "created_at": "2026-11-06T07:20:32.328885+00:00",
+  "updated_at": "2026-11-06T07:23:23.552665+00:00",
+  "completed_studies": 3,
+  "study_index": 3,
+  "options": {
+    "studies": 3,
+    "budget": 1,
+    "controls": false,
+    "learn": false,
+    "red_rules": [],
+    "blue_rules": [],
+    "launch_id": "ec2a599f-b80b-4076-869b-2d35e5aa8beb"
+  },
+  "pid": 16325,
+  "study_id": "3630",
+  "stage": "03-3630-judge3",
+  "role": "judge",
+  "retry": 0,
+  "active_model": "qwen/qwen3-vl-30b-a3b-instruct",
+  "fallback_from": null,
+  "action": null,
+  "request_started_at": "2026-11-06T07:23:07.572024+00:00",
+  "finished_at": "2026-11-06T07:23:23.552662+00:00"
+}

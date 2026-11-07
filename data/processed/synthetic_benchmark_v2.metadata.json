@@ -1,0 +1,57 @@
+{
+  "seed": "midpoint-v2",
+  "attacker": "lexical_seed_v1",
+  "study_counts": {
+    "train": 50,
+    "dev": 20,
+    "test": 30
+  },
+  "sampler": "scarcity-first error-category strata v2",
+  "candidate_counts": {
+    "train": 100,
+    "test": 60,
+    "dev": 40
+  },
+  "attack_counts": {
+    "train": {
+      "laterality": 16,
+      "severity": 17,
+      "presence_absence": 17
+    },
+    "dev": {
+      "severity": 5,
+      "laterality": 7,
+      "presence_absence": 8
+    },
+    "test": {
+      "severity": 10,
+      "laterality": 10,
+      "presence_absence": 10
+    }
+  },
+  "selection_exclusions": {
+    "no_eligible_seed_attack_in_manifest": 3419
+  },
+  "eligibility_counts_before_sampling": {
+    "train": {
+      "laterality": 21,
+      "presence_absence": 151,
+      "severity": 25
+    },
+    "dev": {
+      "presence_absence": 69,
+      "severity": 5,
+      "laterality": 9
+    },
+    "test": {
+      "presence_absence": 102,
+      "severity": 13,
+      "laterality": 26
+    }
+  },
+  "benchmark_sha256": "43f0f1033f2c30627c50c2921549de916c400c7b28a4e39ba136d82dcd239d84",
+  "manifest_sha256": "4111156df28315b9f18cb3e999818afd477121b491d939dcc2f18f855bef2a37",
+  "source_url": "https://www.kaggle.com/datasets/raddar/chest-xrays-indiana-university",
+  "scope": "source-report-relative synthetic edits; clinical validity unreviewed",
+  "grouping": "study; exact selected report and image byte duplicates excluded; patient identity unverified"
+}

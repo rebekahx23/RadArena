@@ -1,0 +1,161 @@
+{
+  "study_id": "2398",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Patient is rotated."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Mild cardiomegaly."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Low lung volumes with elevated hemidiaphragms, greater on the right."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: This is identified on a thoracic XXXX study from XXXX as well."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: No large pleural effusion."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: No focal infiltrate."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: Cardiomegaly with elevated right hemidiaphragms and no acute findings."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Patient is rotated."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Mild cardiomegaly."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Low lung volumes with elevated hemidiaphragms, greater on the right."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: This is identified on a thoracic XXXX study from XXXX as well."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: No large pleural effusion."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: No focal infiltrate."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: Cardiomegaly with elevated right hemidiaphragms and no acute findings."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2398_IM-0947-12012.dcm.png",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2398_IM-0947-4004.dcm.png",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2398_IM-0947-2001.dcm.png"
+  ],
+  "clinical_context": "DYSPNEA; Shortness of breath for 4 weeks. Bilateral leg XXXX for one XXXX. Patient on 2 liters of oxygen at home.",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [],
+    "rationale": "Unchanged source report control",
+    "requested_error_type": null,
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The assessment of rotation is limited by the subjective nature of the evaluation and the lack of prior images for comparison. The assessment of cardiomegaly is limited by the image quality and the lack of prior imaging for comparison."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is patient rotation visible on the image?",
+      "observation": "The images show chest radiographs in different views (AP, PA, and lateral). There appears to be some degree of rotation in the AP view, as evidenced by the asymmetric positioning of the clavicles relative to the ribs. The PA view appears less rotated. The lateral view does not directly assess rotation in the same way as the AP/PA views. It's difficult to quantify the degree of rotation without additional information or comparison to a properly aligned image.",
+      "limitations": "Determining the exact degree of rotation is subjective based on these images alone. The clinical context and patient positioning details are unavailable. Without prior images for comparison, it's difficult to definitively assess the extent of rotation or whether it is clinically significant."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is cardiomegaly present, and if so, how would you characterize its severity?",
+      "observation": "The provided chest radiographs demonstrate a widened mediastinum and an increased cardiac silhouette on the posteroanterior (PA) view. The cardiothoracic ratio appears to be greater than 0.5 on the PA view, which is suggestive of cardiomegaly. The lateral view also shows an enlarged cardiac shadow. However, precise measurement of the cardiac silhouette and cardiothoracic ratio is difficult due to the image quality and lack of clear landmarks. The degree of cardiomegaly is difficult to characterize precisely without further quantitative measurements and comparison to prior imaging.",
+      "limitations": "The assessment of cardiomegaly is limited by the image quality and the lack of prior imaging for comparison. The images are not perfectly standardized, making precise measurements challenging. A definitive diagnosis and characterization of severity would require more detailed evaluation, including echocardiography or other cardiac imaging modalities."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 0,
+    "uncertain": false,
+    "injected_edit_detected": null,
+    "unchanged_control_flagged": false,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

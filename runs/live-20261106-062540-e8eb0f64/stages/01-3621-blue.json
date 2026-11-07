@@ -1,0 +1,171 @@
+{
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s1",
+        "error_type": "contradiction",
+        "evidence": "The lung volumes appear within normal limits. The hemidiaphragms are well-defined and at an appropriate level. The costophrenic angles are sharp.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      },
+      {
+        "sentence_id": "s2",
+        "error_type": "contradiction",
+        "evidence": "There are bilateral perihilar opacities that could represent infiltrates. The lateral view shows some increased interstitial markings, particularly in the retrocardiac region.",
+        "tool_call_ids": [
+          "vision_2"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      },
+      {
+        "sentence_id": "s5",
+        "error_type": "contradiction",
+        "evidence": "The lung volumes appear within normal limits. The hemidiaphragms are well-defined and at an appropriate level. The costophrenic angles are sharp. There are bilateral perihilar opacities that could represent infiltrates. The lateral view shows some increased interstitial markings, particularly in the retrocardiac region.",
+        "tool_call_ids": [
+          "vision_1",
+          "vision_2"
+        ],
+        "evidence_type": "mixed",
+        "report_sentence_ids": [
+          "s1",
+          "s2",
+          "s5"
+        ]
+      }
+    ],
+    "limitations": "The assessment of lung volumes is based on a single frontal and lateral chest radiograph, which may not fully capture dynamic lung function. Patient positioning and inspiration effort can influence the appearance of lung volumes on radiographs. The images provided are a single PA and lateral chest X-ray, which may not be sufficient to definitively characterize subtle infiltrates or differentiate them from other causes of increased opacity such as atelectasis or vascular engorgement. The quality of the images is adequate for general assessment, but detailed evaluation of lung parenchyma can be limited by projectional overlap and patient positioning."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "error",
+        "findings": [
+          {
+            "sentence_id": "s1",
+            "error_type": "contradiction",
+            "evidence": "The lung volumes appear within normal limits. The hemidiaphragms are well-defined and at an appropriate level. The costophrenic angles are sharp.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          },
+          {
+            "sentence_id": "s2",
+            "error_type": "contradiction",
+            "evidence": "There are bilateral perihilar opacities that could represent infiltrates. The lateral view shows some increased interstitial markings, particularly in the retrocardiac region.",
+            "tool_call_ids": [
+              "vision_2"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          },
+          {
+            "sentence_id": "s5",
+            "error_type": "contradiction",
+            "evidence": "The lung volumes appear within normal limits. The hemidiaphragms are well-defined and at an appropriate level. The costophrenic angles are sharp. There are bilateral perihilar opacities that could represent infiltrates. The lateral view shows some increased interstitial markings, particularly in the retrocardiac region.",
+            "tool_call_ids": [
+              "vision_1",
+              "vision_2"
+            ],
+            "evidence_type": "mixed",
+            "report_sentence_ids": [
+              "s1",
+              "s2"
+            ]
+          }
+        ],
+        "limitations": "The assessment of lung volumes is based on a single frontal and lateral chest radiograph, which may not fully capture dynamic lung function. Patient positioning and inspiration effort can influence the appearance of lung volumes on radiographs. The images provided are a single PA and lateral chest X-ray, which may not be sufficient to definitively characterize subtle infiltrates or differentiate them from other causes of increased opacity such as atelectasis or vascular engorgement. The quality of the images is adequate for general assessment, but detailed evaluation of lung parenchyma can be limited by projectional overlap and patient positioning."
+      },
+      "accepted": false,
+      "validation_error": "Text citations must include the flagged sentence"
+    },
+    {
+      "verdict": {
+        "decision": "error",
+        "findings": [
+          {
+            "sentence_id": "s1",
+            "error_type": "contradiction",
+            "evidence": "The lung volumes appear within normal limits. The hemidiaphragms are well-defined and at an appropriate level. The costophrenic angles are sharp.",
+            "tool_call_ids": [
+              "vision_1"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          },
+          {
+            "sentence_id": "s2",
+            "error_type": "contradiction",
+            "evidence": "There are bilateral perihilar opacities that could represent infiltrates. The lateral view shows some increased interstitial markings, particularly in the retrocardiac region.",
+            "tool_call_ids": [
+              "vision_2"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          },
+          {
+            "sentence_id": "s5",
+            "error_type": "contradiction",
+            "evidence": "The lung volumes appear within normal limits. The hemidiaphragms are well-defined and at an appropriate level. The costophrenic angles are sharp. There are bilateral perihilar opacities that could represent infiltrates. The lateral view shows some increased interstitial markings, particularly in the retrocardiac region.",
+            "tool_call_ids": [
+              "vision_1",
+              "vision_2"
+            ],
+            "evidence_type": "mixed",
+            "report_sentence_ids": [
+              "s1",
+              "s2",
+              "s5"
+            ]
+          }
+        ],
+        "limitations": "The assessment of lung volumes is based on a single frontal and lateral chest radiograph, which may not fully capture dynamic lung function. Patient positioning and inspiration effort can influence the appearance of lung volumes on radiographs. The images provided are a single PA and lateral chest X-ray, which may not be sufficient to definitively characterize subtle infiltrates or differentiate them from other causes of increased opacity such as atelectasis or vascular engorgement. The quality of the images is adequate for general assessment, but detailed evaluation of lung parenchyma can be limited by projectional overlap and patient positioning."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Are lung volumes low?",
+      "observation": "The lung volumes appear within normal limits. The hemidiaphragms are well-defined and at an appropriate level. The costophrenic angles are sharp.",
+      "limitations": "The assessment of lung volumes is based on a single frontal and lateral chest radiograph, which may not fully capture dynamic lung function. Patient positioning and inspiration effort can influence the appearance of lung volumes on radiographs."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are there any infiltrates visible?",
+      "observation": "There are bilateral perihilar opacities that could represent infiltrates. The lateral view shows some increased interstitial markings, particularly in the retrocardiac region.",
+      "limitations": "The images provided are a single PA and lateral chest X-ray, which may not be sufficient to definitively characterize subtle infiltrates or differentiate them from other causes of increased opacity such as atelectasis or vascular engorgement. The quality of the images is adequate for general assessment, but detailed evaluation of lung parenchyma can be limited by projectional overlap and patient positioning."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Lung volumes remain low."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: No infiltrates."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Heart and pulmonary XXXX are normal."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: XXXX change."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Hypoinflation with active cardiopulmonary disease."
+    }
+  ],
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

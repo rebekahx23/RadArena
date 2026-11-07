@@ -1,0 +1,80 @@
+{
+  "verdict": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s3",
+        "error_type": "presence_absence",
+        "evidence": "There are no definite opacities in the right mid lung.",
+        "tool_call_ids": [
+          "vision_2"
+        ]
+      }
+    ],
+    "limitations": "The assessment of heart size is limited by the 2D nature of radiographs and patient factors. The assessment for opacities in the right mid lung is limited by the 2D nature of radiographs and potential superimposition of structures."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is the heart size normal?",
+      "observation": "The cardiothoracic ratio appears to be within normal limits on the frontal chest radiograph. The cardiac silhouette does not appear enlarged.",
+      "limitations": "Assessment of heart size on a single frontal and lateral chest radiograph can be limited by patient positioning, phase of respiration, and body habitus. A more accurate assessment of cardiac dimensions would require echocardiography or cardiac MRI."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Are there opacities in the right mid lung?",
+      "observation": "There are no definite opacities in the right mid lung.",
+      "limitations": "The provided images are a PA and lateral chest radiograph. The PA view shows the entire chest, and the lateral view provides a profile of the chest. While the images are of diagnostic quality, the two-dimensional nature of radiographs can obscure subtle findings due to superimposition of structures. Without prior imaging for comparison, it is difficult to assess for interval changes. The question specifically asks about the \"right mid lung,\" which is a general anatomical region and can be subject to interpretation. The presence of breast tissue in the lower lung fields can also create areas of increased density that might be mistaken for pathology, though this is not relevant to the mid-lung region."
+    }
+  ],
+  "claim_assessments": [
+    {
+      "sentence_id": "s1",
+      "relation": "supported",
+      "error_type": null,
+      "evidence": "The cardiothoracic ratio appears to be within normal limits on the frontal chest radiograph. The cardiac silhouette does not appear enlarged.",
+      "tool_call_ids": [
+        "vision_1"
+      ]
+    },
+    {
+      "sentence_id": "s2",
+      "relation": "not_assessed",
+      "error_type": null,
+      "evidence": null,
+      "tool_call_ids": []
+    },
+    {
+      "sentence_id": "s3",
+      "relation": "contradicted",
+      "error_type": "presence_absence",
+      "evidence": "There are no definite opacities in the right mid lung.",
+      "tool_call_ids": [
+        "vision_2"
+      ]
+    },
+    {
+      "sentence_id": "s4",
+      "relation": "not_assessed",
+      "error_type": null,
+      "evidence": null,
+      "tool_call_ids": []
+    },
+    {
+      "sentence_id": "s5",
+      "relation": "not_assessed",
+      "error_type": null,
+      "evidence": null,
+      "tool_call_ids": []
+    }
+  ],
+  "case_id": "37.control",
+  "study_id": "37",
+  "variant": "blue_tools",
+  "status": "ok",
+  "private_label": {
+    "has_error": false,
+    "changed_sentence_ids": [],
+    "error_type": null
+  }
+}

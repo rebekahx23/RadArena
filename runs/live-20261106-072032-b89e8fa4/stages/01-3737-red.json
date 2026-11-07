@@ -1,0 +1,89 @@
+{
+  "study_id": "3737",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Heart size within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: No focal airspace disease."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pneumothorax or pleural effusion."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No acute cardiopulmonary findings."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Heart size within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: No focal airspace disease."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pneumothorax or pleural effusion."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: Mild cardiomegaly."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s4"
+      ],
+      "candidate_ids": [
+        "s4"
+      ],
+      "category": "impression",
+      "description": "Changed the impression from 'No acute cardiopulmonary findings' to 'Mild cardiomegaly' to introduce a clinically plausible error regarding heart size, contradicting the findings section."
+    }
+  ],
+  "rationale": "The original report states 'Heart size within normal limits' in the findings and 'No acute cardiopulmonary findings' in the impression. The images do not clearly show cardiomegaly. I introduced an error by changing the impression to 'Mild cardiomegaly', which contradicts the findings section and is not supported by the images. This creates an internal inconsistency and a clinically plausible error related to heart size.",
+  "eligible": true,
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attempts": [
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: Heart size within normal limits."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: No focal airspace disease."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: No pneumothorax or pleural effusion."
+        },
+        {
+          "id": "s4",
+          "text": "IMPRESSION: Mild cardiomegaly."
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [
+            "s4"
+          ],
+          "candidate_ids": [
+            "s4"
+          ],
+          "category": "impression",
+          "description": "Changed the impression from 'No acute cardiopulmonary findings' to 'Mild cardiomegaly' to introduce a clinically plausible error regarding heart size, contradicting the findings section."
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

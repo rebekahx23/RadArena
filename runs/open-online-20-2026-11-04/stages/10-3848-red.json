@@ -1,0 +1,88 @@
+{
+  "study_id": "3848",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size is moderate to severely enlarged."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is prominence of the central pulmonary XXXX suggesting pulmonary artery hypertension."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: There has been removal of the right-sided PICC line."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: There is persistent left basilar airspace opacity with left costophrenic XXXX blunting which is not evident on the lateral exam."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: There are mild degenerative changes of the spine."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: There is no pneumothorax."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: Moderate-to-severe cardiomegaly with probable pulmonary artery hypertension."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: Persistent left basilar opacity without significant effusion."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart size is moderate to severely enlarged."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is prominence of the central pulmonary XXXX suggesting pulmonary artery hypertension."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: There has been removal of the right-sided PICC line."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: There is persistent left basilar airspace opacity with left costophrenic XXXX blunting which is not evident on the lateral exam."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: There are mild degenerative changes of the spine."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: There is no pneumothorax."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: Moderate-to-severe cardiomegaly with probable pulmonary artery hypertension."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: Persistent left basilar opacity without significant effusion."
+    },
+    {
+      "id": "a1",
+      "text": "IMPRESSION: There is also evidence of a right-sided pneumothorax."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new impression sentence claiming a right-sided pneumothorax, which is contradicted by the findings (s6) and not visible in the images."
+    }
+  ],
+  "rationale": "The change introduces a fabrication error by adding a new impression (a1) stating 'There is also evidence of a right-sided pneumothorax.' This directly contradicts finding s6, which explicitly states 'There is no pneumothorax,' and is not supported by the provided images. This creates a clinically significant error by reporting a condition that is not present.",
+  "eligible": true,
+  "memory_sha256": "fade623ff0eba990389a5745f11212bf7148e7624993d52f038639d3471506eb"
+}

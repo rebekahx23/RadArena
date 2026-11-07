@@ -1,0 +1,13 @@
+{
+  "edits": [
+    {
+      "sentence_id": "s1",
+      "replacement": "The lungs show mild congestion."
+    },
+    {
+      "sentence_id": "s4",
+      "replacement": "Mild congestion is present in the lungs."
+    }
+  ],
+  "rationale": "The original report states the lungs are clear. The clinical context mentions chest congestion, and the images show some opacities. I have changed the report to reflect mild congestion in the lungs, aligning it with the clinical context and image findings while introducing a presence error (changing 'clear' to 'mild congestion')."
+}

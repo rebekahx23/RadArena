@@ -1,0 +1,9 @@
+{
+  "edits": [
+    {
+      "sentence_id": "s2",
+      "replacement": "There are low lung volumes with right basilar subsegmental atelectasis."
+    }
+  ],
+  "rationale": "Changed the laterality of the basilar atelectasis from left to right to introduce a laterality error, as requested. This change is consistent with the error type and strategies provided."
+}

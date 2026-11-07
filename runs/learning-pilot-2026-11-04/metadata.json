@@ -1,0 +1,50 @@
+{
+  "format_version": 1,
+  "benchmark_sha256": "43f0f1033f2c30627c50c2921549de916c400c7b28a4e39ba136d82dcd239d84",
+  "implementation_sha256": "c02a5f448a760e86f29b184efad61ca565dcfa93deacc5d2a8c8a8f867423fc9",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "clinical_context": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "max_checks": 2,
+  "training_studies": [
+    "113",
+    "102",
+    "1187"
+  ],
+  "development_studies": [
+    "2088",
+    "1411",
+    "2070"
+  ],
+  "learning": "three sequential role-private LLM strategy updates; no weight training",
+  "scope": "Synthetic localization; attack clinical validity unreviewed; dev not held-out test"
+}

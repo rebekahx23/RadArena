@@ -1,0 +1,557 @@
+{
+  "study_id": "1284",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Left-sided dual-XXXX cardiac XXXX in stable position."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The heart is of normal size."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Interval decrease and left basilar opacity."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Increase in XXXX opacities in the right lung base."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pneumothorax or large effusion."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: The pulmonary vascularity is unremarkable."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: Calcification of the thoracic aorta."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: Cardiac XXXX in stable position."
+    },
+    {
+      "id": "s10",
+      "text": "IMPRESSION: 2."
+    },
+    {
+      "id": "s11",
+      "text": "IMPRESSION: Increase in right and decrease in left basilar atelectasis."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Left-sided dual-XXXX cardiac XXXX in stable position."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The heart is of normal size."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Interval decrease and left basilar opacity."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Increase in XXXX opacities in the right lung base."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pneumothorax or large effusion."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: The pulmonary vascularity is unremarkable."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: Calcification of the thoracic aorta."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: Cardiac XXXX in stable position."
+    },
+    {
+      "id": "s10",
+      "text": "IMPRESSION: 2."
+    },
+    {
+      "id": "s11",
+      "text": "IMPRESSION: No significant basilar atelectasis."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s11"
+      ],
+      "candidate_ids": [
+        "s11"
+      ],
+      "category": "omission",
+      "description": "The impression regarding basilar atelectasis was changed from an increase in right and decrease in left basilar atelectasis to no significant basilar atelectasis, which contradicts the findings of interval decrease and left basilar opacity and increase in XXXX opacities in the right lung base."
+    }
+  ],
+  "declared_changes": [
+    {
+      "source_ids": [
+        "s11"
+      ],
+      "candidate_ids": [
+        "s11"
+      ],
+      "category": "omission",
+      "description": "The impression regarding basilar atelectasis was changed from an increase in right and decrease in left basilar atelectasis to no significant basilar atelectasis, which contradicts the findings of interval decrease and left basilar opacity and increase in XXXX opacities in the right lung base."
+    }
+  ],
+  "provenance_validation_error": null,
+  "rationale": "The original report states an 'increase in right and decrease in left basilar atelectasis' in the impression, which is supported by the findings of 'Interval decrease and left basilar opacity' and 'Increase in XXXX opacities in the right lung base'. The change to 'No significant basilar atelectasis' in the impression creates an omission error by negating a finding that is present and described in the findings section, and visible in the image (basilar opacities).",
+  "eligible": true,
+  "memory_sha256": "bfd302f95ec0e3544439172bb4de0cebb54cc9c3ac07715c850319eea4bc8860",
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s3",
+        "error_type": "Cannot Assess",
+        "evidence": "The provided image is a lateral chest X-ray. It is not possible to assess interval changes in opacities or compare left and right lung bases from a single lateral view.",
+        "tool_call_ids": [
+          "vision_2"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      },
+      {
+        "sentence_id": "s4",
+        "error_type": "Cannot Assess",
+        "evidence": "The provided image is a lateral chest X-ray. It is not possible to assess interval changes in opacities or compare left and right lung bases from a single lateral view.",
+        "tool_call_ids": [
+          "vision_2"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      }
+    ],
+    "limitations": "The lateral projection of the chest X-ray makes it difficult to precisely evaluate the exact course and tip positions of the cardiac device leads within the heart chambers. Overlapping structures obscure the distal ends of the leads, preventing a definitive assessment of their stability. The question asks for interval changes and comparison between left and right lung bases, which cannot be determined from a single lateral chest X-ray. A prior study would be needed to assess interval changes, and a frontal view (e.g., PA or AP) would be necessary to adequately compare left and right lung bases."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "error",
+        "findings": [
+          {
+            "sentence_id": "s3",
+            "error_type": "Cannot Assess",
+            "evidence": "The provided image is a lateral chest X-ray. It is not possible to assess interval changes in opacities or compare left and right lung bases from a single lateral view.",
+            "tool_call_ids": [
+              "vision_2"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          },
+          {
+            "sentence_id": "s4",
+            "error_type": "Cannot Assess",
+            "evidence": "The provided image is a lateral chest X-ray. It is not possible to assess interval changes in opacities or compare left and right lung bases from a single lateral view.",
+            "tool_call_ids": [
+              "vision_2"
+            ],
+            "evidence_type": "image",
+            "report_sentence_ids": []
+          }
+        ],
+        "limitations": "The lateral projection of the chest X-ray makes it difficult to precisely evaluate the exact course and tip positions of the cardiac device leads within the heart chambers. Overlapping structures obscure the distal ends of the leads, preventing a definitive assessment of their stability. The question asks for interval changes and comparison between left and right lung bases, which cannot be determined from a single lateral chest X-ray. A prior study would be needed to assess interval changes, and a frontal view (e.g., PA or AP) would be necessary to adequately compare left and right lung bases."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there a left-sided dual cardiac device visible, and if so, is it in a stable position?",
+      "observation": "A left-sided dual cardiac device is visible. The device generator is located in the left upper chest. Two leads are seen extending inferiorly from the generator, overlying the cardiac silhouette. The distal ends of the leads are not clearly visualized to definitively assess their stable position within the cardiac chambers.",
+      "limitations": "The lateral projection of the chest X-ray makes it difficult to precisely evaluate the exact course and tip positions of the cardiac device leads within the heart chambers. Overlapping structures obscure the distal ends of the leads, preventing a definitive assessment of their stability."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there an interval decrease in a left basilar opacity, and is there an increase in opacities in the right lung base?",
+      "observation": "The provided image is a lateral chest X-ray. It is not possible to assess interval changes in opacities or compare left and right lung bases from a single lateral view. The image shows multiple metallic clips or markers on the chest wall, and a tube or line is visible within the chest.",
+      "limitations": "The question asks for interval changes and comparison between left and right lung bases, which cannot be determined from a single lateral chest X-ray. A prior study would be needed to assess interval changes, and a frontal view (e.g., PA or AP) would be necessary to adequately compare left and right lung bases."
+    }
+  ],
+  "reviews": [
+    {
+      "status": "ok",
+      "model": "google/gemma-3-27b-it",
+      "review": {
+        "attack_validity": "valid",
+        "attack_explanation": "The attack claims a contradiction between the findings and impression regarding basilar atelectasis. Red argues that the change from 'increase in right and decrease in left basilar atelectasis' to 'No significant basilar atelectasis' contradicts the findings of 'Interval decrease and left basilar opacity' and 'Increase in XXXX opacities in the right lung base'.",
+        "blue_assessment": "incorrect",
+        "reviewed_flag_ids": [
+          "s3",
+          "s4"
+        ],
+        "blue_explanation": "Blue claims it 'Cannot Assess' the changes in basilar opacities due to the image being a lateral chest X-ray, which doesn't allow for comparison of left and right lung bases or assessment of interval changes. However, the original report *does* describe changes in basilar atelectasis, and the candidate report *removes* that description. The image, while a lateral view, does not negate the fact that a change was made to the report. Blue's assessment is incorrect because it focuses on the difficulty of *quantifying* the change from the image, rather than acknowledging that a change *was* made, and that the change contradicts the findings.",
+        "failure_modes": [
+          "Ignoring the core issue of a change in the report",
+          "Focusing on the difficulty of image interpretation instead of the contradiction itself"
+        ],
+        "confidence": "high",
+        "limitations": "The lateral view does limit the ability to assess the degree of change in basilar opacities. However, the core issue is the change in the report itself, which Blue fails to address."
+      },
+      "attempts": [
+        {
+          "review": {
+            "attack_validity": "valid",
+            "attack_explanation": "The attack claims a contradiction between the findings and impression regarding basilar atelectasis. Red argues that the change from 'increase in right and decrease in left basilar atelectasis' to 'No significant basilar atelectasis' contradicts the findings of 'Interval decrease and left basilar opacity' and 'Increase in XXXX opacities in the right lung base'.",
+            "blue_assessment": "incorrect",
+            "reviewed_flag_ids": [
+              "s3",
+              "s4"
+            ],
+            "blue_explanation": "Blue claims it 'Cannot Assess' the changes in basilar opacities due to the image being a lateral chest X-ray, which doesn't allow for comparison of left and right lung bases or assessment of interval changes. However, the original report *does* describe changes in basilar atelectasis, and the candidate report *removes* that description. The image, while a lateral view, does not negate the fact that a change was made to the report. Blue's assessment is incorrect because it focuses on the difficulty of *quantifying* the change from the image, rather than acknowledging that a change *was* made, and that the change contradicts the findings.",
+            "failure_modes": [
+              "Ignoring the core issue of a change in the report",
+              "Focusing on the difficulty of image interpretation instead of the contradiction itself"
+            ],
+            "confidence": "high",
+            "limitations": "The lateral view does limit the ability to assess the degree of change in basilar opacities. However, the core issue is the change in the report itself, which Blue fails to address."
+          },
+          "validation_error": null
+        }
+      ]
+    },
+    {
+      "status": "ok",
+      "model": "google/gemini-2.5-flash",
+      "review": {
+        "attack_validity": "invalid",
+        "attack_explanation": "The attack claims that changing the impression to \"No significant basilar atelectasis\" contradicts the findings of \"Interval decrease and left basilar opacity\" and \"Increase in XXXX opacities in the right lung base.\" However, the provided lateral chest X-ray image does not allow for the assessment of interval changes or the comparison of left and right lung bases. Therefore, it cannot be definitively determined from the image whether there is an increase in right and decrease in left basilar atelectasis, or no significant basilar atelectasis. Without a prior study for comparison and a frontal view, the image evidence is insufficient to support the Red team's claim of a contradiction.",
+        "blue_assessment": "correct",
+        "reviewed_flag_ids": [
+          "s3",
+          "s4"
+        ],
+        "blue_explanation": "Blue correctly identified that the provided lateral chest X-ray is insufficient to assess interval changes in opacities or compare left and right lung bases. This limitation prevents a definitive assessment of the findings related to basilar opacities/atelectasis.",
+        "failure_modes": [],
+        "confidence": "high",
+        "limitations": "The primary limitation is the absence of a prior study for comparison to assess interval changes and the lack of a frontal chest X-ray view to adequately compare left and right lung bases. This makes it impossible to definitively confirm or refute the presence or change in basilar atelectasis from the single lateral image provided."
+      },
+      "attempts": [
+        {
+          "review": {
+            "attack_validity": "invalid",
+            "attack_explanation": "The attack claims that changing the impression to \"No significant basilar atelectasis\" contradicts the findings of \"Interval decrease and left basilar opacity\" and \"Increase in XXXX opacities in the right lung base.\" However, the provided lateral chest X-ray image does not allow for the assessment of interval changes or the comparison of left and right lung bases. Therefore, it cannot be definitively determined from the image whether there is an increase in right and decrease in left basilar atelectasis, or no significant basilar atelectasis. Without a prior study for comparison and a frontal view, the image evidence is insufficient to support the Red team's claim of a contradiction.",
+            "blue_assessment": "correct",
+            "reviewed_flag_ids": [
+              "s3",
+              "s4"
+            ],
+            "blue_explanation": "Blue correctly identified that the provided lateral chest X-ray is insufficient to assess interval changes in opacities or compare left and right lung bases. This limitation prevents a definitive assessment of the findings related to basilar opacities/atelectasis.",
+            "failure_modes": [],
+            "confidence": "high",
+            "limitations": "The primary limitation is the absence of a prior study for comparison to assess interval changes and the lack of a frontal chest X-ray view to adequately compare left and right lung bases. This makes it impossible to definitively confirm or refute the presence or change in basilar atelectasis from the single lateral image provided."
+          },
+          "validation_error": null
+        }
+      ]
+    }
+  ],
+  "control": {
+    "blue": {
+      "decision": "uncertain",
+      "findings": [],
+      "limitations": "The provided image is a lateral view of the left side of the chest, which limits the assessment of the right lung base and the precise stability of the cardiac device leads. No prior imaging was provided for comparison."
+    },
+    "attempts": [
+      {
+        "verdict": {
+          "decision": "uncertain",
+          "findings": [],
+          "limitations": "The provided image is a lateral view of the left side of the chest, which limits the assessment of the right lung base and the precise stability of the cardiac device leads. No prior imaging was provided for comparison."
+        },
+        "accepted": true
+      }
+    ],
+    "status": "ok",
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Is there a left-sided dual cardiac device visible, and if so, is it in a stable position?",
+        "observation": "A left-sided dual cardiac device is visible. The device generator is located in the left upper chest. Two leads are seen extending inferiorly from the generator, overlying the cardiac silhouette. The distal ends of the leads are not clearly visualized to definitively assess their stable position within the cardiac chambers.",
+        "limitations": "The lateral projection of the chest X-ray makes it difficult to precisely evaluate the exact course and tip positions of the cardiac device leads within the heart chambers. Overlapping structures obscure the distal ends of the leads, preventing a definitive assessment of their stability."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "Are there opacities in the right lung base, and if so, has there been an increase compared to prior imaging?",
+        "observation": "The provided lateral chest X-ray image shows the left side of the chest. Therefore, the right lung base is not clearly visualized for evaluation of opacities. There are several metallic clips and wires visible on the chest wall and within the chest cavity.",
+        "limitations": "The question asks about the right lung base, but the provided image is a lateral view of the left side of the chest, making it impossible to assess the right lung base. Additionally, no prior imaging is provided for comparison to determine if there has been an increase in opacities."
+      }
+    ],
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Left-sided dual-XXXX cardiac XXXX in stable position."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The heart is of normal size."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Interval decrease and left basilar opacity."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Increase in XXXX opacities in the right lung base."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No pneumothorax or large effusion."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: The pulmonary vascularity is unremarkable."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: Calcification of the thoracic aorta."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s9",
+        "text": "IMPRESSION: Cardiac XXXX in stable position."
+      },
+      {
+        "id": "s10",
+        "text": "IMPRESSION: 2."
+      },
+      {
+        "id": "s11",
+        "text": "IMPRESSION: Increase in right and decrease in left basilar atelectasis."
+      }
+    ],
+    "memory_sha256": "bfd302f95ec0e3544439172bb4de0cebb54cc9c3ac07715c850319eea4bc8860"
+  },
+  "index": 17,
+  "indication": "OTHER;",
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1284_IM-0188-2001.dcm.png"
+  ],
+  "initial_probe": {
+    "blue": {
+      "decision": "uncertain",
+      "findings": [],
+      "limitations": "The stability of the cardiac device leads could not be definitively assessed due to limitations in visualization on the provided imaging. The assessment of interval decrease in left basilar opacity could not be made without prior imaging."
+    },
+    "attempts": [
+      {
+        "verdict": {
+          "decision": "uncertain",
+          "findings": [],
+          "limitations": "The stability of the cardiac device leads could not be definitively assessed due to limitations in visualization on the provided imaging. The assessment of interval decrease in left basilar opacity could not be made without prior imaging."
+        },
+        "accepted": true
+      }
+    ],
+    "status": "ok",
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Is there a left-sided dual cardiac device visible, and if so, is it in a stable position?",
+        "observation": "A left-sided dual cardiac device is visible. The device generator is located in the left upper chest. Two leads are seen extending inferiorly from the generator, overlying the cardiac silhouette. The distal ends of the leads are not clearly visualized to definitively assess their stable position within the cardiac chambers.",
+        "limitations": "The lateral projection of the chest X-ray makes it difficult to precisely evaluate the exact course and tip positions of the cardiac device leads within the heart chambers. Overlapping structures obscure the distal ends of the leads, preventing a definitive assessment of their stability."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "Is there an opacity in the left lung base, and if so, has it decreased compared to prior imaging?",
+        "observation": "There is an opacity in the left lung base. However, without prior imaging, it is not possible to determine if it has decreased.",
+        "limitations": "The question asks for a comparison to prior imaging, but no prior imaging is provided. Therefore, a complete answer to the question cannot be given."
+      }
+    ],
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Left-sided dual-XXXX cardiac XXXX in stable position."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The heart is of normal size."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Interval decrease and left basilar opacity."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Increase in XXXX opacities in the right lung base."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No pneumothorax or large effusion."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: The pulmonary vascularity is unremarkable."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: Calcification of the thoracic aorta."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s9",
+        "text": "IMPRESSION: Cardiac XXXX in stable position."
+      },
+      {
+        "id": "s10",
+        "text": "IMPRESSION: 2."
+      },
+      {
+        "id": "s11",
+        "text": "IMPRESSION: No significant basilar atelectasis."
+      }
+    ],
+    "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+  },
+  "initial_control": {
+    "blue": {
+      "decision": "error",
+      "findings": [
+        {
+          "sentence_id": "s4",
+          "error_type": "contradiction",
+          "evidence": "The observation states that there are no opacities visible in the right lung base on the lateral chest radiograph, and the right lung base appears clear. This directly contradicts the candidate sentence which states an \"Increase in XXXX opacities in the right lung base.\"",
+          "tool_call_ids": [
+            "vision_2"
+          ],
+          "evidence_type": "image",
+          "report_sentence_ids": []
+        },
+        {
+          "sentence_id": "s11",
+          "error_type": "contradiction",
+          "evidence": "The observation states that there are no opacities visible in the right lung base on the lateral chest radiograph, and the right lung base appears clear. This contradicts the impression sentence which states an \"Increase in right... basilar atelectasis.\"",
+          "tool_call_ids": [
+            "vision_2"
+          ],
+          "evidence_type": "image",
+          "report_sentence_ids": []
+        }
+      ],
+      "limitations": "The size and density of the left basilar opacity cannot be compared to prior imaging because no prior imaging is available for review. Only a single lateral chest radiograph is provided. The single lateral chest radiograph provides limited views of the right lung base, and overlying structures and the two-dimensional nature of the image can obscure pathology. Without prior imaging, no comparison can be made regarding size and density changes."
+    },
+    "attempts": [
+      {
+        "verdict": {
+          "decision": "error",
+          "findings": [
+            {
+              "sentence_id": "s4",
+              "error_type": "contradiction",
+              "evidence": "The observation states that there are no opacities visible in the right lung base on the lateral chest radiograph, and the right lung base appears clear. This directly contradicts the candidate sentence which states an \"Increase in XXXX opacities in the right lung base.\"",
+              "tool_call_ids": [
+                "vision_2"
+              ],
+              "evidence_type": "image",
+              "report_sentence_ids": []
+            },
+            {
+              "sentence_id": "s11",
+              "error_type": "contradiction",
+              "evidence": "The observation states that there are no opacities visible in the right lung base on the lateral chest radiograph, and the right lung base appears clear. This contradicts the impression sentence which states an \"Increase in right... basilar atelectasis.\"",
+              "tool_call_ids": [
+                "vision_2"
+              ],
+              "evidence_type": "image",
+              "report_sentence_ids": []
+            }
+          ],
+          "limitations": "The size and density of the left basilar opacity cannot be compared to prior imaging because no prior imaging is available for review. Only a single lateral chest radiograph is provided. The single lateral chest radiograph provides limited views of the right lung base, and overlying structures and the two-dimensional nature of the image can obscure pathology. Without prior imaging, no comparison can be made regarding size and density changes."
+        },
+        "accepted": true
+      }
+    ],
+    "status": "ok",
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Is there a left basilar opacity, and if so, what is its size and density compared to prior imaging?",
+        "observation": "There is a left basilar opacity visible on the lateral chest radiograph. Its size and density cannot be compared to prior imaging as no prior imaging is provided.",
+        "limitations": "The size and density of the left basilar opacity cannot be compared to prior imaging because no prior imaging is available for review. Only a single lateral chest radiograph is provided."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "Are there opacities in the right lung base, and if so, what is their size and density compared to prior imaging?",
+        "observation": "There are no opacities visible in the right lung base on this lateral chest radiograph. The right lung base appears clear.",
+        "limitations": "This is a single lateral chest radiograph, which provides limited views of the right lung base. Overlying structures and the two-dimensional nature of the image can obscure pathology. Without prior imaging, no comparison can be made regarding size and density changes."
+      }
+    ],
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Left-sided dual-XXXX cardiac XXXX in stable position."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The heart is of normal size."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Interval decrease and left basilar opacity."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Increase in XXXX opacities in the right lung base."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No pneumothorax or large effusion."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: The pulmonary vascularity is unremarkable."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: Calcification of the thoracic aorta."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s9",
+        "text": "IMPRESSION: Cardiac XXXX in stable position."
+      },
+      {
+        "id": "s10",
+        "text": "IMPRESSION: 2."
+      },
+      {
+        "id": "s11",
+        "text": "IMPRESSION: Increase in right and decrease in left basilar atelectasis."
+      }
+    ],
+    "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+  }
+}

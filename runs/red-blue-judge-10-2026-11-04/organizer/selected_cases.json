@@ -1,0 +1,802 @@
+[
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart is normal in size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The mediastinum is unremarkable."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: XXXX XXXX opacities in left mid lung."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: The lungs are otherwise grossly clear."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute disease."
+      }
+    ],
+    "case_id": "4a5e840b360d8c27c6fa276a",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/37_IM-1847-0001-0002.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/37_IM-1847-0001-0001.dcm.png"
+    ],
+    "image_sha256": [
+      "f1db51a09cd1789560c038af33cae4b36c32f86ed9f1cc18990283b4033968b3",
+      "a0f4f1869f5241c6f5d5db5082dad3e75ef2ad23f8bebffaaa32d55d15123fd1"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s3"
+      ],
+      "edits": [
+        {
+          "replacement": "FINDINGS: XXXX XXXX opacities in left mid lung.",
+          "sentence_id": "s3"
+        }
+      ],
+      "error_type": "laterality",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart is normal in size."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The mediastinum is unremarkable."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: XXXX XXXX opacities in right mid lung."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: The lungs are otherwise grossly clear."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute disease."
+      }
+    ],
+    "split": "dev",
+    "study_id": "37"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: There is a large airspace opacity in the left lower and middle lobes."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There is no pneumothorax."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Heart size is normal."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Soft tissue and bony structures unremarkable."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Multilobar airspace consolidation."
+      }
+    ],
+    "case_id": "489cfba6bf4e2d0460967e2c",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/394_IM-2010-1001.dcm.png"
+    ],
+    "image_sha256": [
+      "a085b3a128bc603811c25106621b402857d7a1d3b8f4f1e228775177742a39b3"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s1"
+      ],
+      "edits": [
+        {
+          "replacement": "FINDINGS: There is a large airspace opacity in the left lower and middle lobes.",
+          "sentence_id": "s1"
+        }
+      ],
+      "error_type": "laterality",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: There is a large airspace opacity in the right lower and middle lobes."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There is no pneumothorax."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Heart size is normal."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Soft tissue and bony structures unremarkable."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Multilobar airspace consolidation."
+      }
+    ],
+    "split": "dev",
+    "study_id": "394"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart size and mediastinal contours appear within normal limits."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There are low lung volumes with right basilar subsegmental atelectasis."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No focal airspace consolidation, effusions or pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No acute bony abnormalities."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute cardiopulmonary findings."
+      }
+    ],
+    "case_id": "2d70663923775a7b4f9fff0f",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2402_IM-0951-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2402_IM-0951-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "c37bffdf95e957d51f2d86be250bf46057dbee86e334af8ad394f8b4a700f487",
+      "5086968e37ce5e556ea6945b04fc02f28baf93715661b017d2a0cc70af198071"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s2"
+      ],
+      "edits": [
+        {
+          "replacement": "FINDINGS: There are low lung volumes with right basilar subsegmental atelectasis.",
+          "sentence_id": "s2"
+        }
+      ],
+      "error_type": "laterality",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart size and mediastinal contours appear within normal limits."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There are low lung volumes with left basilar subsegmental atelectasis."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No focal airspace consolidation, effusions or pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No acute bony abnormalities."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute cardiopulmonary findings."
+      }
+    ],
+    "split": "dev",
+    "study_id": "2402"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "IMPRESSION: Streaky opacities in the left lower lobe most suggestive of atelectasis, differential diagnosis includes atypical infection."
+      },
+      {
+        "id": "s2",
+        "text": "IMPRESSION: No definite pleural effusion seen."
+      },
+      {
+        "id": "s3",
+        "text": "IMPRESSION: Heart size within normal limits, no typical findings of pulmonary edema."
+      }
+    ],
+    "case_id": "6e2e8fedef61b42f816bcc94",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3140_IM-1477-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3140_IM-1477-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "475714d0da668587f15fda0cf044b0e1a480e6b9665fae800d5496df35b86d25",
+      "a59d68301579dff1fea378009529f5db2cdb6ea8485abc3bb3c408a1a9962f3c"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s1"
+      ],
+      "edits": [
+        {
+          "replacement": "IMPRESSION: Streaky opacities in the left lower lobe most suggestive of atelectasis, differential diagnosis includes atypical infection.",
+          "sentence_id": "s1"
+        }
+      ],
+      "error_type": "laterality",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "IMPRESSION: Streaky opacities in the right lower lobe most suggestive of atelectasis, differential diagnosis includes atypical infection."
+      },
+      {
+        "id": "s2",
+        "text": "IMPRESSION: No definite pleural effusion seen."
+      },
+      {
+        "id": "s3",
+        "text": "IMPRESSION: Heart size within normal limits, no typical findings of pulmonary edema."
+      }
+    ],
+    "split": "dev",
+    "study_id": "3140"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The lungs are clear."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size is normal."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: Clear lungs."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "case_id": "03d8477aa108a795f5693ff2",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1656_IM-0431-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1656_IM-0431-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "6327501e727f5b971f0e6e242f2287f08880aac10b1ef2d7ac746cf58f440ee4",
+      "e7fed1205b7cc17473a2733e7377a0fb827410080280a84420c899488de86752"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s3"
+      ],
+      "edits": [
+        {
+          "replacement": "FINDINGS: pneumothorax.",
+          "sentence_id": "s3"
+        }
+      ],
+      "error_type": "presence_absence",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The lungs are clear."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size is normal."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: Clear lungs."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "split": "dev",
+    "study_id": "1656"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Heart size and pulmonary vascularity normal."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There is a small right pleural effusion."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: There is infrahilar interstitial prominence which may represent bronchovascular crowding lung."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Small left pleural effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: pneumothorax."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Small bilateral pleural effusions and right infrahilar infiltrate versus bronchovascular crowding."
+      }
+    ],
+    "case_id": "fcdf03521a12953fe35f4d21",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1868_IM-0561-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1868_IM-0561-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "f2ec6bfea1690cd96c37f1fee94356cbcb04bc0a33c359c83b67a692954c803b",
+      "fb740138ffeb627a12ab53924559567a68f25abcc08b3415525dc0bbe50c7723"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s5"
+      ],
+      "edits": [
+        {
+          "replacement": "FINDINGS: pneumothorax.",
+          "sentence_id": "s5"
+        }
+      ],
+      "error_type": "presence_absence",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Heart size and pulmonary vascularity normal."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: There is a small right pleural effusion."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: There is infrahilar interstitial prominence which may represent bronchovascular crowding lung."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Small left pleural effusion."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Small bilateral pleural effusions and right infrahilar infiltrate versus bronchovascular crowding."
+      }
+    ],
+    "split": "dev",
+    "study_id": "1868"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Patient is rotated."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Mild cardiomegaly."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Low lung volumes with elevated hemidiaphragms, greater on the right."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: This is identified on a thoracic XXXX study from XXXX as well."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: pneumothorax."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: No large pleural effusion."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: No focal infiltrate."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: Cardiomegaly with elevated right hemidiaphragms and no acute findings."
+      }
+    ],
+    "case_id": "f5f191087ea498478cee5170",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2398_IM-0947-12012.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2398_IM-0947-4004.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2398_IM-0947-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "0855bfbdec930e30f549f2652c6fa0a771b8eb4b23085f09063b422d9cb321c0",
+      "1dc41d895edea2f470120f95e19e28a96b038071f4afc38502b6b5ddc371e04c",
+      "cd0291d8093f9a02d32194ee52e1357cae14eb71f47c1c3ba775de60de8340e0"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s5"
+      ],
+      "edits": [
+        {
+          "replacement": "FINDINGS: pneumothorax.",
+          "sentence_id": "s5"
+        }
+      ],
+      "error_type": "presence_absence",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Patient is rotated."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Mild cardiomegaly."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Low lung volumes with elevated hemidiaphragms, greater on the right."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: This is identified on a thoracic XXXX study from XXXX as well."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No pneumothorax."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: No large pleural effusion."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: No focal infiltrate."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: Cardiomegaly with elevated right hemidiaphragms and no acute findings."
+      }
+    ],
+    "split": "dev",
+    "study_id": "2398"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "IMPRESSION: Severe cardiomegaly."
+      },
+      {
+        "id": "s2",
+        "text": "IMPRESSION: No overt edema."
+      },
+      {
+        "id": "s3",
+        "text": "IMPRESSION: Lateral image is degraded by motion but there suggestion of minimal bibasilar airspace disease/atelectasis."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: No appreciable pleural effusion or pneumothorax."
+      }
+    ],
+    "case_id": "ae263ff431c13dc05a879e9c",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2557_IM-1061-4004.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2557_IM-1061-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "743fce0a6e69021262db12f8baab4b5432d60fa99d8b508935e5fc78b51a70d5",
+      "b3a68b1cb94500c861b23753ffbaf27c692b7844155f191416b0e6039c57dca5"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s1"
+      ],
+      "edits": [
+        {
+          "replacement": "IMPRESSION: Severe cardiomegaly.",
+          "sentence_id": "s1"
+        }
+      ],
+      "error_type": "severity",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "IMPRESSION: Mild cardiomegaly."
+      },
+      {
+        "id": "s2",
+        "text": "IMPRESSION: No overt edema."
+      },
+      {
+        "id": "s3",
+        "text": "IMPRESSION: Lateral image is degraded by motion but there suggestion of minimal bibasilar airspace disease/atelectasis."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: No appreciable pleural effusion or pneumothorax."
+      }
+    ],
+    "split": "dev",
+    "study_id": "2557"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Heart size within normal limits."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Right paratracheal prominence XXXX represents tortuous XXXX."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: XXXX lung volumes."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Severe streaky bibasilar opacities."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No pleural effusion or pneumothorax."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: No evidence of pulmonary tuberculosis."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: 2."
+      },
+      {
+        "id": "s9",
+        "text": "IMPRESSION: Low lung volumes with minimal streaky basilar airspace disease, XXXX atelectasis."
+      },
+      {
+        "id": "s10",
+        "text": "IMPRESSION: 3."
+      },
+      {
+        "id": "s11",
+        "text": "IMPRESSION: Right paratracheal prominence XXXX represents tortuous XXXX."
+      },
+      {
+        "id": "s12",
+        "text": "IMPRESSION: Comparison with prior imaging studies could confirm this if available."
+      },
+      {
+        "id": "s13",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "case_id": "f3463831da2f93cc0907e7c4",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3244_IM-1536-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3244_IM-1536-2002.dcm.png"
+    ],
+    "image_sha256": [
+      "bd78e5c82a1260444723dda6c676ec4ce2d3dca8413accd1e4b715a3cf59ca05",
+      "12a99741d8fab365c7e2b3c291ca33c838556b37692429cdf2cfab7b46c07391"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s4"
+      ],
+      "edits": [
+        {
+          "replacement": "FINDINGS: Severe streaky bibasilar opacities.",
+          "sentence_id": "s4"
+        }
+      ],
+      "error_type": "severity",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Heart size within normal limits."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Right paratracheal prominence XXXX represents tortuous XXXX."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: XXXX lung volumes."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Mild streaky bibasilar opacities."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No pleural effusion or pneumothorax."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: No evidence of pulmonary tuberculosis."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: 2."
+      },
+      {
+        "id": "s9",
+        "text": "IMPRESSION: Low lung volumes with minimal streaky basilar airspace disease, XXXX atelectasis."
+      },
+      {
+        "id": "s10",
+        "text": "IMPRESSION: 3."
+      },
+      {
+        "id": "s11",
+        "text": "IMPRESSION: Right paratracheal prominence XXXX represents tortuous XXXX."
+      },
+      {
+        "id": "s12",
+        "text": "IMPRESSION: Comparison with prior imaging studies could confirm this if available."
+      },
+      {
+        "id": "s13",
+        "text": "IMPRESSION: ."
+      }
+    ],
+    "split": "dev",
+    "study_id": "3244"
+  },
+  {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Severe cardiomegaly."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Changes of chronic lung disease."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Accentuated thoracic kyphosis."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Chronic lung disease with no acute cardiopulmonary abnormality."
+      }
+    ],
+    "case_id": "d93243de935b2a52f8caa294",
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3768_IM-1887-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3768_IM-1887-2001.dcm.png"
+    ],
+    "image_sha256": [
+      "4b3d6284c5c23a6a4ce143fe6db9284129e6ce8855c5cee69cfb9bc9fdb64382",
+      "ae43322a07a3e8b4f0fb1113bad65bd463a2d6a45352132e233a869f98523794"
+    ],
+    "private_label": {
+      "attacker": "lexical_seed_v1",
+      "changed_sentence_ids": [
+        "s1"
+      ],
+      "edits": [
+        {
+          "replacement": "FINDINGS: Severe cardiomegaly.",
+          "sentence_id": "s1"
+        }
+      ],
+      "error_type": "severity",
+      "has_error": true,
+      "image_adjudication": "pending"
+    },
+    "source": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Mild cardiomegaly."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Changes of chronic lung disease."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Accentuated thoracic kyphosis."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Chronic lung disease with no acute cardiopulmonary abnormality."
+      }
+    ],
+    "split": "dev",
+    "study_id": "3768"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "status": "ok",
+  "model": "google/gemma-3-27b-it",
+  "review": {
+    "attack_validity": "valid",
+    "attack_explanation": "The candidate report introduces 'focal air space disease' in the impression (s7), contradicting the finding in s2 that the lungs are clear. This is a fabrication error.",
+    "blue_assessment": "correct",
+    "reviewed_flag_ids": [
+      "s1",
+      "s7"
+    ],
+    "blue_explanation": "Blue correctly identifies the contradiction between s2 and s7. The image shows clear lungs, supporting the original finding and invalidating the candidate's impression.",
+    "failure_modes": [],
+    "confidence": "high",
+    "limitations": "The assessment relies on visual inspection of the provided images. Subtle findings might be missed. The images are limited to PA and lateral views."
+  },
+  "attempts": [
+    {
+      "review": {
+        "attack_validity": "valid",
+        "attack_explanation": "The candidate report introduces 'focal air space disease' in the impression (s7), contradicting the finding in s2 that the lungs are clear. This is a fabrication error.",
+        "blue_assessment": "correct",
+        "reviewed_flag_ids": [
+          "s1",
+          "s7"
+        ],
+        "blue_explanation": "Blue correctly identifies the contradiction between s2 and s7. The image shows clear lungs, supporting the original finding and invalidating the candidate's impression.",
+        "failure_modes": [],
+        "confidence": "high",
+        "limitations": "The assessment relies on visual inspection of the provided images. Subtle findings might be missed. The images are limited to PA and lateral views."
+      },
+      "validation_error": null
+    }
+  ],
+  "agent_feedback": "Matching accepted reviews can inform role-private demo memories after this study. These demo updates have no measured performance promotion gate.",
+  "requested_model": "google/gemma-3-27b-it",
+  "fallback_used": false,
+  "fallback_reason": null
+}

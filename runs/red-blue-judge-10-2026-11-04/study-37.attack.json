@@ -1,0 +1,150 @@
+{
+  "study_id": "37",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart is normal in size."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The mediastinum is unremarkable."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: XXXX XXXX opacities in right mid lung."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: The lungs are otherwise grossly clear."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No acute disease."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart is normal in size."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The mediastinum is unremarkable."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: XXXX XXXX opacities in left mid lung."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: The lungs are otherwise grossly clear."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No acute disease."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/37_IM-1847-0001-0002.dcm.png",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/37_IM-1847-0001-0001.dcm.png"
+  ],
+  "clinical_context": "HYPOXIA;",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [
+      {
+        "sentence_id": "s3",
+        "replacement": "FINDINGS: XXXX XXXX opacities in left mid lung."
+      }
+    ],
+    "rationale": "Changing the laterality of the opacities from right to left lung, as requested by the error type 'laterality'. The rest of the sentence is preserved.",
+    "requested_error_type": "laterality",
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s3",
+        "error_type": "presence_absence",
+        "evidence": "The frontal chest x-ray shows a possible opacity in the left mid-lung field, indicated by the white arrow. The lateral view does not clearly demonstrate this opacity, but there is some increased density in the left mid-lung region.",
+        "tool_call_ids": [
+          "vision_1"
+        ]
+      }
+    ],
+    "limitations": "The assessment of the opacity in the left mid-lung is limited by the 2D nature of the x-ray images and the potential for overlap of structures. A CT scan would be more helpful to further evaluate this finding."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there any opacity visible in the left mid lung?",
+      "observation": "The frontal chest x-ray shows a possible opacity in the left mid-lung field, indicated by the white arrow. The lateral view does not clearly demonstrate this opacity, but there is some increased density in the left mid-lung region. It is difficult to definitively characterize the nature of this density (e.g., consolidation, mass, effusion) based on these images alone.",
+      "limitations": "The assessment is limited by the 2D nature of the x-ray images. Overlap of structures can make it difficult to accurately assess the extent and characteristics of any opacity. A CT scan would be more helpful to further evaluate this finding. Without prior imaging for comparison, it is difficult to determine if this is a new finding."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Can the size of the heart be assessed, and if so, is it normal?",
+      "observation": "The provided images are chest radiographs (AP and lateral views). Assessing cardiac size on a standard chest radiograph can be challenging and is not a precise measurement. However, based on visual assessment, the cardiac silhouette appears within normal limits for size in both the AP and lateral projections. The cardiothoracic ratio (the ratio of the heart's width to the chest's width) appears to be less than 0.5 on the AP view, which is generally considered normal. The lateral view does not show obvious cardiomegaly. There is an arrow pointing to a region on the AP view, but it is unclear what the arrow is indicating in relation to cardiac size.",
+      "limitations": "Cardiac size assessment on chest radiographs is subjective and can be affected by patient positioning, inspiration, and other factors. A more accurate assessment would require echocardiography or other cardiac imaging modalities. I cannot determine if this is a baseline assessment or if there is a change in cardiac size compared to previous images. The clinical context of the patient is unknown, which is important for interpreting cardiac size."
+    }
+  ],
+  "score": {
+    "localization_tp": 1,
+    "localization_fp": 0,
+    "localization_fn": 0,
+    "uncertain": false,
+    "injected_edit_detected": true,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

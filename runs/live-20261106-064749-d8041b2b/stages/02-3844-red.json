@@ -1,0 +1,89 @@
+{
+  "study_id": "3844",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Lungs are clear."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: No pleural effusions or pneumothoraces."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: heart size is upper limits of normal."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: Heart size upper limits of normal with clear lungs."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Lungs are clear."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: No pleural effusions or pneumothoraces."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: heart size is upper limits of normal."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: Heart size upper limits of normal with mild pulmonary edema."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s4"
+      ],
+      "candidate_ids": [
+        "s4"
+      ],
+      "category": "fabrication",
+      "description": "The impression was changed to include 'mild pulmonary edema' which is not supported by the findings section or the images."
+    }
+  ],
+  "rationale": "The original report states 'Lungs are clear' in the findings and 'clear lungs' in the impression. The images do not show any signs of pulmonary edema. I introduced a fabrication error by changing the impression to 'mild pulmonary edema', which contradicts the findings and is not supported by the images.",
+  "eligible": true,
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attempts": [
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: Lungs are clear."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: No pleural effusions or pneumothoraces."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: heart size is upper limits of normal."
+        },
+        {
+          "id": "s4",
+          "text": "IMPRESSION: Heart size upper limits of normal with mild pulmonary edema."
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [
+            "s4"
+          ],
+          "candidate_ids": [
+            "s4"
+          ],
+          "category": "fabrication",
+          "description": "The impression was changed to include 'mild pulmonary edema' which is not supported by the findings section or the images."
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

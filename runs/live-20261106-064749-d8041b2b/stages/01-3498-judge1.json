@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "model": "google/gemma-3-27b-it",
+  "error_type": "LMRateLimitError",
+  "attempts": [],
+  "message": "Reviewer unavailable. No assessment was substituted. Inspect the audited failed request."
+}

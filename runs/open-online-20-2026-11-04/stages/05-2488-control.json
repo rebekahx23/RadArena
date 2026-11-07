@@ -1,0 +1,48 @@
+{
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The exact nature of the opacity (e.g., granuloma) and its precise location relative to the hilum cannot be definitively determined from a single frontal chest radiograph. A lateral view or CT scan would be necessary for confirmation. The measurement of the opacity is an approximation based on visual estimation. Metallic artifacts also obscure a small portion of the lung fields."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is a 2 cm calcified granuloma visible in the right midlung?",
+      "observation": "A well-defined, rounded opacity measuring approximately 2 cm in diameter is visible in the right midlung field. This opacity appears dense and calcified.",
+      "limitations": "The exact nature of the opacity (e.g., granuloma) cannot be definitively determined from a single frontal chest radiograph. While it appears calcified, the specific etiology is not discernible. The measurement is an approximation based on visual estimation from the image."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is calcified right hilar lymphadenopathy visible?",
+      "observation": "There is a calcified nodule in the right mid-lung field, which could represent a calcified granuloma or lymph node. However, its exact location relative to the hilum is difficult to definitively determine on this single frontal projection. There are also several circular metallic artifacts visible on the image, which are likely external to the patient.",
+      "limitations": "The primary limitation is the single frontal radiographic projection, which makes it challenging to precisely localize structures in three dimensions. A lateral view or CT scan would be necessary to confirm the exact location of the calcified nodule and definitively assess for hilar lymphadenopathy. The metallic artifacts also obscure a small portion of the lung fields."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: Heart size is normal."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: 2 cm calcified granuloma in the right midlung."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: Calcified right hilar lymph XXXX."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No other nodules or masses."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: It is unchanged XXXX compared to a XXXX for the abdomen CT scan from XXXX."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: The XXXX 40% of the nodule is on the upper portion of the XXXX film."
+    }
+  ],
+  "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+}

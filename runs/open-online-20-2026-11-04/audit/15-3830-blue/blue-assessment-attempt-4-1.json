@@ -1,0 +1,19 @@
+{
+  "verdict": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "a1",
+        "error_type": "contradiction",
+        "evidence": "The frontal chest radiograph shows the thoracic spine to be relatively straight without obvious lateral curvature. The lateral view does not provide sufficient information to assess for scoliosis.",
+        "tool_call_ids": [
+          "vision_1"
+        ],
+        "evidence_type": "image",
+        "report_sentence_ids": []
+      }
+    ],
+    "limitations": "The vision tool notes that the images provided are not optimized for the evaluation of scoliosis, and subtle scoliosis may not be apparent on these limited views. The lateral view does not provide sufficient information to assess for scoliosis."
+  },
+  "accepted": true
+}

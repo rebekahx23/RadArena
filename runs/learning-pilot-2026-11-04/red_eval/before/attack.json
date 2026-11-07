@@ -1,0 +1,68 @@
+{
+  "study_id": "2088",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Compared to prior examination from XXXX, there has been extubation and removal of central line and enteric tube."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Stable cardiomegaly and mild thoracolumbar dextroscoliosis."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Left basilar opacity XXXX represents chronic fibrosis/scar."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No focal consolidation, pneumothorax, or effusion."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No acute osseous abnormality."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Stable cardiomegaly without acute cardiopulmonary abnormality."
+    }
+  ],
+  "error_type": "laterality",
+  "red_rationale": "Changing the laterality of the basilar opacity from left to right to introduce a laterality error, as requested. The image shows opacity in the right lung base.",
+  "edits": [
+    {
+      "sentence_id": "s3",
+      "replacement": "Right basilar opacity XXXX represents chronic fibrosis/scar."
+    }
+  ],
+  "red_memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attack_status": "syntactically_valid_clinically_unreviewed",
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Compared to prior examination from XXXX, there has been extubation and removal of central line and enteric tube."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Stable cardiomegaly and mild thoracolumbar dextroscoliosis."
+    },
+    {
+      "id": "s3",
+      "text": "Right basilar opacity XXXX represents chronic fibrosis/scar."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No focal consolidation, pneumothorax, or effusion."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No acute osseous abnormality."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Stable cardiomegaly without acute cardiopulmonary abnormality."
+    }
+  ],
+  "changed_sentence_ids": [
+    "s3"
+  ]
+}

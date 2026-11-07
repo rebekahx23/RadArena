@@ -1,0 +1,77 @@
+{
+  "study_id": "113",
+  "case_id": "446a04222afdb34666562b6f",
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart and mediastinum are unremarkable."
+    },
+    {
+      "id": "s2",
+      "text": "There are two subcentimeter hyperdense nodular opacities are noted within the left lung."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: These may represent XXXX on end or alternatively, calcified granulomas."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: The lungs are clear without infiltrate."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: There is no effusion or pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No acute cardiopulmonary disease."
+    }
+  ],
+  "clinical_context": "Chest pain.",
+  "error_type": "laterality",
+  "changed_sentence_ids": [
+    "s2"
+  ],
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s4",
+        "error_type": "presence_absence",
+        "evidence": "The provided images show a region of increased density in the left lung, potentially representing a nodule approximately 1-2 cm in diameter. This contradicts the claim that the lungs are clear without infiltrate.",
+        "tool_call_ids": [
+          "vision_1"
+        ]
+      }
+    ],
+    "limitations": "The assessment of nodule size is approximate due to the lack of a scale or reference point in the images. The density could be due to various factors other than a nodule, such as consolidation, scarring, or overlying structures. A definitive diagnosis requires further investigation with additional imaging modalities like a CT scan."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there a hyperdense nodular opacity in the left lung, and if so, what is its approximate size?",
+      "observation": "The provided images are chest X-rays, including anterior-posterior (AP) and lateral views. In the AP view, there appears to be a region of increased density in the left lung, potentially representing a nodule. It is located approximately in the left upper lobe. The lateral view does not clearly delineate this opacity, but it appears to be present. Estimating the size is difficult without scale or comparison to other structures, but it appears to be approximately 1-2 cm in diameter. There is also some opacity in the right lung, but it is less distinct. The images are labeled 'BLM LT' and 'LT', suggesting a left-sided view.",
+      "limitations": "The assessment of nodule size is approximate due to the lack of a scale or reference point in the images. The density could be due to various factors other than a nodule, such as consolidation, scarring, or overlying structures. A definitive diagnosis requires further investigation with additional imaging modalities like a CT scan. The image quality is moderate, and subtle findings may be missed. Without prior imaging for comparison, it is difficult to determine if this is a new finding or a chronic one."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is the heart and mediastinum unremarkable?",
+      "observation": "The provided chest radiographs show the heart size and mediastinal contours. In the PA and lateral views, the cardiac silhouette appears within normal limits, and the mediastinum does not show obvious widening or masses. However, subtle abnormalities can be difficult to assess without comparison to prior imaging. The images are labeled 'BLM LT' and 'LT LAT', suggesting these are views from a single patient. There is no obvious acute cardiopulmonary pathology.",
+      "limitations": "Assessment is limited by the lack of prior imaging for comparison. A definitive determination of 'unremarkable' requires excluding chronic conditions or subtle changes that would be best identified with serial imaging. Image quality is adequate but not optimal for detailed assessment. The question is subjective and relies on interpretation."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 1,
+    "localization_fn": 1,
+    "uncertain": false,
+    "injected_edit_detected": false,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "blue_memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

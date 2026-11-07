@@ -1,0 +1,62 @@
+[
+  {
+    "study_id": "3281",
+    "split": "train",
+    "image_ids": [
+      "3281_IM-1562-1001.dcm.png",
+      "3281_IM-1562-3001.dcm.png",
+      "3281_IM-1562-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3281_IM-1562-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3281_IM-1562-3001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3281_IM-1562-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart size is within normal limits."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Cardiomediastinal contour is normal."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: There is a right upper lobe nodule measuring 8 mm in diameter."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Trachea is midline."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: The lungs otherwise clear."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: XXXX and soft tissues are unremarkable."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s8",
+        "text": "IMPRESSION: Right upper lobe pulmonary nodule, XXXX granuloma."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "42e31a460afad9af81758b7a1fbec67aa2849a4613317ce0895c4c2cbff78e76",
+      "708db453aa935d81d235b71a7952e7b1f02c189d3067b68710d6a30116447ae9",
+      "2774ba48bb591c6d785875a5593f03cdfdf895c044b2ce5e9015e2711d0a9a0d"
+    ]
+  }
+]

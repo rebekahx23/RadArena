@@ -1,0 +1,19 @@
+{
+  "format": "iu-csv",
+  "report_rows": 3851,
+  "projection_rows": 7466,
+  "image_files": 7470,
+  "eligible": 3826,
+  "skipped": {
+    "missing_text_or_image_ids": 25,
+    "missing_image_files": 0
+  },
+  "paired_images_checked": true,
+  "projection_uids_without_report": 0,
+  "source_csv_sha256": {
+    "indiana_reports.csv": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "indiana_projections.csv": "7af9c8a6b4f8ae695c654ecd4208edd193a37892a5607b7cb9e609dc997e6b7a"
+  },
+  "source_download_url": "https://www.kaggle.com/datasets/raddar/chest-xrays-indiana-university",
+  "source_provenance": "Download page supplied by user; upstream IU/OpenI collection"
+}

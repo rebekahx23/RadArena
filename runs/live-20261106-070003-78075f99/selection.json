@@ -1,0 +1,170 @@
+[
+  {
+    "study_id": "3772",
+    "split": "train",
+    "image_ids": [
+      "3772_IM-1891-1001.dcm.png",
+      "3772_IM-1891-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3772_IM-1891-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3772_IM-1891-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart size and pulmonary vascularity appear within normal limits."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The lungs are free of focal airspace disease."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pleural effusion or pneumothorax is seen."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Calcified granuloma are present."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: Degenerative changes are present in the spine."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: No evidence of active disease."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "7ca5f8ad8ac7680d9cb95a3ce317b75d94bbe265775fc9739921ce10fd7fa643",
+      "084bd6ae0352e26092183b8d0b0174e8574f53e42e330467a4aaa277d4871fdf"
+    ]
+  },
+  {
+    "study_id": "1893",
+    "split": "train",
+    "image_ids": [
+      "1893_IM-0580-1001.dcm.png",
+      "1893_IM-0580-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1893_IM-0580-1001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1893_IM-0580-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Mildly low lung volumes."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Lungs are clear without focal air space disease."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Persistent mild elevation right hemidiaphragm."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: No pleural effusions or pneumothoraces."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: Heart and mediastinum of normal size and contour."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: Degenerative changes in the spine."
+      },
+      {
+        "id": "s7",
+        "text": "IMPRESSION: Stable appearance of the chest without focal air space disease."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "670d2f3c867e88dad239f7d2a4334715c1d83e75d33c559053e62c8be1d5adba",
+      "9e9bdc9574671df8a97169b0f67ccea94a3749973fd0fe29d731ffa0ec4404ad"
+    ]
+  },
+  {
+    "study_id": "2915",
+    "split": "train",
+    "image_ids": [
+      "2915_IM-1317-3001.dcm.png",
+      "2915_IM-1317-2001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2915_IM-1317-3001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/2915_IM-1317-2001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: The heart size is normal."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: The mediastinal contour is within normal limits."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: The lungs are free of any focal infiltrates."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: There are no nodules or masses."
+      },
+      {
+        "id": "s5",
+        "text": "FINDINGS: No visible pneumothorax."
+      },
+      {
+        "id": "s6",
+        "text": "FINDINGS: No visible pleural fluid."
+      },
+      {
+        "id": "s7",
+        "text": "FINDINGS: The XXXX are grossly normal."
+      },
+      {
+        "id": "s8",
+        "text": "FINDINGS: There is no visible free intraperitoneal air under the diaphragm."
+      },
+      {
+        "id": "s9",
+        "text": "IMPRESSION: 1."
+      },
+      {
+        "id": "s10",
+        "text": "IMPRESSION: No acute radiographic cardiopulmonary process."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "eb7bd3c0aa78c8cd73a1d4bd780eb52b93957ae3b5b6c22dc6c10b8f58d22964",
+      "0dce09429dfa6bc7868977e2d626c361782f316767075bd2ddfedb13dae39f69"
+    ]
+  }
+]

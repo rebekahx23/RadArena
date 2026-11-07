@@ -1,0 +1,68 @@
+{
+  "study_id": "102",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Normal heart size."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Clear, hyperaerated lungs."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pneumothorax."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pleural effusion."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: XXXX substernal density may be related to a pectus deformity."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+    }
+  ],
+  "error_type": "presence_absence",
+  "red_rationale": "The error type is presence_absence, and the task is to introduce an error. The original sentence states 'No pneumothorax.' I have changed it to 'Pneumothorax is present.' to introduce a false positive finding. This change is unambiguous and consistent with the instructions.",
+  "edits": [
+    {
+      "sentence_id": "s3",
+      "replacement": "Pneumothorax is present."
+    }
+  ],
+  "red_memory_sha256": "2535bf8ae7c3ab60c32f540f9e7e65218dfbdbe590f7392f16904bd34941f41f",
+  "attack_status": "syntactically_valid_clinically_unreviewed",
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Normal heart size."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Clear, hyperaerated lungs."
+    },
+    {
+      "id": "s3",
+      "text": "Pneumothorax is present."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pleural effusion."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: XXXX substernal density may be related to a pectus deformity."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: No acute cardiopulmonary abnormality."
+    }
+  ],
+  "changed_sentence_ids": [
+    "s3"
+  ]
+}

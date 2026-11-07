@@ -1,0 +1,46 @@
+[
+  {
+    "study_id": "3621",
+    "split": "train",
+    "image_ids": [
+      "3621_IM-1792-3001.dcm.png",
+      "3621_IM-1792-5001.dcm.png"
+    ],
+    "image_paths": [
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3621_IM-1792-3001.dcm.png",
+      "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3621_IM-1792-5001.dcm.png"
+    ],
+    "sentences": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Lung volumes remain low."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: No infiltrates."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: Heart and pulmonary XXXX are normal."
+      },
+      {
+        "id": "s4",
+        "text": "IMPRESSION: XXXX change."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Hypoinflation with no visible active cardiopulmonary disease."
+      }
+    ],
+    "image_views": [
+      "Frontal",
+      "Lateral"
+    ],
+    "source_xml": null,
+    "source_csv": "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/indiana_reports.csv",
+    "image_sha256": [
+      "679dbefde113356385a1aeff84192af542073cfb92756009a5342bafb3991ef3",
+      "61eb81397e82ca091a76e2ee4c5e863f0fff2a25c86e78f02199f501ad5ad179"
+    ]
+  }
+]

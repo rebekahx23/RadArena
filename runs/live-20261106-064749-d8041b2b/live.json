@@ -1,0 +1,28 @@
+{
+  "id": "live-20261106-064749-d8041b2b",
+  "status": "complete",
+  "phase": "complete",
+  "message": "Live run complete. All visible results were generated during this run. 1 reviewer stage(s) unavailable; no replacement assessments were invented.",
+  "created_at": "2026-11-06T06:47:49.804462+00:00",
+  "updated_at": "2026-11-06T06:49:07.610484+00:00",
+  "completed_studies": 2,
+  "study_index": 2,
+  "options": {
+    "studies": 2,
+    "budget": 1,
+    "controls": false,
+    "learn": false,
+    "red_rules": [],
+    "blue_rules": [],
+    "launch_id": "dbdeb20f-c2b0-4b96-905d-2b889eed4979"
+  },
+  "pid": 9195,
+  "study_id": "3844",
+  "stage": "02-3844-judge2",
+  "role": "judge",
+  "retry": 0,
+  "action": null,
+  "request_started_at": "2026-11-06T06:49:03.862082+00:00",
+  "unavailable_reviews": 1,
+  "finished_at": "2026-11-06T06:49:07.610477+00:00"
+}

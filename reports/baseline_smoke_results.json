@@ -1,0 +1,150 @@
+{
+  "date_local": "2026-11-03",
+  "status": "completed development smoke test; not held-out evidence",
+  "studies": 3,
+  "candidate_reports": 6,
+  "verifier_episodes": 18,
+  "model": "google/gemma-3-27b-it",
+  "reference": "knowledge/reporting_v1.json",
+  "clinical_review": "pending",
+  "handbook_effect": "not evaluated; selector smoke attempts failed safely",
+  "memory_learning": "not implemented",
+  "variants": {
+    "text_only": {
+      "expected": 6,
+      "attempted": 6,
+      "completed": 6,
+      "runtime_failures": 0,
+      "not_attempted": 0,
+      "completion_rate": 1.0,
+      "strict_decision_accuracy_all_expected": 0.6666666666666666,
+      "detection_precision": 0.6666666666666666,
+      "detection_recall": 0.6666666666666666,
+      "detection_f1_completed": 0.6666666666666666,
+      "localization_f1_completed": 0.3333333333333333,
+      "localization_counts": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 2
+      },
+      "false_positive_rate_completed_controls": 0.3333333333333333,
+      "abstention_rate_completed": 0.0,
+      "decision_coverage_completed": 1.0,
+      "category_localized_recall": {
+        "laterality": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "severity": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "presence_absence": {
+          "hits": 1,
+          "n": 1,
+          "recall": 1.0
+        }
+      },
+      "mean_elapsed_seconds": 3.1296666666666666,
+      "reported_cost_usd_sum": 0.00080696,
+      "calls_missing_cost": 0,
+      "recorded_model_calls": 6
+    },
+    "direct_vlm": {
+      "expected": 6,
+      "attempted": 6,
+      "completed": 6,
+      "runtime_failures": 0,
+      "not_attempted": 0,
+      "completion_rate": 1.0,
+      "strict_decision_accuracy_all_expected": 0.5,
+      "detection_precision": 0.5,
+      "detection_recall": 0.6666666666666666,
+      "detection_f1_completed": 0.5714285714285714,
+      "localization_f1_completed": 0.5714285714285714,
+      "localization_counts": {
+        "tp": 2,
+        "fp": 2,
+        "fn": 1
+      },
+      "false_positive_rate_completed_controls": 0.6666666666666666,
+      "abstention_rate_completed": 0.0,
+      "decision_coverage_completed": 1.0,
+      "category_localized_recall": {
+        "laterality": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "severity": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "presence_absence": {
+          "hits": 1,
+          "n": 1,
+          "recall": 1.0
+        }
+      },
+      "mean_elapsed_seconds": 4.078166666666667,
+      "reported_cost_usd_sum": 0.0010412,
+      "calls_missing_cost": 0,
+      "recorded_model_calls": 6
+    },
+    "blue_tools": {
+      "expected": 6,
+      "attempted": 6,
+      "completed": 6,
+      "runtime_failures": 0,
+      "not_attempted": 0,
+      "completion_rate": 1.0,
+      "strict_decision_accuracy_all_expected": 0.5,
+      "detection_precision": 0.5,
+      "detection_recall": 0.6666666666666666,
+      "detection_f1_completed": 0.5714285714285714,
+      "localization_f1_completed": 0.4444444444444444,
+      "localization_counts": {
+        "tp": 2,
+        "fp": 4,
+        "fn": 1
+      },
+      "false_positive_rate_completed_controls": 0.6666666666666666,
+      "abstention_rate_completed": 0.0,
+      "decision_coverage_completed": 1.0,
+      "category_localized_recall": {
+        "laterality": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "severity": {
+          "hits": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        "presence_absence": {
+          "hits": 1,
+          "n": 1,
+          "recall": 1.0
+        }
+      },
+      "mean_elapsed_seconds": 22.581,
+      "reported_cost_usd_sum": 0.00337608,
+      "calls_missing_cost": 0,
+      "recorded_model_calls": 30
+    }
+  },
+  "observed_key_usage_increase_usd": 0.00725378,
+  "billing_scope": "key-level usage difference; may include concurrent unrelated calls; not credit-purchase fees",
+  "artifacts_local": "runs/midpoint-dev-smoke-core-v1",
+  "generative_demo": {
+    "study_id": "113",
+    "split": "train",
+    "attack": "one model-generated laterality edit",
+    "blue_outcome": "localized edited sentence plus one false flag; wrong error category; image validity pending"
+  },
+  "software_tests": 42
+}

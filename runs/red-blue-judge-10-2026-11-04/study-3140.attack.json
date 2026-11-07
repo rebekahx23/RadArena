@@ -1,0 +1,125 @@
+{
+  "study_id": "3140",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: Streaky opacities in the right lower lobe most suggestive of atelectasis, differential diagnosis includes atypical infection."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No definite pleural effusion seen."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: Heart size within normal limits, no typical findings of pulmonary edema."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "IMPRESSION: Streaky opacities in the left lower lobe most suggestive of atelectasis, differential diagnosis includes atypical infection."
+    },
+    {
+      "id": "s2",
+      "text": "IMPRESSION: No definite pleural effusion seen."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: Heart size within normal limits, no typical findings of pulmonary edema."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3140_IM-1477-1001.dcm.png",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/3140_IM-1477-2001.dcm.png"
+  ],
+  "clinical_context": "XXXX-year-old female, chest pain, XXXX symptoms",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [
+      {
+        "sentence_id": "s1",
+        "replacement": "IMPRESSION: Streaky opacities in the left lower lobe most suggestive of atelectasis, differential diagnosis includes atypical infection."
+      }
+    ],
+    "rationale": "Changed 'right lower lobe' to 'left lower lobe' to alter the laterality of the finding, as requested by the error type. This change is consistent with the instructions to modify only one semantic attribute and preserve the rest of the sentence.",
+    "requested_error_type": "laterality",
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "no_error_detected",
+    "findings": [],
+    "limitations": "The assessment of streaky opacities is limited by the single view provided and the potential for interpretation as normal anatomy or artifact. The assessment of pleural effusion is limited by the single view provided and the possibility of subtle or loculated effusions being missed."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there evidence of streaky opacities in the left lower lobe?",
+      "observation": "The frontal chest x-ray shows clear lung fields bilaterally. The lateral chest x-ray demonstrates some increased opacity in the left lower lobe, which could be interpreted as streaky opacities. However, it's difficult to definitively characterize these opacities without further imaging or clinical context. The opacities could also represent normal anatomy or artifact.",
+      "limitations": "The assessment is limited by the single view provided. A comparison to prior imaging would be helpful to assess for changes. The quality of the images is adequate, but higher resolution images could provide more detail. The interpretation is based solely on the provided images and does not include clinical information."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there any pleural effusion visible?",
+      "observation": "The frontal chest x-ray shows clear costophrenic angles bilaterally, suggesting no free fluid in the pleural spaces. The lateral view also does not demonstrate blunting of the costophrenic angle or any obvious fluid layering. However, subtle effusions can be difficult to detect on standard radiographs, especially if small or loculated.",
+      "limitations": "The assessment is based on a single set of radiographs. A decubitus view or ultrasound would be more sensitive for detecting small or subpulmonic effusions. The quality of the images is adequate, but higher resolution images could provide more detail. Without prior imaging for comparison, it is difficult to assess for subtle changes."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 1,
+    "uncertain": false,
+    "injected_edit_detected": false,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

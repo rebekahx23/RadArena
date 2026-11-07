@@ -1,0 +1,9 @@
+{
+  "edits": [
+    {
+      "sentence_id": "s1",
+      "replacement": "FINDINGS: There is a large airspace opacity in the left lower and middle lobes."
+    }
+  ],
+  "rationale": "Changed the laterality of the airspace opacity from right to left to introduce a laterality error, as requested. The change is made in the first sentence where the finding is mentioned."
+}

@@ -1,0 +1,38 @@
+{
+  "max_cost_usd": 1,
+  "max_calls": 20,
+  "started_calls": 1,
+  "accounted_cost_usd": 0.0019870000000000165,
+  "unknown_cost_policy": "retain full conservative request reserve",
+  "verified_model_bounds": {
+    "google/gemini-2.5-flash": {
+      "context_length": 1048576,
+      "max_images": 8,
+      "price_caps": {
+        "prompt": 0.3,
+        "completion": 2.5,
+        "image": 0.001,
+        "request": 0
+      }
+    },
+    "qwen/qwen3-vl-8b-instruct": {
+      "context_length": 262144,
+      "price_caps": {
+        "prompt": 0.5,
+        "completion": 1.0,
+        "image": 0,
+        "request": 0
+      }
+    },
+    "google/gemma-3-27b-it": {
+      "context_length": 131072,
+      "price_caps": {
+        "prompt": 0.1,
+        "completion": 0.2,
+        "image": 0,
+        "request": 0
+      }
+    }
+  },
+  "scope": "sequential audited approved-model calls; excludes unrelated account usage and credit-purchase fees"
+}

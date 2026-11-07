@@ -1,0 +1,12 @@
+{
+  "protocol": "radarena-handbook-v1",
+  "handbook": "handbooks/radiology-handbook",
+  "conditions": ["full", "no_domain", "no_medical", "none"],
+  "development_first": true,
+  "benchmark": "data/processed/synthetic_benchmark_v2.jsonl",
+  "initial_variant": "blue_tools",
+  "max_selected_chapters": 3,
+  "unchanged": ["benchmark cases", "model configuration", "image-tool budget", "verdict schema", "metrics"],
+  "status": "Design configuration for the documented CLI commands; no automatic sweep or live results",
+  "medical_review": "pending"
+}

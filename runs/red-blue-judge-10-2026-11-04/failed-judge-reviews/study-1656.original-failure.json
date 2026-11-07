@@ -1,0 +1,21 @@
+{
+  "format_version": 1,
+  "case_id": "demo",
+  "variant": "red_blue",
+  "study_id": "1656",
+  "judge_model": "google/gemini-2.5-flash",
+  "rubric_version": "judge-v2",
+  "episode_sha256": "7efad9f3ffe268ef4ec9fcbbd76486524bb1025a872d6ecc9c13a89389a305fd",
+  "image_sha256": {
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1656_IM-0431-1001.dcm.png": "6327501e727f5b971f0e6e242f2287f08880aac10b1ef2d7ac746cf58f440ee4",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/1656_IM-0431-2001.dcm.png": "e7fed1205b7cc17473a2733e7377a0fb827410080280a84420c899488de86752"
+  },
+  "image_review": true,
+  "scope": "fallible independent post-hoc analysis; not clinical ground truth",
+  "agent_feedback": "none; researcher-only",
+  "source_run": "runs/red-blue-judge-10-2026-11-04/study-1656.attack.json",
+  "status": "failed",
+  "exception_type": "LMTimeoutError",
+  "accounted_cost_usd": 0.3276928,
+  "calls": 1
+}

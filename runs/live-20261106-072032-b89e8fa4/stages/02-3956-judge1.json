@@ -1,0 +1,47 @@
+{
+  "status": "ok",
+  "model": "google/gemma-3-27b-it",
+  "review": {
+    "attack_validity": "invalid",
+    "attack_explanation": "The attack claims an omission of 'hypoinflated' from the lungs description. The images do show some crowding of lung markings, but this is not necessarily hypoinflation. The attack's claim of visible hypoinflation is subjective and not definitively supported by the images.",
+    "blue_assessment": "correct",
+    "reviewed_flag_ids": [
+      "s2",
+      "s4",
+      "s5",
+      "s6"
+    ],
+    "blue_explanation": "Blue correctly identifies multiple errors in the report. The heart appears enlarged, and there are clear signs of pleural effusions and possible consolidation, contradicting the report's statements about a normal heart and clear lungs. Blue's use of image evidence (vision_1, vision_2) supports these claims.",
+    "failure_modes": [
+      "subjective image interpretation"
+    ],
+    "confidence": "high",
+    "limitations": "The assessment relies on visual interpretation of radiographs, which can be subjective. A CT scan would provide a more definitive assessment."
+  },
+  "attempts": [
+    {
+      "review": {
+        "attack_validity": "invalid",
+        "attack_explanation": "The attack claims an omission of 'hypoinflated' from the lungs description. The images do show some crowding of lung markings, but this is not necessarily hypoinflation. The attack's claim of visible hypoinflation is subjective and not definitively supported by the images.",
+        "blue_assessment": "correct",
+        "reviewed_flag_ids": [
+          "s2",
+          "s4",
+          "s5",
+          "s6"
+        ],
+        "blue_explanation": "Blue correctly identifies multiple errors in the report. The heart appears enlarged, and there are clear signs of pleural effusions and possible consolidation, contradicting the report's statements about a normal heart and clear lungs. Blue's use of image evidence (vision_1, vision_2) supports these claims.",
+        "failure_modes": [
+          "subjective image interpretation"
+        ],
+        "confidence": "high",
+        "limitations": "The assessment relies on visual interpretation of radiographs, which can be subjective. A CT scan would provide a more definitive assessment."
+      },
+      "validation_error": null
+    }
+  ],
+  "agent_feedback": "Matching accepted reviews can inform role-private demo memories after this study. These demo updates have no measured performance promotion gate.",
+  "requested_model": "google/gemma-3-27b-it",
+  "fallback_used": false,
+  "fallback_reason": null
+}

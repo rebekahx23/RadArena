@@ -1,0 +1,79 @@
+{
+  "blue": {
+    "decision": "uncertain",
+    "findings": [],
+    "limitations": "The stability of the cardiac device leads could not be definitively assessed due to limitations in visualization on the provided imaging. The assessment of interval decrease in left basilar opacity could not be made without prior imaging."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "uncertain",
+        "findings": [],
+        "limitations": "The stability of the cardiac device leads could not be definitively assessed due to limitations in visualization on the provided imaging. The assessment of interval decrease in left basilar opacity could not be made without prior imaging."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there a left-sided dual cardiac device visible, and if so, is it in a stable position?",
+      "observation": "A left-sided dual cardiac device is visible. The device generator is located in the left upper chest. Two leads are seen extending inferiorly from the generator, overlying the cardiac silhouette. The distal ends of the leads are not clearly visualized to definitively assess their stable position within the cardiac chambers.",
+      "limitations": "The lateral projection of the chest X-ray makes it difficult to precisely evaluate the exact course and tip positions of the cardiac device leads within the heart chambers. Overlapping structures obscure the distal ends of the leads, preventing a definitive assessment of their stability."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there an opacity in the left lung base, and if so, has it decreased compared to prior imaging?",
+      "observation": "There is an opacity in the left lung base. However, without prior imaging, it is not possible to determine if it has decreased.",
+      "limitations": "The question asks for a comparison to prior imaging, but no prior imaging is provided. Therefore, a complete answer to the question cannot be given."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Left-sided dual-XXXX cardiac XXXX in stable position."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The heart is of normal size."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Interval decrease and left basilar opacity."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Increase in XXXX opacities in the right lung base."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pneumothorax or large effusion."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: The pulmonary vascularity is unremarkable."
+    },
+    {
+      "id": "s7",
+      "text": "FINDINGS: Calcification of the thoracic aorta."
+    },
+    {
+      "id": "s8",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s9",
+      "text": "IMPRESSION: Cardiac XXXX in stable position."
+    },
+    {
+      "id": "s10",
+      "text": "IMPRESSION: 2."
+    },
+    {
+      "id": "s11",
+      "text": "IMPRESSION: No significant basilar atelectasis."
+    }
+  ],
+  "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+}

@@ -1,0 +1,12 @@
+{
+  "after_completed_episodes": 11,
+  "change": "Preserve inaccurate declared change log, derive bookkeeping from the actual text difference, validate exact coverage. Never alter candidate clinical text. Record provenance_validation_error and declared_changes.",
+  "reason": "Case 12 treated revised existing sentence s5 as an addition with no source ID.",
+  "clinical_outputs_unchanged": true,
+  "additional_interface_change_at_same_resume": {
+    "description": "The archived case-12 implementation also includes typed image/report_text/mixed evidence and a bounded assessment helper. Text contradictions require two real candidate sentence citations; image claims still require tool citations.",
+    "reason": "Support real internal report contradictions without falsely treating them as image-derived evidence.",
+    "scope": "Applied to later episodes and identically to both final-five memory checkpoints; early-vs-late round comparisons are confounded.",
+    "invalid_outputs": "Later helper keeps raw rejected attempts separately and returns findings=[] with decision=invalid_output; case 7 retained its earlier raw accusations explicitly as failed output."
+  }
+}

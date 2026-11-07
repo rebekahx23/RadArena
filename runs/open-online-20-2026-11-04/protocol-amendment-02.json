@@ -1,0 +1,5 @@
+{
+  "change": "Retain invalid Blue outputs after bounded correction as invalid_output, counted separately and excluded from learning; keep selected study and continue.",
+  "first_affected_episode": 7,
+  "validation_unchanged": true
+}

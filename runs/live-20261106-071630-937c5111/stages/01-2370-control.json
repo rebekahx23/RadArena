@@ -1,0 +1,85 @@
+{
+  "blue": {
+    "decision": "error",
+    "findings": [
+      {
+        "sentence_id": "s5",
+        "error_type": "Major Discrepancy",
+        "evidence": "The impression states \"Left lower lobe airspace disease consistent with pneumonia.\" However, the findings section (s1) states \"consolidation and atelectasis have developed in the right lower lobe.\" There is no mention of left lower lobe airspace disease in the findings, and the observation for s1 only discusses the right lower lobe. The observation for s3 states \"Left lung clear.\"",
+        "tool_call_ids": [],
+        "evidence_type": "report_text",
+        "report_sentence_ids": [
+          "s1",
+          "s3",
+          "s5"
+        ]
+      }
+    ],
+    "limitations": "The exact nature and extent of the opacity in the right lower lobe are difficult to fully characterize on these two views alone. Overlying structures and the single projection limit a definitive assessment of consolidation versus atelectasis. The images provided are limited to two views (frontal and lateral) of the chest and upper abdomen. No prior imaging is available for comparison."
+  },
+  "attempts": [
+    {
+      "verdict": {
+        "decision": "error",
+        "findings": [
+          {
+            "sentence_id": "s5",
+            "error_type": "Major Discrepancy",
+            "evidence": "The impression states \"Left lower lobe airspace disease consistent with pneumonia.\" However, the findings section (s1) states \"consolidation and atelectasis have developed in the right lower lobe.\" There is no mention of left lower lobe airspace disease in the findings, and the observation for s1 only discusses the right lower lobe. The observation for s3 states \"Left lung clear.\"",
+            "tool_call_ids": [],
+            "evidence_type": "report_text",
+            "report_sentence_ids": [
+              "s1",
+              "s3",
+              "s5"
+            ]
+          }
+        ],
+        "limitations": "The exact nature and extent of the opacity in the right lower lobe are difficult to fully characterize on these two views alone. Overlying structures and the single projection limit a definitive assessment of consolidation versus atelectasis. The images provided are limited to two views (frontal and lateral) of the chest and upper abdomen. No prior imaging is available for comparison."
+      },
+      "accepted": true
+    }
+  ],
+  "status": "ok",
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there consolidation or atelectasis visible in the right lower lobe?",
+      "observation": "There is an ill-defined opacity in the right lower lobe, which could represent consolidation or atelectasis. The diaphragm is obscured in this region.",
+      "limitations": "The exact nature and extent of the opacity in the right lower lobe are difficult to fully characterize on these two views alone. Overlying structures and the single projection limit a definitive assessment of consolidation versus atelectasis."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is there blunting of the costophrenic angle on the right?",
+      "observation": "There is blunting of the right costophrenic angle on the frontal radiograph. The lateral view also shows blunting of the posterior right costophrenic angle.",
+      "limitations": "The images provided are limited to two views (frontal and lateral) of the chest and upper abdomen. No prior imaging is available for comparison."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: In the interval, consolidation and atelectasis have developed in the right lower lobe."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Costophrenic XXXX blunted on the right."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Left lung clear."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Heart size normal."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Left lower lobe airspace disease consistent with pneumonia."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Associated right pleural effusion."
+    }
+  ],
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

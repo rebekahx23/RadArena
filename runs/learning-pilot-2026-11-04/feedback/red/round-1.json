@@ -1,0 +1,51 @@
+{
+  "requested_error_type": "laterality",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart and mediastinum are unremarkable."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There are two subcentimeter hyperdense nodular opacities are noted within the right lung."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: These may represent XXXX on end or alternatively, calcified granulomas."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: The lungs are clear without infiltrate."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: There is no effusion or pneumothorax."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No acute cardiopulmonary disease."
+    }
+  ],
+  "own_edits": [
+    {
+      "sentence_id": "s2",
+      "replacement": "There are two subcentimeter hyperdense nodular opacities are noted within the left lung."
+    }
+  ],
+  "own_rationale": "Changed the laterality of the lung nodules from right to left to introduce a laterality error as requested.",
+  "attack_status": "syntactically_valid_clinically_unreviewed",
+  "edit_localization": {
+    "localization_tp": 0,
+    "localization_fp": 1,
+    "localization_fn": 1,
+    "uncertain": false,
+    "injected_edit_detected": false,
+    "unchanged_control_flagged": null,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "validity": "Syntactic edits only; clinical image support not adjudicated"
+}

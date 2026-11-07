@@ -1,0 +1,89 @@
+{
+  "study_id": "198",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart and lungs have XXXX XXXX in the interval."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Both lungs are clear and expanded."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Heart and mediastinum normal."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No active disease."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart and lungs have XXXX XXXX in the interval."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Both lungs are clear and expanded."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Heart and mediastinum normal."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: Mild cardiomegaly."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s4"
+      ],
+      "candidate_ids": [
+        "s4"
+      ],
+      "category": "fabrication",
+      "description": "The original impression stated 'No active disease', which is consistent with the findings. The image does not show cardiomegaly. Changing the impression to 'Mild cardiomegaly' is a fabrication."
+    }
+  ],
+  "rationale": "The original report states 'No active disease' in the impression, which is consistent with the findings and the provided image. The image does not show any evidence of cardiomegaly. Changing the impression to 'Mild cardiomegaly' is a fabrication, as it introduces a finding not present in the image and contradicts the other findings.",
+  "eligible": true,
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attempts": [
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: The heart and lungs have XXXX XXXX in the interval."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: Both lungs are clear and expanded."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: Heart and mediastinum normal."
+        },
+        {
+          "id": "s4",
+          "text": "IMPRESSION: Mild cardiomegaly."
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [
+            "s4"
+          ],
+          "candidate_ids": [
+            "s4"
+          ],
+          "category": "fabrication",
+          "description": "The original impression stated 'No active disease', which is consistent with the findings. The image does not show cardiomegaly. Changing the impression to 'Mild cardiomegaly' is a fabrication."
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

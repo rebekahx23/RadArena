@@ -1,0 +1,56 @@
+{
+  "study_id": "2643",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The lungs and pleural spaces show no acute abnormality."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Heart size and pulmonary vascularity within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No acute pulmonary abnormality."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The lungs and pleural spaces show no acute abnormality."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Heart size and pulmonary vascularity within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No acute pulmonary abnormality."
+    },
+    {
+      "id": "a1",
+      "text": "IMPRESSION: 2. Mild cardiomegaly."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new impression of mild cardiomegaly, which is not supported by the findings or images."
+    }
+  ],
+  "rationale": "The original report states 'Heart size and pulmonary vascularity within normal limits' in the findings. The images do not show evidence of cardiomegaly. I introduced a fabrication error by adding 'Mild cardiomegaly' to the impression, contradicting the findings and the visual evidence in the images. This creates a clinically significant error by reporting a non-existent abnormality.",
+  "eligible": true,
+  "memory_sha256": "dacedfe3afa6ca71d574b31dd1aa6911b0e2232faaf3146ea42fcff82ba4cca0"
+}

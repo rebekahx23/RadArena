@@ -1,0 +1,67 @@
+{
+  "study_id": "3830",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Cardiac and mediastinal contours are within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The lungs are clear."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Bony structures are intact."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No acute preoperative findings."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Cardiac and mediastinal contours are within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The lungs are clear."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Bony structures are intact."
+    },
+    {
+      "id": "a1",
+      "text": "FINDINGS: There is evidence of mild scoliosis."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: No acute preoperative findings."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new finding of mild scoliosis which is not supported by the images."
+    }
+  ],
+  "declared_changes": [
+    {
+      "source_ids": [],
+      "candidate_ids": [
+        "a1"
+      ],
+      "category": "fabrication",
+      "description": "Added a new finding of mild scoliosis which is not supported by the images."
+    }
+  ],
+  "provenance_validation_error": null,
+  "rationale": "The original report states that bony structures are intact. I introduced a fabrication error by adding a new finding of 'mild scoliosis' in the findings section. This finding is not supported by the provided images, which show a straight spine. This creates a clinically meaningful error by reporting a condition that is not present.",
+  "eligible": true,
+  "memory_sha256": "dacedfe3afa6ca71d574b31dd1aa6911b0e2232faaf3146ea42fcff82ba4cca0"
+}

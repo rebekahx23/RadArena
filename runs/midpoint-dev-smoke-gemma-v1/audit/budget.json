@@ -1,0 +1,28 @@
+{
+  "max_cost_usd": 0.2,
+  "max_calls": 80,
+  "started_calls": 12,
+  "accounted_cost_usd": 0.001740000000000002,
+  "unknown_cost_policy": "retain full conservative request reserve",
+  "verified_model_bounds": {
+    "qwen/qwen3-vl-8b-instruct": {
+      "context_length": 262144,
+      "price_caps": {
+        "prompt": 0.5,
+        "completion": 1.0,
+        "image": 0,
+        "request": 0
+      }
+    },
+    "google/gemma-3-27b-it": {
+      "context_length": 131072,
+      "price_caps": {
+        "prompt": 0.1,
+        "completion": 0.2,
+        "image": 0,
+        "request": 0
+      }
+    }
+  },
+  "scope": "sequential audited approved-model calls; excludes unrelated account usage and credit-purchase fees"
+}

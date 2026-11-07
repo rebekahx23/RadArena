@@ -1,0 +1,136 @@
+{
+  "study_id": "37",
+  "split": "dev",
+  "models": {
+    "text": "google/gemma-3-27b-it",
+    "vision": "google/gemma-3-27b-it",
+    "max_tokens": 2048
+  },
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart is normal in size."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The mediastinum is unremarkable."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: XXXX XXXX opacities in right mid lung."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: The lungs are otherwise grossly clear."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No acute disease."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: The heart is normal in size."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: The mediastinum is unremarkable."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: XXXX XXXX opacities in right mid lung."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: The lungs are otherwise grossly clear."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No acute disease."
+    }
+  ],
+  "image_paths": [
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/37_IM-1847-0001-0002.dcm.png",
+    "/Users/rebekahxing/Documents/ChatGPT/CS329Z RadArena/data/archive (1)/images/images_normalized/37_IM-1847-0001-0001.dcm.png"
+  ],
+  "clinical_context": "HYPOXIA;",
+  "clinical_context_config": {
+    "condition": "indication",
+    "source_csv_sha256": "cd7257716f7be4aaf46e55a9ea266b69095372a2f23dc0e19e32a95b0f02e2e6",
+    "fields": [
+      "indication"
+    ],
+    "reports": 3851,
+    "reports_with_indication": 3765,
+    "missing_policy": "empty indication retained; unknown study ID fails before calls"
+  },
+  "private_attack": {
+    "edits": [],
+    "rationale": "Unchanged source report control",
+    "requested_error_type": null,
+    "clinical_validity": "not_adjudicated"
+  },
+  "blue": {
+    "decision": "uncertain",
+    "findings": [],
+    "limitations": "The assessment of heart size is limited by the lack of prior imaging for comparison. The assessment of opacity in the right mid lung is limited by the 2D nature of the x-ray images and the lack of clinical history."
+  },
+  "observations": [
+    {
+      "tool_call_id": "vision_1",
+      "question": "Is there any opacity visible in the right mid lung?",
+      "observation": "The frontal chest x-ray shows a possible opacity in the right mid lung field, indicated by the white arrow. The lateral view does not clearly demonstrate this opacity, but there is some increased density in the right mid lung compared to the left. It is difficult to definitively characterize the opacity without further imaging or clinical context. The opacity could be due to a number of factors, including pneumonia, atelectasis, or a mass.",
+      "limitations": "The assessment is limited by the 2D nature of the x-ray images. It is difficult to determine the exact location and size of the opacity without additional imaging modalities such as a CT scan. There is also no clinical history available to help interpret the findings. The quality of the images is adequate, but not ideal for detailed assessment."
+    },
+    {
+      "tool_call_id": "vision_2",
+      "question": "Is the heart normal in size?",
+      "observation": "The frontal chest radiograph shows the cardiac silhouette. An arrow points to the right lung apex. The lateral view shows the cardiac silhouette and the right hemidiaphragm. Visually assessing the heart size on a single chest radiograph can be subjective. Without prior radiographs for comparison, it is difficult to definitively state whether the heart is normal in size. The cardiothoracic ratio is not easily assessed without precise measurements. ",
+      "limitations": "Assessment of heart size is limited by the lack of prior imaging for comparison. The quality of the images and potential for magnification due to positioning can also affect the assessment. A precise measurement of the cardiothoracic ratio would require additional tools and expertise."
+    }
+  ],
+  "score": {
+    "localization_tp": 0,
+    "localization_fp": 0,
+    "localization_fn": 0,
+    "uncertain": true,
+    "injected_edit_detected": null,
+    "unchanged_control_flagged": false,
+    "ground_truth_scope": "synthetic edits; image support not adjudicated"
+  },
+  "strategy_memories": {
+    "red": {
+      "condition": "learned",
+      "role": "red",
+      "round": 3,
+      "checkpoint_sha256": "d59167d4590bb7b8493ce10e158d8c132da336a3d557f36677864eb84c3d00ac",
+      "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+    },
+    "blue": {
+      "condition": "learned",
+      "role": "blue",
+      "round": 3,
+      "checkpoint_sha256": "d024a4334d327c9560bf96e43e24af5c4da44deabb3a719cdd874e5635805489",
+      "memory_sha256": "b5d2f2ab202f72dcab49e1e0a8c4f38ee01088d9d87a667b2822fcb0e891deb1"
+    }
+  },
+  "knowledge": {
+    "pack_id": "radiology_reporting_v1",
+    "version": "2026-11-03",
+    "sha256": "f759cd1d98c240dd64f7a042bf13f209f163b4a4c094afac1389db95162ff149",
+    "card_ids": [
+      "report_sections",
+      "terminology_and_limits",
+      "template_role",
+      "standard_vocabulary",
+      "claim_attributes",
+      "negation_uncertainty",
+      "side_severity",
+      "internal_consistency",
+      "reference_vs_image"
+    ],
+    "review_status": "draft; qualified radiologist review pending"
+  },
+  "memory_learning": "frozen; no updates during batch"
+}

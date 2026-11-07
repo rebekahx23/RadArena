@@ -1,0 +1,72 @@
+{
+  "study_id": "2539",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Normal cardiomediastinal contours."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: No pneumothorax or pleural effusions."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No focal lung consolidation."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No acute cardiopulmonary abnormalities."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Normal cardiomediastinal contours."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: No pneumothorax or pleural effusions."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: Mild focal lung consolidation in the right lower lobe."
+    },
+    {
+      "id": "s4",
+      "text": "IMPRESSION: 1."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Mild focal lung consolidation in the right lower lobe."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s3"
+      ],
+      "candidate_ids": [
+        "s3"
+      ],
+      "category": "fabrication",
+      "description": "Fabricated a finding of mild focal lung consolidation in the right lower lobe, which is not present in the images."
+    },
+    {
+      "source_ids": [
+        "s5"
+      ],
+      "candidate_ids": [
+        "s5"
+      ],
+      "category": "fabrication",
+      "description": "Fabricated a finding of mild focal lung consolidation in the right lower lobe in the impression, which is not present in the images."
+    }
+  ],
+  "rationale": "The original report states 'No focal lung consolidation' (s3) and 'No acute cardiopulmonary abnormalities' (s5). The images do not show any focal lung consolidation. I have introduced a fabrication error by stating 'Mild focal lung consolidation in the right lower lobe' in both the findings (s3) and impression (s5). This creates a clinically meaningful error by reporting a non-existent abnormality, directly contradicting the visual evidence in the images. The change is consistent across both the findings and impression sections.",
+  "eligible": true,
+  "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+}

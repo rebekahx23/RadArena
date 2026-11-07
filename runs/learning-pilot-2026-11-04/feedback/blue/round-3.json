@@ -1,0 +1,139 @@
+{
+  "attack": {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: No airspace opacities bilaterally, most prominent in the lung bases."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size is within normal limits."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Osseous structures are grossly intact."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: No air space opacities bilaterally, most prominent in the lung bases."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Findings are nonspecific, but may represent subsegmental atelectasis versus mild interstitial edema or an atypical infectious process."
+      }
+    ],
+    "indication": "XXXX-year-old with shortness of breath",
+    "verdict": {
+      "decision": "error",
+      "findings": [
+        {
+          "sentence_id": "s1",
+          "error_type": "presence_absence",
+          "evidence": "The PA view shows some increased opacity in the lower lung fields bilaterally, which could represent airspace opacity. The lateral view shows some increased opacity in the left lower lung field.",
+          "tool_call_ids": [
+            "vision_1"
+          ]
+        }
+      ],
+      "limitations": "The images are limited in that they are single views and do not allow for a comprehensive assessment of the lungs. It is difficult to definitively determine if the increased opacity is airspace opacity versus other causes of increased density."
+    },
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Is there any airspace opacity visible bilaterally?",
+        "observation": "The PA view shows some increased opacity in the lower lung fields bilaterally, which could represent airspace opacity. The lateral view shows some increased opacity in the left lower lung field. However, it is difficult to definitively determine if this is airspace opacity versus other causes of increased density, such as vascular congestion or pleural effusion. There is also some artifact present in the images that could affect interpretation.",
+        "limitations": "The images are limited in that they are single views and do not allow for a comprehensive assessment of the lungs. Without prior imaging for comparison, it is difficult to determine if these findings are new or chronic. The quality of the images is also somewhat limited, making it difficult to definitively characterize the opacities."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "Is the heart size within normal limits?",
+        "observation": "The frontal chest radiograph shows the cardiac silhouette. Assessing cardiac size on a single PA view can be subjective. The cardiothoracic ratio appears within normal limits, but a precise measurement is difficult without a prior image for comparison. The lateral view does not provide a clear assessment of cardiac size. There are no obvious signs of cardiomegaly, such as significant enlargement of the cardiac silhouette or effacement of the costophrenic angles.",
+        "limitations": "Assessment of cardiac size is limited by the lack of prior imaging for comparison. A precise cardiothoracic ratio cannot be determined without a standardized PA view and knowledge of the patient's body habitus. The lateral view is not optimal for assessing cardiac size."
+      }
+    ],
+    "training_label": {
+      "has_injected_edit": true,
+      "changed_sentence_ids": [
+        "s1",
+        "s5"
+      ],
+      "requested_error_type": "severity"
+    },
+    "score": {
+      "localization_tp": 1,
+      "localization_fp": 0,
+      "localization_fn": 1,
+      "uncertain": false,
+      "injected_edit_detected": true,
+      "unchanged_control_flagged": null,
+      "ground_truth_scope": "synthetic edits; image support not adjudicated"
+    }
+  },
+  "control": {
+    "candidate": [
+      {
+        "id": "s1",
+        "text": "FINDINGS: Minimally increased XXXX airspace opacities bilaterally, most prominent in the lung bases."
+      },
+      {
+        "id": "s2",
+        "text": "FINDINGS: Heart size is within normal limits."
+      },
+      {
+        "id": "s3",
+        "text": "FINDINGS: No pneumothorax or pleural effusion."
+      },
+      {
+        "id": "s4",
+        "text": "FINDINGS: Osseous structures are grossly intact."
+      },
+      {
+        "id": "s5",
+        "text": "IMPRESSION: Minimally increased air space opacities bilaterally, most prominent in the lung bases."
+      },
+      {
+        "id": "s6",
+        "text": "IMPRESSION: Findings are nonspecific, but may represent subsegmental atelectasis versus mild interstitial edema or an atypical infectious process."
+      }
+    ],
+    "indication": "XXXX-year-old with shortness of breath",
+    "verdict": {
+      "decision": "no_error_detected",
+      "findings": [],
+      "limitations": "The image observations indicate the presence of increased opacities in the lung fields, but it is difficult to definitively characterize them as airspace opacities without further information or comparison to prior imaging. The report claims are consistent with these findings, and therefore cannot be confidently contradicted."
+    },
+    "observations": [
+      {
+        "tool_call_id": "vision_1",
+        "question": "Are there airspace opacities visible bilaterally?",
+        "observation": "The frontal chest radiograph shows some areas of increased opacity in both lung fields, particularly in the lower lobes. These could potentially represent airspace opacities, but could also be due to other factors like vascular prominence or overlying soft tissue. The lateral view shows some increased opacity in the left lung, but it is difficult to definitively characterize as airspace opacity without comparison to prior imaging or additional views. There is some haziness in the right lung base on the frontal view as well.",
+        "limitations": "It is difficult to definitively determine if these are airspace opacities without further clinical information or comparison to prior imaging. The quality of the images and the lack of additional views limit the ability to fully characterize the findings. The images are grayscale and subtle differences in density can be hard to assess."
+      },
+      {
+        "tool_call_id": "vision_2",
+        "question": "If airspace opacities are present, are they most prominent in the lung bases?",
+        "observation": "The frontal chest x-ray shows some areas of increased opacity in both lung bases. The lateral view also demonstrates increased opacity in the left lung base. However, it is difficult to definitively characterize these opacities as airspace disease without further information. There is also some opacity in the right mid-lung field on the frontal view. ",
+        "limitations": "The images are limited to these two views. A full set of chest x-rays (AP/PA and lateral) or a CT scan would be needed to better characterize the opacities and determine if they are truly airspace disease. It is also difficult to assess the extent and distribution of the opacities without comparison to prior imaging. The question asks specifically about airspace opacities, but the images do not confirm this diagnosis."
+      }
+    ],
+    "training_label": {
+      "has_injected_edit": false,
+      "changed_sentence_ids": [],
+      "requested_error_type": null
+    },
+    "score": {
+      "localization_tp": 0,
+      "localization_fp": 0,
+      "localization_fn": 0,
+      "uncertain": false,
+      "injected_edit_detected": null,
+      "unchanged_control_flagged": false,
+      "ground_truth_scope": "synthetic edits; image support not adjudicated"
+    }
+  },
+  "scope": "Training-only synthetic labels. Unchanged source reports are not adjudicated error-free."
+}

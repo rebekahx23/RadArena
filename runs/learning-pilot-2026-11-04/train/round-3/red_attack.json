@@ -1,0 +1,73 @@
+{
+  "study_id": "1187",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Minimally increased XXXX airspace opacities bilaterally, most prominent in the lung bases."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Heart size is within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pneumothorax or pleural effusion."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Osseous structures are grossly intact."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: Minimally increased air space opacities bilaterally, most prominent in the lung bases."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Findings are nonspecific, but may represent subsegmental atelectasis versus mild interstitial edema or an atypical infectious process."
+    }
+  ],
+  "error_type": "severity",
+  "red_rationale": "Changed the severity of the airspace opacities from 'minimally increased' to 'no' to introduce a false negative finding, as per the error type (severity) and strategies provided. The change was applied consistently in both the Findings and Impression sections.",
+  "edits": [
+    {
+      "sentence_id": "s1",
+      "replacement": "FINDINGS: No airspace opacities bilaterally, most prominent in the lung bases."
+    },
+    {
+      "sentence_id": "s5",
+      "replacement": "IMPRESSION: No air space opacities bilaterally, most prominent in the lung bases."
+    }
+  ],
+  "red_memory_sha256": "30bad2d33d70a76f7148f6a052332fdbeeec8da6607699696aa01ae31fa218cb",
+  "attack_status": "syntactically_valid_clinically_unreviewed",
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: No airspace opacities bilaterally, most prominent in the lung bases."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: Heart size is within normal limits."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No pneumothorax or pleural effusion."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Osseous structures are grossly intact."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No air space opacities bilaterally, most prominent in the lung bases."
+    },
+    {
+      "id": "s6",
+      "text": "IMPRESSION: Findings are nonspecific, but may represent subsegmental atelectasis versus mild interstitial edema or an atypical infectious process."
+    }
+  ],
+  "changed_sentence_ids": [
+    "s1",
+    "s5"
+  ]
+}

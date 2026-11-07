@@ -1,0 +1,92 @@
+{
+  "pack_id": "radiology_reporting_v1",
+  "version": "2026-11-03",
+  "review_status": "draft; qualified radiologist review pending",
+  "scope": "Reporting conventions and task rules; not a diagnostic textbook or patient-specific evidence",
+  "sources": [
+    {
+      "id": "acr_communication",
+      "title": "ACR Practice Parameter for Communication of Diagnostic Imaging Findings",
+      "url": "https://gravitas.acr.org/PPTS/DownloadPreviewDocument?DocId=74&ReleaseId=2",
+      "access_note": "Official search excerpts checked; full document fetch returned 403. Limited paraphrases only."
+    },
+    {
+      "id": "rsna_radreport",
+      "title": "RSNA RadReport reporting templates",
+      "url": "https://www.rsna.org/practice-tools/data-tools-and-standards/radreport-reporting-templates",
+      "access_note": "Overview read. No individual template imported or clinically reviewed here."
+    },
+    {
+      "id": "rsna_radlex",
+      "title": "RSNA RadLex radiology lexicon",
+      "url": "https://www.rsna.org/practice-tools/data-tools-and-standards/radlex-radiology-lexicon",
+      "access_note": "Overview read. This pack does not include a RadLex ontology export."
+    },
+    {
+      "id": "radarena_protocol",
+      "title": "Project-authored verification and synthetic-edit rules",
+      "url": "project:docs/EVALUATION.md",
+      "access_note": "Operational task guidance, not an external clinical recommendation."
+    }
+  ],
+  "cards": [
+    {
+      "id": "report_sections",
+      "title": "Findings and impression",
+      "source_ids": ["acr_communication"],
+      "text": "Use Findings to describe observations and Impression to communicate the conclusion or diagnosis. The source guidance also addresses clinical information, procedure details, limitations, and available comparisons; do not invent missing information."
+    },
+    {
+      "id": "terminology_and_limits",
+      "title": "Terminology and examination limitations",
+      "source_ids": ["acr_communication"],
+      "text": "Use appropriate anatomic, pathologic, and radiologic terminology. State relevant examination limitations and acknowledge when the available examination cannot answer a clinical question."
+    },
+    {
+      "id": "template_role",
+      "title": "Consistent report organization",
+      "source_ids": ["rsna_radreport", "radarena_protocol"],
+      "text": "Reporting templates support consistent organization and wording. A template supplies structure, not observations about the current image; never fill a normal-finding template by assumption."
+    },
+    {
+      "id": "standard_vocabulary",
+      "title": "Consistent terminology",
+      "source_ids": ["rsna_radlex", "radarena_protocol"],
+      "text": "RadLex is a radiology terminology resource. Use consistent names for anatomy and findings; similar wording alone does not establish that two claims have the same presence, side, or severity."
+    },
+    {
+      "id": "claim_attributes",
+      "title": "Represent each clinical claim explicitly",
+      "source_ids": ["radarena_protocol"],
+      "text": "For this task, track finding, presence or absence, uncertainty, anatomic location, laterality, severity, and sentence ID separately. Change or flag the relevant attribute without silently altering the others."
+    },
+    {
+      "id": "negation_uncertainty",
+      "title": "Negation is different from uncertainty",
+      "source_ids": ["radarena_protocol"],
+      "text": "Treat absent, present, and uncertain claims as distinct. For example, 'possible pleural effusion' is not equivalent to 'no pleural effusion'. Preserve hedging unless the available evidence supports changing it. This wording example is fictional and is not a labeled image case."
+    },
+    {
+      "id": "side_severity",
+      "title": "Check side and severity independently",
+      "source_ids": ["radarena_protocol"],
+      "text": "A finding name can be correct while its side or severity is wrong. Check stated side against available orientation information. Preserve severity qualifiers; this pack supplies no validated visual thresholds for mild, moderate, or severe. Return uncertainty when evidence is insufficient."
+    },
+    {
+      "id": "internal_consistency",
+      "title": "Repeated findings must remain consistent",
+      "source_ids": ["radarena_protocol"],
+      "text": "When the same finding appears in Findings and Impression, compare its presence, location, side, and severity across mentions. Distinguish the same repeated finding from unrelated abnormalities before editing or flagging it."
+    },
+    {
+      "id": "reference_vs_image",
+      "title": "Reference knowledge is not case evidence",
+      "source_ids": ["radarena_protocol"],
+      "text": "A reference can explain reporting conventions and what to check; it cannot establish what is visible in the current study. Base image-supported claims on the supplied images or recorded image observations. Do not infer prior-study changes without the prior images or supplied comparison evidence."
+    }
+  ],
+  "role_guidance": {
+    "red": "Use the shared reporting rules to preserve authentic style and consistency while making one permitted synthetic semantic error. Keep the edit record and rationale private. Skip cases where a valid attribute change is unclear.",
+    "verifier": "Use the shared reporting rules to plan checks and interpret the candidate. Keep reference principles separate from image evidence. Flag supported contradictions, preserve uncertainty, and cite actual observations; do not treat a reference as proof of a current finding."
+  }
+}

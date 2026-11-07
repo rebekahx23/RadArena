@@ -1,0 +1,62 @@
+{
+  "study_id": "1849",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Heart size is within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: 8mm calcified granuloma in the right base."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No focal airspace consolidations."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pneumothorax or effusion."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No acute cardiopulmonary findings."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Heart size is within normal limits."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: No calcified granuloma in the right base."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: No focal airspace consolidations."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: No pneumothorax or effusion."
+    },
+    {
+      "id": "s5",
+      "text": "IMPRESSION: No acute cardiopulmonary findings."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s2"
+      ],
+      "candidate_ids": [
+        "s2"
+      ],
+      "category": "omission",
+      "description": "The 8mm calcified granuloma in the right base was omitted."
+    }
+  ],
+  "rationale": "The original report correctly identified an 8mm calcified granuloma in the right base. The image clearly shows a calcified lesion in the right lower lung field, consistent with a granuloma. To introduce a clinically meaningful error, I have omitted this finding by changing the sentence to state 'No calcified granuloma in the right base.' This creates a false negative, which is a type of omission error, and directly contradicts the visual evidence in the image. This change aligns with the 'omission' category and the rule to 'Focus on altering quantitative findings to create false negatives' by negating the presence of a specific finding.",
+  "eligible": true,
+  "memory_sha256": "bc894c3e0978a30976d23121c6ce1b977fa2ac13aec9df2d6f09bcc990593c3a"
+}

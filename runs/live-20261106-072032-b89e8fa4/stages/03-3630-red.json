@@ -1,0 +1,170 @@
+{
+  "study_id": "3630",
+  "source": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Frontal and lateral views of the chest show normal size and configuration of the cardiac silhouette."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is aortic XXXX vascular calcification."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: And there is a hyper left lung calcified granuloma."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Normal mediastinal contour, pulmonary XXXX and vasculature, central airways and lung volumes."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: No pleural effusion."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: There are vascular and skeletal senescent changes."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No acute or active cardiac, pulmonary or pleural disease."
+    }
+  ],
+  "candidate": [
+    {
+      "id": "s1",
+      "text": "FINDINGS: Frontal and lateral views of the chest show normal size and configuration of the cardiac silhouette."
+    },
+    {
+      "id": "s2",
+      "text": "FINDINGS: There is aortic XXXX vascular calcification."
+    },
+    {
+      "id": "s3",
+      "text": "FINDINGS: And there is a hyper left lung calcified granuloma."
+    },
+    {
+      "id": "s4",
+      "text": "FINDINGS: Normal mediastinal contour, pulmonary XXXX and vasculature, central airways and lung volumes."
+    },
+    {
+      "id": "s5",
+      "text": "FINDINGS: There is a small pleural effusion."
+    },
+    {
+      "id": "s6",
+      "text": "FINDINGS: There are vascular and skeletal senescent changes."
+    },
+    {
+      "id": "s7",
+      "text": "IMPRESSION: No acute or active cardiac, pulmonary or pleural disease."
+    }
+  ],
+  "changes": [
+    {
+      "source_ids": [
+        "s5"
+      ],
+      "candidate_ids": [
+        "s5"
+      ],
+      "category": "fabrication",
+      "description": "The original report stated 'No pleural effusion.' This was changed to 'There is a small pleural effusion,' which is a fabrication as no pleural effusion is visible in the provided images."
+    }
+  ],
+  "rationale": "The change introduces a fabrication by stating the presence of a small pleural effusion when the images clearly show no such finding. This is a clinically plausible error that contradicts the visual evidence.",
+  "eligible": true,
+  "memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "attempts": [
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "Frontal and lateral views of the chest show normal size and configuration of the cardiac silhouette."
+        },
+        {
+          "id": "s2",
+          "text": "There is aortic XXXX vascular calcification."
+        },
+        {
+          "id": "s3",
+          "text": "And there is a hyper left lung calcified granuloma."
+        },
+        {
+          "id": "s4",
+          "text": "Normal mediastinal contour, pulmonary XXXX and vasculature, central airways and lung volumes."
+        },
+        {
+          "id": "s5",
+          "text": "No pleural effusion."
+        },
+        {
+          "id": "s6",
+          "text": "There are vascular and skeletal senescent changes."
+        },
+        {
+          "id": "s7",
+          "text": "IMPRESSION: Acute cardiac, pulmonary or pleural disease is noted."
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [
+            "s7"
+          ],
+          "candidate_ids": [
+            "s7"
+          ],
+          "category": "certainty",
+          "description": "The impression was changed from 'No acute or active cardiac, pulmonary or pleural disease' to 'Acute cardiac, pulmonary or pleural disease is noted.' This changes the certainty of the absence of disease to the presence of disease, which is a fabrication given the findings."
+        }
+      ],
+      "error": "Change log must cover exactly all changed source/candidate sentences"
+    },
+    {
+      "candidate": [
+        {
+          "id": "s1",
+          "text": "FINDINGS: Frontal and lateral views of the chest show normal size and configuration of the cardiac silhouette."
+        },
+        {
+          "id": "s2",
+          "text": "FINDINGS: There is aortic XXXX vascular calcification."
+        },
+        {
+          "id": "s3",
+          "text": "FINDINGS: And there is a hyper left lung calcified granuloma."
+        },
+        {
+          "id": "s4",
+          "text": "FINDINGS: Normal mediastinal contour, pulmonary XXXX and vasculature, central airways and lung volumes."
+        },
+        {
+          "id": "s5",
+          "text": "FINDINGS: There is a small pleural effusion."
+        },
+        {
+          "id": "s6",
+          "text": "FINDINGS: There are vascular and skeletal senescent changes."
+        },
+        {
+          "id": "s7",
+          "text": "IMPRESSION: No acute or active cardiac, pulmonary or pleural disease."
+        }
+      ],
+      "changes": [
+        {
+          "source_ids": [
+            "s5"
+          ],
+          "candidate_ids": [
+            "s5"
+          ],
+          "category": "fabrication",
+          "description": "The original report stated 'No pleural effusion.' This was changed to 'There is a small pleural effusion,' which is a fabrication as no pleural effusion is visible in the provided images."
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

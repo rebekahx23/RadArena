@@ -1,0 +1,28 @@
+{
+  "handbook_id": "radarena-radiology-handbook",
+  "version": "0.3.0",
+  "review_status": "draft; qualified radiologist review pending",
+  "entrypoint": "SKILL.md",
+  "role_indexes": {"red": "references/red-team/SKILL.md", "verifier": "references/blue-team/SKILL.md"},
+  "chapters": [
+    {"path": "SKILL.md", "title": "Handbook index", "group": "platform", "roles": ["red", "verifier"], "bootstrap": true},
+    {"path": "SOURCES.md", "title": "Sources and review status", "group": "platform", "roles": ["red", "verifier"]},
+    {"path": "references/red-team/SKILL.md", "title": "Red role index", "group": "domain", "roles": ["red"], "bootstrap": true},
+    {"path": "references/red-team/workflow.md", "title": "Red constrained editing workflow", "group": "domain", "roles": ["red"]},
+    {"path": "references/red-team/error-families.md", "title": "Red error families", "group": "domain", "roles": ["red"]},
+    {"path": "references/blue-team/SKILL.md", "title": "Blue role index", "group": "domain", "roles": ["verifier"], "bootstrap": true},
+    {"path": "references/blue-team/workflow.md", "title": "Blue image verification workflow", "group": "domain", "roles": ["verifier"]},
+    {"path": "references/blue-team/evidence.md", "title": "Blue evidence and uncertainty", "group": "domain", "roles": ["verifier"]},
+    {"path": "references/reporting/SKILL.md", "title": "Reporting index", "group": "domain", "roles": ["red", "verifier"]},
+    {"path": "references/reporting/structure.md", "title": "Findings and Impression", "group": "domain", "roles": ["red", "verifier"]},
+    {"path": "references/reporting/claims.md", "title": "Claim attributes and terminology", "group": "domain", "roles": ["red", "verifier"]},
+    {"path": "references/medical-library/SKILL.md", "title": "Medical reference index", "group": "medical", "roles": ["red", "verifier"]},
+    {"path": "references/medical-library/cxr-technique.md", "title": "Chest X-ray technique, PA/AP projection and cardiac magnification", "group": "medical", "roles": ["red", "verifier"]},
+    {"path": "references/medical-library/systematic-review.md", "title": "Systematic chest radiograph review checklist", "group": "medical", "roles": ["red", "verifier"]},
+    {"path": "references/medical-library/pleural-effusion.md", "title": "Pleural effusion", "group": "medical", "roles": ["red", "verifier"]},
+    {"path": "references/medical-library/pneumothorax.md", "title": "Pneumothorax", "group": "medical", "roles": ["red", "verifier"]},
+    {"path": "references/medical-library/cardiac-enlargement.md", "title": "Cardiac enlargement", "group": "medical", "roles": ["red", "verifier"]},
+    {"path": "references/tools/SKILL.md", "title": "Tool index", "group": "platform", "roles": ["red", "verifier"], "bootstrap": true},
+    {"path": "references/tools/contracts.md", "title": "Tool contracts and current status", "group": "platform", "roles": ["red", "verifier"]}
+  ]
+}

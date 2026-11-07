@@ -1,0 +1,722 @@
+{
+  "complete": false,
+  "per_variant_complete": {
+    "text_only": false,
+    "direct_vlm": true,
+    "blue_tools": true
+  },
+  "scope": "three-study development behavior comparison; no clinical review",
+  "conditions": {
+    "no_radgraph": {
+      "scope": "source-report-relative synthetic edits; clinical validity unreviewed",
+      "split": "dev",
+      "complete": true,
+      "variants": {
+        "text_only": {
+          "expected": 6,
+          "attempted": 6,
+          "completed": 6,
+          "runtime_failures": 0,
+          "not_attempted": 0,
+          "completion_rate": 1.0,
+          "strict_decision_accuracy_all_expected": 0.6666666666666666,
+          "detection_precision": 1.0,
+          "detection_recall": 0.3333333333333333,
+          "detection_f1_completed": 0.5,
+          "localization_f1_completed": 0.5,
+          "localization_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 2
+          },
+          "false_positive_rate_completed_controls": 0.0,
+          "abstention_rate_completed": 0.0,
+          "decision_coverage_completed": 1.0,
+          "category_localized_recall": {
+            "laterality": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            },
+            "severity": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            },
+            "presence_absence": {
+              "hits": 1,
+              "n": 1,
+              "recall": 1.0
+            }
+          },
+          "mean_elapsed_seconds": 2.303,
+          "reported_cost_usd_sum": 0.0007788000000000001,
+          "calls_missing_cost": 0,
+          "recorded_model_calls": 6
+        },
+        "direct_vlm": {
+          "expected": 6,
+          "attempted": 6,
+          "completed": 6,
+          "runtime_failures": 0,
+          "not_attempted": 0,
+          "completion_rate": 1.0,
+          "strict_decision_accuracy_all_expected": 0.3333333333333333,
+          "detection_precision": 0.6666666666666666,
+          "detection_recall": 0.6666666666666666,
+          "detection_f1_completed": 0.6666666666666666,
+          "localization_f1_completed": 0.3333333333333333,
+          "localization_counts": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 2
+          },
+          "false_positive_rate_completed_controls": 0.3333333333333333,
+          "abstention_rate_completed": 0.5,
+          "decision_coverage_completed": 0.5,
+          "category_localized_recall": {
+            "laterality": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            },
+            "severity": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            },
+            "presence_absence": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            }
+          },
+          "mean_elapsed_seconds": 4.273499999999999,
+          "reported_cost_usd_sum": 0.00106792,
+          "calls_missing_cost": 0,
+          "recorded_model_calls": 6
+        },
+        "blue_tools": {
+          "expected": 6,
+          "attempted": 6,
+          "completed": 6,
+          "runtime_failures": 0,
+          "not_attempted": 0,
+          "completion_rate": 1.0,
+          "strict_decision_accuracy_all_expected": 0.6666666666666666,
+          "detection_precision": 0.6666666666666666,
+          "detection_recall": 0.6666666666666666,
+          "detection_f1_completed": 0.6666666666666666,
+          "localization_f1_completed": 0.5,
+          "localization_counts": {
+            "tp": 2,
+            "fp": 3,
+            "fn": 1
+          },
+          "false_positive_rate_completed_controls": 0.3333333333333333,
+          "abstention_rate_completed": 0.16666666666666666,
+          "decision_coverage_completed": 0.8333333333333334,
+          "category_localized_recall": {
+            "laterality": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            },
+            "severity": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            },
+            "presence_absence": {
+              "hits": 1,
+              "n": 1,
+              "recall": 1.0
+            }
+          },
+          "mean_elapsed_seconds": 23.7115,
+          "reported_cost_usd_sum": 0.0034556,
+          "calls_missing_cost": 0,
+          "recorded_model_calls": 30
+        }
+      },
+      "paired_comparisons": {
+        "text_only": {
+          "available": true,
+          "metric": "localization_f1",
+          "difference": 0.0,
+          "interval_95_percentile": [
+            -0.33333333333333337,
+            0.5
+          ],
+          "bootstrap_studies": 3,
+          "resamples": 1000,
+          "limitation": "Exploratory pilot interval; independent patient IDs unavailable"
+        },
+        "direct_vlm": {
+          "available": true,
+          "metric": "localization_f1",
+          "difference": 0.16666666666666669,
+          "interval_95_percentile": [
+            -0.16666666666666663,
+            0.6666666666666666
+          ],
+          "bootstrap_studies": 3,
+          "resamples": 1000,
+          "limitation": "Exploratory pilot interval; independent patient IDs unavailable"
+        }
+      }
+    },
+    "with_radgraph": {
+      "scope": "source-report-relative synthetic edits; clinical validity unreviewed",
+      "split": "dev",
+      "complete": false,
+      "variants": {
+        "text_only": {
+          "expected": 6,
+          "attempted": 6,
+          "completed": 5,
+          "runtime_failures": 1,
+          "not_attempted": 0,
+          "completion_rate": 0.8333333333333334,
+          "strict_decision_accuracy_all_expected": 0.5,
+          "detection_precision": null,
+          "detection_recall": 0.0,
+          "detection_f1_completed": 0.0,
+          "localization_f1_completed": 0.0,
+          "localization_counts": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2
+          },
+          "false_positive_rate_completed_controls": 0.0,
+          "abstention_rate_completed": 0.0,
+          "decision_coverage_completed": 1.0,
+          "category_localized_recall": {
+            "laterality": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            },
+            "severity": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            }
+          },
+          "mean_elapsed_seconds": 4.2726,
+          "reported_cost_usd_sum": 0.00125688,
+          "calls_missing_cost": 0,
+          "recorded_model_calls": 5
+        },
+        "direct_vlm": {
+          "expected": 6,
+          "attempted": 6,
+          "completed": 6,
+          "runtime_failures": 0,
+          "not_attempted": 0,
+          "completion_rate": 1.0,
+          "strict_decision_accuracy_all_expected": 0.5,
+          "detection_precision": 0.5,
+          "detection_recall": 0.3333333333333333,
+          "detection_f1_completed": 0.4,
+          "localization_f1_completed": 0.4,
+          "localization_counts": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 2
+          },
+          "false_positive_rate_completed_controls": 0.3333333333333333,
+          "abstention_rate_completed": 0.0,
+          "decision_coverage_completed": 1.0,
+          "category_localized_recall": {
+            "laterality": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            },
+            "severity": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            },
+            "presence_absence": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            }
+          },
+          "mean_elapsed_seconds": 5.8975,
+          "reported_cost_usd_sum": 0.00175288,
+          "calls_missing_cost": 0,
+          "recorded_model_calls": 6
+        },
+        "blue_tools": {
+          "expected": 6,
+          "attempted": 6,
+          "completed": 6,
+          "runtime_failures": 0,
+          "not_attempted": 0,
+          "completion_rate": 1.0,
+          "strict_decision_accuracy_all_expected": 0.6666666666666666,
+          "detection_precision": 0.6,
+          "detection_recall": 1.0,
+          "detection_f1_completed": 0.75,
+          "localization_f1_completed": 0.46153846153846156,
+          "localization_counts": {
+            "tp": 3,
+            "fp": 7,
+            "fn": 0
+          },
+          "false_positive_rate_completed_controls": 0.6666666666666666,
+          "abstention_rate_completed": 0.0,
+          "decision_coverage_completed": 1.0,
+          "category_localized_recall": {
+            "laterality": {
+              "hits": 0,
+              "n": 1,
+              "recall": 0.0
+            },
+            "severity": {
+              "hits": 1,
+              "n": 1,
+              "recall": 1.0
+            },
+            "presence_absence": {
+              "hits": 1,
+              "n": 1,
+              "recall": 1.0
+            }
+          },
+          "mean_elapsed_seconds": 23.78616666666667,
+          "reported_cost_usd_sum": 0.00492488,
+          "calls_missing_cost": 0,
+          "recorded_model_calls": 30
+        }
+      },
+      "paired_comparisons": {}
+    }
+  },
+  "paired_cases": [
+    {
+      "case_id": "115b953dcd11c46f401bc84b",
+      "variant": "blue_tools",
+      "study_id": "1094",
+      "has_synthetic_error": false,
+      "error_type": null,
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s4"
+        ],
+        "localized_edit": false,
+        "control_false_alarm": true
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s4",
+          "s5",
+          "s6"
+        ],
+        "localized_edit": false,
+        "control_false_alarm": true
+      }
+    },
+    {
+      "case_id": "115b953dcd11c46f401bc84b",
+      "variant": "direct_vlm",
+      "study_id": "1094",
+      "has_synthetic_error": false,
+      "error_type": null,
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s4"
+        ],
+        "localized_edit": false,
+        "control_false_alarm": true
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s4"
+        ],
+        "localized_edit": false,
+        "control_false_alarm": true
+      }
+    },
+    {
+      "case_id": "115b953dcd11c46f401bc84b",
+      "variant": "text_only",
+      "study_id": "1094",
+      "has_synthetic_error": false,
+      "error_type": null,
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "1698dfe12a9edd966d1f7e2b",
+      "variant": "blue_tools",
+      "study_id": "1106",
+      "has_synthetic_error": false,
+      "error_type": null,
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s3"
+        ],
+        "localized_edit": false,
+        "control_false_alarm": true
+      }
+    },
+    {
+      "case_id": "1698dfe12a9edd966d1f7e2b",
+      "variant": "direct_vlm",
+      "study_id": "1106",
+      "has_synthetic_error": false,
+      "error_type": null,
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "uncertain",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "1698dfe12a9edd966d1f7e2b",
+      "variant": "text_only",
+      "study_id": "1106",
+      "has_synthetic_error": false,
+      "error_type": null,
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "18dac685b8a3abe4283e2415",
+      "variant": "blue_tools",
+      "study_id": "1106",
+      "has_synthetic_error": true,
+      "error_type": "presence_absence",
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s3",
+          "s7"
+        ],
+        "localized_edit": true,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s3",
+          "s7"
+        ],
+        "localized_edit": true,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "18dac685b8a3abe4283e2415",
+      "variant": "direct_vlm",
+      "study_id": "1106",
+      "has_synthetic_error": true,
+      "error_type": "presence_absence",
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s5"
+        ],
+        "localized_edit": false,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "18dac685b8a3abe4283e2415",
+      "variant": "text_only",
+      "study_id": "1106",
+      "has_synthetic_error": true,
+      "error_type": "presence_absence",
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s7"
+        ],
+        "localized_edit": true,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "failed",
+        "decision": null,
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "2661c37027547abb480f1f41",
+      "variant": "blue_tools",
+      "study_id": "2036",
+      "has_synthetic_error": false,
+      "error_type": null,
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "2661c37027547abb480f1f41",
+      "variant": "direct_vlm",
+      "study_id": "2036",
+      "has_synthetic_error": false,
+      "error_type": null,
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "uncertain",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "2661c37027547abb480f1f41",
+      "variant": "text_only",
+      "study_id": "2036",
+      "has_synthetic_error": false,
+      "error_type": null,
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "2eb8ef815cadd0931827eee4",
+      "variant": "blue_tools",
+      "study_id": "2036",
+      "has_synthetic_error": true,
+      "error_type": "severity",
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "uncertain",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s1"
+        ],
+        "localized_edit": true,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "2eb8ef815cadd0931827eee4",
+      "variant": "direct_vlm",
+      "study_id": "2036",
+      "has_synthetic_error": true,
+      "error_type": "severity",
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "uncertain",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "2eb8ef815cadd0931827eee4",
+      "variant": "text_only",
+      "study_id": "2036",
+      "has_synthetic_error": true,
+      "error_type": "severity",
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "c5f396adceacaefd9711b818",
+      "variant": "blue_tools",
+      "study_id": "1094",
+      "has_synthetic_error": true,
+      "error_type": "laterality",
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s4",
+          "s5"
+        ],
+        "localized_edit": true,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s4",
+          "s5",
+          "s6"
+        ],
+        "localized_edit": true,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "c5f396adceacaefd9711b818",
+      "variant": "direct_vlm",
+      "study_id": "1094",
+      "has_synthetic_error": true,
+      "error_type": "laterality",
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s4"
+        ],
+        "localized_edit": true,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "error",
+        "flagged_ids": [
+          "s4"
+        ],
+        "localized_edit": true,
+        "control_false_alarm": false
+      }
+    },
+    {
+      "case_id": "c5f396adceacaefd9711b818",
+      "variant": "text_only",
+      "study_id": "1094",
+      "has_synthetic_error": true,
+      "error_type": "laterality",
+      "no_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      },
+      "with_radgraph": {
+        "status": "ok",
+        "decision": "no_error_detected",
+        "flagged_ids": [],
+        "localized_edit": false,
+        "control_false_alarm": false
+      }
+    }
+  ],
+  "configs_match_except_graphs": true,
+  "limits": [
+    "reused development cases",
+    "single run per condition",
+    "unreviewed synthetic labels",
+    "cache reuse affects cost and timing",
+    "no three-way claim-assessment intervention"
+  ]
+}
